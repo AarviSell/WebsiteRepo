@@ -1,0 +1,173 @@
+/* src/index.css — AArvi Design System */
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --color-bg:              #fafaf8;
+  --color-surface:         #ffffff;
+  --color-surface-2:       #f4f3ef;
+  --color-surface-offset:  #ede9e0;
+  --color-surface-dynamic: #f0ede6;
+  --color-text:            #1a1a18;
+  --color-text-muted:      #5a5954;
+  --color-text-faint:      #9c9890;
+  --color-border:          rgba(26, 26, 24, 0.12);
+  --color-border-subtle:   rgba(26, 26, 24, 0.06);
+  --color-success:           #437a22;
+  --color-success-highlight: #e8f4e0;
+  --color-blue:              #006494;
+  --color-blue-highlight:    #ddf0fc;
+  --color-error:             #c0392b;
+  --color-error-highlight:   #fdecea;
+  --color-primary:           #01696f;
+  --color-primary-hover:     #0c4e54;
+  --color-primary-active:    #0f3638;
+  --color-primary-highlight: #cedcd8;
+  --color-price:      #da7101;
+  --color-price-dark: #b35a00;
+  --color-indiamart:    #006494;
+  --color-shipmydeals:  #437a22;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body:    'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.07);
+  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.08);
+  --content-wide:   1200px;
+  --content-normal: 800px;
+}
+
+[data-theme="dark"] {
+  --color-bg:              #0f1210;
+  --color-surface:         #181e1c;
+  --color-surface-2:       #202824;
+  --color-surface-offset:  #252e2a;
+  --color-surface-dynamic: #2a3430;
+  --color-text:       #e8ede9;
+  --color-text-muted: #9aaba0;
+  --color-text-faint: #5a6b62;
+  --color-border:        rgba(232, 237, 233, 0.1);
+  --color-border-subtle: rgba(232, 237, 233, 0.05);
+  --color-success:           #6dbb3c;
+  --color-success-highlight: #1a2e10;
+  --color-blue:              #4db8f0;
+  --color-blue-highlight:    #0a1e2a;
+  --color-error:             #e57373;
+  --color-error-highlight:   #2a1010;
+  --color-primary:           #4ab3b9;
+  --color-primary-hover:     #5dc9d0;
+  --color-primary-active:    #70dde4;
+  --color-primary-highlight: #0f2e30;
+  --color-price:      #fdab43;
+  --color-price-dark: #fec47e;
+  --color-indiamart:   #4db8f0;
+  --color-shipmydeals: #6dbb3c;
+  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.35);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body { margin: 0; min-height: 100dvh; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.1s;
+}
+.skip-link:focus { top: var(--space-4); }
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-offset) 25%,
+    var(--color-surface-dynamic) 50%,
+    var(--color-surface-offset) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+.product-grid > * {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 320px;
+}
+
+.price {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-price);
+  font-weight: 700;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

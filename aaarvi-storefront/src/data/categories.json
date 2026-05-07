@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "home-and-kitchen",
+    "label": "Home And Kitchen",
+    "count": 32,
+    "source_sites": [
+      "shipmydeals"
+    ],
+    "children": []
+  },
+  {
+    "slug": "cleaning-product",
+    "label": "Cleaning Product",
+    "count": 12,
+    "source_sites": [
+      "shipmydeals"
+    ],
+    "children": []
+  },
+  {
+    "slug": "in-the-spotlight",
+    "label": "In The Spotlight",
+    "count": 9,
+    "source_sites": [
+      "shipmydeals"
+    ],
+    "children": []
+  },
+  {
+    "slug": "essentials",
+    "label": "Essentials",
+    "count": 8,
+    "source_sites": [
+      "shipmydeals"
+    ],
+    "children": []
+  },
+  {
+    "slug": "best-sellers",
+    "label": "Best Sellers",
+    "count": 4,
+    "source_sites": [
+      "shipmydeals"
+    ],
+    "children": []
+  }
+]
