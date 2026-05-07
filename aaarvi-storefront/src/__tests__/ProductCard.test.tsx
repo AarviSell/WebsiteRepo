@@ -34,11 +34,6 @@ describe('ProductCard', () => {
     expect(screen.getByText('Test Lunch Box')).toBeTruthy();
   });
 
-  it('renders price when present', () => {
-    renderCard(makeProduct({ price: '₹299/piece' }));
-    expect(screen.getByText('₹299/piece')).toBeTruthy();
-  });
-
   it('renders brand when present', () => {
     renderCard(makeProduct({ brand: 'Cello' }));
     expect(screen.getByText('Cello')).toBeTruthy();

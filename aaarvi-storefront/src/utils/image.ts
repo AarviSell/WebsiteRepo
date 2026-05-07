@@ -2,12 +2,15 @@
 import type { Product, ProductImage } from '@/types/product';
 
 /**
- * Convert a scraper local_path to the runtime URL served from /data/.
+ * Convert a scraper local_path to the runtime URL served from the base path.
  * local_path: "shipmydeals/home-and-kitchen/..."
- * Runtime URL: "/data/shipmydeals/home-and-kitchen/..."
+ * Runtime URL: "<BASE_URL>data/shipmydeals/home-and-kitchen/..."
+ *
+ * import.meta.env.BASE_URL is '/' in dev and '/WebsiteRepo/' on GitHub Pages,
+ * so this works correctly in both environments.
  */
 export function resolveImageUrl(localPath: string): string {
-  return `/data/${localPath}`;
+  return `${import.meta.env.BASE_URL}data/${localPath}`;
 }
 
 /**

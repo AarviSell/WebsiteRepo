@@ -19,7 +19,8 @@ function makeProduct(overrides: Partial<Product> = {}): Product {
 }
 
 describe('resolveImageUrl', () => {
-  it('prepends /data/ to a local path', () => {
+  it('prepends the base URL and data/ to a local path', () => {
+    // import.meta.env.BASE_URL is '/' in the test environment
     expect(resolveImageUrl('shipmydeals/home/img.jpg')).toBe('/data/shipmydeals/home/img.jpg');
   });
 });
