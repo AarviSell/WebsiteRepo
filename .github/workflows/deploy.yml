@@ -34,10 +34,13 @@ jobs:
         working-directory: aaarvi-storefront
         env:
           VITE_BASE: /WebsiteRepo/
-        # Data files are already committed — skip build:data, run vite directly
         run: npx vite build
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: aaarvi-storefront/dist
 
@@ -48,5 +51,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
