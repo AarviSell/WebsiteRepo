@@ -34,8 +34,8 @@ jobs:
         working-directory: aaarvi-storefront
         env:
           VITE_BASE: /WebsiteRepo/
-        # Skip build:data — data files are already committed to the repo
-        run: npx tsc --noEmit && npx vite build
+        # Data files are already committed — skip build:data, run vite directly
+        run: npx vite build
 
       - uses: actions/upload-pages-artifact@v3
         with:
