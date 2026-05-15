@@ -1,47 +1,48 @@
 // src/components/layout/Header.tsx
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { SearchBar } from '@/components/search/SearchBar';
-import { useProductStore } from '@/store/useProductStore';
+import { Link, useNavigate } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
 
 function AArviLogo() {
   return (
-    <svg
-      aria-label="AArvi"
-      viewBox="0 0 120 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ width: 120, height: 32, flexShrink: 0 }}
-    >
-      <path
-        d="M8 26 L16 8 L24 26"
-        stroke="var(--color-primary)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M18 26 L26 8 L34 26"
-        stroke="var(--color-primary)"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <line x1="10" y1="20" x2="22" y2="20" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" />
-      <line x1="20" y1="20" x2="32" y2="20" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" />
-      <text
-        x="42"
-        y="22"
-        fontFamily="'Instrument Serif', serif"
-        fontSize="18"
-        fill="currentColor"
-        fontWeight="400"
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', color: 'var(--color-text)' }}>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ width: 34, height: 34, flexShrink: 0 }}
+      >
+        <circle cx="17" cy="17" r="16" stroke="url(#lg)" strokeWidth="1.5" />
+        <path d="M17 7 L26 25 H8 Z" fill="url(#lg2)" opacity="0.92" />
+        <path d="M12 19 H22" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round" />
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="34" y2="34">
+            <stop offset="0%" stopColor="#a855f7" />
+            <stop offset="100%" stopColor="#f0b429" />
+          </linearGradient>
+          <linearGradient id="lg2" x1="17" y1="7" x2="17" y2="25">
+            <stop offset="0%" stopColor="#c084fc" />
+            <stop offset="100%" stopColor="#f0b429" stopOpacity="0.8" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span
+        style={{
+          fontFamily: 'var(--font-display)',
+          fontSize: '1.6rem',
+          fontWeight: 700,
+          background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          lineHeight: 1,
+        }}
       >
         AArvi
-      </text>
-    </svg>
+      </span>
+    </span>
   );
 }
 
@@ -140,11 +141,15 @@ function DrawerNav({ onClose }: { onClose: () => void }) {
 }
 
 export function Header() {
-  const { theme, setTheme } = useProductStore();
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
 
-  const isDark = theme === 'dark';
+  function navClick(path: string) {
+    const evt = new CustomEvent('aarvi:nav', { detail: { path }, cancelable: true });
+    const notIntercepted = window.dispatchEvent(evt);
+    if (notIntercepted) navigate(path);
+  }
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -161,92 +166,92 @@ export function Header() {
         style={{
           position: 'sticky',
           top: 0,
-          zIndex: 50,
-          background: 'var(--color-bg)',
-          borderBottom: '1px solid oklch(from var(--color-text, #1a1a18) l c h / 0.08)',
-          borderBottomColor: 'var(--color-border)',
+          zIndex: 70,
+          padding: 'var(--space-3) var(--space-4) 0',
+          background: 'linear-gradient(180deg, rgba(13, 4, 20, 0.94), rgba(13, 4, 20, 0.78) 72%, rgba(13, 4, 20, 0))',
         }}
       >
         <div
           style={{
             maxWidth: 'var(--content-wide)',
             margin: '0 auto',
-            padding: '0 var(--space-4)',
+            padding: 0,
           }}
         >
-          {/* Desktop: single row */}
           <div
+            className="glass-panel"
             style={{
-              display: 'none',
-              alignItems: 'center',
-              gap: 'var(--space-4)',
-              height: 64,
+              borderRadius: '1.75rem',
+              padding: '0 var(--space-4)',
             }}
-            className="desktop-header"
           >
-            <Link to="/" aria-label="AArvi home" style={{ flexShrink: 0 }}>
-              <AArviLogo />
-            </Link>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <SearchBar />
-            </div>
-            <button
-              onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            {/* Desktop: single row */}
+            <div
               style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                color: 'var(--color-text-muted)',
-                padding: 'var(--space-2)',
-                minHeight: 44,
-                minWidth: 44,
-                display: 'flex',
+                display: 'none',
+                gridTemplateColumns: '1fr auto 1fr',
                 alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 'var(--radius-md)',
-                flexShrink: 0,
+                minHeight: 74,
               }}
+              className="desktop-header"
             >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-          </div>
-
-          {/* Mobile: two rows */}
-          <div className="mobile-header">
-            {/* Row 1 */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 56 }}>
-              <Link to="/" aria-label="AArvi home">
+              {/* Left slot — empty */}
+              <div />
+              {/* Center — logo */}
+              <Link to="/" aria-label="AArvi home" style={{ textDecoration: 'none', justifySelf: 'center' }}>
                 <AArviLogo />
               </Link>
-              <div style={{ display: 'flex', gap: 'var(--space-1)' }}>
-                <button
-                  onClick={() => setTheme(isDark ? 'light' : 'dark')}
-                  aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    color: 'var(--color-text-muted)',
-                    padding: 'var(--space-2)',
-                    minHeight: 44,
-                    minWidth: 44,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: 'var(--radius-md)',
-                  }}
-                >
-                  {isDark ? <Sun size={20} /> : <Moon size={20} />}
-                </button>
+
+              <nav style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-1)', justifyContent: 'flex-end' }} aria-label="Primary navigation">
+                {([
+                  { label: 'Deals',     path: '/category/best-sellers' },
+                  { label: 'Spotlight', path: '/category/in-the-spotlight' },
+                ] as const).map(({ label, path }) => (
+                  <button
+                    key={label}
+                    onClick={() => navClick(path)}
+                    style={{
+                      background: 'none', border: 'none', cursor: 'pointer',
+                      color: 'var(--color-text-muted)',
+                      fontSize: 'var(--text-sm)', fontWeight: 500,
+                      padding: '0.35rem 0.8rem',
+                      borderRadius: 'var(--radius-full)',
+                      transition: 'color 180ms, background 180ms',
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.color = 'var(--color-text)';
+                      e.currentTarget.style.background = 'rgba(168,85,247,0.1)';
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.color = 'var(--color-text-muted)';
+                      e.currentTarget.style.background = 'none';
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </nav>
+            </div>
+
+            {/* Mobile: single row */}
+            <div className="mobile-header">
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', minHeight: 62 }}>
+                {/* Left — empty */}
+                <div />
+                {/* Center — logo */}
+                <Link to="/" aria-label="AArvi home" style={{ textDecoration: 'none', justifySelf: 'center' }}>
+                  <AArviLogo />
+                </Link>
+                {/* Right — hamburger */}
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <button
                   ref={hamburgerRef}
                   onClick={() => setDrawerOpen(true)}
                   aria-label="Open navigation menu"
                   aria-expanded={drawerOpen}
                   style={{
-                    background: 'none',
-                    border: 'none',
+                    background: 'rgba(250, 245, 255, 0.04)',
+                    border: '1px solid var(--color-border)',
                     cursor: 'pointer',
                     color: 'var(--color-text)',
                     padding: 'var(--space-2)',
@@ -255,16 +260,13 @@ export function Header() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderRadius: 'var(--radius-md)',
+                    borderRadius: 'var(--radius-full)',
                   }}
                 >
                   <Menu size={22} />
                 </button>
+                </div>
               </div>
-            </div>
-            {/* Row 2 */}
-            <div style={{ paddingBottom: 'var(--space-3)' }}>
-              <SearchBar />
             </div>
           </div>
         </div>
@@ -272,7 +274,7 @@ export function Header() {
 
       <style>{`
         @media (min-width: 1024px) {
-          .desktop-header { display: flex !important; }
+          .desktop-header { display: grid !important; }
           .mobile-header { display: none !important; }
         }
       `}</style>

@@ -1,6 +1,6 @@
 // src/pages/ProductDetailPage.tsx
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { MapPin, Mail, ChevronDown, ChevronUp, PackageSearch } from 'lucide-react';
 import { useProductStore } from '@/store/useProductStore';
 import { useProductData } from '@/hooks/useProductData';
@@ -52,7 +52,19 @@ function Divider() {
 
 export function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const fromCategory = (location.state as { fromCategory?: string } | null)?.fromCategory;
+  const [isExiting, setIsExiting] = useState(false);
   const { getProductById, getProductsByCategory } = useProductStore();
+
+  function handleBack() {
+    setIsExiting(true);
+    setTimeout(() => {
+      if (fromCategory) navigate(`/category/${fromCategory}`);
+      else navigate(-1);
+    }, 420);
+  }
   const { getCategoryBySlug, isLoaded } = useProductData();
 
   const product = id ? getProductById(id) : undefined;
@@ -99,8 +111,30 @@ export function ProductDetailPage() {
   ];
 
   return (
-    <main id="main-content">
+    <main
+      id="main-content"
+      style={{
+        animation: isExiting
+          ? 'pdExit 420ms cubic-bezier(0.4,0,1,1) both'
+          : 'pdEnter 480ms cubic-bezier(0.22,1,0.36,1) both',
+      }}
+    >
       <div style={{ maxWidth: 'var(--content-wide)', margin: '0 auto', padding: 'var(--space-5) var(--space-4)' }}>
+        <button
+          onClick={handleBack}
+          style={{
+            background: 'none', border: 'none', cursor: 'pointer',
+            color: 'var(--color-text-muted)',
+            fontSize: 'var(--text-sm)', fontWeight: 500,
+            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+            padding: '0.35rem 0', marginBottom: 'var(--space-2)',
+            letterSpacing: '0.03em', transition: 'color 180ms',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-text)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-text-muted)')}
+        >
+          ← Back
+        </button>
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Two-column layout */}
@@ -250,6 +284,14 @@ export function ProductDetailPage() {
       </div>
 
       <style>{`
+        @keyframes pdEnter {
+          from { opacity: 0; transform: scale(0.97) translateY(14px); }
+          to   { opacity: 1; transform: none; }
+        }
+        @keyframes pdExit {
+          from { opacity: 1; transform: none; }
+          to   { opacity: 0; transform: scale(1.04); }
+        }
         @media (min-width: 1024px) {
           .product-detail-grid {
             grid-template-columns: 55fr 45fr !important;

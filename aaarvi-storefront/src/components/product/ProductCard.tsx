@@ -14,7 +14,6 @@ export function ProductCard({ product, size = 'md' }: ProductCardProps) {
   const imgSrc = primaryImg ? resolveImageUrl(primaryImg.local_path) : getImageFallbackSvg(product.name);
   const imgWidth = primaryImg?.width ?? 400;
   const imgHeight = primaryImg?.height ?? 300;
-
   return (
     <Link
       to={`/product/${product.id}`}
@@ -22,20 +21,22 @@ export function ProductCard({ product, size = 'md' }: ProductCardProps) {
       style={{
         display: 'block',
         textDecoration: 'none',
-        background: 'var(--color-surface)',
-        borderRadius: 'var(--radius-lg)',
+        background: 'linear-gradient(180deg, rgba(28, 11, 39, 0.95), rgba(16, 6, 24, 0.96))',
+        borderRadius: '1.5rem',
+        border: '1px solid var(--color-border)',
         overflow: 'hidden',
-        boxShadow: 'var(--shadow-sm)',
+        boxShadow: 'var(--shadow-md)',
+        backdropFilter: 'blur(18px)',
         transition: 'box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1)',
         color: 'inherit',
         height: '100%',
       }}
       onMouseEnter={e => {
-        (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'var(--shadow-md)';
-        (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
+        (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 28px 58px rgba(0, 0, 0, 0.34)';
+        (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-4px)';
       }}
       onMouseLeave={e => {
-        (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'var(--shadow-sm)';
+        (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'var(--shadow-md)';
         (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
       }}
     >
@@ -57,16 +58,26 @@ export function ProductCard({ product, size = 'md' }: ProductCardProps) {
           }}
         />
 
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.08), rgba(13,4,20,0.08) 50%, rgba(13,4,20,0.58) 100%)',
+            pointerEvents: 'none',
+          }}
+        />
+
+
       </div>
 
       {/* Content */}
-      <div style={{ padding: size === 'sm' ? 'var(--space-2)' : 'var(--space-3)' }}>
+      <div style={{ padding: size === 'sm' ? 'var(--space-3)' : 'var(--space-4)' }}>
         <p
           className="line-clamp-2"
           style={{
             margin: '0 0 var(--space-1)',
-            fontSize: 'var(--text-base)',
-            fontWeight: 500,
+            fontSize: size === 'sm' ? 'var(--text-sm)' : 'var(--text-base)',
+            fontWeight: 600,
             color: 'var(--color-text)',
             lineHeight: 1.4,
           }}

@@ -4,32 +4,35 @@
 /* ─── Design Tokens ─────────────────────────────────────────────────────── */
 :root,
 [data-theme="light"] {
-  --color-bg:              #fafaf8;
-  --color-surface:         #ffffff;
-  --color-surface-2:       #f4f3ef;
-  --color-surface-offset:  #ede9e0;
-  --color-surface-dynamic: #f0ede6;
-  --color-text:            #1a1a18;
-  --color-text-muted:      #5a5954;
-  --color-text-faint:      #9c9890;
-  --color-border:          rgba(26, 26, 24, 0.12);
-  --color-border-subtle:   rgba(26, 26, 24, 0.06);
-  --color-success:           #437a22;
-  --color-success-highlight: #e8f4e0;
-  --color-blue:              #006494;
-  --color-blue-highlight:    #ddf0fc;
-  --color-error:             #c0392b;
-  --color-error-highlight:   #fdecea;
-  --color-primary:           #01696f;
-  --color-primary-hover:     #0c4e54;
-  --color-primary-active:    #0f3638;
-  --color-primary-highlight: #cedcd8;
-  --color-price:      #da7101;
-  --color-price-dark: #b35a00;
-  --color-indiamart:    #006494;
-  --color-shipmydeals:  #437a22;
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body:    'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+  --color-bg:              #14071d;
+  --color-surface:         rgba(28, 11, 39, 0.84);
+  --color-surface-2:       #1a0b26;
+  --color-surface-offset:  #221033;
+  --color-surface-dynamic: #301749;
+  --color-text:            #faf5ff;
+  --color-text-muted:      rgba(250, 245, 255, 0.76);
+  --color-text-faint:      rgba(250, 245, 255, 0.45);
+  --color-border:          rgba(250, 245, 255, 0.12);
+  --color-border-subtle:   rgba(250, 245, 255, 0.06);
+  --color-success:           #8ddf6b;
+  --color-success-highlight: rgba(141, 223, 107, 0.16);
+  --color-blue:              #85d0ff;
+  --color-blue-highlight:    rgba(133, 208, 255, 0.16);
+  --color-error:             #ff8c7c;
+  --color-error-highlight:   rgba(255, 140, 124, 0.18);
+  --color-primary:           #a855f7;
+  --color-primary-hover:     #c084fc;
+  --color-primary-active:    #7c3aed;
+  --color-primary-highlight: rgba(168, 85, 247, 0.18);
+  --color-accent:            #f0b429;
+  --color-accent-soft:       #fde68a;
+  --color-glow:              #c084fc;
+  --color-price:             #fde68a;
+  --color-price-dark:        #f0b429;
+  --color-indiamart:         #85d0ff;
+  --color-shipmydeals:       #8ddf6b;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', 'Segoe UI', sans-serif;
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
   --text-base: 1rem;
@@ -52,41 +55,44 @@
   --radius-lg:   12px;
   --radius-xl:   16px;
   --radius-full: 9999px;
-  --shadow-sm:  0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
-  --shadow-md:  0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.07);
-  --shadow-lg:  0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.08);
-  --content-wide:   1200px;
+  --shadow-sm:  0 8px 20px rgba(0, 0, 0, 0.2);
+  --shadow-md:  0 18px 32px rgba(0, 0, 0, 0.24);
+  --shadow-lg:  0 26px 70px rgba(0, 0, 0, 0.36);
+  --content-wide:   1280px;
   --content-normal: 800px;
 }
 
 [data-theme="dark"] {
-  --color-bg:              #0f1210;
-  --color-surface:         #181e1c;
-  --color-surface-2:       #202824;
-  --color-surface-offset:  #252e2a;
-  --color-surface-dynamic: #2a3430;
-  --color-text:       #e8ede9;
-  --color-text-muted: #9aaba0;
-  --color-text-faint: #5a6b62;
-  --color-border:        rgba(232, 237, 233, 0.1);
-  --color-border-subtle: rgba(232, 237, 233, 0.05);
-  --color-success:           #6dbb3c;
-  --color-success-highlight: #1a2e10;
-  --color-blue:              #4db8f0;
-  --color-blue-highlight:    #0a1e2a;
-  --color-error:             #e57373;
-  --color-error-highlight:   #2a1010;
-  --color-primary:           #4ab3b9;
-  --color-primary-hover:     #5dc9d0;
-  --color-primary-active:    #70dde4;
-  --color-primary-highlight: #0f2e30;
-  --color-price:      #fdab43;
-  --color-price-dark: #fec47e;
-  --color-indiamart:   #4db8f0;
-  --color-shipmydeals: #6dbb3c;
-  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.35);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.4);
+  --color-bg:              #0d0414;
+  --color-surface:         rgba(18, 8, 27, 0.88);
+  --color-surface-2:       #13081f;
+  --color-surface-offset:  #1d0d2b;
+  --color-surface-dynamic: #28123a;
+  --color-text:            #faf5ff;
+  --color-text-muted:      rgba(250, 245, 255, 0.78);
+  --color-text-faint:      rgba(250, 245, 255, 0.42);
+  --color-border:          rgba(250, 245, 255, 0.1);
+  --color-border-subtle:   rgba(250, 245, 255, 0.05);
+  --color-success:           #8ddf6b;
+  --color-success-highlight: rgba(141, 223, 107, 0.14);
+  --color-blue:              #6dc7ff;
+  --color-blue-highlight:    rgba(109, 199, 255, 0.16);
+  --color-error:             #ff9b8e;
+  --color-error-highlight:   rgba(255, 155, 142, 0.18);
+  --color-primary:           #c084fc;
+  --color-primary-hover:     #d6a8ff;
+  --color-primary-active:    #a855f7;
+  --color-primary-highlight: rgba(168, 85, 247, 0.2);
+  --color-accent:            #f0b429;
+  --color-accent-soft:       #fde68a;
+  --color-glow:              #a855f7;
+  --color-price:             #fde68a;
+  --color-price-dark:        #f0b429;
+  --color-indiamart:         #6dc7ff;
+  --color-shipmydeals:       #8ddf6b;
+  --shadow-sm:               0 8px 20px rgba(0,0,0,0.28);
+  --shadow-md:               0 18px 34px rgba(0,0,0,0.34);
+  --shadow-lg:               0 28px 80px rgba(0,0,0,0.46);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -100,7 +106,18 @@ html {
   scroll-behavior: smooth;
 }
 
-body { margin: 0; min-height: 100dvh; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at top left, rgba(168, 85, 247, 0.18), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(240, 180, 41, 0.14), transparent 28%),
+    linear-gradient(180deg, #0d0414, #16081f 42%, #0f0518);
+}
+
+#root {
+  min-height: 100dvh;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -127,7 +144,7 @@ body { margin: 0; min-height: 100dvh; }
 .skip-link:focus { top: var(--space-4); }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -157,6 +174,11 @@ body { margin: 0; min-height: 100dvh; }
   font-variant-numeric: tabular-nums;
   color: var(--color-price);
   font-weight: 700;
+}
+
+::selection {
+  background: rgba(240, 180, 41, 0.28);
+  color: var(--color-text);
 }
 
 .line-clamp-1 {

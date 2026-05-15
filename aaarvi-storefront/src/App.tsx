@@ -1,12 +1,13 @@
 // src/App.tsx
 import { lazy, Suspense, useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { useProductStore } from '@/store/useProductStore';
+import { HomePageScene } from '@/pages/HomePageScene';
+import './App.css';
 
-const HomePage = lazy(() => import('@/pages/HomePage').then(m => ({ default: m.HomePage })));
 const SearchResultsPage = lazy(() => import('@/pages/SearchResultsPage').then(m => ({ default: m.SearchResultsPage })));
 const CategoryPage = lazy(() => import('@/pages/CategoryPage').then(m => ({ default: m.CategoryPage })));
 const ProductDetailPage = lazy(() => import('@/pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage })));
@@ -30,6 +31,28 @@ function PageLoader() {
   );
 }
 
+/** Layout with header + footer used for all non-home pages */
+function AppLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      className="app-shell flex flex-col min-h-dvh"
+      style={{ background: 'var(--color-bg)', color: 'var(--color-text)' }}
+    >
+      <Header />
+      <Suspense fallback={<PageLoader />}>
+        {children}
+      </Suspense>
+      <Footer />
+    </div>
+  );
+}
+
+/** Forces CategoryPage to fully remount when slug changes so isExiting state never carries over */
+function CategoryPageWrapper() {
+  const { slug } = useParams<{ slug: string }>();
+  return <CategoryPage key={slug} />;
+}
+
 export function App() {
   const { theme, loadData } = useProductStore();
 
@@ -43,23 +66,27 @@ export function App() {
 
   return (
     <HashRouter>
-      <div
-        className="flex flex-col min-h-dvh"
-        style={{ background: 'var(--color-bg)', color: 'var(--color-text)' }}
-      >
-        <Header />
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/search" element={<SearchResultsPage />} />
-            <Route path="/category/:slug" element={<CategoryPage />} />
-            <Route path="/category/:slug/:subSlug" element={<CategoryPage />} />
-            <Route path="/product/:id" element={<ProductDetailPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Homepage — fullscreen Three.js scene, no layout wrapper */}
+        <Route path="/" element={<HomePageScene />} />
+
+        {/* All other pages use the standard header/footer layout */}
+        <Route path="/search" element={
+          <AppLayout><SearchResultsPage /></AppLayout>
+        } />
+        <Route path="/category/:slug" element={
+          <AppLayout><CategoryPageWrapper /></AppLayout>
+        } />
+        <Route path="/category/:slug/:subSlug" element={
+          <AppLayout><CategoryPageWrapper /></AppLayout>
+        } />
+        <Route path="/product/:id" element={
+          <AppLayout><ProductDetailPage /></AppLayout>
+        } />
+        <Route path="*" element={
+          <AppLayout><NotFoundPage /></AppLayout>
+        } />
+      </Routes>
     </HashRouter>
   );
 }

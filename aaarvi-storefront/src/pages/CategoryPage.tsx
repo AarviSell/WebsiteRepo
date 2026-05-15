@@ -1,366 +1,278 @@
 // src/pages/CategoryPage.tsx
-import { useState, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
-import { SlidersHorizontal, X } from 'lucide-react';
-import { Breadcrumb } from '@/components/ui/Breadcrumb';
-import { ProductGrid } from '@/components/product/ProductGrid';
-import { FilterPanel } from '@/components/filters/FilterPanel';
-import { Sidebar } from '@/components/layout/Sidebar';
-import { Button } from '@/components/ui/Button';
+import { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useProductData } from '@/hooks/useProductData';
-import { useFilters } from '@/hooks/useFilters';
-import type { FilterState } from '@/types/product';
+import type { Product } from '@/types/product';
+import { getPrimaryImage, resolveImageUrl, getImageFallbackSvg } from '@/utils/image';
 
-const PAGE_SIZE = 24;
-
-function Pagination({
-  currentPage,
-  totalPages,
-  onPageChange,
+/* ── Floating product card ─────────────────────────────────── */
+function FloatingCard({
+  product, index, isExiting, dealIn, totalCount,
 }: {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
+  product: Product;
+  index: number;
+  isExiting: boolean;
+  dealIn: boolean;
+  totalCount: number;
 }) {
-  if (totalPages <= 1) return null;
+  const [clicked, setClicked] = useState(false);
+  const navigate = useNavigate();
+  const primaryImg = getPrimaryImage(product);
+  const imgSrc = primaryImg ? resolveImageUrl(primaryImg.local_path) : getImageFallbackSvg(product.name);
 
-  function getPageNumbers(): (number | '…')[] {
-    const pages: (number | '…')[] = [];
-    if (totalPages <= 7) {
-      for (let i = 1; i <= totalPages; i++) pages.push(i);
-      return pages;
-    }
-    pages.push(1);
-    const start = Math.max(2, currentPage - 2);
-    const end = Math.min(totalPages - 1, currentPage + 2);
-    if (start > 2) pages.push('…');
-    for (let i = start; i <= end; i++) pages.push(i);
-    if (end < totalPages - 1) pages.push('…');
-    pages.push(totalPages);
-    return pages;
+  // Stagger timings
+  const enterDelay = dealIn
+    ? Math.round(index * (920 / Math.max(totalCount - 1, 1)))
+    : 40 + index * 48;
+  // Exit: deterministic pseudo-random delay 0–140ms and tilt ±14deg
+  const exitDelay  = (index * 37 + (index % 5) * 13) % 140;
+  const exitAngle  = ((index * 31 + 7) % 29) - 14;
+  const floatDur   = 3.2 + (index % 5) * 0.4;
+  // Float starts after the enter animation finishes
+  const floatStart = enterDelay + (dealIn ? 320 : 460);
+
+  // Pure CSS-animation approach — no JS transitions so there is no
+  // animation vs transition conflict that caused cards to snap/disappear.
+  const animStyle: React.CSSProperties = isExiting
+    ? ({
+        '--cp-exit-angle': `${exitAngle}deg`,
+        animation: `cpFall 0.48s cubic-bezier(0.55,0,0.85,0.4) ${exitDelay}ms both`,
+      } as React.CSSProperties)
+    : clicked
+    ? { animation: 'cpZoomProduct 360ms cubic-bezier(0.4,0,1,1) both' }
+    : {
+        animation:
+          `${dealIn ? 'cpDealIn 310ms' : 'cpEnter 450ms'} cubic-bezier(0.22,1,0.36,1) ${enterDelay}ms both,` +
+          ` cpFloat ${floatDur}s ease-in-out ${floatStart}ms infinite alternate`,
+      };
+
+  function handleClick(e: React.MouseEvent) {
+    if (clicked || isExiting) return;
+    e.preventDefault();
+    setClicked(true);
+    setTimeout(() => navigate(`/product/${product.id}`, { state: { fromCategory: product.category } }), 360);
   }
 
   return (
-    <nav
-      aria-label="Pagination"
+    <Link
+      to={`/product/${product.id}`}
+      onClick={handleClick}
+      aria-label={product.name}
+      style={{ display: 'block', textDecoration: 'none', color: 'inherit', ...animStyle }}
+    >
+      <div
+        style={{
+          borderRadius: '1.25rem',
+          border: '1px solid rgba(240,180,41,0.28)',
+          background: 'linear-gradient(160deg, #3d2200 0%, #2a1600 50%, #1a0c00 100%)',
+          overflow: 'hidden',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.55), inset 0 1px 0 rgba(240,180,41,0.12)',
+          transition: 'box-shadow 200ms ease, border-color 200ms ease',
+        }}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLDivElement;
+          el.style.boxShadow = '0 20px 50px rgba(0,0,0,0.6), 0 0 28px rgba(240,180,41,0.2), inset 0 1px 0 rgba(240,180,41,0.2)';
+          el.style.borderColor = 'rgba(240,180,41,0.55)';
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLDivElement;
+          el.style.boxShadow = '0 8px 32px rgba(0,0,0,0.55), inset 0 1px 0 rgba(240,180,41,0.12)';
+          el.style.borderColor = 'rgba(240,180,41,0.28)';
+        }}
+      >
+        {/* Image */}
+        <div style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}>
+          <img
+            src={imgSrc}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            onError={e => { (e.currentTarget as HTMLImageElement).src = getImageFallbackSvg(product.name); }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(180deg, transparent 55%, rgba(26,10,0,0.78) 100%)',
+            pointerEvents: 'none',
+          }} />
+        </div>
+
+        {/* Name only */}
+        <div style={{ padding: '0.9rem 1rem 1rem' }}>
+          <p style={{
+            margin: 0,
+            fontSize: '0.875rem', fontWeight: 600, lineHeight: 1.35,
+            color: '#fde68a',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}>
+            {product.name}
+          </p>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+/* ── Page ──────────────────────────────────────────────────── */
+export function CategoryPage() {
+  const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const dealIn = !!(location.state as { dealIn?: boolean } | null)?.dealIn;
+  const { allProducts, getCategoryBySlug, isLoaded } = useProductData();
+  const [isExiting, setIsExiting] = useState(false);
+
+  // Intercept header nav clicks: animate cards out, then navigate
+  useEffect(() => {
+    function onNav(e: Event) {
+      const { path } = (e as CustomEvent<{ path: string }>).detail;
+      e.preventDefault();
+      setIsExiting(true);
+      setTimeout(() => navigate(path, { state: { dealIn: true } }), 700);
+    }
+    window.addEventListener('aarvi:nav', onNav);
+    return () => window.removeEventListener('aarvi:nav', onNav);
+  }, [navigate]);
+
+  const products = allProducts.filter(p => p.category === slug);
+  const cat = slug ? getCategoryBySlug(slug) : undefined;
+  const label = cat?.label ?? slug ?? '';
+
+  function handleBack() {
+    setIsExiting(true);
+    setTimeout(() => navigate('/', { state: { returnTo: slug } }), 700);
+  }
+
+  return (
+    <main
+      id="main-content"
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 'var(--space-1)',
-        marginTop: 'var(--space-8)',
-        flexWrap: 'wrap',
+        minHeight: '100dvh',
+        background: '#0d0414',
+        color: '#faf5ff',
+        fontFamily: "'DM Sans', system-ui, sans-serif",
       }}
     >
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        aria-label="Previous page"
-        style={{
-          padding: 'var(--space-2) var(--space-3)',
-          border: '1px solid var(--color-border)',
-          borderRadius: 'var(--radius-md)',
-          background: 'var(--color-surface)',
-          color: 'var(--color-text)',
-          cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-          opacity: currentPage === 1 ? 0.4 : 1,
-          fontSize: 'var(--text-sm)',
-          minHeight: 44,
-          minWidth: 44,
-        }}
-      >
-        ← Prev
-      </button>
-
-      {getPageNumbers().map((page, i) =>
-        page === '…' ? (
-          <span key={`ellipsis-${i}`} style={{ padding: '0 var(--space-2)', color: 'var(--color-text-faint)' }}>
-            …
-          </span>
-        ) : (
-          <button
-            key={page}
-            onClick={() => onPageChange(page as number)}
-            aria-label={`Page ${page}`}
-            aria-current={page === currentPage ? 'page' : undefined}
-            style={{
-              padding: 'var(--space-2) var(--space-3)',
-              border: '1px solid var(--color-border)',
-              borderRadius: 'var(--radius-md)',
-              background: page === currentPage ? 'var(--color-primary)' : 'var(--color-surface)',
-              color: page === currentPage ? '#ffffff' : 'var(--color-text)',
-              cursor: 'pointer',
-              fontSize: 'var(--text-sm)',
-              fontWeight: page === currentPage ? 600 : 400,
-              minHeight: 44,
-              minWidth: 44,
-            }}
-          >
-            {page}
-          </button>
-        )
-      )}
-
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        aria-label="Next page"
-        style={{
-          padding: 'var(--space-2) var(--space-3)',
-          border: '1px solid var(--color-border)',
-          borderRadius: 'var(--radius-md)',
-          background: 'var(--color-surface)',
-          color: 'var(--color-text)',
-          cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
-          opacity: currentPage === totalPages ? 0.4 : 1,
-          fontSize: 'var(--text-sm)',
-          minHeight: 44,
-          minWidth: 44,
-        }}
-      >
-        Next →
-      </button>
-    </nav>
-  );
-}
-
-function FilterBottomSheet({
-  onClose,
-  children,
-}: {
-  onClose: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      aria-label="Filter products"
-      style={{ position: 'fixed', inset: 0, zIndex: 150 }}
-    >
-      <div
-        style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)' }}
-        onClick={onClose}
-        aria-hidden="true"
-      />
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          background: 'var(--color-surface)',
-          borderRadius: 'var(--radius-xl) var(--radius-xl) 0 0',
-          padding: 'var(--space-4)',
-          maxHeight: '80vh',
-          overflowY: 'auto',
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-4)' }}>
-          <span style={{ fontSize: 'var(--text-base)', fontWeight: 600 }}>Filter & Sort</span>
-          <button
-            onClick={onClose}
-            aria-label="Close filters"
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--color-text)',
-              padding: 'var(--space-2)',
-              minHeight: 44,
-              minWidth: 44,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <X size={20} />
-          </button>
-        </div>
-        {children}
+      {/* Ambient orbs */}
+      <div aria-hidden="true" style={{
+        position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0, overflow: 'hidden',
+      }}>
+        <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, #7c3aed, transparent 70%)', top: -100, left: -100, filter: 'blur(80px)', opacity: 0.12 }} />
+        <div style={{ position: 'absolute', width: 380, height: 380, borderRadius: '50%', background: 'radial-gradient(circle, #f0b429, transparent 70%)', bottom: -80, right: -80, filter: 'blur(80px)', opacity: 0.08 }} />
       </div>
-    </div>
-  );
-}
 
-export function CategoryPage() {
-  const { slug, subSlug } = useParams<{ slug: string; subSlug?: string }>();
-  const { allProducts, getCategoryBySlug, isLoaded } = useProductData();
-  const [filterSheetOpen, setFilterSheetOpen] = useState(false);
-
-  const categoryProducts = allProducts.filter(p => {
-    if (p.category !== slug) return false;
-    if (subSlug && p.subcategory !== subSlug) return false;
-    return true;
-  });
-
-  const {
-    filters,
-    setFilter,
-    clearFilters,
-    filteredProducts,
-    paginatedProducts,
-    totalPages,
-  } = useFilters(categoryProducts);
-
-  const cat = slug ? getCategoryBySlug(slug) : undefined;
-  const subCat = cat?.children.find(c => c.slug === subSlug);
-
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: cat?.label ?? (slug ?? ''), href: `/category/${slug}` },
-    ...(subCat ? [{ label: subCat.label }] : []),
-  ];
-
-  const handlePageChange = useCallback((page: number) => {
-    setFilter('page', page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [setFilter]);
-
-  const startItem = (filters.page - 1) * PAGE_SIZE + 1;
-  const endItem = Math.min(filters.page * PAGE_SIZE, filteredProducts.length);
-
-  return (
-    <main id="main-content">
-      <div
-        style={{
-          maxWidth: 'var(--content-wide)',
-          margin: '0 auto',
-          padding: 'var(--space-5) var(--space-4)',
-        }}
-      >
-        <Breadcrumb items={breadcrumbItems} />
-
-        <div
+      {/* Category heading */}
+      <div style={{ position: 'relative', zIndex: 1, padding: '6rem 2rem 2.5rem', textAlign: 'center' }}>
+        <p style={{
+          fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.18em',
+          textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.5rem',
+        }}>
+          Category
+        </p>
+        <h1 style={{
+          fontFamily: "'Playfair Display', Georgia, serif",
+          fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1,
+          background: 'linear-gradient(135deg, #fff 40%, #e9d5ff)',
+          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+          margin: '0 0 0.5rem',
+        }}>
+          {label}
+        </h1>
+        {products.length > 0 && (
+          <p style={{ fontSize: '0.875rem', color: 'rgba(250,245,255,0.55)', margin: 0 }}>
+            {products.length} products
+          </p>
+        )}
+        <button
+          onClick={handleBack}
           style={{
-            display: 'flex',
-            gap: 'var(--space-8)',
-            marginTop: 'var(--space-5)',
-            alignItems: 'flex-start',
+            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+            marginTop: '1.25rem',
+            fontSize: '0.8rem', color: 'rgba(250,245,255,0.5)',
+            background: 'none', border: 'none', padding: 0, cursor: 'pointer',
+            letterSpacing: '0.04em',
+            transition: 'color 180ms',
           }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'rgba(250,245,255,0.85)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(250,245,255,0.5)')}
         >
-          {/* Desktop sidebar */}
-          <div style={{ display: 'none' }} className="sidebar-desktop">
-            <Sidebar />
-            <div style={{ marginTop: 'var(--space-6)' }}>
-              <FilterPanel
-                filters={filters}
-                setFilter={setFilter}
-                clearFilters={clearFilters}
-                products={categoryProducts}
+          ← Back
+        </button>
+      </div>
+
+      {/* Product grid */}
+      <div style={{ position: 'relative', zIndex: 1, padding: '0 1.5rem 4rem', maxWidth: 1400, margin: '0 auto' }}>
+        {!isLoaded ? (
+          /* Skeleton */
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(200px,100%),1fr))',
+            gap: '1.25rem',
+          }}>
+            {Array.from({ length: 12 }, (_, i) => (
+              <div key={i} style={{
+                borderRadius: '1.5rem',
+                background: 'rgba(32,14,52,0.6)',
+                aspectRatio: '3/4',
+                animation: 'cpPulse 1.4s ease-in-out infinite alternate',
+                animationDelay: `${i * 80}ms`,
+              }} />
+            ))}
+          </div>
+        ) : products.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '4rem 1rem', color: 'rgba(250,245,255,0.5)' }}>
+            <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>No products in this category yet.</p>
+            <Link to="/" style={{ color: '#a855f7', textDecoration: 'none' }}>← Back to home</Link>
+          </div>
+        ) : (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(min(200px,100%),1fr))',
+            gap: '1.25rem',
+          }}>
+            {products.map((p, i) => (
+              <FloatingCard
+                key={p.id}
+                product={p}
+                index={i}
+                isExiting={isExiting}
+                dealIn={dealIn}
+                totalCount={products.length}
               />
-            </div>
+            ))}
           </div>
-
-          {/* Main content */}
-          <div style={{ flex: 1, minWidth: 0 }}>
-            {/* Toolbar */}
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                marginBottom: 'var(--space-4)',
-                flexWrap: 'wrap',
-                gap: 'var(--space-3)',
-              }}
-            >
-              <h1
-                style={{
-                  fontSize: 'var(--text-lg)',
-                  fontWeight: 600,
-                  color: 'var(--color-text)',
-                  margin: 0,
-                }}
-              >
-                {subCat?.label ?? cat?.label ?? slug}
-                <span style={{ fontSize: 'var(--text-sm)', fontWeight: 400, color: 'var(--color-text-muted)', marginLeft: 'var(--space-2)' }}>
-                  ({filteredProducts.length})
-                </span>
-              </h1>
-
-              <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center' }}>
-                {/* Mobile filter button */}
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setFilterSheetOpen(true)}
-                  className="mobile-filter-btn"
-                >
-                  <SlidersHorizontal size={14} aria-hidden="true" />
-                  Filter & Sort
-                </Button>
-
-                {/* Sort dropdown */}
-                <div>
-                  <label htmlFor="sort-select" style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', marginRight: 'var(--space-2)' }}>
-                    Sort:
-                  </label>
-                  <select
-                    id="sort-select"
-                    value={filters.sortBy}
-                    onChange={e => setFilter('sortBy', e.target.value as FilterState['sortBy'])}
-                    style={{
-                      padding: 'var(--space-2) var(--space-3)',
-                      borderRadius: 'var(--radius-md)',
-                      border: '1px solid var(--color-border)',
-                      background: 'var(--color-surface)',
-                      color: 'var(--color-text)',
-                      fontSize: 'var(--text-sm)',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    <option value="relevance">Relevance</option>
-                    <option value="price_asc">Price: Low to High</option>
-                    <option value="price_desc">Price: High to Low</option>
-                    <option value="name_asc">Name: A–Z</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            {/* Results info */}
-            {filteredProducts.length > 0 && (
-              <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', margin: '0 0 var(--space-4)' }}>
-                Showing {startItem}–{endItem} of {filteredProducts.length} products
-              </p>
-            )}
-
-            <ProductGrid
-              products={paginatedProducts}
-              loading={!isLoaded}
-              emptyTitle="No products match your filters"
-              emptyDescription="Try adjusting or clearing your filters."
-              onEmptyAction={clearFilters}
-              emptyActionLabel="Clear Filters"
-            />
-
-            <Pagination
-              currentPage={filters.page}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
-          </div>
-        </div>
+        )}
       </div>
 
       <style>{`
-        @media (min-width: 1024px) {
-          .sidebar-desktop { display: block !important; }
-          .mobile-filter-btn { display: none !important; }
+        @keyframes cpEnter {
+          from { opacity: 0; transform: scale(0.72) translateY(28px); }
+          to   { opacity: 1; transform: none; }
+        }
+        @keyframes cpDealIn {
+          from { opacity: 0; transform: translateX(-70px) scale(0.65) rotate(-6deg); }
+          to   { opacity: 1; transform: none; }
+        }
+        @keyframes cpFall {
+          from { opacity: 1; transform: translateY(0) rotate(0deg); }
+          to   { opacity: 0; transform: translateY(120vh) rotate(var(--cp-exit-angle, 10deg)); }
+        }
+        @keyframes cpZoomProduct {
+          from { opacity: 1; transform: scale(1); }
+          to   { opacity: 0; transform: scale(1.2) translateY(-18px); }
+        }
+        @keyframes cpFloat {
+          from { transform: translateY(0px); }
+          to   { transform: translateY(-8px); }
+        }
+        @keyframes cpPulse {
+          from { opacity: 0.4; }
+          to   { opacity: 0.7; }
         }
       `}</style>
-
-      {filterSheetOpen && (
-        <FilterBottomSheet onClose={() => setFilterSheetOpen(false)}>
-          <FilterPanel
-            filters={filters}
-            setFilter={setFilter}
-            clearFilters={() => { clearFilters(); setFilterSheetOpen(false); }}
-            products={categoryProducts}
-          />
-        </FilterBottomSheet>
-      )}
     </main>
   );
 }
