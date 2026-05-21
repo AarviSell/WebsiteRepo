@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
+import logoSrc from '../assets/logo.png';
 
 /* ── Category data ─────────────────────────────────────────── */
 const CATS = [
@@ -689,7 +690,7 @@ export function HomePageScene() {
         </button>
         {/* Center — logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-          <img src={new URL('../assets/logo.png', import.meta.url).href} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
+          <img src={logoSrc} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
           <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
             fontSize: '1.5rem', fontWeight: 700,
