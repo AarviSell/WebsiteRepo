@@ -6,10 +6,10 @@ import { Footer } from '@/components/layout/Footer';
 import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { useProductStore } from '@/store/useProductStore';
 import { HomePageScene } from '@/pages/HomePageScene';
+import { CategoryPageScene } from '@/pages/CategoryPageScene';
 import './App.css';
 
 const SearchResultsPage = lazy(() => import('@/pages/SearchResultsPage').then(m => ({ default: m.SearchResultsPage })));
-const CategoryPage = lazy(() => import('@/pages/CategoryPage').then(m => ({ default: m.CategoryPage })));
 const ProductDetailPage = lazy(() => import('@/pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage })));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
@@ -47,12 +47,6 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** Forces CategoryPage to fully remount when slug changes so isExiting state never carries over */
-function CategoryPageWrapper() {
-  const { slug } = useParams<{ slug: string }>();
-  return <CategoryPage key={slug} />;
-}
-
 export function App() {
   const { theme, loadData } = useProductStore();
 
@@ -74,12 +68,9 @@ export function App() {
         <Route path="/search" element={
           <AppLayout><SearchResultsPage /></AppLayout>
         } />
-        <Route path="/category/:slug" element={
-          <AppLayout><CategoryPageWrapper /></AppLayout>
-        } />
-        <Route path="/category/:slug/:subSlug" element={
-          <AppLayout><CategoryPageWrapper /></AppLayout>
-        } />
+        {/* Category pages — fullscreen Three.js cube scene, no layout wrapper */}
+        <Route path="/category/:slug" element={<CategoryPageScene />} />
+        <Route path="/category/:slug/:subSlug" element={<CategoryPageScene />} />
         <Route path="/product/:id" element={
           <AppLayout><ProductDetailPage /></AppLayout>
         } />

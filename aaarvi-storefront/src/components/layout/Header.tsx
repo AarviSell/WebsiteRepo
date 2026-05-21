@@ -3,31 +3,16 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
+import logoSrc from '@/assets/logo.png';
 
 function AArviLogo() {
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', color: 'var(--color-text)' }}>
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 34 34"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ width: 34, height: 34, flexShrink: 0 }}
-      >
-        <circle cx="17" cy="17" r="16" stroke="url(#lg)" strokeWidth="1.5" />
-        <path d="M17 7 L26 25 H8 Z" fill="url(#lg2)" opacity="0.92" />
-        <path d="M12 19 H22" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round" />
-        <defs>
-          <linearGradient id="lg" x1="0" y1="0" x2="34" y2="34">
-            <stop offset="0%" stopColor="#a855f7" />
-            <stop offset="100%" stopColor="#f0b429" />
-          </linearGradient>
-          <linearGradient id="lg2" x1="17" y1="7" x2="17" y2="25">
-            <stop offset="0%" stopColor="#c084fc" />
-            <stop offset="100%" stopColor="#f0b429" stopOpacity="0.8" />
-          </linearGradient>
-        </defs>
-      </svg>
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '2px', color: 'var(--color-text)' }}>
+      <img
+        src={logoSrc}
+        alt="Arvi logo"
+        style={{ width: 34, height: 34, flexShrink: 0, objectFit: 'contain' }}
+      />
       <span
         style={{
           fontFamily: 'var(--font-display)',
@@ -40,7 +25,7 @@ function AArviLogo() {
           lineHeight: 1,
         }}
       >
-        AArvi
+        Arvi
       </span>
     </span>
   );

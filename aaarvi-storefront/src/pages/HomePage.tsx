@@ -137,7 +137,7 @@ function CategoryCard({
 
         <span className="home-category-card__footer">
           <span className="home-category-card__slug">{cat.slug.replaceAll('-', ' ')}</span>
-          <span className="home-category-card__slug">AArvi Edit</span>
+          <span className="home-category-card__slug">{active ? 'Tap to enter →' : 'AArvi Edit'}</span>
         </span>
       </span>
     </button>
@@ -239,7 +239,7 @@ export function HomePage() {
           </div>
 
           <div className="home-scene">
-            <p className="home-scene__hint">Use arrows or tap a card to browse</p>
+            <p className="home-scene__hint">Tap to focus · tap active card to enter</p>
 
             <button
               type="button"
@@ -282,10 +282,6 @@ export function HomePage() {
               <p className="home-scene__label">{activeVisual.eyebrow}</p>
               <h2 className="home-scene__title">{activeCategory?.label}</h2>
               <p className="home-scene__count">{activeCategory?.count} products staged for this collection</p>
-              <button type="button" className="home-cta" onClick={handleShopCategory} disabled={isZooming}>
-                {isZooming ? 'Opening scene…' : 'Shop This Category'}
-                <ArrowRight size={16} aria-hidden="true" />
-              </button>
             </div>
 
             <div className="scene-dots" aria-label="Choose category scene">

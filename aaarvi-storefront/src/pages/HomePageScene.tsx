@@ -5,11 +5,14 @@ import * as THREE from 'three';
 
 /* ── Category data ─────────────────────────────────────────── */
 const CATS = [
-  { slug: 'home-and-kitchen', label: 'Home & Kitchen',  count: 32, icon: '🏠' },
-  { slug: 'cleaning-product', label: 'Cleaning',         count: 12, icon: '✨' },
-  { slug: 'in-the-spotlight', label: 'In The Spotlight', count: 9,  icon: '⭐' },
-  { slug: 'essentials',       label: 'Essentials',        count: 8,  icon: '🛒' },
-  { slug: 'best-sellers',     label: 'Best Sellers',      count: 4,  icon: '🔥' },
+  { slug: 'standard-collection',  label: 'Standard Collection',  count: 0, icon: '📦' },
+  { slug: 'business-collection',  label: 'Business Collection',  count: 0, icon: '💼' },
+  { slug: 'signature-collection', label: 'Signature Collection', count: 0, icon: '✒️' },
+  { slug: 'preferred-collection', label: 'Preferred Collection', count: 0, icon: '⭐' },
+  { slug: 'premium-collection',   label: 'Premium Collection',   count: 0, icon: '💎' },
+  { slug: 'executive-collection', label: 'Executive Collection', count: 0, icon: '🎩' },
+  { slug: 'chairman-collection',  label: 'Chairman Collection',  count: 0, icon: '🏆' },
+  { slug: 'legacy-collection',    label: 'Legacy Collection',    count: 0, icon: '👑' },
 ];
 
 /* ── Helpers ────────────────────────────────────────────────── */
@@ -149,7 +152,7 @@ function makeGoldTexture(cat: { slug: string; icon: string }) {
   ctx.font = '600 14px "DM Sans", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'bottom';
-  ctx.fillText(cat.slug.toUpperCase(), W / 2, H - 22);
+  ctx.fillText(cat.label.toUpperCase(), W / 2, H - 22);
 
   return new THREE.CanvasTexture(cv);
 }
@@ -214,24 +217,6 @@ function buildCard(cat: { slug: string; icon: string }) {
   back.position.z = -0.046;
   group.add(back);
 
-  const haloGeo = new THREE.PlaneGeometry(3.8, 5.2);
-  const haloMat = new THREE.MeshBasicMaterial({
-    color: 0xf0b429, transparent: true, opacity: 0.07,
-    depthWrite: false, blending: THREE.AdditiveBlending,
-  });
-  const halo = new THREE.Mesh(haloGeo, haloMat);
-  halo.position.z = -0.25;
-  group.add(halo);
-
-  const ringGeo = new THREE.RingGeometry(1.55, 1.9, 64);
-  const ringMat = new THREE.MeshBasicMaterial({
-    color: 0xfde68a, transparent: true, opacity: 0.06,
-    depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
-  });
-  const ring = new THREE.Mesh(ringGeo, ringMat);
-  ring.position.z = -0.05;
-  group.add(ring);
-
   return group;
 }
 
@@ -245,8 +230,9 @@ export function HomePageScene() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(initialIndex);
   const [labelVisible, setLabelVisible] = useState(false);
-  const [ctaVisible, setCtaVisible] = useState(false);
   const [isZoomingOut, setIsZoomingOut] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
 
   const sceneRef = useRef<{
     renderer: THREE.WebGLRenderer;
@@ -255,7 +241,7 @@ export function HomePageScene() {
     cards: THREE.Group[];
     fillLight: THREE.PointLight;
     rimLight: THREE.PointLight;
-    clock: THREE.Clock;
+    clock?: never;
   } | null>(null);
 
   const currentRef = useRef(0);
@@ -307,7 +293,6 @@ export function HomePageScene() {
     setCurrent(idx);
     setTimeout(() => {
       setLabelVisible(true);
-      setCtaVisible(true);
     }, 200);
   }, []);
 
@@ -318,7 +303,6 @@ export function HomePageScene() {
 
     isAnimatingRef.current = true;
     setLabelVisible(false);
-    setCtaVisible(false);
 
     const prev = currentRef.current;
     currentRef.current = next;
@@ -429,21 +413,42 @@ export function HomePageScene() {
 
     /* ── Intro / return animation ── */
     if (returnSlug) {
-      // Returning from category page — zoom out from card face
-      camera.position.z = 0.6;
+      // Returning from category page — card rises from flat to upright, fading in
+      const HALF_H_R     = 2.0;
+      const FALL_ANGLE_R = 0.85;
       const retCard = cards[initialIndex];
-      retCard.scale.setScalar(1.18);
-      const zoomOutStart = performance.now();
-      const ZOOM_OUT_DUR = 650;
-      function zoomOutTick(now: number) {
-        const raw = Math.min((now - zoomOutStart) / ZOOM_OUT_DUR, 1);
-        const t = easeInOutQuart(raw);
-        camera.position.z = lerp(0.6, 6, t);
-        retCard.scale.setScalar(lerp(1.18, 1, t));
-        if (raw < 1) requestAnimationFrame(zoomOutTick);
-        else { camera.position.z = 6; retCard.scale.setScalar(1); showLabel(initialIndex); }
+      // Start at flat/fallen position at natural scale, initially invisible
+      retCard.rotation.x = FALL_ANGLE_R;                                    // positive: bottom was toward camera
+      retCard.position.y = -HALF_H_R + HALF_H_R * Math.cos(FALL_ANGLE_R);
+      retCard.position.z = HALF_H_R * Math.sin(FALL_ANGLE_R);               // positive: was toward camera
+      retCard.scale.setScalar(1);
+      const riseMats = retCard.children
+        .filter(c => c instanceof THREE.Mesh)
+        .map(c => (c as THREE.Mesh).material as THREE.MeshStandardMaterial);
+      riseMats.forEach(m => { m.transparent = true; m.opacity = 0; });
+      isAnimatingRef.current = true;
+      const riseStart = performance.now();
+      const RISE_DUR = 750;
+      function riseTick(now: number) {
+        const raw = Math.min((now - riseStart) / RISE_DUR, 1);
+        const t   = easeOutBack(raw);  // slight overshoot gives a satisfying "settle"
+        const θ   = FALL_ANGLE_R * (1 - t);
+        retCard.rotation.x = θ;
+        retCard.position.y = -HALF_H_R + HALF_H_R * Math.cos(θ);
+        retCard.position.z = HALF_H_R * Math.sin(θ);
+        riseMats.forEach(m => { m.opacity = Math.min(raw / 0.7, 1); }); // fade in over first 70%
+        if (raw < 1) {
+          requestAnimationFrame(riseTick);
+        } else {
+          retCard.rotation.x = 0;
+          retCard.position.set(0, 0, 0);
+          retCard.scale.setScalar(1);
+          riseMats.forEach(m => { m.opacity = 1; m.transparent = false; });
+          isAnimatingRef.current = false;
+          showLabel(initialIndex);
+        }
       }
-      requestAnimationFrame(zoomOutTick);
+      requestAnimationFrame(riseTick);
     } else {
       const c0 = cards[0];
       c0.position.set(0, -7, 0);
@@ -462,12 +467,12 @@ export function HomePageScene() {
       requestAnimationFrame(introTick);
     }
 
-    const clock = new THREE.Clock();
+    const loopStart = performance.now();
     let mouseX = 0, mouseY = 0;
 
     /* ── Animation loop ── */
     renderer.setAnimationLoop(() => {
-      const t = clock.getElapsedTime();
+      const t = (performance.now() - loopStart) / 1000;
       if (!isAnimatingRef.current) {
         const cc = cards[currentRef.current];
         cc.position.y = Math.sin(t * 0.75) * 0.07;
@@ -481,7 +486,7 @@ export function HomePageScene() {
       renderer.render(scene, camera);
     });
 
-    sceneRef.current = { renderer, scene, camera, cards, fillLight, rimLight, clock };
+    sceneRef.current = { renderer, scene, camera, cards, fillLight, rimLight };
 
     /* Show label after intro (normal entry only; return entry calls showLabel at zoom-out end) */
     if (!returnSlug) setTimeout(() => showLabel(initialIndex), 600);
@@ -492,14 +497,30 @@ export function HomePageScene() {
       mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
     }
 
+    /* ── Mouse swipe (desktop drag) ── */
+    let mx = 0, my = 0;
+    function onMouseDown(e: MouseEvent) { mx = e.clientX; my = e.clientY; isDragRef.current = false; }
+    function onMouseUp(e: MouseEvent) {
+      const dx = e.clientX - mx;
+      const dy = e.clientY - my;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        isDragRef.current = true;
+        if (dx < 0) goTo((currentRef.current + 1) % CATS.length);
+        else        goTo((currentRef.current - 1 + CATS.length) % CATS.length);
+      }
+    }
+
     /* ── Touch ── */
-    let tx = 0;
-    function onTouchStart(e: TouchEvent) { tx = e.touches[0].clientX; }
+    let tx = 0, ty = 0;
+    function onTouchStart(e: TouchEvent) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }
     function onTouchEnd(e: TouchEvent) {
       const dx = e.changedTouches[0].clientX - tx;
+      const dy = e.changedTouches[0].clientY - ty;
       if (Math.abs(dx) > 50) {
         if (dx < 0) goTo((currentRef.current + 1) % CATS.length);
         else        goTo((currentRef.current - 1 + CATS.length) % CATS.length);
+      } else if (Math.abs(dx) < 15 && Math.abs(dy) < 15) {
+        zoomNavigateRef.current(CATS[currentRef.current].slug);
       }
     }
 
@@ -512,6 +533,8 @@ export function HomePageScene() {
 
     window.addEventListener('mousemove', onMouseMove);
     window.addEventListener('resize', onResize);
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mouseup', onMouseUp);
     document.addEventListener('touchstart', onTouchStart, { passive: true });
     document.addEventListener('touchend', onTouchEnd);
 
@@ -521,6 +544,8 @@ export function HomePageScene() {
       if (container.contains(renderer.domElement)) container.removeChild(renderer.domElement);
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('resize', onResize);
+      document.removeEventListener('mousedown', onMouseDown);
+      document.removeEventListener('mouseup', onMouseUp);
       document.removeEventListener('touchstart', onTouchStart);
       document.removeEventListener('touchend', onTouchEnd);
       sceneRef.current = null;
@@ -538,41 +563,63 @@ export function HomePageScene() {
     return () => document.removeEventListener('keydown', onKeyDown);
   }, [goPrev, goNext]);
 
-  /* Zoom camera then navigate — shared by all homepage→category links */
+  /* Card fall → navigate to category */
+  /*
+   * Card fall-flat animation:
+   * The active card pivots around its BOTTOM EDGE (y = -HALF_H).
+   * As rotation.x → FALL_ANGLE (~49°) the card tips backward away from the camera,
+   * and its material opacity fades to 0 so it dissolves into the floor.
+   */
+  const HALF_H     = 2.0;   // half of card height (4.0 units tall)
+  const FALL_ANGLE = 0.85;  // radians ≈ 49° – card tips backward away from camera
+
   function handleZoomNavigate(targetSlug: string) {
     if (!sceneRef.current || isZoomingOut) return;
-    const { camera, cards } = sceneRef.current;
+    const { cards } = sceneRef.current;
 
     setIsZoomingOut(true);
     setLabelVisible(false);
-    setCtaVisible(false);
     isAnimatingRef.current = true;
 
-    const isSameCat = targetSlug === CATS[currentRef.current].slug;
     const activeCard = cards[currentRef.current];
-    const startZ = camera.position.z;
-    // Same-category: zoom all the way into the face; different: just push forward
-    const targetZ = isSameCat ? 0.6 : 2.5;
-    const ZOOM_DUR = isSameCat ? 620 : 380;
-    const zoomStart = performance.now();
+    const sideStartY = cards.map(c => c.position.y);
+    const FALL_DUR   = 650;
+    const fallStart  = performance.now();
 
-    function zoomTick(now: number) {
-      const raw = Math.min((now - zoomStart) / ZOOM_DUR, 1);
-      const t = easeInQuart(raw);
-      camera.position.z = lerp(startZ, targetZ, t);
-      if (isSameCat) activeCard.scale.setScalar(lerp(1, 1.18, t));
+    function fallTick(now: number) {
+      const raw = Math.min((now - fallStart) / FALL_DUR, 1);
+      const t   = easeInQuart(raw);
+      const θ   = FALL_ANGLE * t;
+
+      // Pivot around bottom edge: bottom tips TOWARD camera (falls forward, becomes floor)
+      activeCard.rotation.x = θ;
+      activeCard.position.y = -HALF_H + HALF_H * Math.cos(θ);
+      activeCard.position.z = HALF_H * Math.sin(θ);            // positive = moves toward camera
+
+      // Side cards fall away and vanish
+      if (raw > 0.05) {
+        const sideT = Math.min((raw - 0.05) / 0.95, 1);
+        const st = easeInQuart(sideT);
+        cards.forEach((card, i) => {
+          if (i !== currentRef.current) {
+            card.position.y = sideStartY[i] - 14 * st;
+            card.scale.setScalar(Math.max(0.01, 0.82 - st * 0.82));
+          }
+        });
+      }
+
       if (raw < 1) {
-        requestAnimationFrame(zoomTick);
+        requestAnimationFrame(fallTick);
       } else {
         navigate(`/category/${targetSlug}`, { state: { dealIn: true } });
       }
     }
-    requestAnimationFrame(zoomTick);
+    requestAnimationFrame(fallTick);
   }
 
-  function handleShop() {
-    handleZoomNavigate(CATS[currentRef.current].slug);
-  }
+  const zoomNavigateRef = useRef(handleZoomNavigate);
+  zoomNavigateRef.current = handleZoomNavigate;
+  const isDragRef = useRef(false);
 
   return (
     <div
@@ -604,8 +651,24 @@ export function HomePageScene() {
         animation: 'hpDrift1 9s ease-in-out infinite alternate',
       }} />
 
-      {/* Canvas container */}
-      <div ref={containerRef} style={{ position: 'fixed', inset: 0 }} />
+      {/* Canvas container — clicking the active card navigates to its category */}
+      <div
+        ref={containerRef}
+        style={{ position: 'fixed', inset: 0 }}
+        onClick={(e) => {
+          if (isDragRef.current) { isDragRef.current = false; return; }
+          if (!sceneRef.current || isAnimatingRef.current || isZoomingOut) return;
+          const { camera, cards } = sceneRef.current;
+          const x = (e.clientX / window.innerWidth) * 2 - 1;
+          const y = -(e.clientY / window.innerHeight) * 2 + 1;
+          const raycaster = new THREE.Raycaster();
+          raycaster.setFromCamera(new THREE.Vector2(x, y), camera);
+          const activeCard = cards[currentRef.current];
+          if (raycaster.intersectObject(activeCard, true).length > 0) {
+            handleZoomNavigate(CATS[currentRef.current].slug);
+          }
+        }}
+      />
 
       {/* Header */}
       <header style={{
@@ -614,32 +677,26 @@ export function HomePageScene() {
         padding: '1.25rem 2.5rem',
         background: 'linear-gradient(to bottom, rgba(13,4,20,0.92) 0%, transparent 100%)',
       }}>
-        {/* Left slot — empty */}
-        <div />
+        {/* Left slot — hamburger */}
+        <button
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', padding: '0.4rem', justifySelf: 'start', display: 'flex', flexDirection: 'column', gap: '4px' }}
+        >
+          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
+          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
+          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
+        </button>
         {/* Center — logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-label="Aarvi">
-            <circle cx="17" cy="17" r="16" stroke="url(#hpLg)" strokeWidth="1.5" />
-            <path d="M17 7 L26 25 H8 Z" fill="url(#hpLg2)" opacity="0.92" />
-            <path d="M12 19 H22" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round" />
-            <defs>
-              <linearGradient id="hpLg" x1="0" y1="0" x2="34" y2="34">
-                <stop offset="0%" stopColor="#a855f7" />
-                <stop offset="100%" stopColor="#f0b429" />
-              </linearGradient>
-              <linearGradient id="hpLg2" x1="17" y1="7" x2="17" y2="25">
-                <stop offset="0%" stopColor="#c084fc" />
-                <stop offset="100%" stopColor="#f0b429" stopOpacity="0.8" />
-              </linearGradient>
-            </defs>
-          </svg>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+          <img src={new URL('../assets/logo.png', import.meta.url).href} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
           <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
             fontSize: '1.5rem', fontWeight: 700,
             background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
           }}>
-            AArvi
+            Arvi
           </span>
         </div>
         {/* Right — nav */}
@@ -711,7 +768,7 @@ export function HomePageScene() {
         onClick={goPrev}
         aria-label="Previous category"
         style={{
-          position: 'fixed', top: '50%', left: '2rem',
+          position: 'fixed', top: '50%', left: 'max(0.75rem, calc(50% - 350px))',
           transform: 'translateY(-50%)',
           zIndex: 10, width: 52, height: 52, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
@@ -742,7 +799,7 @@ export function HomePageScene() {
         onClick={goNext}
         aria-label="Next category"
         style={{
-          position: 'fixed', top: '50%', right: '2rem',
+          position: 'fixed', top: '50%', right: 'max(0.75rem, calc(50% - 350px))',
           transform: 'translateY(-50%)',
           zIndex: 10, width: 52, height: 52, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
@@ -788,40 +845,74 @@ export function HomePageScene() {
         ))}
       </div>
 
-      {/* Shop CTA */}
-      <div style={{
-        position: 'fixed', bottom: '4.5rem', left: '50%', transform: 'translateX(-50%)',
-        zIndex: 10,
-        opacity: ctaVisible ? 1 : 0,
-        pointerEvents: ctaVisible ? 'auto' : 'none',
-        transition: 'opacity 400ms ease 250ms',
+
+
+      {/* ── Menu backdrop ── */}
+      {menuOpen && (
+        <div onClick={() => setMenuOpen(false)} style={{ position: 'fixed', inset: 0, zIndex: 98, background: 'rgba(0,0,0,0.45)' }} />
+      )}
+
+      {/* ── Filter / Browse panel ── */}
+      <aside style={{
+        position: 'fixed', top: 0, left: 0, height: '100dvh', width: 290,
+        background: 'rgba(10,3,18,0.97)', backdropFilter: 'blur(24px)',
+        borderRight: '1px solid rgba(168,85,247,0.2)',
+        zIndex: 100,
+        transform: menuOpen ? 'translateX(0)' : 'translateX(-100%)',
+        transition: 'transform 320ms cubic-bezier(0.4,0,0.2,1)',
+        display: 'flex', flexDirection: 'column',
+        padding: '1.5rem', overflowY: 'auto',
+        fontFamily: "'DM Sans', system-ui, sans-serif", color: '#faf5ff',
       }}>
-        <button
-          onClick={handleShop}
-          style={{
-            padding: '0.7rem 2.2rem', borderRadius: 9999, border: 'none',
-            fontFamily: "'DM Sans', system-ui, sans-serif",
-            fontSize: '0.875rem', fontWeight: 600,
-            letterSpacing: '0.05em', color: '#1a0a00',
-            background: 'linear-gradient(135deg, #fde68a, #f0b429)',
-            cursor: 'pointer',
-            boxShadow: '0 4px 20px rgba(240,180,41,0.4)',
-            transition: 'transform 180ms ease, box-shadow 180ms ease',
-          }}
-          onMouseEnter={e => {
-            const b = e.currentTarget as HTMLButtonElement;
-            b.style.transform = 'scale(1.06)';
-            b.style.boxShadow = '0 8px 30px rgba(240,180,41,0.55)';
-          }}
-          onMouseLeave={e => {
-            const b = e.currentTarget as HTMLButtonElement;
-            b.style.transform = 'scale(1)';
-            b.style.boxShadow = '0 4px 20px rgba(240,180,41,0.4)';
-          }}
-        >
-          Shop This Category
-        </button>
-      </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+          <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>Browse</span>
+          <button onClick={() => setMenuOpen(false)} style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', opacity: 0.6, padding: '0.25rem' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+          </button>
+        </div>
+        <div style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.6rem' }}>Collections</div>
+        {CATS.map(cat => (
+          <button
+            key={cat.slug}
+            onClick={() => { navigate(`/category/${cat.slug}`); setMenuOpen(false); }}
+            style={{
+              display: 'flex', alignItems: 'center', gap: '0.6rem',
+              background: CATS[current]?.slug === cat.slug ? 'rgba(168,85,247,0.2)' : 'transparent',
+              border: 'none', color: '#faf5ff',
+              padding: '0.6rem 0.75rem', borderRadius: '0.5rem',
+              cursor: 'pointer', width: '100%', textAlign: 'left',
+              fontSize: '0.88rem', fontWeight: CATS[current]?.slug === cat.slug ? 600 : 400,
+              marginBottom: '0.15rem', transition: 'background 150ms',
+            }}
+            onMouseEnter={e => { if (CATS[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(168,85,247,0.1)'; }}
+            onMouseLeave={e => { if (CATS[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
+          >
+            <span style={{ fontSize: '1rem' }}>{cat.icon}</span>
+            <span>{cat.label}</span>
+          </button>
+        ))}
+        <div style={{ marginTop: '2rem' }}>
+          <div style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.6rem' }}>Price Range</div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem', color: 'rgba(250,245,255,0.65)', marginBottom: '0.75rem' }}>
+            <span>₹{priceRange[0].toLocaleString()}</span>
+            <span>₹{priceRange[1].toLocaleString()}</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <div>
+              <div style={{ fontSize: '0.7rem', color: 'rgba(250,245,255,0.45)', marginBottom: '0.3rem' }}>Min</div>
+              <input type="range" min={0} max={10000} step={100} value={priceRange[0]}
+                onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - 100), priceRange[1]])}
+                style={{ accentColor: '#a855f7', width: '100%' }} />
+            </div>
+            <div>
+              <div style={{ fontSize: '0.7rem', color: 'rgba(250,245,255,0.45)', marginBottom: '0.3rem' }}>Max</div>
+              <input type="range" min={0} max={10000} step={100} value={priceRange[1]}
+                onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + 100)])}
+                style={{ accentColor: '#a855f7', width: '100%' }} />
+            </div>
+          </div>
+        </div>
+      </aside>
 
       {/* Orb keyframes injected via style tag */}
       <style>{`
