@@ -1,1 +1,1960 @@
-[]
+[
+  {
+    "id": "aarvi-executive-collection-1",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-2",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-3",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-4",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-5",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-6",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-7",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-8",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-9",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-10",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-11",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-12",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-13",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-14",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-15",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-16",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-17",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-18",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-19",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-20",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-21",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-22",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-23",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/24.jpg",
+        "filename": "24.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-24",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-25",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-26",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-27",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-28",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-29",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/30.jpg",
+        "filename": "30.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-30",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-31",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-32",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-33",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-34",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-35",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-36",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-37",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-38",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-39",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-40",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-41",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-42",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-43",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-44",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-45",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-46",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-47",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-48",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-49",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-50",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-51",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-52",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-53",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-54",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-55",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-56",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-57",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/58.jpg",
+        "filename": "58.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-58",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-59",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-60",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-61",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-62",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-63",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-64",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-65",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/66.jpg",
+        "filename": "66.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-66",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/67.jpg",
+        "filename": "67.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-67",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/68.jpg",
+        "filename": "68.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-68",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/69.jpg",
+        "filename": "69.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-69",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/70.jpg",
+        "filename": "70.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-70",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/71.jpg",
+        "filename": "71.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-71",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/72.jpg",
+        "filename": "72.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-72",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/73.jpg",
+        "filename": "73.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-73",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/74.jpg",
+        "filename": "74.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-74",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/75.jpg",
+        "filename": "75.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-75",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/76.jpg",
+        "filename": "76.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-76",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/77.jpg",
+        "filename": "77.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-77",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/78.jpg",
+        "filename": "78.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-78",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/79.jpg",
+        "filename": "79.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-79",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/80.jpg",
+        "filename": "80.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-80",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/81.jpg",
+        "filename": "81.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-81",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/82.jpg",
+        "filename": "82.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-82",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/83.jpg",
+        "filename": "83.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-83",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/84.jpg",
+        "filename": "84.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-84",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/85.jpg",
+        "filename": "85.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-85",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/86.jpg",
+        "filename": "86.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-86",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/87.jpg",
+        "filename": "87.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-87",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/88.jpg",
+        "filename": "88.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-88",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/89.jpg",
+        "filename": "89.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-executive-collection-89",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "executive-collection",
+    "category_label": "Executive Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/premium-400-600/90.jpg",
+        "filename": "90.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  }
+]

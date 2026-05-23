@@ -44,10 +44,90 @@ interface SceneState {
   floorMesh: THREE.InstancedMesh;
   floorData: Array<{ x: number; z: number; speed: number; offset: number; amplitude: number }>;
   cubes: THREE.Mesh[];
+  labels: THREE.Sprite[];
   entryDone: { value: boolean };
   isRotating: { value: boolean };
   isExiting: { value: boolean };
   exitStart: { value: number };
+}
+
+/* ── Label sprite factory: golden plaque with black text ───── */
+/* Label sits just above the cube. Width derives from the horizontal cube
+   spacing so the plaque always fits the column above its block and squeezes
+   automatically if cubes move closer together. The background canvas itself
+   does NOT redraw on resize — only the sprite's X scale tracks spacing. */
+const LABEL_OFFSET_Y     = CUBE_SIZE / 2 + 0.18;
+const LABEL_OFFSET_Z     = CUBE_SIZE / 2 + 0.05; // sit just in front of front face
+const LABEL_MAX_WIDTH    = CUBE_SIZE;        // upper bound = cube footprint
+const LABEL_HEIGHT       = 0.32;             // fixed visual height
+const LABEL_CANVAS_W     = 512;
+const LABEL_CANVAS_H     = Math.round(LABEL_CANVAS_W * (LABEL_HEIGHT / LABEL_MAX_WIDTH));
+const LABEL_PADDING_PX   = 30;
+
+/** Truncate `text` with an ellipsis so it fits within `maxWidth` pixels under
+ *  the current ctx.font. Returns the original string if it already fits. */
+function fitTextWithEllipsis(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string {
+  if (ctx.measureText(text).width <= maxWidth) return text;
+  const ell = '…';
+  let lo = 0, hi = text.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi) / 2);
+    if (ctx.measureText(text.slice(0, mid).trimEnd() + ell).width <= maxWidth) lo = mid;
+    else hi = mid - 1;
+  }
+  return text.slice(0, lo).trimEnd() + ell;
+}
+
+function makeLabelSprite(text: string): THREE.Sprite {
+  const canvas = document.createElement('canvas');
+  canvas.width  = LABEL_CANVAS_W;
+  canvas.height = LABEL_CANVAS_H;
+  const ctx = canvas.getContext('2d')!;
+
+  // Golden background with subtle vertical gradient
+  const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  grad.addColorStop(0, '#ffe27a');
+  grad.addColorStop(0.5, '#ffd54a');
+  grad.addColorStop(1, '#c9962a');
+  ctx.fillStyle = grad;
+  // Rounded rect
+  const r = Math.min(20, canvas.height / 2);
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  ctx.lineTo(canvas.width - r, 0);
+  ctx.quadraticCurveTo(canvas.width, 0, canvas.width, r);
+  ctx.lineTo(canvas.width, canvas.height - r);
+  ctx.quadraticCurveTo(canvas.width, canvas.height, canvas.width - r, canvas.height);
+  ctx.lineTo(r, canvas.height);
+  ctx.quadraticCurveTo(0, canvas.height, 0, canvas.height - r);
+  ctx.lineTo(0, r);
+  ctx.quadraticCurveTo(0, 0, r, 0);
+  ctx.closePath();
+  ctx.fill();
+
+  // Dark gold border
+  ctx.strokeStyle = '#5a3d05';
+  ctx.lineWidth   = 4;
+  ctx.stroke();
+
+  // Black text — truncate with ellipsis if it overflows
+  ctx.fillStyle = '#0a0a0a';
+  const fontPx = Math.floor(canvas.height * 0.6);
+  ctx.font = `bold ${fontPx}px "Segoe UI", system-ui, sans-serif`;
+  ctx.textAlign    = 'center';
+  ctx.textBaseline = 'middle';
+  const display = fitTextWithEllipsis(ctx, text, canvas.width - LABEL_PADDING_PX * 2);
+  ctx.fillText(display, canvas.width / 2, canvas.height / 2 + 2);
+
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 4;
+
+  const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+  const sprite = new THREE.Sprite(mat);
+  // Initial scale uses max width; the animation loop may shrink X to fit spacing.
+  sprite.scale.set(LABEL_MAX_WIDTH, LABEL_HEIGHT, 1);
+  return sprite;
 }
 
 /* ── Gold material factory ──────────────────────────────────── */
@@ -64,6 +144,19 @@ function goldMat() {
 /* Product face uses MeshBasicMaterial so it is completely unaffected by scene lights */
 function productMat(tex: THREE.Texture) {
   return new THREE.MeshBasicMaterial({ map: tex });
+}
+
+/* Parallax: amplitude of UV drift per axis. Must be <= (1 - PARALLAX_REPEAT) / 2
+   so the texture never samples past the cropped image edge. */
+const PARALLAX_REPEAT    = 0.92;
+const PARALLAX_AMPLITUDE = (1 - PARALLAX_REPEAT) / 2;  // 0.04
+
+interface ParallaxEntry {
+  tex: THREE.Texture;
+  phaseX: number;
+  phaseY: number;
+  speedX: number;
+  speedY: number;
 }
 
 /* ── Collection catalogue ───────────────────────────────────────── */
@@ -89,6 +182,7 @@ export function CategoryPageScene() {
   const productsRef    = useRef<Product[]>([]);
   const pageRef        = useRef(0);
   const texCache       = useRef(new Map<string, THREE.Texture>());
+  const parallaxRef    = useRef<ParallaxEntry[]>([]);
   const isAnimatingRef = useRef(false);
   /** Records clientX at last pointerdown so click handler can reject drag events */
   const mouseDragStartX = useRef(-1);
@@ -141,9 +235,17 @@ export function CategoryPageScene() {
     floorLight.position.set(0, 8, -15);
     scene.add(floorLight);
     /* Single warm point light above the table – replaces the 15 per-cube lights */
-    const tableLight = new THREE.PointLight(0xffd977, 4.0, 40);
-    tableLight.position.set(0, 14, 5);
+    const tableLight = new THREE.PointLight(0xffd977, 8.0, 60);
+    tableLight.position.set(0, 8, -15);
     scene.add(tableLight);
+
+    /* Hemisphere light positioned behind the center cube, shining forward onto
+       the floating cubes from behind. The light's "up" axis is set from its
+       position vector, so placing it at -Z makes the warm sky tint hit the back
+       faces of the cube grid while a cooler ground tint fills the front. */
+    const backHemi = new THREE.HemisphereLight(0xffd28a, 0x2a1240, 2.1);
+    backHemi.position.set(0, 5.2, -8);
+    scene.add(backHemi);
 
     /* ── Floor grid (70×70 instanced cubes) ── */
     const floorGeo = new THREE.BoxGeometry(1, 1, 1);
@@ -180,6 +282,7 @@ export function CategoryPageScene() {
     const cubeGroup = new THREE.Group();
     scene.add(cubeGroup);
     const cubes: THREE.Mesh[] = [];
+    const labels: THREE.Sprite[] = [];
 
     let cubeIdx = 0;
     for (let x = 0; x < TABLE_W; x++) {
@@ -202,6 +305,13 @@ export function CategoryPageScene() {
 
         cubeGroup.add(mesh);
         cubes.push(mesh);
+
+        // Label sprite above the cube — tracks cube Y in animation loop.
+        const label = makeLabelSprite(`Product ${cubeIdx + 1}`);
+        label.position.set(posX, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
+        scene.add(label);
+        labels.push(label);
+
         cubeIdx++;
       }
     }
@@ -267,6 +377,19 @@ export function CategoryPageScene() {
         }
       });
 
+      /* Labels follow their cube's Y position (entry, float, and exit) */
+      for (let li = 0; li < labels.length; li++) {
+        labels[li].position.y = cubes[li].position.y + LABEL_OFFSET_Y;
+      }
+
+      /* Parallax: slow per-texture UV drift on the visible product faces */
+      const parallax = parallaxRef.current;
+      for (let pi = 0; pi < parallax.length; pi++) {
+        const p = parallax[pi];
+        p.tex.offset.x = Math.sin(time * p.speedX + p.phaseX) * PARALLAX_AMPLITUDE;
+        p.tex.offset.y = Math.cos(time * p.speedY + p.phaseY) * PARALLAX_AMPLITUDE;
+      }
+
       /* Exit animation: cubes drop below floor */
       if (isExiting.value) {
         const exitElapsed = now - exitStart.value;
@@ -280,7 +403,7 @@ export function CategoryPageScene() {
       renderer.render(scene, camera);
     });
 
-    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, entryDone, isRotating, isExiting, exitStart };
+    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart };
     setSceneReady(true);
 
     /* Resize */
@@ -313,6 +436,9 @@ export function CategoryPageScene() {
     const faceIdx = PAGE_FACE_IDX[pageIdx];
     const loader  = new THREE.TextureLoader();
 
+    // Reset active parallax list for the new page; entries get re-pushed below.
+    parallaxRef.current = [];
+
     // First pass: reset ALL non-current page faces back to plain gold on every cube
     state.cubes.forEach(cube => {
       const mats = (cube.material as THREE.Material[]).slice();
@@ -335,19 +461,44 @@ export function CategoryPageScene() {
 
       const apply = (tex: THREE.Texture) => {
         tex.colorSpace = THREE.SRGBColorSpace;
+        tex.center.set(0.5, 0.5);
+        tex.repeat.set(PARALLAX_REPEAT, PARALLAX_REPEAT);
+        tex.offset.set(0, 0);
         const mats = (cube.material as THREE.Material[]).slice();
         mats[faceIdx] = productMat(tex);
         cube.material = mats;
+        parallaxRef.current.push({
+          tex,
+          phaseX: Math.random() * Math.PI * 2,
+          phaseY: Math.random() * Math.PI * 2,
+          speedX: 0.55 + Math.random() * 0.35,
+          speedY: 0.50 + Math.random() * 0.35,
+        });
       };
 
       if (texCache.current.has(url)) {
         apply(texCache.current.get(url)!);
         return;
       }
-      loader.load(url, tex => {
-        texCache.current.set(url, tex);
-        apply(tex);
-      });
+      loader.load(
+        url,
+        tex => {
+          // Guard: skip textures that loaded but have no decodable image data —
+          // applying them produces a solid-black face.
+          const img = tex.image as HTMLImageElement | ImageBitmap | undefined;
+          const w = (img as HTMLImageElement)?.naturalWidth ?? (img as ImageBitmap)?.width ?? 0;
+          const h = (img as HTMLImageElement)?.naturalHeight ?? (img as ImageBitmap)?.height ?? 0;
+          if (!img || w === 0 || h === 0) {
+            tex.dispose();
+            return;
+          }
+          texCache.current.set(url, tex);
+          apply(tex);
+        },
+        undefined,
+        // onError: leave the face as the default gold material.
+        () => { /* swallow — face stays gold */ },
+      );
     });
   }, []);
 

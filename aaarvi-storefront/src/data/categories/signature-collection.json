@@ -1,1 +1,2884 @@
-[]
+[
+  {
+    "id": "aarvi-signature-collection-1",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-2",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-3",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-4",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-5",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-6",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-7",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-8",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-9",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-10",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-11",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-12",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-13",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-14",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-15",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-16",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/16.jpg",
+        "filename": "16.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-17",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-18",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-19",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-20",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-21",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-22",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-23",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-24",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-25",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-26",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-27",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-28",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-29",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/30.jpg",
+        "filename": "30.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-30",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-31",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-32",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-33",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-34",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-35",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-36",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-37",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-38",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-39",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-40",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-41",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-42",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-43",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-44",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-45",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-46",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-47",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-48",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-49",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-50",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-51",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-52",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-53",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-54",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-55",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-56",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-57",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/58.jpg",
+        "filename": "58.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-58",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-59",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-60",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-61",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-62",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-63",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-64",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-65",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/66.jpg",
+        "filename": "66.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-66",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/67.jpg",
+        "filename": "67.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-67",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/68.jpg",
+        "filename": "68.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-68",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/69.jpg",
+        "filename": "69.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-69",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/70.jpg",
+        "filename": "70.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-70",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/71.jpg",
+        "filename": "71.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-71",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/72.jpg",
+        "filename": "72.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-72",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/73.jpg",
+        "filename": "73.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-73",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/74.jpg",
+        "filename": "74.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-74",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/75.jpg",
+        "filename": "75.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-75",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/76.jpg",
+        "filename": "76.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-76",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/77.jpg",
+        "filename": "77.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-77",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/78.jpg",
+        "filename": "78.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-78",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/79.jpg",
+        "filename": "79.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-79",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/80.jpg",
+        "filename": "80.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-80",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/81.jpg",
+        "filename": "81.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-81",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/82.jpg",
+        "filename": "82.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-82",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/83.jpg",
+        "filename": "83.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-83",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/84.jpg",
+        "filename": "84.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-84",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/85.jpg",
+        "filename": "85.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-85",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/86.jpg",
+        "filename": "86.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-86",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/87.jpg",
+        "filename": "87.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-87",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/88.jpg",
+        "filename": "88.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-88",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/89.jpg",
+        "filename": "89.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-89",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/90.jpg",
+        "filename": "90.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-90",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/91.jpg",
+        "filename": "91.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-91",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/92.jpg",
+        "filename": "92.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-92",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/93.jpg",
+        "filename": "93.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-93",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/94.jpg",
+        "filename": "94.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-94",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/95.jpg",
+        "filename": "95.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-95",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/96.jpg",
+        "filename": "96.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-96",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/97.jpg",
+        "filename": "97.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-97",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/98.jpg",
+        "filename": "98.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-98",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/99.jpg",
+        "filename": "99.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-99",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/100.jpg",
+        "filename": "100.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-100",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/101.jpg",
+        "filename": "101.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-101",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/102.jpg",
+        "filename": "102.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-102",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/103.jpg",
+        "filename": "103.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-103",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/104.jpg",
+        "filename": "104.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-104",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/105.jpg",
+        "filename": "105.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-105",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/106.jpg",
+        "filename": "106.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-106",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/107.jpg",
+        "filename": "107.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-107",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/108.jpg",
+        "filename": "108.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-108",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/109.jpg",
+        "filename": "109.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-109",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/110.jpg",
+        "filename": "110.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-110",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/111.jpg",
+        "filename": "111.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-111",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/112.jpg",
+        "filename": "112.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-112",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/113.jpg",
+        "filename": "113.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-113",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/114.jpg",
+        "filename": "114.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-114",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/115.jpg",
+        "filename": "115.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-115",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/116.jpg",
+        "filename": "116.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-116",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/117.jpg",
+        "filename": "117.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-117",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/118.jpg",
+        "filename": "118.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-118",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/119.jpg",
+        "filename": "119.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-119",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/120.jpg",
+        "filename": "120.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-120",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/121.jpg",
+        "filename": "121.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-121",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/122.jpg",
+        "filename": "122.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-122",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/123.jpg",
+        "filename": "123.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-123",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/124.jpg",
+        "filename": "124.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-124",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/125.jpg",
+        "filename": "125.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-125",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/126.jpg",
+        "filename": "126.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-126",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/127.jpg",
+        "filename": "127.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-127",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/128.jpg",
+        "filename": "128.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-128",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/129.jpg",
+        "filename": "129.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-129",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/130.jpg",
+        "filename": "130.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-130",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/131.jpg",
+        "filename": "131.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-signature-collection-131",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "signature-collection",
+    "category_label": "Signature Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/super-affordable-100-200/132.jpg",
+        "filename": "132.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  }
+]

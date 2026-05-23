@@ -1,1 +1,1498 @@
-[]
+[
+  {
+    "id": "aarvi-business-collection-1",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-2",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-3",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-4",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-5",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-6",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-7",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-8",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-9",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-10",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-11",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-12",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-13",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-14",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-15",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-16",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/16.jpg",
+        "filename": "16.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-17",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-18",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-19",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-20",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-21",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-22",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-23",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-24",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/24.jpg",
+        "filename": "24.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-25",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-26",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-27",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-28",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-29",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-30",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/30.jpg",
+        "filename": "30.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-31",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-32",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-33",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-34",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-35",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-36",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-37",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-38",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-39",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-40",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-41",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-42",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-43",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-44",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-45",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-46",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-47",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-48",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-49",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-50",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-51",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-52",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-53",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-54",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-55",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-56",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-57",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-58",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-59",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-60",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-61",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-62",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-63",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-64",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-65",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/66.jpg",
+        "filename": "66.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-66",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/67.jpg",
+        "filename": "67.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-67",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/68.jpg",
+        "filename": "68.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-business-collection-68",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "business-collection",
+    "category_label": "Business Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/economical-50-100/69.jpg",
+        "filename": "69.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  }
+]

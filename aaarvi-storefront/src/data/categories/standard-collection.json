@@ -1,1 +1,1410 @@
-[]
+[
+  {
+    "id": "aarvi-standard-collection-1",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-2",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-3",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-4",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-5",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-6",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-7",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-8",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-9",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-10",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-11",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-12",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-13",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-14",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-15",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-16",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-17",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-18",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-19",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-20",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-21",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-22",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-23",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/24.jpg",
+        "filename": "24.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-24",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-25",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-26",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-27",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-28",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-29",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/30.jpg",
+        "filename": "30.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-30",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-31",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-32",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-33",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-34",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-35",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-36",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-37",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-38",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-39",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-40",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-41",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-42",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-43",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-44",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-45",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-46",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-47",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-48",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-49",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-50",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-51",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-52",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-53",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-54",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-55",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-56",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-57",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/58.jpg",
+        "filename": "58.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-58",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-59",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-60",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-61",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-62",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-63",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-standard-collection-64",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "standard-collection",
+    "category_label": "Standard Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/low-range-20-50/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  }
+]

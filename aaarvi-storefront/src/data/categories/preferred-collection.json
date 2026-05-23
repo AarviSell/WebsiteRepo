@@ -1,1 +1,2488 @@
-[]
+[
+  {
+    "id": "aarvi-preferred-collection-1",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-2",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-3",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-4",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-5",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-6",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-7",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-8",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-9",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-10",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-11",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-12",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-13",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-14",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-15",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-16",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/16.jpg",
+        "filename": "16.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-17",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-18",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-19",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-20",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-21",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-22",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-23",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-24",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/24.jpg",
+        "filename": "24.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-25",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-26",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-27",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-28",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-29",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-30",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-31",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-32",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-33",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-34",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-35",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-36",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-37",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-38",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-39",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-40",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-41",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-42",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-43",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-44",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-45",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-46",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-47",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-48",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-49",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-50",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-51",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-52",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-53",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-54",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-55",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-56",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-57",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/58.jpg",
+        "filename": "58.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-58",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-59",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-60",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-61",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-62",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-63",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-64",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-65",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/66.jpg",
+        "filename": "66.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-66",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/67.jpg",
+        "filename": "67.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-67",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/68.jpg",
+        "filename": "68.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-68",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/69.jpg",
+        "filename": "69.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-69",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/70.jpg",
+        "filename": "70.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-70",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/71.jpg",
+        "filename": "71.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-71",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/72.jpg",
+        "filename": "72.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-72",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/73.jpg",
+        "filename": "73.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-73",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/74.jpg",
+        "filename": "74.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-74",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/75.jpg",
+        "filename": "75.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-75",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/76.jpg",
+        "filename": "76.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-76",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/77.jpg",
+        "filename": "77.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-77",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/78.jpg",
+        "filename": "78.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-78",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/79.jpg",
+        "filename": "79.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-79",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/80.jpg",
+        "filename": "80.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-80",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/81.jpg",
+        "filename": "81.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-81",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/82.jpg",
+        "filename": "82.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-82",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/83.jpg",
+        "filename": "83.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-83",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/84.jpg",
+        "filename": "84.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-84",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/85.jpg",
+        "filename": "85.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-85",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/86.jpg",
+        "filename": "86.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-86",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/87.jpg",
+        "filename": "87.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-87",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/88.jpg",
+        "filename": "88.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-88",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/89.jpg",
+        "filename": "89.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-89",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/90.jpg",
+        "filename": "90.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-90",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/91.jpg",
+        "filename": "91.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-91",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/92.jpg",
+        "filename": "92.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-92",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/93.jpg",
+        "filename": "93.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-93",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/94.jpg",
+        "filename": "94.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-94",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/95.jpg",
+        "filename": "95.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-95",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/96.jpg",
+        "filename": "96.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-96",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/97.jpg",
+        "filename": "97.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-97",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/98.jpg",
+        "filename": "98.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-98",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/99.jpg",
+        "filename": "99.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-99",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/100.jpg",
+        "filename": "100.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-100",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/101.jpg",
+        "filename": "101.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-101",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/102.jpg",
+        "filename": "102.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-102",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/103.jpg",
+        "filename": "103.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-103",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/104.jpg",
+        "filename": "104.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-104",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/105.jpg",
+        "filename": "105.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-105",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/106.jpg",
+        "filename": "106.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-106",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/107.jpg",
+        "filename": "107.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-107",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/108.jpg",
+        "filename": "108.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-108",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/109.jpg",
+        "filename": "109.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-109",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/110.jpg",
+        "filename": "110.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-110",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/111.jpg",
+        "filename": "111.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-111",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/112.jpg",
+        "filename": "112.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-112",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/113.jpg",
+        "filename": "113.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  },
+  {
+    "id": "aarvi-preferred-collection-113",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/affordable-200-300/114.jpg",
+        "filename": "114.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": ""
+  }
+]
