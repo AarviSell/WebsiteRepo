@@ -6,8 +6,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const SCRAPER_OUTPUT = process.env.SCRAPER_OUTPUT_PATH ?? path.resolve(__dirname, '../../output');
+const SCRAPER_OUTPUT = process.env.SCRAPER_OUTPUT_PATH ?? path.resolve(__dirname, '../../aArvi-scraper/output');
 const SRC_DATA = path.resolve(__dirname, '../src/data');
+const CATEGORY_DATA = path.join(SRC_DATA, 'categories');
 const PUBLIC_DATA = path.resolve(__dirname, '../public/data');
 
 interface ScrapedImage {
@@ -37,6 +38,11 @@ interface ScrapedProduct {
   description?: string;
   specifications: Record<string, string>;
   images: ScrapedImage[];
+  product_code?: string;
+  catalogue_pdf?: string;
+  catalogue_page?: number;
+  catalogue_image_index?: number;
+  catalogue_page_path?: string;
   seller_name?: string;
   seller_location?: string;
   scraped_at: string;
@@ -71,11 +77,55 @@ function findProductJsonFiles(dir: string): string[] {
   return results;
 }
 
+function findExistingCategoryProductFiles(): string[] {
+  if (!fs.existsSync(CATEGORY_DATA)) return [];
+  return fs
+    .readdirSync(CATEGORY_DATA, { withFileTypes: true })
+    .filter(entry => entry.isFile() && entry.name.endsWith('.json'))
+    .map(entry => path.join(CATEGORY_DATA, entry.name));
+}
+
+function readExistingCategories(): CategoryNode[] {
+  const file = path.join(SRC_DATA, 'categories.json');
+  if (!fs.existsSync(file)) return [];
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    return Array.isArray(parsed) ? parsed as CategoryNode[] : [];
+  } catch (err) {
+    console.warn(`[build-data] Failed to parse existing categories.json:`, err);
+    return [];
+  }
+}
+
 function parseNumericPrice(priceStr: string): number | null {
   if (!priceStr) return null;
   const match = priceStr.match(/₹\s*([\d,]+)/);
   if (!match) return null;
   return parseFloat(match[1].replace(/,/g, ''));
+}
+
+function normalizeProduct(product: ScrapedProduct): ScrapedProduct {
+  if (product.price && product.price_numeric == null) {
+    return { ...product, price_numeric: parseNumericPrice(product.price) ?? undefined };
+  }
+  return product;
+}
+
+function addProductsFromFile(file: string, allProducts: ScrapedProduct[], seenProductIds: Set<string>) {
+  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const products = JSON.parse(raw);
+    if (!Array.isArray(products)) return;
+
+    for (const product of products as ScrapedProduct[]) {
+      if (!product.id || seenProductIds.has(product.id)) continue;
+      seenProductIds.add(product.id);
+      allProducts.push(normalizeProduct(product));
+    }
+  } catch (err) {
+    console.warn(`[build-data] Failed to parse ${file}:`, err);
+  }
 }
 
 function main() {
@@ -87,21 +137,18 @@ function main() {
   console.log(`[build-data] Found ${productFiles.length} product JSON files`);
 
   const allProducts: ScrapedProduct[] = [];
+  const seenProductIds = new Set<string>();
 
   for (const file of productFiles) {
-    try {
-      const raw = fs.readFileSync(file, 'utf-8');
-      const products: ScrapedProduct[] = JSON.parse(raw);
-      // Ensure price_numeric is set
-      for (const p of products) {
-        if (p.price && p.price_numeric == null) {
-          p.price_numeric = parseNumericPrice(p.price) ?? undefined;
-        }
-      }
-      allProducts.push(...products);
-    } catch (err) {
-      console.warn(`[build-data] Failed to parse ${file}:`, err);
-    }
+    addProductsFromFile(file, allProducts, seenProductIds);
+  }
+
+  const existingCategoryProductFiles = findExistingCategoryProductFiles();
+  if (existingCategoryProductFiles.length > 0) {
+    console.log(`[build-data] Preserving ${existingCategoryProductFiles.length} existing category chunks`);
+  }
+  for (const file of existingCategoryProductFiles) {
+    addProductsFromFile(file, allProducts, seenProductIds);
   }
 
   console.log(`[build-data] Total products: ${allProducts.length}`);
@@ -133,11 +180,26 @@ function main() {
       sub.count++;
     }
   }
-  const categories = Array.from(categoryMap.values());
+  const generatedCategories = Array.from(categoryMap.values());
+  const existingCategories = readExistingCategories();
+  const generatedBySlug = new Map(generatedCategories.map(category => [category.slug, category]));
+  const existingSlugs = new Set(existingCategories.map(category => category.slug));
+  const categories = [
+    ...existingCategories.map(existing => {
+      const generated = generatedBySlug.get(existing.slug);
+      if (!generated) return existing;
+      return {
+        ...generated,
+        label: existing.label || generated.label,
+        children: generated.children.length > 0 ? generated.children : existing.children,
+      };
+    }),
+    ...generatedCategories.filter(category => !existingSlugs.has(category.slug)),
+  ];
 
   // Ensure output dirs exist
   fs.mkdirSync(SRC_DATA, { recursive: true });
-  fs.mkdirSync(path.join(SRC_DATA, 'categories'), { recursive: true });
+  fs.mkdirSync(CATEGORY_DATA, { recursive: true });
 
   // Write products.json
   fs.writeFileSync(

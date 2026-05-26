@@ -35,11 +35,13 @@ export function SearchBar() {
   }, [input, navigate]);
 
   const handleSuggestionClick = useCallback((id: string) => {
+    const product = results.find(result => result.item.id === id)?.item;
+    if (!product) return;
     setOpen(false);
     setActiveIndex(-1);
     setInput('');
-    navigate(`/product/${id}`);
-  }, [navigate]);
+    navigate(`/category/${product.category}`, { state: { focusProductId: product.id } });
+  }, [navigate, results]);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (!showSuggestions) {

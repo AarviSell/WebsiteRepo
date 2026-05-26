@@ -50,12 +50,13 @@ function FloatingCard({
     if (clicked || isExiting) return;
     e.preventDefault();
     setClicked(true);
-    setTimeout(() => navigate(`/product/${product.id}`, { state: { fromCategory: product.category } }), 360);
+    setTimeout(() => navigate(`/category/${product.category}`, { state: { focusProductId: product.id } }), 360);
   }
 
   return (
     <Link
-      to={`/product/${product.id}`}
+      to={`/category/${product.category}`}
+      state={{ focusProductId: product.id }}
       onClick={handleClick}
       aria-label={product.name}
       style={{ display: 'block', textDecoration: 'none', color: 'inherit', ...animStyle }}

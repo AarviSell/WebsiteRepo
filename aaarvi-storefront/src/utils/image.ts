@@ -10,7 +10,12 @@ import type { Product, ProductImage } from '@/types/product';
  * so this works correctly in both environments.
  */
 export function resolveImageUrl(localPath: string): string {
-  return `${import.meta.env.BASE_URL}data/${localPath}`;
+  const normalisedPath = localPath
+    .replace(/\\/g, '/')
+    .replace(/^output\//, '')
+    .replace(/^public\/data\//, '')
+    .replace(/^data\//, '');
+  return `${import.meta.env.BASE_URL}data/${normalisedPath}`;
 }
 
 /**

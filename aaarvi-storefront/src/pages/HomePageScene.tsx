@@ -1,7 +1,11 @@
 // src/pages/HomePageScene.tsx  — Three.js golden-card homepage
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
+import { useProductData } from '@/hooks/useProductData';
+import { SceneSearchBar } from '@/components/search/SceneSearchBar';
+import { searchProducts } from '@/utils/productSearch';
+import type { Product } from '@/types/product';
 import logoSrc from '../assets/logo.png';
 
 /* ── Category data ─────────────────────────────────────────── */
@@ -225,8 +229,14 @@ function buildCard(cat: { slug: string; icon: string }) {
 export function HomePageScene() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { categories, allProducts, isLoaded } = useProductData();
   const returnSlug = (location.state as { returnTo?: string } | null)?.returnTo;
   const initialIndex = returnSlug ? Math.max(0, CATS.findIndex(c => c.slug === returnSlug)) : 0;
+
+  const cats = useMemo(() => CATS.map(cat => {
+    const loadedCategory = categories.find(category => category.slug === cat.slug);
+    return { ...cat, count: loadedCategory?.count ?? cat.count };
+  }), [categories]);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(initialIndex);
@@ -234,6 +244,7 @@ export function HomePageScene() {
   const [isZoomingOut, setIsZoomingOut] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const [homeSearch, setHomeSearch] = useState('');
 
   const sceneRef = useRef<{
     renderer: THREE.WebGLRenderer;
@@ -247,6 +258,22 @@ export function HomePageScene() {
 
   const currentRef = useRef(0);
   const isAnimatingRef = useRef(false);
+
+  const openSearchResults = useCallback((query: string, selectedProduct?: Product) => {
+    const trimmedQuery = query.trim();
+    if (trimmedQuery.length < 2) return;
+
+    const firstResult = selectedProduct ?? searchProducts(allProducts, trimmedQuery, { limit: 1 })[0];
+    const targetSlug = firstResult?.category ?? CATS[currentRef.current]?.slug ?? 'standard-collection';
+
+    navigate(`/category/${targetSlug}`, {
+      state: {
+        searchQuery: trimmedQuery,
+        searchProductId: selectedProduct?.id,
+        searchGlobal: true,
+      },
+    });
+  }, [allProducts, navigate]);
 
   const OFF_X  = 10;
   const OFF_Z  = -4;
@@ -673,21 +700,34 @@ export function HomePageScene() {
 
       {/* Header */}
       <header style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 10,
-        display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center',
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40,
+        display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
         padding: '1.25rem 2.5rem',
         background: 'linear-gradient(to bottom, rgba(13,4,20,0.92) 0%, transparent 100%)',
+        gap: '1rem',
       }}>
-        {/* Left slot — hamburger */}
-        <button
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', padding: '0.4rem', justifySelf: 'start', display: 'flex', flexDirection: 'column', gap: '4px' }}
-        >
-          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
-          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
-          <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
-        </button>
+        {/* Left slot — hamburger + search */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', justifySelf: 'stretch', minWidth: 0 }}>
+          <button
+            onClick={() => setMenuOpen(o => !o)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', padding: '0.4rem', display: 'flex', flexDirection: 'column', gap: '4px', flexShrink: 0 }}
+          >
+            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
+            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
+          </button>
+          <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '26rem' }}>
+            <SceneSearchBar
+              value={homeSearch}
+              onChange={setHomeSearch}
+              onSearch={query => openSearchResults(query)}
+              onProductSelect={product => openSearchResults(product.name, product)}
+              placeholder={isLoaded ? 'Name, code, or type' : 'Loading search'}
+              disabled={!isLoaded}
+            />
+          </div>
+        </div>
         {/* Center — logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
           <img src={logoSrc} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
@@ -751,7 +791,7 @@ export function HomePageScene() {
           transform: labelVisible ? 'translateY(0)' : 'translateY(14px)',
           transition: 'opacity 350ms ease 80ms, transform 350ms ease 80ms',
         }}>
-          {CATS[current]?.label}
+          {cats[current]?.label}
         </div>
         <div style={{
           fontSize: '0.875rem', color: 'rgba(250,245,255,0.7)',
@@ -760,7 +800,7 @@ export function HomePageScene() {
           transform: labelVisible ? 'translateY(0)' : 'translateY(8px)',
           transition: 'opacity 350ms ease 150ms, transform 350ms ease 150ms',
         }}>
-          {CATS[current]?.count} items
+          {isLoaded ? `${cats[current]?.count} items` : 'Loading items'}
         </div>
       </div>
 
@@ -831,11 +871,11 @@ export function HomePageScene() {
         position: 'fixed', bottom: '2rem', left: '50%', transform: 'translateX(-50%)',
         display: 'flex', gap: '0.5rem', zIndex: 10,
       }}>
-        {CATS.map((_, i) => (
+        {cats.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i)}
-            aria-label={`Go to ${CATS[i].label}`}
+            aria-label={`Go to ${cats[i].label}`}
             style={{
               width: 8, height: 8, borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer',
               background: i === current ? '#a855f7' : 'rgba(168,85,247,0.3)',
@@ -872,21 +912,21 @@ export function HomePageScene() {
           </button>
         </div>
         <div style={{ fontSize: '0.58rem', fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.6rem' }}>Collections</div>
-        {CATS.map(cat => (
+        {cats.map(cat => (
           <button
             key={cat.slug}
             onClick={() => { navigate(`/category/${cat.slug}`); setMenuOpen(false); }}
             style={{
               display: 'flex', alignItems: 'center', gap: '0.6rem',
-              background: CATS[current]?.slug === cat.slug ? 'rgba(168,85,247,0.2)' : 'transparent',
+              background: cats[current]?.slug === cat.slug ? 'rgba(168,85,247,0.2)' : 'transparent',
               border: 'none', color: '#faf5ff',
               padding: '0.6rem 0.75rem', borderRadius: '0.5rem',
               cursor: 'pointer', width: '100%', textAlign: 'left',
-              fontSize: '0.88rem', fontWeight: CATS[current]?.slug === cat.slug ? 600 : 400,
+              fontSize: '0.88rem', fontWeight: cats[current]?.slug === cat.slug ? 600 : 400,
               marginBottom: '0.15rem', transition: 'background 150ms',
             }}
-            onMouseEnter={e => { if (CATS[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(168,85,247,0.1)'; }}
-            onMouseLeave={e => { if (CATS[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
+            onMouseEnter={e => { if (cats[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'rgba(168,85,247,0.1)'; }}
+            onMouseLeave={e => { if (cats[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
           >
             <span style={{ fontSize: '1rem' }}>{cat.icon}</span>
             <span>{cat.label}</span>

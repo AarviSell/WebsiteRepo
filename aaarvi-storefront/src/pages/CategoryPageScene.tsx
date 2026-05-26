@@ -1,9 +1,14 @@
 // src/pages/CategoryPageScene.tsx — Three.js cube-grid category scene
-import { useEffect, useRef, useState, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
-import { loadCategoryProducts } from '@/data/loader';
+import { loadCategoryProducts, loadCategories } from '@/data/loader';
+import { useProductData } from '@/hooks/useProductData';
+import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
+import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
+import { makeCataloguePageTexture } from '@/utils/threeCatalogueTexture';
+import { searchProducts } from '@/utils/productSearch';
 import type { Product } from '@/types/product';
 import logoSrc from '@/assets/logo.png';
 
@@ -27,6 +32,11 @@ const PAGE_SIZE   = TABLE_W * TABLE_H; // 15
  */
 const PAGE_FACE_IDX = [4, 1, 5, 0] as const;
 const MAX_PAGES = PAGE_FACE_IDX.length; // 4 → up to 60 products
+const PRODUCT_FOCUS_RETURN_DUR = 860;
+
+function getPageRotationY(pageIdx: number) {
+  return pageIdx * (Math.PI / 2);
+}
 
 /* ── Easing ─────────────────────────────────────────────────── */
 function easeOutBack(t: number) {
@@ -35,6 +45,36 @@ function easeOutBack(t: number) {
 }
 
 function easeInQuart(t: number) { return t * t * t * t; }
+
+function easeInOutCubic(t: number) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+function clamp01(value: number) { return Math.max(0, Math.min(1, value)); }
+
+function getFocusTargetScale(faceIdx: number) {
+  return faceIdx === 0 || faceIdx === 1
+    ? new THREE.Vector3(0.28, 1.55, 2.55)
+    : new THREE.Vector3(2.55, 1.55, 0.28);
+}
+
+interface ProductFocusState {
+  active: boolean;
+  returning: boolean;
+  selectedIdx: number;
+  startMs: number;
+  returnStartMs: number;
+  startCamera: THREE.Vector3;
+  targetCamera: THREE.Vector3;
+  returnStartCamera: THREE.Vector3;
+  returnTargetCamera: THREE.Vector3;
+  startPosition: THREE.Vector3;
+  targetPosition: THREE.Vector3;
+  startScale: THREE.Vector3;
+  targetScale: THREE.Vector3;
+  startRotation: THREE.Euler;
+  targetRotationY: number;
+}
 
 /* ── Scene ref type ─────────────────────────────────────────── */
 interface SceneState {
@@ -49,6 +89,7 @@ interface SceneState {
   isRotating: { value: boolean };
   isExiting: { value: boolean };
   exitStart: { value: number };
+  productFocus: ProductFocusState;
 }
 
 /* ── Label sprite factory: golden plaque with black text ───── */
@@ -78,11 +119,32 @@ function fitTextWithEllipsis(ctx: CanvasRenderingContext2D, text: string, maxWid
   return text.slice(0, lo).trimEnd() + ell;
 }
 
-function makeLabelSprite(text: string): THREE.Sprite {
-  const canvas = document.createElement('canvas');
-  canvas.width  = LABEL_CANVAS_W;
-  canvas.height = LABEL_CANVAS_H;
+/** Heuristically shorten a long product name into a compact label suitable
+ *  for the cube plaque. Keeps the head noun phrase and drops trailing
+ *  descriptors (colors, dimensions, sub-component lists). The canvas itself
+ *  applies an ellipsis if the result is still too wide. */
+function shortenProductName(raw: string): string {
+  if (!raw) return '';
+  let s = raw.trim();
+  // 1. Drop everything after an em/en dash, colon, or vertical bar — these
+  //    introduce descriptors ("— Black, Gunmetal, Rose Gold", ": 375Ml").
+  s = s.split(/\s+[—–|:]\s+/)[0];
+  // 2. Drop " - " sub-descriptors (ASCII hyphen surrounded by spaces).
+  s = s.split(/\s+-\s+/)[0];
+  // 3. Drop "with …" and "for …" tails that describe accessories.
+  //    Keep "in" phrases so names like "4 in 1 Pen" stay meaningful.
+  s = s.replace(/\s+(?:with|for)\s+.*$/i, '');
+  // 4. Drop trailing parentheticals like "(Set of 2)".
+  s = s.replace(/\s*\([^)]*\)\s*$/, '');
+  // 5. Collapse whitespace and an awkward trailing "&".
+  s = s.replace(/\s+&\s*$/, '').replace(/\s+/g, ' ').trim();
+  return s || raw.trim();
+}
+
+/** Redraw a label canvas with the given text (or leave it blank for empty). */
+function drawLabelCanvas(canvas: HTMLCanvasElement, text: string): void {
   const ctx = canvas.getContext('2d')!;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Golden background with subtle vertical gradient
   const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
@@ -110,6 +172,8 @@ function makeLabelSprite(text: string): THREE.Sprite {
   ctx.lineWidth   = 4;
   ctx.stroke();
 
+  if (!text) return;
+
   // Black text — truncate with ellipsis if it overflows
   ctx.fillStyle = '#0a0a0a';
   const fontPx = Math.floor(canvas.height * 0.6);
@@ -118,6 +182,13 @@ function makeLabelSprite(text: string): THREE.Sprite {
   ctx.textBaseline = 'middle';
   const display = fitTextWithEllipsis(ctx, text, canvas.width - LABEL_PADDING_PX * 2);
   ctx.fillText(display, canvas.width / 2, canvas.height / 2 + 2);
+}
+
+function makeLabelSprite(text: string): THREE.Sprite {
+  const canvas = document.createElement('canvas');
+  canvas.width  = LABEL_CANVAS_W;
+  canvas.height = LABEL_CANVAS_H;
+  drawLabelCanvas(canvas, text);
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.colorSpace = THREE.SRGBColorSpace;
@@ -127,7 +198,19 @@ function makeLabelSprite(text: string): THREE.Sprite {
   const sprite = new THREE.Sprite(mat);
   // Initial scale uses max width; the animation loop may shrink X to fit spacing.
   sprite.scale.set(LABEL_MAX_WIDTH, LABEL_HEIGHT, 1);
+  // Stash canvas + texture so we can repaint when the page changes.
+  sprite.userData.canvas  = canvas;
+  sprite.userData.texture = tex;
   return sprite;
+}
+
+/** Update an existing label sprite's text in place (no new GPU allocation). */
+function setLabelSpriteText(sprite: THREE.Sprite, text: string): void {
+  const canvas = sprite.userData.canvas as HTMLCanvasElement | undefined;
+  const tex    = sprite.userData.texture as THREE.CanvasTexture | undefined;
+  if (!canvas || !tex) return;
+  drawLabelCanvas(canvas, text);
+  tex.needsUpdate = true;
 }
 
 /* ── Gold material factory ──────────────────────────────────── */
@@ -171,10 +254,120 @@ const CATS = [
   { slug: 'legacy-collection',    label: 'Legacy Collection',    icon: '👑' },
 ];
 
+function formatWhatsAppNumber(value: string): string {
+  const trimmed = value.trim();
+  if (!trimmed) return '';
+  return trimmed.replace(/(\+\d{1,3})(\d{5})(\d+)/, '$1 $2 $3');
+}
+
+function buildWhatsAppHref(number: string, productName: string, productCode?: string): string {
+  const digits = number.replace(/[^\d]/g, '');
+  const codeText = productCode ? ` (code ${productCode})` : '';
+  const message = `Hi AArvi, I am interested in ${productName}${codeText}. Please share pricing and availability.`;
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+}
+
+function makeCaptchaChallenge(seed: string) {
+  const hash = Array.from(seed).reduce((total, character) => total + character.charCodeAt(0), 0);
+  const leftOperand = 2 + (hash % 7);
+  const rightOperand = 3 + (Math.floor(hash / 7) % 6);
+  return { leftOperand, rightOperand, total: leftOperand + rightOperand };
+}
+
+function CubeContactReveal({ product }: { product: Product }) {
+  const [open, setOpen] = useState(false);
+  const [answer, setAnswer] = useState('');
+  const [verified, setVerified] = useState(false);
+  const [error, setError] = useState('');
+  const challenge = useMemo(() => makeCaptchaChallenge(product.id), [product.id]);
+  const productCode = getProductCode(product);
+  const whatsappNumber = (import.meta.env.VITE_AARVI_WHATSAPP_NUMBER ?? '').trim();
+  const formattedNumber = formatWhatsAppNumber(whatsappNumber);
+  const whatsappHref = whatsappNumber ? buildWhatsAppHref(whatsappNumber, product.name, productCode) : '';
+
+  function verifyAnswer(event: React.FormEvent) {
+    event.preventDefault();
+    if (Number(answer.trim()) === challenge.total) {
+      setVerified(true);
+      setError('');
+      return;
+    }
+    setError('Try again');
+  }
+
+  const shellStyle: React.CSSProperties = {
+    border: '1px solid rgba(250,245,255,0.2)',
+    background: 'rgba(17,7,24,0.82)',
+    boxShadow: '0 18px 44px rgba(0,0,0,0.32)',
+    backdropFilter: 'blur(18px)',
+    color: '#faf5ff',
+  };
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        style={{
+          ...shellStyle,
+          minHeight: 44,
+          borderRadius: 999,
+          cursor: 'pointer',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.5rem',
+          width: '100%',
+          padding: '0.72rem 1.1rem',
+          fontSize: '0.9rem',
+          fontWeight: 700,
+        }}
+      >
+        Contact us for purchase
+      </button>
+    );
+  }
+
+  return (
+    <div style={{ ...shellStyle, width: '100%', borderRadius: '0.75rem', padding: '0.72rem' }}>
+      {verified ? (
+        <div role="status" aria-live="polite" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '0.35rem', color: '#8ddf6b', fontSize: '0.9rem', fontWeight: 700, textAlign: 'center' }}>
+          {formattedNumber ? (
+            <a href={whatsappHref} target="_blank" rel="noreferrer" style={{ color: '#8ddf6b', textDecoration: 'none', minHeight: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+              {formattedNumber}
+            </a>
+          ) : (
+            <span>WhatsApp number not configured</span>
+          )}
+        </div>
+      ) : (
+        <form onSubmit={verifyAnswer} style={{ display: 'grid', gridTemplateColumns: 'auto minmax(4rem, 1fr) auto', gap: '0.5rem', alignItems: 'center' }}>
+          <label htmlFor="cube-whatsapp-captcha" style={{ color: '#fde68a', fontSize: '0.82rem', fontWeight: 700 }}>{challenge.leftOperand} + {challenge.rightOperand}</label>
+          <input
+            id="cube-whatsapp-captcha"
+            inputMode="numeric"
+            value={answer}
+            onChange={event => setAnswer(event.target.value)}
+            autoComplete="off"
+            style={{ width: '100%', minHeight: 38, borderRadius: '0.45rem', border: '1px solid rgba(250,245,255,0.18)', background: 'rgba(250,245,255,0.08)', color: '#faf5ff', textAlign: 'center', font: 'inherit' }}
+          />
+          <button type="submit" style={{ minHeight: 38, border: 'none', borderRadius: '0.45rem', background: '#a855f7', color: '#fff', cursor: 'pointer', fontWeight: 700, padding: '0 0.8rem' }}>Verify</button>
+          {error && <span role="alert" style={{ gridColumn: '1 / -1', color: '#ff8c7c', fontSize: '0.75rem', textAlign: 'center' }}>{error}</span>}
+        </form>
+      )}
+    </div>
+  );
+}
+
 /* ═══════════════════════════════════════════════════════════ */
 export function CategoryPageScene() {
   const { slug } = useParams<{ slug: string }>();
   const navigate  = useNavigate();
+  const location = useLocation();
+  const { allProducts, isLoaded } = useProductData();
+  const routeState = location.state as { focusProductId?: string; searchQuery?: string; searchProductId?: string } | null;
+  const incomingSearchQuery = routeState?.searchQuery?.trim() ?? '';
+  const incomingSearchProductId = routeState?.searchProductId ?? null;
 
   const wrapperRef     = useRef<HTMLDivElement>(null);
   const containerRef   = useRef<HTMLDivElement>(null);
@@ -183,26 +376,95 @@ export function CategoryPageScene() {
   const pageRef        = useRef(0);
   const texCache       = useRef(new Map<string, THREE.Texture>());
   const parallaxRef    = useRef<ParallaxEntry[]>([]);
+  const texturePageRequestRef = useRef(0);
   const isAnimatingRef = useRef(false);
+  const consumedFocusRequestRef = useRef<string | null>(null);
+  const finishProductReturnRef = useRef<() => void>(() => {});
   /** Records clientX at last pointerdown so click handler can reject drag events */
   const mouseDragStartX = useRef(-1);
 
+  const [categoryProducts, setCategoryProducts] = useState<Product[]>([]);
   const [products,  setProducts]  = useState<Product[]>([]);
   const [page,      setPage]      = useState(0);
   const [sceneReady, setSceneReady] = useState(false);
   const [catLabel,  setCatLabel]  = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const [openingProductName, setOpeningProductName] = useState('');
+  const [focusedProduct, setFocusedProduct] = useState<Product | null>(null);
+  const [searchQuery, setSearchQuery] = useState(incomingSearchQuery);
+  const [selectedSearchProductId, setSelectedSearchProductId] = useState<string | null>(incomingSearchProductId);
+  const [isCategoryLoading, setIsCategoryLoading] = useState(true);
+  const focusProductId = routeState?.focusProductId;
+  const focusRequestKey = focusProductId ? `${location.key}:${focusProductId}` : '';
+  const trimmedSearchQuery = searchQuery.trim();
+  const isSearchMode = trimmedSearchQuery.length >= 2 || Boolean(selectedSearchProductId);
+
+  const setVisibleProducts = useCallback((nextProducts: Product[]) => {
+    productsRef.current = nextProducts;
+    setProducts(nextProducts);
+    pageRef.current = 0;
+    setPage(0);
+  }, []);
 
   /* ── Load products ────────────────────────────────────────── */
   useEffect(() => {
     if (!slug) return;
+    setIsCategoryLoading(true);
+    setSearchQuery(incomingSearchQuery);
+    setSelectedSearchProductId(incomingSearchProductId);
+    pageRef.current = 0;
+    const resetTimer = window.setTimeout(() => {
+      setPage(0);
+      setOpeningProductName('');
+      setFocusedProduct(null);
+    }, 0);
+    isAnimatingRef.current = false;
+    const state = sceneRef.current;
+    const el = wrapperRef.current;
+    if (el) {
+      el.style.transition = 'opacity 300ms ease';
+      requestAnimationFrame(() => { if (wrapperRef.current) wrapperRef.current.style.opacity = '1'; });
+    }
+    if (state) {
+      state.productFocus.active = false;
+      state.productFocus.returning = false;
+      state.isRotating.value = false;
+      state.camera.position.set(0, 5.5, 12);
+      state.cubes.forEach((cube, cubeIndex) => {
+        const columnIndex = Math.floor(cubeIndex / TABLE_H);
+        const posX = (columnIndex - 2) * SPACING;
+        cube.position.set(posX, cube.userData.baseY, 0);
+        cube.rotation.set(0, 0, 0);
+        cube.scale.set(1, 1, 1);
+        cube.userData.targetRotX = 0;
+        cube.userData.targetRotY = 0;
+      });
+      state.labels.forEach(label => {
+        const material = label.material as THREE.SpriteMaterial;
+        material.opacity = 1;
+      });
+    }
+    // Title-cased slug as a guaranteed fallback (e.g. "standard-collection" -> "Standard Collection").
+    const fallbackLabel = slug
+      .split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+    // Resolve the collection's display label from categories.json first so the
+    // header always shows the collection name (e.g. "Signature Collection")
+    // rather than the per-product `category_label` (e.g. "Drinkware").
+    loadCategories().then(cats => {
+      const node = cats.find(c => c.slug === slug);
+      setCatLabel(node?.label ?? fallbackLabel);
+    }).catch(() => setCatLabel(fallbackLabel));
+
     loadCategoryProducts(slug).then(p => {
-      productsRef.current = p;
-      setProducts(p);
-      if (p.length > 0) setCatLabel(p[0].category_label ?? slug.replace(/-/g, ' '));
-    });
-  }, [slug]);
+      setCategoryProducts(p);
+      if (!incomingSearchQuery && !incomingSearchProductId) setVisibleProducts(p);
+    }).finally(() => setIsCategoryLoading(false));
+
+    return () => window.clearTimeout(resetTimer);
+  }, [incomingSearchProductId, incomingSearchQuery, setVisibleProducts, slug]);
 
   /* ── Build Three.js scene ─────────────────────────────────── */
   useEffect(() => {
@@ -307,7 +569,8 @@ export function CategoryPageScene() {
         cubes.push(mesh);
 
         // Label sprite above the cube — tracks cube Y in animation loop.
-        const label = makeLabelSprite(`Product ${cubeIdx + 1}`);
+        // Starts blank; populated by loadPageTextures once products load.
+        const label = makeLabelSprite('');
         label.position.set(posX, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
         scene.add(label);
         labels.push(label);
@@ -321,6 +584,23 @@ export function CategoryPageScene() {
     const isRotating = { value: false };
     const isExiting  = { value: false };
     const exitStart  = { value: 0 };
+    const productFocus: ProductFocusState = {
+      active: false,
+      returning: false,
+      selectedIdx: -1,
+      startMs: 0,
+      returnStartMs: 0,
+      startCamera: new THREE.Vector3(),
+      targetCamera: new THREE.Vector3(),
+      returnStartCamera: new THREE.Vector3(),
+      returnTargetCamera: new THREE.Vector3(),
+      startPosition: new THREE.Vector3(),
+      targetPosition: new THREE.Vector3(),
+      startScale: new THREE.Vector3(1, 1, 1),
+      targetScale: new THREE.Vector3(1, 1, 1),
+      startRotation: new THREE.Euler(),
+      targetRotationY: 0,
+    };
 
     /* ── Animation loop ── */
     const ENTRY_DELAY   = 300;  // ms before first cube rises
@@ -371,11 +651,115 @@ export function CategoryPageScene() {
       cubes.forEach(cube => {
         cube.rotation.x += (cube.userData.targetRotX - cube.rotation.x) * rotLerp;
         cube.rotation.y += (cube.userData.targetRotY - cube.rotation.y) * rotLerp;
-        if (entryDone.value && !isExiting.value) {
+        if (entryDone.value && !isExiting.value && !productFocus.active && !productFocus.returning) {
           cube.position.y = cube.userData.baseY
             + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
         }
       });
+
+      /* Product focus: selected cube becomes the catalogue-page slab while all others fall away */
+      if (productFocus.active) {
+        const focusElapsed = now - productFocus.startMs;
+        const selectedCube = cubes[productFocus.selectedIdx];
+        const moveT = easeInOutCubic(clamp01(focusElapsed / 1080));
+        selectedCube.position.lerpVectors(productFocus.startPosition, productFocus.targetPosition, moveT);
+        selectedCube.scale.lerpVectors(productFocus.startScale, productFocus.targetScale, moveT);
+        selectedCube.rotation.x = THREE.MathUtils.lerp(productFocus.startRotation.x, 0, moveT);
+        selectedCube.rotation.y = THREE.MathUtils.lerp(productFocus.startRotation.y, productFocus.targetRotationY, moveT);
+        selectedCube.rotation.z = THREE.MathUtils.lerp(productFocus.startRotation.z, 0, moveT);
+
+        camera.position.lerpVectors(productFocus.startCamera, productFocus.targetCamera, moveT);
+        camera.lookAt(productFocus.targetPosition.x, productFocus.targetPosition.y, productFocus.targetPosition.z);
+
+        cubes.forEach((cube, cubeIndex) => {
+          const labelMat = labels[cubeIndex]?.material as THREE.SpriteMaterial | undefined;
+          if (cubeIndex === productFocus.selectedIdx) {
+            if (labelMat) labelMat.opacity = 1 - clamp01(focusElapsed / 240);
+            return;
+          }
+
+          const dropT = easeInQuart(clamp01((focusElapsed - cubeIndex * 22) / 760));
+          const startY = (cube.userData.focusStartY as number | undefined) ?? cube.position.y;
+          const startRotX = (cube.userData.focusStartRotX as number | undefined) ?? cube.rotation.x;
+          const startRotZ = (cube.userData.focusStartRotZ as number | undefined) ?? cube.rotation.z;
+          cube.position.y = startY + (-16 - startY) * dropT;
+          cube.rotation.x = startRotX + dropT * (cubeIndex % 2 === 0 ? 1.65 : -1.35);
+          cube.rotation.z = startRotZ + dropT * (cubeIndex % 3 === 0 ? -0.9 : 0.9);
+          const scale = THREE.MathUtils.lerp(1, 0.82, dropT);
+          cube.scale.setScalar(scale);
+          if (labelMat) labelMat.opacity = 1 - dropT;
+        });
+      }
+
+      if (productFocus.returning) {
+        const returnElapsed = now - productFocus.returnStartMs;
+        const rawReturnT = clamp01(returnElapsed / PRODUCT_FOCUS_RETURN_DUR);
+        const returnT = easeInOutCubic(rawReturnT);
+        const targetRotY = getPageRotationY(pageRef.current);
+
+        camera.position.lerpVectors(productFocus.returnStartCamera, productFocus.returnTargetCamera, returnT);
+        camera.lookAt(0, 5.2, 0);
+
+        cubes.forEach((cube, cubeIndex) => {
+          const columnIndex = Math.floor(cubeIndex / TABLE_H);
+          const targetX = (columnIndex - 2) * SPACING;
+          const targetY = cube.userData.baseY as number;
+          const startPosition = cube.userData.returnStartPosition as THREE.Vector3 | undefined;
+          const startRotation = cube.userData.returnStartRotation as THREE.Euler | undefined;
+          const startScale = cube.userData.returnStartScale as THREE.Vector3 | undefined;
+
+          if (startPosition) {
+            cube.position.set(
+              THREE.MathUtils.lerp(startPosition.x, targetX, returnT),
+              THREE.MathUtils.lerp(startPosition.y, targetY, returnT),
+              THREE.MathUtils.lerp(startPosition.z, 0, returnT),
+            );
+          } else {
+            cube.position.set(targetX, targetY, 0);
+          }
+
+          if (startRotation) {
+            cube.rotation.x = THREE.MathUtils.lerp(startRotation.x, 0, returnT);
+            cube.rotation.y = THREE.MathUtils.lerp(startRotation.y, targetRotY, returnT);
+            cube.rotation.z = THREE.MathUtils.lerp(startRotation.z, 0, returnT);
+          } else {
+            cube.rotation.set(0, targetRotY, 0);
+          }
+
+          if (startScale) {
+            cube.scale.set(
+              THREE.MathUtils.lerp(startScale.x, 1, returnT),
+              THREE.MathUtils.lerp(startScale.y, 1, returnT),
+              THREE.MathUtils.lerp(startScale.z, 1, returnT),
+            );
+          } else {
+            cube.scale.set(1, 1, 1);
+          }
+
+          const labelMat = labels[cubeIndex]?.material as THREE.SpriteMaterial | undefined;
+          if (labelMat) labelMat.opacity = returnT;
+
+          if (rawReturnT >= 1) {
+            cube.position.set(targetX, targetY, 0);
+            cube.rotation.set(0, targetRotY, 0);
+            cube.scale.set(1, 1, 1);
+            cube.userData.targetRotX = 0;
+            cube.userData.targetRotY = targetRotY;
+            delete cube.userData.focusStartY;
+            delete cube.userData.focusStartRotX;
+            delete cube.userData.focusStartRotZ;
+            delete cube.userData.returnStartPosition;
+            delete cube.userData.returnStartRotation;
+            delete cube.userData.returnStartScale;
+          }
+        });
+
+        if (rawReturnT >= 1) {
+          productFocus.returning = false;
+          productFocus.selectedIdx = -1;
+          finishProductReturnRef.current();
+        }
+      }
 
       /* Labels follow their cube's Y position (entry, float, and exit) */
       for (let li = 0; li < labels.length; li++) {
@@ -403,7 +787,7 @@ export function CategoryPageScene() {
       renderer.render(scene, camera);
     });
 
-    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart };
+    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart, productFocus };
     setSceneReady(true);
 
     /* Resize */
@@ -414,59 +798,72 @@ export function CategoryPageScene() {
     }
 
     window.addEventListener('resize', onResize);
+    const textureCache = texCache.current;
 
     return () => {
       renderer.setAnimationLoop(null);
       renderer.dispose();
       if (container.contains(renderer.domElement)) container.removeChild(renderer.domElement);
       window.removeEventListener('resize', onResize);
-      texCache.current.forEach(t => t.dispose());
-      texCache.current.clear();
+      textureCache.forEach(t => t.dispose());
+      textureCache.clear();
       sceneRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /* ── Load textures for a page ─────────────────────────────── */
   const loadPageTextures = useCallback((pageIdx: number) => {
     const state = sceneRef.current;
     const prods = productsRef.current;
-    if (!state || prods.length === 0) return;
+    if (!state || pageIdx < 0 || pageIdx >= MAX_PAGES) return;
 
+    const requestId = ++texturePageRequestRef.current;
     const faceIdx = PAGE_FACE_IDX[pageIdx];
     const loader  = new THREE.TextureLoader();
 
     // Reset active parallax list for the new page; entries get re-pushed below.
     parallaxRef.current = [];
 
-    // First pass: reset ALL non-current page faces back to plain gold on every cube
+    // First pass: reset all page faces back to plain gold on every cube.
+    // The current face is repainted below only for slots that have a product.
     state.cubes.forEach(cube => {
       const mats = (cube.material as THREE.Material[]).slice();
-      PAGE_FACE_IDX.forEach((fi, pi) => {
-        if (pi === pageIdx) return; // leave current face alone for now
+      PAGE_FACE_IDX.forEach(fi => {
         (mats[fi] as THREE.Material).dispose();
         mats[fi] = goldMat();
       });
       cube.material = mats;
     });
 
+    // Clear all labels first; we'll repopulate only the slots that have a product.
+    state.labels.forEach(lbl => setLabelSpriteText(lbl, ''));
+
+    if (prods.length === 0) return;
+
     // Second pass: apply product image ONLY to the face that now faces the camera
-    state.cubes.forEach((cube, i) => {
+    state.cubes.forEach((_, i) => {
       const prodIdx = pageIdx * PAGE_SIZE + i;
       if (prodIdx >= prods.length) return;
+
+      // Update the label above this cube with the shortened product name.
+      const label = state.labels[i];
+      if (label) setLabelSpriteText(label, shortenProductName(prods[prodIdx].name || ''));
 
       const img = getPrimaryImage(prods[prodIdx]);
       if (!img) return;
       const url = resolveImageUrl(img.local_path);
 
       const apply = (tex: THREE.Texture) => {
+        const activeState = sceneRef.current;
+        if (!activeState || pageRef.current !== pageIdx || texturePageRequestRef.current !== requestId) return;
         tex.colorSpace = THREE.SRGBColorSpace;
         tex.center.set(0.5, 0.5);
         tex.repeat.set(PARALLAX_REPEAT, PARALLAX_REPEAT);
         tex.offset.set(0, 0);
-        const mats = (cube.material as THREE.Material[]).slice();
+        const activeCube = activeState.cubes[i];
+        const mats = (activeCube.material as THREE.Material[]).slice();
         mats[faceIdx] = productMat(tex);
-        cube.material = mats;
+        activeCube.material = mats;
         parallaxRef.current.push({
           tex,
           phaseX: Math.random() * Math.PI * 2,
@@ -502,6 +899,19 @@ export function CategoryPageScene() {
     });
   }, []);
 
+  useEffect(() => {
+    if (!isSearchMode) {
+      setVisibleProducts(categoryProducts);
+      return;
+    }
+
+    const searchPool = allProducts.length > 0 ? allProducts : categoryProducts;
+    const nextProducts = selectedSearchProductId
+      ? searchPool.filter(product => product.id === selectedSearchProductId)
+      : searchProducts(searchPool, trimmedSearchQuery);
+    setVisibleProducts(nextProducts);
+  }, [allProducts, categoryProducts, isSearchMode, selectedSearchProductId, setVisibleProducts, trimmedSearchQuery]);
+
   /* ── Fade the scene in on mount ── */
   useEffect(() => {
     const el = wrapperRef.current;
@@ -512,46 +922,56 @@ export function CategoryPageScene() {
 
   /* ── Trigger texture load once both scene + products are ready ── */
   useEffect(() => {
-    if (sceneReady && products.length > 0) {
+    if (sceneReady) {
       loadPageTextures(0);
     }
   }, [sceneReady, products, loadPageTextures]);
 
+  useEffect(() => {
+    finishProductReturnRef.current = () => {
+      setOpeningProductName('');
+      isAnimatingRef.current = false;
+      loadPageTextures(pageRef.current);
+    };
+  }, [loadPageTextures]);
+
   /* ── Computed values ─────────────────────────────────────────── */
   const maxPages = Math.min(MAX_PAGES, Math.ceil(products.length / PAGE_SIZE));
+  const isProductOpening = openingProductName.length > 0;
 
   /* ── Cube rotation helpers ────────────────────────────────── */
-  function rotateCubes(yAmount: number) {
+  const startPageRotation = useCallback((targetPage: number) => {
     const state = sceneRef.current;
-    if (!state || state.isRotating.value) return;
+    if (!state || state.isRotating.value || isAnimatingRef.current) return false;
     state.isRotating.value = true;
-    state.cubes.forEach(cube => { cube.userData.targetRotY += yAmount; });
+    const targetRotY = getPageRotationY(targetPage);
+    state.cubes.forEach(cube => { cube.userData.targetRotY = targetRotY; });
     // Unlock after animation settles (~700ms)
     setTimeout(() => { if (sceneRef.current) sceneRef.current.isRotating.value = false; }, 720);
-  }
+    return true;
+  }, []);
 
   /* Stable refs so touch handler inside useEffect can call these */
   const goNextRef = useRef<() => void>(() => {});
   const goPrevRef = useRef<() => void>(() => {});
 
-  const goNext = useCallback(() => {
-    const next = pageRef.current + 1;
-    if (next >= maxPages) return;
+  const goToPage = useCallback((targetPage: number) => {
+    if (isAnimatingRef.current) return;
+    const next = Math.max(0, Math.min(targetPage, maxPages - 1));
+    if (next === pageRef.current) return;
+    if (!startPageRotation(next)) return;
     pageRef.current = next;
     setPage(next);
     loadPageTextures(next);
-    rotateCubes(Math.PI / 2);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [maxPages, loadPageTextures]);
+  }, [loadPageTextures, maxPages, startPageRotation]);
+
+  const goNext = useCallback(() => {
+    goToPage(pageRef.current + 1);
+  }, [goToPage]);
 
   const goPrev = useCallback(() => {
-    const prev = pageRef.current - 1;
-    if (prev < 0) return;
-    pageRef.current = prev;
-    setPage(prev);
-    rotateCubes(-Math.PI / 2);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    goToPage(pageRef.current - 1);
+  }, [goToPage]);
 
   useEffect(() => { goNextRef.current = goNext; }, [goNext]);
   useEffect(() => { goPrevRef.current = goPrev; }, [goPrev]);
@@ -619,10 +1039,72 @@ export function CategoryPageScene() {
     return () => document.removeEventListener('keydown', onKey);
   }, []);
 
-  /* ── Canvas click → product navigation ───────────────────── */
+  /* ── Canvas click → in-scene product focus ───────────────── */
+  const beginProductFocus = useCallback((cubeIdx: number, product: Product) => {
+    const state = sceneRef.current;
+    if (!state) return;
+    const cube = state.cubes[cubeIdx];
+    const faceIdx = PAGE_FACE_IDX[pageRef.current];
+    const focusY = window.innerWidth < 768 ? 3.9 : 4.35;
+    const focus = state.productFocus;
+
+    setMenuOpen(false);
+    setOpeningProductName(shortenProductName(product.name));
+    setFocusedProduct(product);
+    isAnimatingRef.current = true;
+    parallaxRef.current = [];
+
+    state.cubes.forEach(fallingCube => {
+      fallingCube.userData.focusStartY = fallingCube.position.y;
+      fallingCube.userData.focusStartRotX = fallingCube.rotation.x;
+      fallingCube.userData.focusStartRotZ = fallingCube.rotation.z;
+    });
+
+    focus.active = true;
+    focus.returning = false;
+    focus.selectedIdx = cubeIdx;
+    focus.startMs = performance.now();
+    focus.startCamera.copy(state.camera.position);
+    focus.targetCamera.set(0, focusY + 0.12, window.innerWidth < 768 ? 6.6 : 5.35);
+    focus.startPosition.copy(cube.position);
+    focus.targetPosition.set(0, focusY, 0);
+    focus.startScale.copy(cube.scale);
+    focus.targetScale.copy(getFocusTargetScale(faceIdx));
+    focus.startRotation.copy(cube.rotation);
+    focus.targetRotationY = cube.userData.targetRotY;
+
+    const source = getCataloguePageSource(product);
+    if (!source) return;
+
+    const cacheKey = `catalogue:${source.imageUrl}`;
+    const applyCatalogueTexture = (tex: THREE.Texture) => {
+      const activeState = sceneRef.current;
+      if (!activeState || !activeState.productFocus.active || activeState.productFocus.selectedIdx !== cubeIdx) return;
+      const activeCube = activeState.cubes[cubeIdx];
+      const mats = (activeCube.material as THREE.Material[]).slice();
+      (mats[faceIdx] as THREE.Material).dispose();
+      mats[faceIdx] = productMat(tex);
+      activeCube.material = mats;
+    };
+
+    if (texCache.current.has(cacheKey)) {
+      applyCatalogueTexture(texCache.current.get(cacheKey)!);
+      return;
+    }
+
+    makeCataloguePageTexture({
+      imageUrl: source.imageUrl,
+      title: product.name,
+      missingLabel: source.isPdfPage ? `${source.pdfName ?? 'Catalogue'} page ${source.pageNumber ?? ''}`.trim() : undefined,
+    }).then(tex => {
+      texCache.current.set(cacheKey, tex);
+      applyCatalogueTexture(tex);
+    });
+  }, []);
+
   function handleCanvasClick(e: React.MouseEvent) {
     const state = sceneRef.current;
-    if (!state || isAnimatingRef.current) return;
+    if (!state) return;
     // Ignore header/button area (top 90px)
     if (e.clientY < 90) return;    // Reject if this was actually a drag (pointer moved more than 10 px since mousedown)
     if (Math.abs(e.clientX - mouseDragStartX.current) > 10) return;
@@ -630,6 +1112,15 @@ export function CategoryPageScene() {
     const ny = (e.clientY / window.innerHeight) * -2 + 1;
     const raycaster = new THREE.Raycaster();
     raycaster.setFromCamera(new THREE.Vector2(nx, ny), state.camera);
+
+    if (state.productFocus.active) {
+      const selectedCube = state.cubes[state.productFocus.selectedIdx];
+      const hits = selectedCube ? raycaster.intersectObject(selectedCube) : [];
+      if (hits.length === 0) resetProductFocus();
+      return;
+    }
+
+    if (isAnimatingRef.current || state.isRotating.value || state.productFocus.returning) return;
     const hits = raycaster.intersectObjects(state.cubes);
     if (hits.length === 0) return;
 
@@ -637,12 +1128,93 @@ export function CategoryPageScene() {
     const prodIdx  = pageRef.current * PAGE_SIZE + cubeI;
     if (prodIdx < productsRef.current.length) {
       const product = productsRef.current[prodIdx];
-      navigate(`/product/${product.id}`, { state: { fromCategory: slug } });
+      beginProductFocus(cubeI, product);
     }
   }
 
+  const resetProductFocus = useCallback(() => {
+    setFocusedProduct(null);
+
+    const state = sceneRef.current;
+    if (!state || state.productFocus.returning) return;
+
+    isAnimatingRef.current = true;
+    state.productFocus.active = false;
+    state.productFocus.returning = true;
+    state.productFocus.returnStartMs = performance.now();
+    state.productFocus.returnStartCamera.copy(state.camera.position);
+    state.productFocus.returnTargetCamera.set(0, 5.5, 12);
+    state.isRotating.value = false;
+    const targetRotY = getPageRotationY(pageRef.current);
+
+    state.cubes.forEach(cube => {
+      cube.userData.returnStartPosition = cube.position.clone();
+      cube.userData.returnStartRotation = cube.rotation.clone();
+      cube.userData.returnStartScale = cube.scale.clone();
+      cube.userData.targetRotX = 0;
+      cube.userData.targetRotY = targetRotY;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!focusProductId || !focusRequestKey || !sceneReady || products.length === 0) return;
+    if (consumedFocusRequestRef.current === focusRequestKey || isAnimatingRef.current) return;
+
+    const productIndex = products.findIndex(product => product.id === focusProductId);
+    if (productIndex < 0) return;
+
+    const targetPage = Math.floor(productIndex / PAGE_SIZE);
+    const cubeIndex = productIndex % PAGE_SIZE;
+    const product = products[productIndex];
+    if (targetPage >= MAX_PAGES) return;
+    consumedFocusRequestRef.current = focusRequestKey;
+
+    pageRef.current = targetPage;
+    const pageTimer = window.setTimeout(() => setPage(targetPage), 0);
+    loadPageTextures(targetPage);
+
+    const state = sceneRef.current;
+    if (state) {
+      const targetRotY = getPageRotationY(targetPage);
+      state.isRotating.value = false;
+      state.cubes.forEach(cube => {
+        cube.rotation.y = targetRotY;
+        cube.userData.targetRotY = targetRotY;
+      });
+    }
+
+    const timer = window.setTimeout(() => beginProductFocus(cubeIndex, product), 360);
+    return () => {
+      window.clearTimeout(pageTimer);
+      window.clearTimeout(timer);
+    };
+  }, [beginProductFocus, focusProductId, focusRequestKey, loadPageTextures, products, sceneReady]);
+
+  const handleCategorySearch = useCallback((query: string) => {
+    const trimmedQuery = query.trim();
+    if (trimmedQuery.length < 2) return;
+    setSelectedSearchProductId(null);
+    setSearchQuery(trimmedQuery);
+  }, []);
+
+  const handleCategoryProductSelect = useCallback((product: Product) => {
+    setSearchQuery(product.name);
+    setSelectedSearchProductId(product.id);
+    setMenuOpen(false);
+  }, []);
+
+  const clearCategorySearch = useCallback(() => {
+    setSearchQuery('');
+    setSelectedSearchProductId(null);
+  }, []);
+
   /* ── Render ─────────────────────────────────────────────────── */
-  const displayLabel = catLabel || (slug ?? '').replace(/-/g, ' ');
+  const displayLabel = isSearchMode ? 'Search Results' : catLabel || (slug ?? '').replace(/-/g, ' ');
+  const searchResultLabel = selectedSearchProductId
+    ? 'Selected product'
+    : trimmedSearchQuery
+      ? `Results for "${trimmedSearchQuery}"`
+      : 'Search results';
 
   return (
     <div ref={wrapperRef} style={{
@@ -654,20 +1226,20 @@ export function CategoryPageScene() {
       <div
         ref={containerRef}
         style={{ position: 'fixed', inset: 0, cursor: 'pointer' }}
-        onMouseDown={(e) => { mouseDragStartX.current = e.clientX; }}
+        onPointerDown={(e) => { mouseDragStartX.current = e.clientX; }}
         onClick={handleCanvasClick}
       />
 
       {/* ── Header ── */}
       <header style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 20,
-        display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center',
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40,
+        display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
         padding: '1rem 1.5rem',
         background: 'linear-gradient(to bottom, rgba(13,4,20,0.96) 0%, transparent 100%)',
         gap: '1rem',
       }}>
         {/* Left — hamburger + back */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', justifySelf: 'start' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', justifySelf: 'stretch', minWidth: 0 }}>
           <button
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -706,6 +1278,22 @@ export function CategoryPageScene() {
             </svg>
             Home
           </button>
+          {!isProductOpening && (
+            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '25rem' }}>
+              <SceneSearchBar
+                value={searchQuery}
+                onChange={value => {
+                  setSearchQuery(value);
+                  if (value.trim().length < 2) setSelectedSearchProductId(null);
+                }}
+                onSearch={handleCategorySearch}
+                onProductSelect={handleCategoryProductSelect}
+                onClear={clearCategorySearch}
+                placeholder={isLoaded ? 'Name, code, or type' : 'Loading search'}
+                disabled={!isLoaded}
+              />
+            </div>
+          )}
         </div>
 
         {/* Centre — logo + name */}
@@ -736,7 +1324,7 @@ export function CategoryPageScene() {
 
       {/* ── Prev / Next arrows (always visible) ── */}
       <button
-        onClick={page > 0 ? goPrev : undefined}
+        onClick={!isProductOpening && page > 0 ? goPrev : undefined}
         aria-label="Previous page"
         style={{
           position: 'fixed', top: '50%', left: '1.25rem',
@@ -744,10 +1332,11 @@ export function CategoryPageScene() {
           width: 50, height: 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
           background: 'rgba(42,16,64,0.6)', backdropFilter: 'blur(10px)',
-          color: '#faf5ff', cursor: page > 0 ? 'pointer' : 'default',
+          color: '#faf5ff', cursor: !isProductOpening && page > 0 ? 'pointer' : 'default',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           transition: 'border-color 200ms, background 200ms, opacity 200ms',
-          opacity: page > 0 ? 1 : 0.3,
+          opacity: isProductOpening ? 0 : page > 0 ? 1 : 0.3,
+          pointerEvents: isProductOpening ? 'none' : 'auto',
         }}
         onMouseEnter={e => { if (page > 0) { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = '#a855f7'; b.style.background = 'rgba(124,58,237,0.4)'; }}}
         onMouseLeave={e => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(168,85,247,0.4)'; b.style.background = 'rgba(42,16,64,0.6)'; }}
@@ -758,7 +1347,7 @@ export function CategoryPageScene() {
       </button>
 
       <button
-        onClick={page < maxPages - 1 ? goNext : undefined}
+        onClick={!isProductOpening && page < maxPages - 1 ? goNext : undefined}
         aria-label="Next page"
         style={{
           position: 'fixed', top: '50%', right: '1.25rem',
@@ -766,10 +1355,11 @@ export function CategoryPageScene() {
           width: 50, height: 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
           background: 'rgba(42,16,64,0.6)', backdropFilter: 'blur(10px)',
-          color: '#faf5ff', cursor: page < maxPages - 1 ? 'pointer' : 'default',
+          color: '#faf5ff', cursor: !isProductOpening && page < maxPages - 1 ? 'pointer' : 'default',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           transition: 'border-color 200ms, background 200ms, opacity 200ms',
-          opacity: page < maxPages - 1 ? 1 : 0.3,
+          opacity: isProductOpening ? 0 : page < maxPages - 1 ? 1 : 0.3,
+          pointerEvents: isProductOpening ? 'none' : 'auto',
         }}
         onMouseEnter={e => { if (page < maxPages - 1) { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = '#a855f7'; b.style.background = 'rgba(124,58,237,0.4)'; }}}
         onMouseLeave={e => { const b = e.currentTarget as HTMLButtonElement; b.style.borderColor = 'rgba(168,85,247,0.4)'; b.style.background = 'rgba(42,16,64,0.6)'; }}
@@ -780,7 +1370,7 @@ export function CategoryPageScene() {
       </button>
 
       {/* ── Page dots ── */}
-      {maxPages > 1 && (
+      {maxPages > 1 && !isProductOpening && (
         <div style={{
           position: 'fixed', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)',
           display: 'flex', gap: '0.5rem', zIndex: 15,
@@ -789,19 +1379,7 @@ export function CategoryPageScene() {
             <button
               key={i}
               onClick={() => {
-                if (i === pageRef.current) return;
-                const direction = i > pageRef.current ? 1 : -1;
-                // Step one page at a time toward target
-                const steps = Math.abs(i - pageRef.current);
-                let step = 0;
-                function doStep() {
-                  if (step >= steps) return;
-                  if (direction > 0) goNextRef.current();
-                  else goPrevRef.current();
-                  step++;
-                  if (step < steps) setTimeout(doStep, 750);
-                }
-                doStep();
+                goToPage(i);
               }}
               aria-label={`Page ${i + 1}`}
               style={{
@@ -830,10 +1408,92 @@ export function CategoryPageScene() {
         padding: '0.35rem 1rem',
         border: '1px solid rgba(168,85,247,0.25)',
       }}>
-        {products.length === 0
-          ? 'Loading products…'
-          : 'Tap a cube to view · swipe or use arrows to browse pages'}
+        {isProductOpening
+          ? `Viewing ${openingProductName}`
+          : isCategoryLoading || (isSearchMode && !isLoaded)
+            ? 'Loading products…'
+            : isSearchMode && products.length === 0
+              ? `No products found for "${trimmedSearchQuery}"`
+              : isSearchMode
+                ? `${products.length} ${products.length === 1 ? 'product' : 'products'} · ${searchResultLabel}`
+                : products.length === 0
+                  ? 'No products in this collection'
+                  : 'Tap a cube to view · swipe or use arrows to browse pages'}
       </div>
+
+      {focusedProduct && (() => {
+        const focusedCode = getProductCode(focusedProduct);
+        return (
+          <div
+            aria-label="Product purchase actions"
+            style={{
+              position: 'fixed',
+              top: '50%',
+              right: 'clamp(1rem, 4vw, 3rem)',
+              transform: 'translateY(-50%)',
+              zIndex: 34,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'stretch',
+              gap: '0.75rem',
+              width: 'min(15.5rem, calc(100vw - 2rem))',
+              padding: '0.9rem 1.05rem',
+              borderRadius: '0.85rem',
+              border: '1px solid rgba(240,180,41,0.45)',
+              background: 'rgba(17,7,24,0.78)',
+              boxShadow: '0 18px 44px rgba(0,0,0,0.32)',
+              backdropFilter: 'blur(16px)',
+              pointerEvents: 'auto',
+            }}
+          >
+            {focusedCode && (
+              <div
+                aria-label={`Product code ${focusedCode}`}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  gap: '0.3rem',
+                }}
+              >
+                <span style={{
+                  fontSize: '0.55rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: '#f0b429',
+                }}>Product Code</span>
+                <span style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontSize: 'clamp(1rem, 2.2vw, 1.35rem)',
+                  fontWeight: 700,
+                  color: '#faf5ff',
+                  lineHeight: 1.1,
+                  letterSpacing: '0.04em',
+                }}>{focusedCode}</span>
+              </div>
+            )}
+            <CubeContactReveal key={focusedProduct.id} product={focusedProduct} />
+            <button
+              type="button"
+              onClick={resetProductFocus}
+              style={{
+                minHeight: 40,
+                border: '1px solid rgba(250,245,255,0.18)',
+                borderRadius: 999,
+                background: 'rgba(250,245,255,0.06)',
+                color: '#faf5ff',
+                cursor: 'pointer',
+                padding: '0.62rem 1rem',
+                fontSize: '0.82rem',
+                fontWeight: 700,
+              }}
+            >
+              Back to cubes
+            </button>
+          </div>
+        );
+      })()}
 
       {/* ── Menu backdrop ── */}
       {menuOpen && (
@@ -864,10 +1524,11 @@ export function CategoryPageScene() {
             key={cat.slug}
             onClick={() => {
               setMenuOpen(false);
+              clearCategorySearch();
               if (cat.slug === slug) return;
               const el = wrapperRef.current;
               if (el) { el.style.transition = 'opacity 300ms ease'; el.style.opacity = '0'; }
-              setTimeout(() => navigate(`/category/${cat.slug}`), 320);
+              setTimeout(() => navigate(`/category/${cat.slug}`, { state: null }), 320);
             }}
             style={{
               display: 'flex', alignItems: 'center', gap: '0.6rem',

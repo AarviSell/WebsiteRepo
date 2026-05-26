@@ -3,11 +3,14 @@ import { create } from 'zustand';
 import Fuse from 'fuse.js';
 import type { Product, CategoryNode } from '@/types/product';
 import { loadAllProducts, loadCategories } from '@/data/loader';
+import { withProductSearchText } from '@/utils/productSearch';
 
 const fuseOptions: Fuse.IFuseOptions<Product> = {
   keys: [
     { name: 'name',              weight: 0.50 },
     { name: 'description',       weight: 0.20 },
+    { name: 'product_code',      weight: 0.24 },
+    { name: 'search_text',       weight: 0.18 },
     { name: 'category_label',    weight: 0.12 },
     { name: 'subcategory_label', weight: 0.10 },
     { name: 'brand',             weight: 0.08 },
@@ -18,6 +21,17 @@ const fuseOptions: Fuse.IFuseOptions<Product> = {
   ignoreLocation: true,
   useExtendedSearch: true,
 };
+
+function hydrateCategoryCounts(categories: CategoryNode[], products: Product[]): CategoryNode[] {
+  return categories.map(category => {
+    const categoryProducts = products.filter(product => product.category === category.slug);
+    return {
+      ...category,
+      count: categoryProducts.length,
+      source_sites: Array.from(new Set(categoryProducts.map(product => product.source_site))),
+    };
+  });
+}
 
 interface ProductStore {
   // Data
@@ -53,8 +67,9 @@ export const useProductStore = create<ProductStore>((set, get) => ({
         loadAllProducts(),
         loadCategories(),
       ]);
-      const fuse = new Fuse(products, fuseOptions);
-      set({ allProducts: products, categories, fuse, isLoaded: true });
+      const searchableProducts = products.map(withProductSearchText);
+      const fuse = new Fuse(searchableProducts, fuseOptions);
+      set({ allProducts: searchableProducts, categories: hydrateCategoryCounts(categories, searchableProducts), fuse, isLoaded: true });
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Failed to load data';
       if (import.meta.env.DEV) console.error('[AArvi] Data load error:', err);

@@ -27,6 +27,12 @@ export interface Product {
   description?: string;
   specifications: Record<string, string>;
   images: ProductImage[];
+  product_code?: string;
+  search_text?: string;
+  catalogue_pdf?: string;
+  catalogue_page?: number;
+  catalogue_image_index?: number;
+  catalogue_page_path?: string;
   seller_name?: string;
   seller_location?: string;
   scraped_at: string;

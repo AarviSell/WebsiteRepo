@@ -16,7 +16,8 @@ export function ProductCard({ product, size = 'md' }: ProductCardProps) {
   const imgHeight = primaryImg?.height ?? 300;
   return (
     <Link
-      to={`/product/${product.id}`}
+      to={`/category/${product.category}`}
+      state={{ focusProductId: product.id }}
       aria-label={product.name}
       style={{
         display: 'block',

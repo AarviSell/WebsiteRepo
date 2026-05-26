@@ -1,6 +1,6 @@
 // src/App.tsx
 import { lazy, Suspense, useEffect } from 'react';
-import { HashRouter, Routes, Route, useParams } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ProductCardSkeleton } from '@/components/ui/Skeleton';
@@ -10,7 +10,6 @@ import { CategoryPageScene } from '@/pages/CategoryPageScene';
 import './App.css';
 
 const SearchResultsPage = lazy(() => import('@/pages/SearchResultsPage').then(m => ({ default: m.SearchResultsPage })));
-const ProductDetailPage = lazy(() => import('@/pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage })));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 function PageLoader() {
@@ -71,9 +70,6 @@ export function App() {
         {/* Category pages — fullscreen Three.js cube scene, no layout wrapper */}
         <Route path="/category/:slug" element={<CategoryPageScene />} />
         <Route path="/category/:slug/:subSlug" element={<CategoryPageScene />} />
-        <Route path="/product/:id" element={
-          <AppLayout><ProductDetailPage /></AppLayout>
-        } />
         <Route path="*" element={
           <AppLayout><NotFoundPage /></AppLayout>
         } />

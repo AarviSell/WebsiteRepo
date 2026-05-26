@@ -50,10 +50,10 @@ describe('ProductCard', () => {
     expect(img.src).toMatch(/data:image\/svg\+xml/);
   });
 
-  it('renders a link to the product detail page', () => {
-    const { container } = renderCard(makeProduct({ id: 'abc-123' }));
+  it('renders a link to the category cube scene', () => {
+    const { container } = renderCard(makeProduct({ id: 'abc-123', category: 'standard-collection' }));
     const link = container.querySelector('a');
-    expect(link?.getAttribute('href')).toBe('/product/abc-123');
+    expect(link?.getAttribute('href')).toBe('/category/standard-collection');
   });
 
   it('renders with no price gracefully', () => {
