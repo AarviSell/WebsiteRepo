@@ -3,6 +3,8 @@ import { useState, useRef, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { useSearch } from '@/hooks/useSearch';
+import { useProductData } from '@/hooks/useProductData';
+import { searchProductsByName } from '@/utils/productSearch';
 import { SearchSuggestions } from './SearchSuggestions';
 
 function useDebounce<T>(value: T, delay: number): T {
@@ -16,6 +18,7 @@ function useDebounce<T>(value: T, delay: number): T {
 
 export function SearchBar() {
   const navigate = useNavigate();
+  const { allProducts } = useProductData();
   const [input, setInput] = useState('');
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -28,11 +31,22 @@ export function SearchBar() {
   const showSuggestions = open && input.length >= 2 && results.length > 0;
 
   const handleNavigateToSearch = useCallback(() => {
-    if (!input.trim()) return;
+    const trimmedInput = input.trim();
+    if (!trimmedInput) return;
+    const firstResult = searchProductsByName(allProducts, trimmedInput, { limit: 1 })[0];
+    const targetSlug = firstResult?.category ?? 'standard-collection';
     setOpen(false);
     setActiveIndex(-1);
-    navigate(`/search?q=${encodeURIComponent(input.trim())}`);
-  }, [input, navigate]);
+    navigate(`/category/${targetSlug}`, {
+      state: {
+        searchQuery: trimmedInput,
+        searchProductId: undefined,
+        focusProductId: undefined,
+        searchOrigin: 'home',
+        searchGlobal: true,
+      },
+    });
+  }, [allProducts, input, navigate]);
 
   const handleSuggestionClick = useCallback((id: string) => {
     const product = results.find(result => result.item.id === id)?.item;
@@ -40,7 +54,15 @@ export function SearchBar() {
     setOpen(false);
     setActiveIndex(-1);
     setInput('');
-    navigate(`/category/${product.category}`, { state: { focusProductId: product.id } });
+    navigate(`/category/${product.category}`, {
+      state: {
+        searchQuery: product.name,
+        searchProductId: product.id,
+        focusProductId: product.id,
+        searchOrigin: 'home',
+        searchGlobal: true,
+      },
+    });
   }, [navigate, results]);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {

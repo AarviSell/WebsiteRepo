@@ -25,6 +25,7 @@ interface SceneSearchBarProps {
   placeholder?: string;
   label?: string;
   disabled?: boolean;
+  autoFocus?: boolean;
 }
 
 export function SceneSearchBar({
@@ -36,6 +37,7 @@ export function SceneSearchBar({
   placeholder = 'Search name, code, or product type',
   label = 'Search products',
   disabled = false,
+  autoFocus = false,
 }: SceneSearchBarProps) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -45,6 +47,12 @@ export function SceneSearchBar({
   const results = useSearch(debouncedQuery, { limit: 6 });
   const trimmedValue = value.trim();
   const showSuggestions = open && trimmedValue.length >= 2 && results.length > 0;
+
+  useEffect(() => {
+    if (!autoFocus || disabled) return;
+    const frame = window.requestAnimationFrame(() => inputRef.current?.focus());
+    return () => window.cancelAnimationFrame(frame);
+  }, [autoFocus, disabled]);
 
   const submitSearch = useCallback(() => {
     if (trimmedValue.length < 2 || disabled) return;

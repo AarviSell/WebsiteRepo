@@ -97,3 +97,52 @@ export function searchProducts(products: Product[], query: string, options?: { l
   const results = scoredProducts.map(result => result.product);
   return typeof options?.limit === 'number' ? results.slice(0, options.limit) : results;
 }
+
+function splitNameSearchTerms(query: string) {
+  const normalizedQuery = normalizeSearchText(query);
+  return normalizedQuery
+    .split(/\b(?:and|or)\b/g)
+    .map(term => term.trim())
+    .filter(term => term.length >= 2);
+}
+
+function scoreProductName(product: Product, query: string) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (normalizedQuery.length < 2) return 0;
+
+  const nameText = normalizeSearchText(product.name);
+  const compactName = compactSearchText(product.name);
+  const compactQuery = compactSearchText(query);
+  const terms = splitNameSearchTerms(query);
+  const searchTerms = terms.length > 0 ? terms : [normalizedQuery];
+
+  let score = 0;
+  if (nameText === normalizedQuery) score += 400;
+  if (nameText.includes(normalizedQuery)) score += 260;
+  if (compactQuery.length >= 2 && compactName.includes(compactQuery)) score += 240;
+
+  searchTerms.forEach(term => {
+    const compactTerm = compactSearchText(term);
+    const termTokens = term.split(' ').filter(token => token.length > 0);
+    const phraseMatch = nameText.includes(term) || compactName.includes(compactTerm);
+    const tokenMatch = termTokens.every(token => nameText.includes(token) || compactName.includes(compactSearchText(token)));
+
+    if (phraseMatch) score += 180;
+    else if (tokenMatch) score += 80;
+  });
+
+  return score;
+}
+
+export function searchProductsByName(products: Product[], query: string, options?: { limit?: number }) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (normalizedQuery.length < 2) return [];
+
+  const scoredProducts = products
+    .map(product => ({ product, score: scoreProductName(product, query) }))
+    .filter(result => result.score > 0)
+    .sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name));
+
+  const results = scoredProducts.map(result => result.product);
+  return typeof options?.limit === 'number' ? results.slice(0, options.limit) : results;
+}

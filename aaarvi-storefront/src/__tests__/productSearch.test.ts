@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { searchProducts, withProductSearchText } from '@/utils/productSearch';
+import { searchProducts, searchProductsByName, withProductSearchText } from '@/utils/productSearch';
 import type { Product } from '@/types/product';
 
 function makeProduct(overrides: Partial<Product>): Product {
@@ -35,5 +35,16 @@ describe('product scene search', () => {
   it('finds products by category or type text', () => {
     const results = searchProducts(products, 'sink organizer');
     expect(results.some(product => product.id === 'soap')).toBe(true);
+  });
+
+  it('finds product table results by name only with compact phrase matching', () => {
+    const tableProducts = [
+      makeProduct({ id: 'lunch-box', name: 'Steel Lunch Box', category_label: 'Food Storage' }),
+      makeProduct({ id: 'water-bottle', name: 'Copper Water Bottle', category_label: 'Drinkware' }),
+      makeProduct({ id: 'category-only', name: 'Travel Mug', category_label: 'Water Bottle Gifts' }),
+    ];
+
+    expect(searchProductsByName(tableProducts, 'lunchbox').map(product => product.id)).toEqual(['lunch-box']);
+    expect(searchProductsByName(tableProducts, 'water bottle').map(product => product.id)).toEqual(['water-bottle']);
   });
 });

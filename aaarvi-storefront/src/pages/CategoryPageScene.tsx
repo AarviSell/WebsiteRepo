@@ -2,13 +2,14 @@
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
+import { Search, X } from 'lucide-react';
 import { loadCategoryProducts, loadCategories } from '@/data/loader';
 import { useProductData } from '@/hooks/useProductData';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
 import { makeCataloguePageTexture } from '@/utils/threeCatalogueTexture';
-import { searchProducts } from '@/utils/productSearch';
+import { searchProductsByName } from '@/utils/productSearch';
 import type { Product } from '@/types/product';
 import logoSrc from '@/assets/logo.png';
 
@@ -33,6 +34,7 @@ const PAGE_SIZE   = TABLE_W * TABLE_H; // 15
 const PAGE_FACE_IDX = [4, 1, 5, 0] as const;
 const MAX_PAGES = PAGE_FACE_IDX.length; // 4 → up to 60 products
 const PRODUCT_FOCUS_RETURN_DUR = 860;
+const SEARCH_DROP_DUR = 560;
 
 function getPageRotationY(pageIdx: number) {
   return pageIdx * (Math.PI / 2);
@@ -89,7 +91,24 @@ interface SceneState {
   isRotating: { value: boolean };
   isExiting: { value: boolean };
   exitStart: { value: number };
+  searchDrop: { active: boolean; startMs: number };
   productFocus: ProductFocusState;
+}
+
+interface CategoryRouteState {
+  focusProductId?: string;
+  searchQuery?: string;
+  searchProductId?: string;
+  searchOrigin?: 'home' | 'category';
+  returnCategorySlug?: string;
+  reopenSearch?: boolean;
+  searchGlobal?: boolean;
+}
+
+interface SearchReturnTarget {
+  origin: 'home' | 'category';
+  query: string;
+  categorySlug?: string;
 }
 
 /* ── Label sprite factory: golden plaque with black text ───── */
@@ -365,7 +384,7 @@ export function CategoryPageScene() {
   const navigate  = useNavigate();
   const location = useLocation();
   const { allProducts, isLoaded } = useProductData();
-  const routeState = location.state as { focusProductId?: string; searchQuery?: string; searchProductId?: string } | null;
+  const routeState = location.state as CategoryRouteState | null;
   const incomingSearchQuery = routeState?.searchQuery?.trim() ?? '';
   const incomingSearchProductId = routeState?.searchProductId ?? null;
 
@@ -380,6 +399,7 @@ export function CategoryPageScene() {
   const isAnimatingRef = useRef(false);
   const consumedFocusRequestRef = useRef<string | null>(null);
   const finishProductReturnRef = useRef<() => void>(() => {});
+  const searchReturnRef = useRef<SearchReturnTarget | null>(null);
   /** Records clientX at last pointerdown so click handler can reject drag events */
   const mouseDragStartX = useRef(-1);
 
@@ -394,8 +414,10 @@ export function CategoryPageScene() {
   const [focusedProduct, setFocusedProduct] = useState<Product | null>(null);
   const [searchQuery, setSearchQuery] = useState(incomingSearchQuery);
   const [selectedSearchProductId, setSelectedSearchProductId] = useState<string | null>(incomingSearchProductId);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [isCategoryLoading, setIsCategoryLoading] = useState(true);
   const focusProductId = routeState?.focusProductId;
+  const shouldReopenSearch = Boolean(routeState?.reopenSearch) && !focusProductId;
   const focusRequestKey = focusProductId ? `${location.key}:${focusProductId}` : '';
   const trimmedSearchQuery = searchQuery.trim();
   const isSearchMode = trimmedSearchQuery.length >= 2 || Boolean(selectedSearchProductId);
@@ -413,6 +435,7 @@ export function CategoryPageScene() {
     setIsCategoryLoading(true);
     setSearchQuery(incomingSearchQuery);
     setSelectedSearchProductId(incomingSearchProductId);
+    setSearchOpen(shouldReopenSearch);
     pageRef.current = 0;
     const resetTimer = window.setTimeout(() => {
       setPage(0);
@@ -430,6 +453,8 @@ export function CategoryPageScene() {
       state.productFocus.active = false;
       state.productFocus.returning = false;
       state.isRotating.value = false;
+      state.searchDrop.active = false;
+      state.searchDrop.startMs = Number.NEGATIVE_INFINITY;
       state.camera.position.set(0, 5.5, 12);
       state.cubes.forEach((cube, cubeIndex) => {
         const columnIndex = Math.floor(cubeIndex / TABLE_H);
@@ -439,6 +464,10 @@ export function CategoryPageScene() {
         cube.scale.set(1, 1, 1);
         cube.userData.targetRotX = 0;
         cube.userData.targetRotY = 0;
+        delete cube.userData.searchDropStartY;
+        delete cube.userData.searchDropStartRotX;
+        delete cube.userData.searchDropStartRotZ;
+        delete cube.userData.searchDropStartScale;
       });
       state.labels.forEach(label => {
         const material = label.material as THREE.SpriteMaterial;
@@ -464,7 +493,7 @@ export function CategoryPageScene() {
     }).finally(() => setIsCategoryLoading(false));
 
     return () => window.clearTimeout(resetTimer);
-  }, [incomingSearchProductId, incomingSearchQuery, setVisibleProducts, slug]);
+  }, [incomingSearchProductId, incomingSearchQuery, setVisibleProducts, shouldReopenSearch, slug]);
 
   /* ── Build Three.js scene ─────────────────────────────────── */
   useEffect(() => {
@@ -584,6 +613,7 @@ export function CategoryPageScene() {
     const isRotating = { value: false };
     const isExiting  = { value: false };
     const exitStart  = { value: 0 };
+    const searchDrop = { active: false, startMs: Number.NEGATIVE_INFINITY };
     const productFocus: ProductFocusState = {
       active: false,
       returning: false,
@@ -616,6 +646,9 @@ export function CategoryPageScene() {
       const dt   = Math.min((now - lastFrameMs) / 1000, 0.05); // delta-time, capped at 50 ms
       lastFrameMs = now;
       frameCounter++;
+      const searchDropElapsed = now - searchDrop.startMs;
+      const searchDropTransitioning = Number.isFinite(searchDropElapsed) && searchDropElapsed >= 0 && searchDropElapsed < SEARCH_DROP_DUR;
+      const searchDropBlocksCubes = searchDrop.active || searchDropTransitioning;
 
       /* Floor wave – updated every 2nd frame to halve instanced-matrix upload cost */
       if (frameCounter % 2 === 0) {
@@ -651,11 +684,47 @@ export function CategoryPageScene() {
       cubes.forEach(cube => {
         cube.rotation.x += (cube.userData.targetRotX - cube.rotation.x) * rotLerp;
         cube.rotation.y += (cube.userData.targetRotY - cube.rotation.y) * rotLerp;
-        if (entryDone.value && !isExiting.value && !productFocus.active && !productFocus.returning) {
+        if (entryDone.value && !isExiting.value && !productFocus.active && !productFocus.returning && !searchDropBlocksCubes) {
           cube.position.y = cube.userData.baseY
             + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
         }
       });
+
+      if (searchDropBlocksCubes && !productFocus.active && !productFocus.returning && !isExiting.value) {
+        const rawDropT = clamp01(searchDropElapsed / SEARCH_DROP_DUR);
+        const dropT = searchDrop.active ? easeInQuart(rawDropT) : easeInOutCubic(rawDropT);
+
+        cubes.forEach((cube, cubeIndex) => {
+          const startY = (cube.userData.searchDropStartY as number | undefined) ?? cube.position.y;
+          const startRotX = (cube.userData.searchDropStartRotX as number | undefined) ?? cube.rotation.x;
+          const startRotZ = (cube.userData.searchDropStartRotZ as number | undefined) ?? cube.rotation.z;
+          const startScale = (cube.userData.searchDropStartScale as number | undefined) ?? cube.scale.x;
+          const floatY = cube.userData.baseY + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
+          const targetY = searchDrop.active ? -16 - (cubeIndex % TABLE_H) * 0.45 : floatY;
+          const targetRotX = searchDrop.active ? (cubeIndex % 2 === 0 ? 1.2 : -1.1) : 0;
+          const targetRotZ = searchDrop.active ? (cubeIndex % 3 === 0 ? -0.85 : 0.85) : 0;
+          const targetScale = searchDrop.active ? 0.82 : 1;
+
+          cube.position.y = THREE.MathUtils.lerp(startY, targetY, dropT);
+          cube.rotation.x = THREE.MathUtils.lerp(startRotX, targetRotX, dropT);
+          cube.rotation.z = THREE.MathUtils.lerp(startRotZ, targetRotZ, dropT);
+          cube.scale.setScalar(THREE.MathUtils.lerp(startScale, targetScale, dropT));
+
+          const labelMat = labels[cubeIndex]?.material as THREE.SpriteMaterial | undefined;
+          if (labelMat) labelMat.opacity = searchDrop.active ? 1 - dropT : dropT;
+
+          if (!searchDrop.active && rawDropT >= 1) {
+            delete cube.userData.searchDropStartY;
+            delete cube.userData.searchDropStartRotX;
+            delete cube.userData.searchDropStartRotZ;
+            delete cube.userData.searchDropStartScale;
+          }
+        });
+
+        if (!searchDrop.active && rawDropT >= 1) {
+          searchDrop.startMs = Number.NEGATIVE_INFINITY;
+        }
+      }
 
       /* Product focus: selected cube becomes the catalogue-page slab while all others fall away */
       if (productFocus.active) {
@@ -787,7 +856,7 @@ export function CategoryPageScene() {
       renderer.render(scene, camera);
     });
 
-    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart, productFocus };
+    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart, searchDrop, productFocus };
     setSceneReady(true);
 
     /* Resize */
@@ -811,6 +880,20 @@ export function CategoryPageScene() {
     };
   }, []);
 
+  useEffect(() => {
+    const state = sceneRef.current;
+    if (!state || state.searchDrop.active === searchOpen) return;
+
+    state.searchDrop.active = searchOpen;
+    state.searchDrop.startMs = performance.now();
+    state.cubes.forEach(cube => {
+      cube.userData.searchDropStartY = cube.position.y;
+      cube.userData.searchDropStartRotX = cube.rotation.x;
+      cube.userData.searchDropStartRotZ = cube.rotation.z;
+      cube.userData.searchDropStartScale = cube.scale.x;
+    });
+  }, [sceneReady, searchOpen]);
+
   /* ── Load textures for a page ─────────────────────────────── */
   const loadPageTextures = useCallback((pageIdx: number) => {
     const state = sceneRef.current;
@@ -820,6 +903,7 @@ export function CategoryPageScene() {
     const requestId = ++texturePageRequestRef.current;
     const faceIdx = PAGE_FACE_IDX[pageIdx];
     const loader  = new THREE.TextureLoader();
+    const hideUnpaintedSearchCubes = isSearchMode;
 
     // Reset active parallax list for the new page; entries get re-pushed below.
     parallaxRef.current = [];
@@ -833,10 +917,14 @@ export function CategoryPageScene() {
         mats[fi] = goldMat();
       });
       cube.material = mats;
+      cube.visible = !hideUnpaintedSearchCubes;
     });
 
     // Clear all labels first; we'll repopulate only the slots that have a product.
-    state.labels.forEach(lbl => setLabelSpriteText(lbl, ''));
+    state.labels.forEach(lbl => {
+      lbl.visible = !hideUnpaintedSearchCubes;
+      setLabelSpriteText(lbl, '');
+    });
 
     if (prods.length === 0) return;
 
@@ -845,11 +933,21 @@ export function CategoryPageScene() {
       const prodIdx = pageIdx * PAGE_SIZE + i;
       if (prodIdx >= prods.length) return;
 
+      const product = prods[prodIdx];
+      const img = getPrimaryImage(product);
+      if (hideUnpaintedSearchCubes && !img) {
+        state.cubes[i].visible = false;
+        if (state.labels[i]) state.labels[i].visible = false;
+        return;
+      }
+
+      state.cubes[i].visible = true;
+      if (state.labels[i]) state.labels[i].visible = true;
+
       // Update the label above this cube with the shortened product name.
       const label = state.labels[i];
-      if (label) setLabelSpriteText(label, shortenProductName(prods[prodIdx].name || ''));
+      if (label) setLabelSpriteText(label, shortenProductName(product.name || ''));
 
-      const img = getPrimaryImage(prods[prodIdx]);
       if (!img) return;
       const url = resolveImageUrl(img.local_path);
 
@@ -897,7 +995,7 @@ export function CategoryPageScene() {
         () => { /* swallow — face stays gold */ },
       );
     });
-  }, []);
+  }, [isSearchMode]);
 
   useEffect(() => {
     if (!isSearchMode) {
@@ -908,7 +1006,7 @@ export function CategoryPageScene() {
     const searchPool = allProducts.length > 0 ? allProducts : categoryProducts;
     const nextProducts = selectedSearchProductId
       ? searchPool.filter(product => product.id === selectedSearchProductId)
-      : searchProducts(searchPool, trimmedSearchQuery);
+      : searchProductsByName(searchPool, trimmedSearchQuery).filter(product => Boolean(getPrimaryImage(product)));
     setVisibleProducts(nextProducts);
   }, [allProducts, categoryProducts, isSearchMode, selectedSearchProductId, setVisibleProducts, trimmedSearchQuery]);
 
@@ -972,6 +1070,18 @@ export function CategoryPageScene() {
   const goPrev = useCallback(() => {
     goToPage(pageRef.current - 1);
   }, [goToPage]);
+
+  const syncSceneToPage = useCallback((targetPage: number) => {
+    const state = sceneRef.current;
+    if (!state) return;
+
+    const targetRotY = getPageRotationY(targetPage);
+    state.isRotating.value = false;
+    state.cubes.forEach(cube => {
+      cube.rotation.y = targetRotY;
+      cube.userData.targetRotY = targetRotY;
+    });
+  }, []);
 
   useEffect(() => { goNextRef.current = goNext; }, [goNext]);
   useEffect(() => { goPrevRef.current = goPrev; }, [goPrev]);
@@ -1156,9 +1266,57 @@ export function CategoryPageScene() {
     });
   }, []);
 
+  const returnFromFocusedProduct = useCallback(() => {
+    const fallbackQuery = trimmedSearchQuery || focusedProduct?.name || '';
+    const routeReturnTarget: SearchReturnTarget | null = routeState?.searchOrigin
+      ? {
+          origin: routeState.searchOrigin,
+          query: routeState.searchQuery?.trim() || fallbackQuery,
+          categorySlug: routeState.returnCategorySlug,
+        }
+      : null;
+    const localReturnTarget = searchReturnRef.current;
+    const selectedReturnTarget: SearchReturnTarget | null = selectedSearchProductId
+      ? { origin: 'category', query: fallbackQuery, categorySlug: slug }
+      : null;
+    const target = localReturnTarget ?? routeReturnTarget ?? selectedReturnTarget;
+
+    if (!target || !target.query.trim()) {
+      resetProductFocus();
+      return;
+    }
+
+    searchReturnRef.current = null;
+
+    if (target.origin === 'home') {
+      navigate('/', {
+        state: {
+          returnTo: slug,
+          searchQuery: target.query,
+          reopenSearch: true,
+        },
+      });
+      return;
+    }
+
+    const targetSlug = target.categorySlug ?? slug ?? focusedProduct?.category;
+    if (!targetSlug) {
+      resetProductFocus();
+      return;
+    }
+
+    navigate(`/category/${targetSlug}`, {
+      state: {
+        searchQuery: target.query,
+        reopenSearch: true,
+        searchOrigin: 'category',
+      },
+    });
+  }, [focusedProduct?.category, focusedProduct?.name, navigate, resetProductFocus, routeState?.returnCategorySlug, routeState?.searchOrigin, routeState?.searchQuery, selectedSearchProductId, slug, trimmedSearchQuery]);
+
   useEffect(() => {
     if (!focusProductId || !focusRequestKey || !sceneReady || products.length === 0) return;
-    if (consumedFocusRequestRef.current === focusRequestKey || isAnimatingRef.current) return;
+    if (consumedFocusRequestRef.current === focusRequestKey) return;
 
     const productIndex = products.findIndex(product => product.id === focusProductId);
     if (productIndex < 0) return;
@@ -1167,43 +1325,70 @@ export function CategoryPageScene() {
     const cubeIndex = productIndex % PAGE_SIZE;
     const product = products[productIndex];
     if (targetPage >= MAX_PAGES) return;
-    consumedFocusRequestRef.current = focusRequestKey;
 
     pageRef.current = targetPage;
     const pageTimer = window.setTimeout(() => setPage(targetPage), 0);
     loadPageTextures(targetPage);
 
-    const state = sceneRef.current;
-    if (state) {
-      const targetRotY = getPageRotationY(targetPage);
-      state.isRotating.value = false;
-      state.cubes.forEach(cube => {
-        cube.rotation.y = targetRotY;
-        cube.userData.targetRotY = targetRotY;
-      });
-    }
+    syncSceneToPage(targetPage);
 
-    const timer = window.setTimeout(() => beginProductFocus(cubeIndex, product), 360);
+    const timer = window.setTimeout(() => {
+      if (consumedFocusRequestRef.current === focusRequestKey) return;
+      consumedFocusRequestRef.current = focusRequestKey;
+      beginProductFocus(cubeIndex, product);
+    }, 360);
     return () => {
       window.clearTimeout(pageTimer);
       window.clearTimeout(timer);
     };
-  }, [beginProductFocus, focusProductId, focusRequestKey, loadPageTextures, products, sceneReady]);
+  }, [beginProductFocus, focusProductId, focusRequestKey, loadPageTextures, products, sceneReady, syncSceneToPage]);
+
+  const focusProductFromSearch = useCallback((product: Product, query: string) => {
+    const nextQuery = query.trim() || product.name;
+
+    if (product.category !== slug) {
+      navigate(`/category/${product.category}`, {
+        state: {
+          searchQuery: nextQuery,
+          searchProductId: product.id,
+          focusProductId: product.id,
+          searchOrigin: 'category',
+          returnCategorySlug: slug,
+          searchGlobal: true,
+        },
+      });
+      return;
+    }
+
+    searchReturnRef.current = { origin: 'category', query: nextQuery, categorySlug: slug };
+    setSearchOpen(false);
+    setMenuOpen(false);
+    setOpeningProductName('');
+    setFocusedProduct(null);
+    setSearchQuery(nextQuery);
+    setSelectedSearchProductId(product.id);
+    setVisibleProducts([product]);
+    syncSceneToPage(0);
+    loadPageTextures(0);
+    window.setTimeout(() => beginProductFocus(0, product), 160);
+  }, [beginProductFocus, loadPageTextures, navigate, setVisibleProducts, slug, syncSceneToPage]);
 
   const handleCategorySearch = useCallback((query: string) => {
     const trimmedQuery = query.trim();
     if (trimmedQuery.length < 2) return;
+
+    searchReturnRef.current = { origin: 'category', query: trimmedQuery, categorySlug: slug };
+    setMenuOpen(false);
     setSelectedSearchProductId(null);
     setSearchQuery(trimmedQuery);
-  }, []);
+  }, [slug]);
 
   const handleCategoryProductSelect = useCallback((product: Product) => {
-    setSearchQuery(product.name);
-    setSelectedSearchProductId(product.id);
-    setMenuOpen(false);
-  }, []);
+    focusProductFromSearch(product, product.name);
+  }, [focusProductFromSearch]);
 
   const clearCategorySearch = useCallback(() => {
+    searchReturnRef.current = null;
     setSearchQuery('');
     setSelectedSearchProductId(null);
   }, []);
@@ -1278,8 +1463,8 @@ export function CategoryPageScene() {
             </svg>
             Home
           </button>
-          {!isProductOpening && (
-            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '25rem' }}>
+          {searchOpen ? (
+            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '25rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.45rem', alignItems: 'center' }}>
               <SceneSearchBar
                 value={searchQuery}
                 onChange={value => {
@@ -1291,8 +1476,59 @@ export function CategoryPageScene() {
                 onClear={clearCategorySearch}
                 placeholder={isLoaded ? 'Name, code, or type' : 'Loading search'}
                 disabled={!isLoaded}
+                autoFocus
               />
+              <button
+                type="button"
+                aria-label="Close search"
+                title="Close search"
+                onClick={() => setSearchOpen(false)}
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: '50%',
+                  border: '1px solid rgba(240,180,41,0.36)',
+                  background: 'rgba(17,7,24,0.82)',
+                  color: '#faf5ff',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 16px 42px rgba(0,0,0,0.28)',
+                  backdropFilter: 'blur(18px)',
+                  flexShrink: 0,
+                }}
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
             </div>
+          ) : (
+            <button
+              type="button"
+              aria-label="Open search"
+              title="Search products"
+              onClick={() => {
+                setMenuOpen(false);
+                setSearchOpen(true);
+              }}
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: '50%',
+                border: '1px solid rgba(240,180,41,0.42)',
+                background: 'rgba(17,7,24,0.8)',
+                color: '#fde68a',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 16px 42px rgba(0,0,0,0.3)',
+                backdropFilter: 'blur(18px)',
+                flexShrink: 0,
+              }}
+            >
+              <Search size={18} aria-hidden="true" />
+            </button>
           )}
         </div>
 
@@ -1394,13 +1630,17 @@ export function CategoryPageScene() {
         </div>
       )}
 
-      {/* ── Bottom hint ── */}
+      {/* ── Status hint ── */}
       <div style={{
         position: 'fixed',
-        bottom: maxPages > 1 ? '4.5rem' : '1.5rem',
+        top: isProductOpening ? undefined : '4.15rem',
+        bottom: isProductOpening ? (maxPages > 1 ? '4.5rem' : '1.5rem') : undefined,
         left: '50%', transform: 'translateX(-50%)',
         color: 'rgba(250,245,255,0.85)', fontSize: '0.72rem',
-        letterSpacing: '0.08em', zIndex: 15, whiteSpace: 'nowrap',
+        letterSpacing: '0.08em', zIndex: 15,
+        maxWidth: 'calc(100vw - 2rem)',
+        whiteSpace: 'normal',
+        textAlign: 'center',
         pointerEvents: 'none',
         background: 'rgba(13,4,20,0.7)',
         backdropFilter: 'blur(8px)',
@@ -1476,7 +1716,7 @@ export function CategoryPageScene() {
             <CubeContactReveal key={focusedProduct.id} product={focusedProduct} />
             <button
               type="button"
-              onClick={resetProductFocus}
+              onClick={returnFromFocusedProduct}
               style={{
                 minHeight: 40,
                 border: '1px solid rgba(250,245,255,0.18)',
@@ -1489,7 +1729,7 @@ export function CategoryPageScene() {
                 fontWeight: 700,
               }}
             >
-              Back to cubes
+              {routeState?.searchOrigin || selectedSearchProductId ? 'Back to search' : 'Back to cubes'}
             </button>
           </div>
         );

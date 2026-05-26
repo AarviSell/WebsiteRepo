@@ -2,9 +2,10 @@
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
+import { Search, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
-import { searchProducts } from '@/utils/productSearch';
+import { searchProductsByName } from '@/utils/productSearch';
 import type { Product } from '@/types/product';
 import logoSrc from '../assets/logo.png';
 
@@ -230,7 +231,8 @@ export function HomePageScene() {
   const navigate = useNavigate();
   const location = useLocation();
   const { categories, allProducts, isLoaded } = useProductData();
-  const returnSlug = (location.state as { returnTo?: string } | null)?.returnTo;
+  const locationState = location.state as { returnTo?: string; searchQuery?: string; reopenSearch?: boolean } | null;
+  const returnSlug = locationState?.returnTo;
   const initialIndex = returnSlug ? Math.max(0, CATS.findIndex(c => c.slug === returnSlug)) : 0;
 
   const cats = useMemo(() => CATS.map(cat => {
@@ -244,7 +246,8 @@ export function HomePageScene() {
   const [isZoomingOut, setIsZoomingOut] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [homeSearch, setHomeSearch] = useState('');
+  const [homeSearch, setHomeSearch] = useState(locationState?.reopenSearch ? locationState.searchQuery ?? '' : '');
+  const [searchOpen, setSearchOpen] = useState(Boolean(locationState?.reopenSearch));
 
   const sceneRef = useRef<{
     renderer: THREE.WebGLRenderer;
@@ -263,13 +266,16 @@ export function HomePageScene() {
     const trimmedQuery = query.trim();
     if (trimmedQuery.length < 2) return;
 
-    const firstResult = selectedProduct ?? searchProducts(allProducts, trimmedQuery, { limit: 1 })[0];
+    const firstResult = selectedProduct ?? searchProductsByName(allProducts, trimmedQuery, { limit: 1 })[0];
     const targetSlug = firstResult?.category ?? CATS[currentRef.current]?.slug ?? 'standard-collection';
+    setSearchOpen(false);
 
     navigate(`/category/${targetSlug}`, {
       state: {
         searchQuery: trimmedQuery,
         searchProductId: selectedProduct?.id,
+        focusProductId: selectedProduct?.id,
+        searchOrigin: 'home',
         searchGlobal: true,
       },
     });
@@ -717,16 +723,69 @@ export function HomePageScene() {
             <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
             <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
           </button>
-          <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '26rem' }}>
-            <SceneSearchBar
-              value={homeSearch}
-              onChange={setHomeSearch}
-              onSearch={query => openSearchResults(query)}
-              onProductSelect={product => openSearchResults(product.name, product)}
-              placeholder={isLoaded ? 'Name, code, or type' : 'Loading search'}
-              disabled={!isLoaded}
-            />
-          </div>
+          {!isZoomingOut && (searchOpen ? (
+            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '26rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.45rem', alignItems: 'center' }}>
+              <SceneSearchBar
+                value={homeSearch}
+                onChange={setHomeSearch}
+                onSearch={query => openSearchResults(query)}
+                onProductSelect={product => openSearchResults(product.name, product)}
+                placeholder={isLoaded ? 'Name, code, or type' : 'Loading search'}
+                disabled={!isLoaded}
+                autoFocus
+              />
+              <button
+                type="button"
+                aria-label="Close search"
+                title="Close search"
+                onClick={() => setSearchOpen(false)}
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: '50%',
+                  border: '1px solid rgba(240,180,41,0.36)',
+                  background: 'rgba(17,7,24,0.82)',
+                  color: '#faf5ff',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 16px 42px rgba(0,0,0,0.28)',
+                  backdropFilter: 'blur(18px)',
+                  flexShrink: 0,
+                }}
+              >
+                <X size={18} aria-hidden="true" />
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              aria-label="Open search"
+              title="Search products"
+              onClick={() => {
+                setMenuOpen(false);
+                setSearchOpen(true);
+              }}
+              style={{
+                width: 44,
+                height: 44,
+                borderRadius: '50%',
+                border: '1px solid rgba(240,180,41,0.42)',
+                background: 'rgba(17,7,24,0.8)',
+                color: '#fde68a',
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 16px 42px rgba(0,0,0,0.3)',
+                backdropFilter: 'blur(18px)',
+                flexShrink: 0,
+              }}
+            >
+              <Search size={18} aria-hidden="true" />
+            </button>
+          ))}
         </div>
         {/* Center — logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
@@ -740,29 +799,7 @@ export function HomePageScene() {
             Arvi
           </span>
         </div>
-        {/* Right — nav */}
-        <nav style={{ display: 'flex', gap: '2rem', justifyContent: 'flex-end' }}>
-          {(['Deals', 'Spotlight'] as const).map(link => (
-            <a
-              key={link}
-              href="#"
-              onClick={e => {
-                e.preventDefault();
-                if (link === 'Deals') handleZoomNavigate('best-sellers');
-                else if (link === 'Spotlight') handleZoomNavigate('in-the-spotlight');
-              }}
-              style={{
-                fontSize: '0.875rem', fontWeight: 500,
-                color: 'rgba(250,245,255,0.7)', textDecoration: 'none',
-                letterSpacing: '0.04em', transition: 'color 180ms ease',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#faf5ff')}
-              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(250,245,255,0.7)')}
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
+        <div />
       </header>
 
       {/* Category display */}
