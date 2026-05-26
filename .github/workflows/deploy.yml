@@ -36,9 +36,6 @@ jobs:
           VITE_BASE: /WebsiteRepo/
         run: npx vite build
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
