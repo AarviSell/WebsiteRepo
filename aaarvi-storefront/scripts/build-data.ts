@@ -5,6 +5,10 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const SCRAPER_OUTPUT = process.env.SCRAPER_OUTPUT_PATH ?? path.resolve(__dirname, '../../aArvi-scraper/output');
 const SRC_DATA = path.resolve(__dirname, '../src/data');

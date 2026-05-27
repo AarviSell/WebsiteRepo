@@ -1289,7 +1289,7 @@ export function CategoryPageScene() {
     searchReturnRef.current = null;
 
     if (target.origin === 'home') {
-      navigate('/', {
+      navigate('/interactive', {
         state: {
           returnTo: slug,
           searchQuery: target.query,
@@ -1441,9 +1441,9 @@ export function CategoryPageScene() {
                 sceneRef.current.exitStart.value = performance.now();
                 const el = wrapperRef.current;
                 if (el) { el.style.transition = 'opacity 350ms ease'; el.style.opacity = '0'; }
-                setTimeout(() => navigate('/', { state: { returnTo: slug } }), 380);
+                setTimeout(() => navigate('/interactive', { state: { returnTo: slug } }), 380);
               } else {
-                navigate('/', { state: { returnTo: slug } });
+                navigate('/interactive', { state: { returnTo: slug } });
               }
             }}
             style={{

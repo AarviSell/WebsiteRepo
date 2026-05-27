@@ -6,20 +6,27 @@ import { Search, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { searchProductsByName } from '@/utils/productSearch';
+import { COLLECTIONS } from '@/utils/collections';
 import type { Product } from '@/types/product';
 import logoSrc from '../assets/logo.png';
 
 /* ── Category data ─────────────────────────────────────────── */
-const CATS = [
-  { slug: 'standard-collection',  label: 'Standard Collection',  count: 0, icon: '📦' },
-  { slug: 'business-collection',  label: 'Business Collection',  count: 0, icon: '💼' },
-  { slug: 'signature-collection', label: 'Signature Collection', count: 0, icon: '✒️' },
-  { slug: 'preferred-collection', label: 'Preferred Collection', count: 0, icon: '⭐' },
-  { slug: 'premium-collection',   label: 'Premium Collection',   count: 0, icon: '💎' },
-  { slug: 'executive-collection', label: 'Executive Collection', count: 0, icon: '🎩' },
-  { slug: 'chairman-collection',  label: 'Chairman Collection',  count: 0, icon: '🏆' },
-  { slug: 'legacy-collection',    label: 'Legacy Collection',    count: 0, icon: '👑' },
-];
+const CATEGORY_ICONS: Record<string, string> = {
+  'standard-collection': '📦',
+  'business-collection': '💼',
+  'signature-collection': '✒️',
+  'preferred-collection': '⭐',
+  'premium-collection': '💎',
+  'executive-collection': '🎩',
+  'chairman-collection': '🏆',
+  'legacy-collection': '👑',
+};
+
+const CATS = COLLECTIONS.map(collection => ({
+  ...collection,
+  count: 0,
+  icon: CATEGORY_ICONS[collection.slug] ?? '✦',
+}));
 
 /* ── Helpers ────────────────────────────────────────────────── */
 function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
@@ -80,7 +87,7 @@ function drawCornerFlourish(
   ctx.fill();
 }
 
-function makeGoldTexture(cat: { slug: string; icon: string }) {
+function makeGoldTexture(cat: { slug: string; label: string; icon: string; priceRange: string }) {
   const W = 512, H = 720;
   const cv = document.createElement('canvas');
   cv.width = W; cv.height = H;
@@ -154,11 +161,14 @@ function makeGoldTexture(cat: { slug: string; icon: string }) {
   roundRectPath(ctx, 0, H - 100, W, 100, [0, 0, 28, 28]);
   ctx.fill();
 
-  ctx.fillStyle = 'rgba(255,240,160,0.3)';
+  ctx.fillStyle = 'rgba(255,240,160,0.34)';
   ctx.font = '600 14px "DM Sans", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'bottom';
-  ctx.fillText(cat.label.toUpperCase(), W / 2, H - 22);
+  ctx.fillText(cat.label.toUpperCase(), W / 2, H - 46);
+  ctx.fillStyle = 'rgba(255,250,225,0.78)';
+  ctx.font = '700 17px "DM Sans", sans-serif';
+  ctx.fillText(cat.priceRange.toUpperCase(), W / 2, H - 20);
 
   return new THREE.CanvasTexture(cv);
 }
@@ -197,7 +207,7 @@ function makeRoundedBoxGeo(w: number, h: number, d: number, r: number, segs: num
   });
 }
 
-function buildCard(cat: { slug: string; icon: string }) {
+function buildCard(cat: { slug: string; label: string; icon: string; priceRange: string }) {
   const group = new THREE.Group();
   const geo = makeRoundedBoxGeo(2.8, 4.0, 0.09, 0.14, 8);
 
@@ -831,6 +841,15 @@ export function HomePageScene() {
           {cats[current]?.label}
         </div>
         <div style={{
+          fontSize: '0.9rem', color: '#fde68a',
+          marginTop: '0.35rem', fontWeight: 800,
+          opacity: labelVisible ? 1 : 0,
+          transform: labelVisible ? 'translateY(0)' : 'translateY(8px)',
+          transition: 'opacity 350ms ease 120ms, transform 350ms ease 120ms',
+        }}>
+          {cats[current]?.priceRange}
+        </div>
+        <div style={{
           fontSize: '0.875rem', color: 'rgba(250,245,255,0.7)',
           marginTop: '0.4rem',
           opacity: labelVisible ? 1 : 0,
@@ -966,7 +985,10 @@ export function HomePageScene() {
             onMouseLeave={e => { if (cats[current]?.slug !== cat.slug) (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
           >
             <span style={{ fontSize: '1rem' }}>{cat.icon}</span>
-            <span>{cat.label}</span>
+            <span style={{ display: 'grid', gap: '0.1rem' }}>
+              <span>{cat.label}</span>
+              <span style={{ color: '#fde68a', fontSize: '0.7rem', fontWeight: 700 }}>{cat.priceRange}</span>
+            </span>
           </button>
         ))}
         <div style={{ marginTop: '2rem' }}>
