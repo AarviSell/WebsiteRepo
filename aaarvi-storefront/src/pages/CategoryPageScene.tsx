@@ -21,6 +21,9 @@ const TABLE_MIN_COLUMNS = 2;
 const TABLE_MIN_ROWS = 2;
 const TABLE_MAX_SLOTS = TABLE_MAX_COLUMNS * TABLE_MAX_ROWS;
 const CUBE_SIZE = 2.15;
+const BASE_FLOAT_AMPLITUDE = 0.12;
+const FLOAT_LABEL_CLEARANCE = 0.08;
+const TEXTURE_FADE_DUR = 380;
 const TABLE_BASE_CENTER_Y = 5.2;
 const MOBILE_BREAKPOINT = 768;
 const FLOOR_GRID  = 40;  // 40×40 = 1 600 tiles – fog hides anything beyond ~30 units
@@ -97,7 +100,11 @@ function getSceneLayout(viewport: SceneViewportSize) {
   const rows = isVeryShort ? TABLE_MIN_ROWS : TABLE_MAX_ROWS;
   const spacingMax = columns >= 5 ? 2.9 : columns >= 4 ? 2.72 : 2.5;
   const spacingMin = columns <= 2 ? 2.16 : 2.28;
-  const spacing = clamp(2.22 + widthEase * 0.72 - heightPressure * 0.22, spacingMin, spacingMax);
+  const baseSpacing = 2.22 + widthEase * 0.72 - heightPressure * 0.22;
+  const spacing = clamp(baseSpacing, spacingMin, spacingMax);
+  const rowSpacingMin = CUBE_SIZE / 2 + LABEL_OFFSET_Y + LABEL_HEIGHT / 2 + BASE_FLOAT_AMPLITUDE * 2 + FLOAT_LABEL_CLEARANCE;
+  const rowSpacingMax = columns >= 5 ? 3.04 : columns >= 4 ? 2.96 : 2.88;
+  const rowSpacing = clamp(baseSpacing + (rows >= 3 ? 0.34 : 0.26), rowSpacingMin, rowSpacingMax);
   const cameraFov = clamp(
     isCompact ? 76 - widthEase * 8 + heightPressure * 4 : 60 - widthEase * 10,
     isCompact ? 68 : 50,
@@ -105,7 +112,7 @@ function getSceneLayout(viewport: SceneViewportSize) {
   );
 
   const tableWorldWidth = (columns - 1) * spacing + CUBE_SIZE;
-  const tableWorldHeight = (rows - 1) * spacing + CUBE_SIZE + LABEL_OFFSET_Y + LABEL_HEIGHT;
+  const tableWorldHeight = (rows - 1) * rowSpacing + CUBE_SIZE + LABEL_OFFSET_Y + LABEL_HEIGHT;
   const topSafePx = isCompact ? 96 : 104;
   const bottomSafePx = isCompact ? 132 : 92;
   const verticalSafeRatio = clamp((height - topSafePx - bottomSafePx) / height, 0.52, 0.82);
@@ -130,6 +137,7 @@ function getSceneLayout(viewport: SceneViewportSize) {
     columns,
     rows,
     spacing,
+    rowSpacing,
     pageSize: columns * rows,
     tableCenterY,
     cameraFov,
@@ -150,8 +158,16 @@ function getGridPosition(cubeIndex: number, layout: SceneLayout) {
 
   return {
     x: (columnIndex - (layout.columns - 1) / 2) * layout.spacing,
-    y: ((layout.rows - 1) / 2 - rowIndex) * layout.spacing + layout.tableCenterY,
+    y: ((layout.rows - 1) / 2 - rowIndex) * layout.rowSpacing + layout.tableCenterY,
   };
+}
+
+function getLayoutFloatAmplitude(layout: SceneLayout) {
+  const availableFloat = (
+    layout.rowSpacing
+    - (CUBE_SIZE / 2 + LABEL_OFFSET_Y + LABEL_HEIGHT / 2 + FLOAT_LABEL_CLEARANCE)
+  ) / 2;
+  return clamp(availableFloat, 0.035, BASE_FLOAT_AMPLITUDE);
 }
 
 /* ── Easing ─────────────────────────────────────────────────── */
@@ -416,8 +432,13 @@ function goldMat() {
 }
 
 /* Product face uses MeshBasicMaterial so it is completely unaffected by scene lights */
-function productMat(tex: THREE.Texture) {
-  return new THREE.MeshBasicMaterial({ map: tex });
+function productMat(tex: THREE.Texture, opacity = 1) {
+  return new THREE.MeshBasicMaterial({
+    map: tex,
+    opacity,
+    transparent: opacity < 1,
+    depthWrite: opacity >= 1,
+  });
 }
 
 function makeGoldCubeMaterials() {
@@ -457,6 +478,12 @@ interface ParallaxEntry {
   phaseY: number;
   speedX: number;
   speedY: number;
+}
+
+interface TextureFadeEntry {
+  material: THREE.Material;
+  startMs: number;
+  durationMs: number;
 }
 
 /* ── Collection catalogue ───────────────────────────────────────── */
@@ -598,6 +625,7 @@ export function CategoryPageScene() {
   const previousPageSizeRef = useRef(pageSize);
   const texCache       = useRef(new Map<string, THREE.Texture>());
   const parallaxRef    = useRef<ParallaxEntry[]>([]);
+  const textureFadeRef = useRef<TextureFadeEntry[]>([]);
   const texturePageRequestRef = useRef(0);
   const isAnimatingRef = useRef(false);
   const refreshScenePageRef = useRef<() => void>(() => {});
@@ -856,6 +884,7 @@ export function CategoryPageScene() {
       const searchDropTransitioning = Number.isFinite(searchDropElapsed) && searchDropElapsed >= 0 && searchDropElapsed < SEARCH_DROP_DUR;
       const searchDropBlocksCubes = searchDrop.active || searchDropTransitioning;
       const currentLayout = sceneRef.current?.layout ?? layout;
+      const floatAmplitude = getLayoutFloatAmplitude(currentLayout);
 
       /* Floor wave – updated every 2nd frame to halve instanced-matrix upload cost */
       if (frameCounter % 2 === 0) {
@@ -893,7 +922,7 @@ export function CategoryPageScene() {
         cube.rotation.y += (cube.userData.targetRotY - cube.rotation.y) * rotLerp;
         if (entryDone.value && !isExiting.value && !productFocus.active && !productFocus.returning && !searchDropBlocksCubes) {
           cube.position.y = cube.userData.baseY
-            + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
+            + Math.sin(time * 0.5 + cube.userData.floatOffset) * floatAmplitude;
         }
       });
 
@@ -906,7 +935,7 @@ export function CategoryPageScene() {
           const startRotX = (cube.userData.searchDropStartRotX as number | undefined) ?? cube.rotation.x;
           const startRotZ = (cube.userData.searchDropStartRotZ as number | undefined) ?? cube.rotation.z;
           const startScale = (cube.userData.searchDropStartScale as number | undefined) ?? cube.scale.x;
-          const floatY = cube.userData.baseY + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
+          const floatY = cube.userData.baseY + Math.sin(time * 0.5 + cube.userData.floatOffset) * floatAmplitude;
           const targetY = searchDrop.active ? -16 - (cubeIndex % currentLayout.rows) * 0.45 : floatY;
           const targetRotX = searchDrop.active ? (cubeIndex % 2 === 0 ? 1.2 : -1.1) : 0;
           const targetRotZ = searchDrop.active ? (cubeIndex % 3 === 0 ? -0.85 : 0.85) : 0;
@@ -1052,6 +1081,26 @@ export function CategoryPageScene() {
         p.tex.offset.y = Math.cos(time * p.speedY + p.phaseY) * PARALLAX_AMPLITUDE;
       }
 
+      const textureFades = textureFadeRef.current;
+      if (textureFades.length > 0) {
+        const remainingFades: TextureFadeEntry[] = [];
+        for (let fadeIndex = 0; fadeIndex < textureFades.length; fadeIndex++) {
+          const fade = textureFades[fadeIndex];
+          const rawFadeT = clamp01((now - fade.startMs) / fade.durationMs);
+          fade.material.opacity = easeInOutCubic(rawFadeT);
+
+          if (rawFadeT >= 1) {
+            fade.material.opacity = 1;
+            fade.material.transparent = false;
+            fade.material.depthWrite = true;
+            fade.material.needsUpdate = true;
+          } else {
+            remainingFades.push(fade);
+          }
+        }
+        textureFadeRef.current = remainingFades;
+      }
+
       /* Exit animation: cubes drop below floor */
       if (isExiting.value) {
         const exitElapsed = now - exitStart.value;
@@ -1096,6 +1145,7 @@ export function CategoryPageScene() {
       window.removeEventListener('resize', onResize);
       textureCache.forEach(t => t.dispose());
       textureCache.clear();
+      textureFadeRef.current = [];
       sceneRef.current = null;
     };
   }, []);
@@ -1128,6 +1178,7 @@ export function CategoryPageScene() {
 
     // Reset active parallax list for the new page; entries get re-pushed below.
     parallaxRef.current = [];
+    textureFadeRef.current = [];
 
     // First pass: reset all page faces back to plain gold on every cube.
     // The current face is repainted below only for slots that have a product.
@@ -1178,8 +1229,12 @@ export function CategoryPageScene() {
         tex.offset.set(0, 0);
         const activeCube = activeState.cubes[i];
         const mats = (activeCube.material as THREE.Material[]).slice();
-        mats[faceIdx] = productMat(tex);
+        const previousMaterial = mats[faceIdx] as THREE.Material | undefined;
+        const imageMaterial = productMat(tex, 0);
+        if (previousMaterial) previousMaterial.dispose();
+        mats[faceIdx] = imageMaterial;
         activeCube.material = mats;
+        textureFadeRef.current.push({ material: imageMaterial, startMs: performance.now(), durationMs: TEXTURE_FADE_DUR });
         parallaxRef.current.push({
           tex,
           phaseX: Math.random() * Math.PI * 2,
@@ -1353,8 +1408,8 @@ export function CategoryPageScene() {
         if (dy < 0) goNextRef.current();
         else        goPrevRef.current();
       } else {
-        // Horizontal dominant: left = next, right = prev
-        if (dx < 0) goNextRef.current();
+        // Horizontal dominant: drag direction matches cube turn direction.
+        if (dx > 0) goNextRef.current();
         else        goPrevRef.current();
       }
     }
@@ -1380,8 +1435,8 @@ export function CategoryPageScene() {
         if (dy < 0) goNextRef.current();
         else        goPrevRef.current();
       } else {
-        // Horizontal dominant: left = next, right = prev
-        if (dx < 0) goNextRef.current();
+        // Horizontal dominant: drag direction matches cube turn direction.
+        if (dx > 0) goNextRef.current();
         else        goPrevRef.current();
       }
     }

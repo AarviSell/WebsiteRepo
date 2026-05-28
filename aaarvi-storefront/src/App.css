@@ -619,13 +619,16 @@
 
 .basic-header__top {
 	display: grid;
-	grid-template-columns: auto auto minmax(12rem, 1fr) auto;
+	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+	grid-template-areas:
+		"menu logo interactive"
+		"search search search";
 	align-items: center;
-	gap: 0.9rem;
+	column-gap: 0.9rem;
+	row-gap: 0.7rem;
 	max-width: var(--content-wide);
-	min-height: 72px;
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0.85rem 1rem 0.7rem;
 }
 
 .basic-header__menu,
@@ -645,7 +648,25 @@
 	text-decoration: none;
 }
 
+.basic-header__menu {
+	grid-area: menu;
+	justify-self: start;
+}
+
+.basic-logo {
+	grid-area: logo;
+	justify-self: center;
+}
+
+.basic-header__interactive {
+	grid-area: interactive;
+	justify-self: end;
+}
+
 .basic-search {
+	grid-area: search;
+	justify-self: center;
+	width: min(46rem, 100%);
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 54px;
 	min-height: 48px;
@@ -678,6 +699,18 @@
 	gap: 0.5rem;
 	padding: 0 0.85rem;
 	font-weight: 800;
+	white-space: nowrap;
+	border-color: rgba(240, 180, 41, 0.68);
+	background: linear-gradient(135deg, #ffe27a 0%, #f0b429 58%, #c9962a 100%);
+	color: #1a0a00;
+	box-shadow: 0 10px 24px rgba(240, 180, 41, 0.2);
+}
+
+.basic-header__interactive:hover,
+.basic-header__interactive:focus-visible {
+	border-color: rgba(253, 230, 138, 0.95);
+	background: linear-gradient(135deg, #fff0a3 0%, #f4c542 58%, #d59b24 100%);
+	color: #1a0a00;
 }
 
 .basic-header__nav {
@@ -1352,10 +1385,6 @@
 }
 
 @media (max-width: 980px) {
-	.basic-header__top {
-		grid-template-columns: auto auto minmax(0, 1fr) auto;
-	}
-
 	.basic-catalog-layout,
 	.basic-product-detail {
 		grid-template-columns: 1fr;
@@ -1384,7 +1413,7 @@
 	}
 
 	.basic-header__top {
-		grid-template-columns: auto auto minmax(0, 1fr) auto;
+		grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 		gap: 0.7rem;
 		padding-block: 0.75rem;
 	}
@@ -1400,7 +1429,6 @@
 	}
 
 	.basic-header__interactive {
-		justify-self: end;
 		min-width: 40px;
 		min-height: 40px;
 		padding-inline: 0.65rem;
@@ -1408,7 +1436,6 @@
 	}
 
 	.basic-search {
-		grid-column: 1 / -1;
 		width: 100%;
 	}
 
