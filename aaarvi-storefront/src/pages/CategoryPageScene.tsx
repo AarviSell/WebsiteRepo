@@ -5,7 +5,6 @@ import * as THREE from 'three';
 import { Search, X } from 'lucide-react';
 import { loadCategoryProducts, loadCategories } from '@/data/loader';
 import { useProductData } from '@/hooks/useProductData';
-import { useIsCompactViewport } from '@/hooks/useViewport';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
@@ -16,13 +15,13 @@ import logoSrc from '@/assets/logo.png';
 
 /* ── Constants ─────────────────────────────────────────────── */
 const BG        = 0x0d0414;
-const DESKTOP_TABLE_COLUMNS = 5;
-const MOBILE_TABLE_COLUMNS  = 3;
-const TABLE_ROWS = 3;
+const TABLE_MAX_COLUMNS = 5;
+const TABLE_MAX_ROWS = 3;
+const TABLE_MIN_COLUMNS = 2;
+const TABLE_MIN_ROWS = 2;
+const TABLE_MAX_SLOTS = TABLE_MAX_COLUMNS * TABLE_MAX_ROWS;
 const CUBE_SIZE = 2.15;
-const DESKTOP_SPACING = 2.9;
-const MOBILE_SPACING  = 2.5;
-const TABLE_CENTER_Y  = 5.2;
+const TABLE_BASE_CENTER_Y = 5.2;
 const MOBILE_BREAKPOINT = 768;
 const FLOOR_GRID  = 40;  // 40×40 = 1 600 tiles – fog hides anything beyond ~30 units
 const FLOOR_COUNT = FLOOR_GRID * FLOOR_GRID;
@@ -47,18 +46,99 @@ function getPageFaceIdx(pageIdx: number) {
   return PAGE_FACE_IDX[pageIdx % PAGE_FACE_IDX.length];
 }
 
-function getSceneLayout(isMobile: boolean) {
-  const columns = isMobile ? MOBILE_TABLE_COLUMNS : DESKTOP_TABLE_COLUMNS;
-  const spacing = isMobile ? MOBILE_SPACING : DESKTOP_SPACING;
+interface SceneViewportSize {
+  width: number;
+  height: number;
+}
+
+function clamp(value: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function getCurrentSceneViewport(): SceneViewportSize {
+  if (typeof window === 'undefined') return { width: 1280, height: 720 };
+  return {
+    width: Math.max(1, window.innerWidth),
+    height: Math.max(1, window.innerHeight),
+  };
+}
+
+function useSceneViewportSize() {
+  const [viewportSize, setViewportSize] = useState(getCurrentSceneViewport);
+
+  useEffect(() => {
+    const update = () => setViewportSize(getCurrentSceneViewport());
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  return viewportSize;
+}
+
+function getSceneLayout(viewport: SceneViewportSize) {
+  const width = Math.max(320, viewport.width);
+  const height = Math.max(420, viewport.height);
+  const aspect = width / height;
+  const isCompact = width < MOBILE_BREAKPOINT;
+  const isVeryNarrow = width < 370;
+  const isShort = height < 560;
+  const isVeryShort = height < 505;
+  const widthEase = clamp((width - 360) / 900, 0, 1);
+  const heightPressure = clamp((620 - height) / 220, 0, 1);
+
+  let columns = TABLE_MAX_COLUMNS;
+  if (isVeryNarrow) columns = TABLE_MIN_COLUMNS;
+  else if (width < 760) columns = 3;
+  else if (width < 1080 || aspect < 1.08) columns = 4;
+
+  if (isVeryShort && columns > 4) columns = 4;
+
+  const rows = isVeryShort ? TABLE_MIN_ROWS : TABLE_MAX_ROWS;
+  const spacingMax = columns >= 5 ? 2.9 : columns >= 4 ? 2.72 : 2.5;
+  const spacingMin = columns <= 2 ? 2.16 : 2.28;
+  const spacing = clamp(2.22 + widthEase * 0.72 - heightPressure * 0.22, spacingMin, spacingMax);
+  const cameraFov = clamp(
+    isCompact ? 76 - widthEase * 8 + heightPressure * 4 : 60 - widthEase * 10,
+    isCompact ? 68 : 50,
+    isCompact ? 78 : 62,
+  );
+
+  const tableWorldWidth = (columns - 1) * spacing + CUBE_SIZE;
+  const tableWorldHeight = (rows - 1) * spacing + CUBE_SIZE + LABEL_OFFSET_Y + LABEL_HEIGHT;
+  const topSafePx = isCompact ? 96 : 104;
+  const bottomSafePx = isCompact ? 132 : 92;
+  const verticalSafeRatio = clamp((height - topSafePx - bottomSafePx) / height, 0.52, 0.82);
+  const horizontalSafeRatio = isCompact ? 0.88 : 0.78;
+  const fovRadians = cameraFov * Math.PI / 180;
+  const fovTan = Math.tan(fovRadians / 2);
+  const zForHeight = tableWorldHeight / (verticalSafeRatio * 2 * fovTan);
+  const zForWidth = tableWorldWidth / (horizontalSafeRatio * 2 * fovTan * aspect);
+  const minCameraZ = isCompact ? 9.7 : 10.4;
+  const maxCameraZ = isCompact ? 13.4 : 15.5;
+  const cameraZ = clamp(Math.max(zForHeight, zForWidth, minCameraZ), minCameraZ, maxCameraZ);
+  const visibleWorldHeight = 2 * cameraZ * fovTan;
+  const tableCenterY = TABLE_BASE_CENTER_Y - (isShort ? 0.18 : 0);
+  const availableCenterPx = (topSafePx + height - bottomSafePx) / 2;
+  const centerNdcY = 1 - (availableCenterPx / height) * 2;
+  const cameraY = clamp(tableCenterY - centerNdcY * visibleWorldHeight / 2, 4.25, 6.05);
 
   return {
+    viewportWidth: width,
+    viewportHeight: height,
+    isCompact,
     columns,
-    rows: TABLE_ROWS,
+    rows,
     spacing,
-    pageSize: columns * TABLE_ROWS,
-    cameraFov: isMobile ? 70 : 50,
-    cameraY: isMobile ? 5.15 : 5.5,
-    cameraZ: isMobile ? 11.6 : 12,
+    pageSize: columns * rows,
+    tableCenterY,
+    cameraFov,
+    cameraY,
+    cameraZ,
+    focusY: isCompact ? (isShort ? 3.7 : 3.9) : 4.35,
+    focusCameraZ: isCompact ? clamp(cameraZ - 3.05, 7.6, 8.8) : 5.35,
+    arrowBottom: isCompact ? '4.75rem' : undefined,
+    dotsBottom: isCompact ? '0.45rem' : '1rem',
   };
 }
 
@@ -70,7 +150,7 @@ function getGridPosition(cubeIndex: number, layout: SceneLayout) {
 
   return {
     x: (columnIndex - (layout.columns - 1) / 2) * layout.spacing,
-    y: ((layout.rows - 1) / 2 - rowIndex) * layout.spacing + TABLE_CENTER_Y,
+    y: ((layout.rows - 1) / 2 - rowIndex) * layout.spacing + layout.tableCenterY,
   };
 }
 
@@ -128,6 +208,63 @@ interface SceneState {
   exitStart: { value: number };
   searchDrop: { active: boolean; startMs: number };
   productFocus: ProductFocusState;
+}
+
+function applySceneLayoutToState(state: SceneState, layout: SceneLayout, resetCamera = true) {
+  const canSnapCubes = state.entryDone.value
+    && !state.productFocus.active
+    && !state.productFocus.returning
+    && !state.searchDrop.active
+    && !state.isExiting.value;
+
+  state.layout = layout;
+  state.camera.aspect = layout.viewportWidth / layout.viewportHeight;
+  state.camera.fov = layout.cameraFov;
+  if (resetCamera && !state.productFocus.active && !state.productFocus.returning) {
+    state.camera.position.set(0, layout.cameraY, layout.cameraZ);
+  }
+  state.camera.updateProjectionMatrix();
+
+  state.cubes.forEach((cube, cubeIndex) => {
+    const isLayoutSlot = cubeIndex < layout.pageSize;
+    const position = getGridPosition(cubeIndex, layout);
+    const wasLayoutSlot = Boolean(cube.userData.layoutActive);
+    cube.userData.layoutActive = isLayoutSlot;
+    cube.userData.baseY = position.y;
+
+    if (isLayoutSlot && !wasLayoutSlot) {
+      resetCubeMaterialsToGold(cube);
+    }
+
+    if (!isLayoutSlot) {
+      cube.visible = false;
+      if (canSnapCubes) cube.position.set(position.x, -16, 0);
+    } else if (!wasLayoutSlot && canSnapCubes) {
+      cube.visible = true;
+      cube.position.set(position.x, position.y, 0);
+    } else if (canSnapCubes) {
+      cube.position.set(position.x, position.y, 0);
+    } else {
+      cube.position.x = position.x;
+    }
+
+    const label = state.labels[cubeIndex];
+    if (!label) return;
+    label.position.x = position.x;
+    label.position.z = LABEL_OFFSET_Z;
+    label.scale.set(Math.min(LABEL_MAX_WIDTH, Math.max(1.45, layout.spacing * 0.74)), LABEL_HEIGHT, 1);
+    if (!isLayoutSlot) label.visible = false;
+    else if (!wasLayoutSlot && canSnapCubes) label.visible = true;
+  });
+}
+
+function syncSceneRotationToPage(state: SceneState, targetPage: number) {
+  const targetRotY = getPageRotationY(targetPage);
+  state.isRotating.value = false;
+  state.cubes.forEach(cube => {
+    cube.rotation.y = targetRotY;
+    cube.userData.targetRotY = targetRotY;
+  });
 }
 
 interface CategoryRouteState {
@@ -283,6 +420,32 @@ function productMat(tex: THREE.Texture) {
   return new THREE.MeshBasicMaterial({ map: tex });
 }
 
+function makeGoldCubeMaterials() {
+  return Array.from({ length: 6 }, goldMat);
+}
+
+function disposeMaterials(material: THREE.Material | THREE.Material[]) {
+  if (Array.isArray(material)) {
+    material.forEach(mat => mat.dispose());
+    return;
+  }
+  material.dispose();
+}
+
+function resetCubeMaterialsToGold(cube: THREE.Mesh) {
+  disposeMaterials(cube.material);
+  cube.material = makeGoldCubeMaterials();
+}
+
+function resetPageFaceMaterialsToGold(cube: THREE.Mesh) {
+  const mats = (cube.material as THREE.Material[]).slice();
+  PAGE_FACE_IDX.forEach(faceIndex => {
+    (mats[faceIndex] as THREE.Material).dispose();
+    mats[faceIndex] = goldMat();
+  });
+  cube.material = mats;
+}
+
 /* Parallax: amplitude of UV drift per axis. Must be <= (1 - PARALLAX_REPEAT) / 2
    so the texture never samples past the cropped image edge. */
 const PARALLAX_REPEAT    = 0.92;
@@ -418,8 +581,9 @@ export function CategoryPageScene() {
   const { slug } = useParams<{ slug: string }>();
   const navigate  = useNavigate();
   const location = useLocation();
-  const isCompactViewport = useIsCompactViewport(MOBILE_BREAKPOINT);
-  const sceneLayout = useMemo(() => getSceneLayout(isCompactViewport), [isCompactViewport]);
+  const viewportSize = useSceneViewportSize();
+  const sceneLayout = useMemo(() => getSceneLayout(viewportSize), [viewportSize]);
+  const isCompactViewport = sceneLayout.isCompact;
   const pageSize = sceneLayout.pageSize;
   const { allProducts, isLoaded } = useProductData();
   const routeState = location.state as CategoryRouteState | null;
@@ -431,10 +595,12 @@ export function CategoryPageScene() {
   const sceneRef       = useRef<SceneState | null>(null);
   const productsRef    = useRef<Product[]>([]);
   const pageRef        = useRef(0);
+  const previousPageSizeRef = useRef(pageSize);
   const texCache       = useRef(new Map<string, THREE.Texture>());
   const parallaxRef    = useRef<ParallaxEntry[]>([]);
   const texturePageRequestRef = useRef(0);
   const isAnimatingRef = useRef(false);
+  const refreshScenePageRef = useRef<() => void>(() => {});
   const consumedFocusRequestRef = useRef<string | null>(null);
   const finishProductReturnRef = useRef<() => void>(() => {});
   const searchReturnRef = useRef<SearchReturnTarget | null>(null);
@@ -493,12 +659,12 @@ export function CategoryPageScene() {
       state.isRotating.value = false;
       state.searchDrop.active = false;
       state.searchDrop.startMs = Number.NEGATIVE_INFINITY;
-      state.camera.fov = state.layout.cameraFov;
-      state.camera.position.set(0, state.layout.cameraY, state.layout.cameraZ);
-      state.camera.updateProjectionMatrix();
+      applySceneLayoutToState(state, state.layout);
       state.cubes.forEach((cube, cubeIndex) => {
+        const isLayoutSlot = cubeIndex < state.layout.pageSize;
         const position = getGridPosition(cubeIndex, state.layout);
-        cube.position.set(position.x, cube.userData.baseY, 0);
+        cube.position.set(position.x, isLayoutSlot ? cube.userData.baseY : -16, 0);
+        cube.visible = isLayoutSlot;
         cube.rotation.set(0, 0, 0);
         cube.scale.set(1, 1, 1);
         cube.userData.targetRotX = 0;
@@ -508,9 +674,10 @@ export function CategoryPageScene() {
         delete cube.userData.searchDropStartRotZ;
         delete cube.userData.searchDropStartScale;
       });
-      state.labels.forEach(label => {
+      state.labels.forEach((label, labelIndex) => {
         const material = label.material as THREE.SpriteMaterial;
         material.opacity = 1;
+        label.visible = labelIndex < state.layout.pageSize;
       });
     }
     // Title-cased slug as a guaranteed fallback (e.g. "standard-collection" -> "Standard Collection").
@@ -540,12 +707,11 @@ export function CategoryPageScene() {
     if (!container) return;
 
     /* Renderer — alpha:true so the CSS gradient wrapper shows through the sky */
-    const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
-    const layout = getSceneLayout(isMobile);
-    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.0 : 1.5));
     const width = container.clientWidth || window.innerWidth;
     const height = container.clientHeight || window.innerHeight;
+    const layout = getSceneLayout({ width, height });
+    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, layout.isCompact ? 1.0 : 1.5));
     renderer.setSize(width, height);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping      = THREE.ACESFilmicToneMapping;
@@ -610,43 +776,42 @@ export function CategoryPageScene() {
       }
     }
 
-    /* ── Product table (5×3 desktop, 3×3 mobile) ── */
+    /* ── Product table: build max slots once, then activate what the layout needs ── */
     const cubeGeo   = new THREE.BoxGeometry(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE);
     const cubeGroup = new THREE.Group();
     scene.add(cubeGroup);
     const cubes: THREE.Mesh[] = [];
     const labels: THREE.Sprite[] = [];
 
-    let cubeIdx = 0;
-    for (let x = 0; x < layout.columns; x++) {
-      for (let y = 0; y < layout.rows; y++) {
-        const mats = Array.from({ length: 6 }, goldMat);
-        const mesh  = new THREE.Mesh(cubeGeo, mats);
+    for (let cubeIdx = 0; cubeIdx < TABLE_MAX_SLOTS; cubeIdx++) {
+      const mats = makeGoldCubeMaterials();
+      const mesh  = new THREE.Mesh(cubeGeo, mats);
 
-        const position = getGridPosition(cubeIdx, layout);
+      const position = getGridPosition(cubeIdx, layout);
+      const isLayoutSlot = cubeIdx < layout.pageSize;
 
-        // Start below floor; entry animation will raise them
-        mesh.position.set(position.x, -10, 0);
-        mesh.userData = {
-          baseY:       position.y,
-          targetRotX:  0,
-          targetRotY:  0,
-          floatOffset: Math.random() * Math.PI * 2,
-          cubeIdx,
-        };
+      // Start below floor; entry animation will raise them
+      mesh.position.set(position.x, -10, 0);
+      mesh.visible = isLayoutSlot;
+      mesh.userData = {
+        baseY:       position.y,
+        targetRotX:  0,
+        targetRotY:  0,
+        floatOffset: Math.random() * Math.PI * 2,
+        cubeIdx,
+        layoutActive: isLayoutSlot,
+      };
 
-        cubeGroup.add(mesh);
-        cubes.push(mesh);
+      cubeGroup.add(mesh);
+      cubes.push(mesh);
 
-        // Label sprite above the cube — tracks cube Y in animation loop.
-        // Starts blank; populated by loadPageTextures once products load.
-        const label = makeLabelSprite('');
-        label.position.set(position.x, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
-        scene.add(label);
-        labels.push(label);
-
-        cubeIdx++;
-      }
+      // Label sprite above the cube — tracks cube Y in animation loop.
+      // Starts blank; populated by loadPageTextures once products load.
+      const label = makeLabelSprite('');
+      label.position.set(position.x, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
+      label.visible = isLayoutSlot;
+      scene.add(label);
+      labels.push(label);
     }
 
     /* ── Shared mutable flags passed by reference ── */
@@ -690,6 +855,7 @@ export function CategoryPageScene() {
       const searchDropElapsed = now - searchDrop.startMs;
       const searchDropTransitioning = Number.isFinite(searchDropElapsed) && searchDropElapsed >= 0 && searchDropElapsed < SEARCH_DROP_DUR;
       const searchDropBlocksCubes = searchDrop.active || searchDropTransitioning;
+      const currentLayout = sceneRef.current?.layout ?? layout;
 
       /* Floor wave – updated every 2nd frame to halve instanced-matrix upload cost */
       if (frameCounter % 2 === 0) {
@@ -741,7 +907,7 @@ export function CategoryPageScene() {
           const startRotZ = (cube.userData.searchDropStartRotZ as number | undefined) ?? cube.rotation.z;
           const startScale = (cube.userData.searchDropStartScale as number | undefined) ?? cube.scale.x;
           const floatY = cube.userData.baseY + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
-          const targetY = searchDrop.active ? -16 - (cubeIndex % layout.rows) * 0.45 : floatY;
+          const targetY = searchDrop.active ? -16 - (cubeIndex % currentLayout.rows) * 0.45 : floatY;
           const targetRotX = searchDrop.active ? (cubeIndex % 2 === 0 ? 1.2 : -1.1) : 0;
           const targetRotZ = searchDrop.active ? (cubeIndex % 3 === 0 ? -0.85 : 0.85) : 0;
           const targetScale = searchDrop.active ? 0.82 : 1;
@@ -808,10 +974,10 @@ export function CategoryPageScene() {
         const targetRotY = getPageRotationY(pageRef.current);
 
         camera.position.lerpVectors(productFocus.returnStartCamera, productFocus.returnTargetCamera, returnT);
-        camera.lookAt(0, 5.2, 0);
+        camera.lookAt(0, currentLayout.tableCenterY, 0);
 
         cubes.forEach((cube, cubeIndex) => {
-          const targetPosition = getGridPosition(cubeIndex, layout);
+          const targetPosition = getGridPosition(cubeIndex, currentLayout);
           const targetX = targetPosition.x;
           const targetY = cube.userData.baseY as number;
           const startPosition = cube.userData.returnStartPosition as THREE.Vector3 | undefined;
@@ -873,7 +1039,9 @@ export function CategoryPageScene() {
 
       /* Labels follow their cube's Y position (entry, float, and exit) */
       for (let li = 0; li < labels.length; li++) {
+        labels[li].position.x = cubes[li].position.x;
         labels[li].position.y = cubes[li].position.y + LABEL_OFFSET_Y;
+        labels[li].visible = cubes[li].visible && Boolean(cubes[li].userData.layoutActive);
       }
 
       /* Parallax: slow per-texture UV drift on the visible product faces */
@@ -905,11 +1073,16 @@ export function CategoryPageScene() {
       const mount = containerRef.current;
       const nextWidth = mount?.clientWidth || window.innerWidth;
       const nextHeight = mount?.clientHeight || window.innerHeight;
-      const compact = nextWidth < MOBILE_BREAKPOINT;
-      const nextLayout = getSceneLayout(compact);
-      camera.aspect = nextWidth / nextHeight;
-      camera.fov = nextLayout.cameraFov;
-      camera.updateProjectionMatrix();
+      const nextLayout = getSceneLayout({ width: nextWidth, height: nextHeight });
+      const state = sceneRef.current;
+      const previousPageSize = state?.layout.pageSize;
+      if (state) {
+        applySceneLayoutToState(state, nextLayout);
+        if (previousPageSize !== nextLayout.pageSize) {
+          window.requestAnimationFrame(() => refreshScenePageRef.current());
+        }
+      }
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, nextLayout.isCompact ? 1.0 : 1.5));
       renderer.setSize(nextWidth, nextHeight);
     }
 
@@ -951,25 +1124,22 @@ export function CategoryPageScene() {
     const faceIdx = getPageFaceIdx(pageIdx);
     const loader  = new THREE.TextureLoader();
     const hideUnpaintedSearchCubes = isSearchMode;
+    const activePageSize = state.layout.pageSize;
 
     // Reset active parallax list for the new page; entries get re-pushed below.
     parallaxRef.current = [];
 
     // First pass: reset all page faces back to plain gold on every cube.
     // The current face is repainted below only for slots that have a product.
-    state.cubes.forEach(cube => {
-      const mats = (cube.material as THREE.Material[]).slice();
-      PAGE_FACE_IDX.forEach(fi => {
-        (mats[fi] as THREE.Material).dispose();
-        mats[fi] = goldMat();
-      });
-      cube.material = mats;
-      cube.visible = !hideUnpaintedSearchCubes;
+    state.cubes.forEach((cube, cubeIndex) => {
+      const isLayoutSlot = cubeIndex < activePageSize;
+      resetPageFaceMaterialsToGold(cube);
+      cube.visible = isLayoutSlot && !hideUnpaintedSearchCubes;
     });
 
     // Clear all labels first; we'll repopulate only the slots that have a product.
-    state.labels.forEach(lbl => {
-      lbl.visible = !hideUnpaintedSearchCubes;
+    state.labels.forEach((lbl, labelIndex) => {
+      lbl.visible = labelIndex < activePageSize && !hideUnpaintedSearchCubes;
       setLabelSpriteText(lbl, '');
     });
 
@@ -977,7 +1147,8 @@ export function CategoryPageScene() {
 
     // Second pass: apply product image ONLY to the face that now faces the camera
     state.cubes.forEach((_, i) => {
-      const prodIdx = pageIdx * pageSize + i;
+      if (i >= activePageSize) return;
+      const prodIdx = pageIdx * activePageSize + i;
       if (prodIdx >= prods.length) return;
 
       const product = prods[prodIdx];
@@ -1042,7 +1213,31 @@ export function CategoryPageScene() {
         () => { /* swallow — face stays gold */ },
       );
     });
-  }, [isSearchMode, pageSize]);
+  }, [isSearchMode]);
+
+  useEffect(() => {
+    refreshScenePageRef.current = () => {
+      const state = sceneRef.current;
+      if (!state || isAnimatingRef.current || state.productFocus.active || state.productFocus.returning) return;
+
+      const activePageSize = state.layout.pageSize;
+      const previousPageSize = previousPageSizeRef.current;
+      const nextMaxPages = Math.max(1, Math.ceil(productsRef.current.length / activePageSize));
+      const firstVisibleProductIndex = pageRef.current * previousPageSize;
+      const nextPage = previousPageSize === activePageSize
+        ? Math.min(pageRef.current, nextMaxPages - 1)
+        : Math.min(Math.floor(firstVisibleProductIndex / activePageSize), nextMaxPages - 1);
+
+      previousPageSizeRef.current = activePageSize;
+      if (pageRef.current !== nextPage) {
+        pageRef.current = nextPage;
+        setPage(nextPage);
+      }
+
+      syncSceneRotationToPage(state, nextPage);
+      loadPageTextures(nextPage);
+    };
+  }, [loadPageTextures]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -1070,10 +1265,25 @@ export function CategoryPageScene() {
 
   /* ── Trigger texture load once both scene + products are ready ── */
   useEffect(() => {
-    if (sceneReady) {
-      loadPageTextures(0);
+    if (!sceneReady) return;
+
+    const previousPageSize = previousPageSizeRef.current;
+    const nextMaxPages = Math.max(1, Math.ceil(products.length / pageSize));
+    const firstVisibleProductIndex = pageRef.current * previousPageSize;
+    const nextPage = previousPageSize === pageSize
+      ? Math.min(pageRef.current, nextMaxPages - 1)
+      : Math.min(Math.floor(firstVisibleProductIndex / pageSize), nextMaxPages - 1);
+
+    previousPageSizeRef.current = pageSize;
+    if (pageRef.current !== nextPage) {
+      pageRef.current = nextPage;
+      setPage(nextPage);
     }
-  }, [sceneReady, products, loadPageTextures]);
+
+    const state = sceneRef.current;
+    if (state) syncSceneRotationToPage(state, nextPage);
+    loadPageTextures(nextPage);
+  }, [sceneReady, products, pageSize, loadPageTextures]);
 
   useEffect(() => {
     finishProductReturnRef.current = () => {
@@ -1124,13 +1334,7 @@ export function CategoryPageScene() {
   const syncSceneToPage = useCallback((targetPage: number) => {
     const state = sceneRef.current;
     if (!state) return;
-
-    const targetRotY = getPageRotationY(targetPage);
-    state.isRotating.value = false;
-    state.cubes.forEach(cube => {
-      cube.rotation.y = targetRotY;
-      cube.userData.targetRotY = targetRotY;
-    });
+    syncSceneRotationToPage(state, targetPage);
   }, []);
 
   useEffect(() => { goNextRef.current = goNext; }, [goNext]);
@@ -1205,8 +1409,7 @@ export function CategoryPageScene() {
     if (!state) return;
     const cube = state.cubes[cubeIdx];
     const faceIdx = getPageFaceIdx(pageRef.current);
-    const isMobileLayout = state.layout.columns === MOBILE_TABLE_COLUMNS;
-    const focusY = isMobileLayout ? 3.9 : 4.35;
+    const focusY = state.layout.focusY;
     const focus = state.productFocus;
 
     setMenuOpen(false);
@@ -1226,7 +1429,7 @@ export function CategoryPageScene() {
     focus.selectedIdx = cubeIdx;
     focus.startMs = performance.now();
     focus.startCamera.copy(state.camera.position);
-    focus.targetCamera.set(0, focusY + 0.12, isMobileLayout ? 8.2 : 5.35);
+    focus.targetCamera.set(0, focusY + 0.12, state.layout.focusCameraZ);
     focus.startPosition.copy(cube.position);
     focus.targetPosition.set(0, focusY, 0);
     focus.startScale.copy(cube.scale);
@@ -1282,7 +1485,7 @@ export function CategoryPageScene() {
     }
 
     if (isAnimatingRef.current || state.isRotating.value || state.productFocus.returning) return;
-    const hits = raycaster.intersectObjects(state.cubes);
+  const hits = raycaster.intersectObjects(state.cubes.filter(cube => cube.visible && cube.userData.layoutActive));
     if (hits.length === 0) return;
 
     const cubeI    = (hits[0].object as THREE.Mesh).userData.cubeIdx as number;
@@ -1617,7 +1820,7 @@ export function CategoryPageScene() {
         aria-label="Previous page"
         style={{
           position: 'fixed', top: isCompactViewport ? undefined : '50%', left: isCompactViewport ? '0.85rem' : '1.25rem',
-          bottom: isCompactViewport ? '5.35rem' : undefined,
+          bottom: sceneLayout.arrowBottom,
           transform: isCompactViewport ? 'none' : 'translateY(-50%)', zIndex: 15,
           width: isCompactViewport ? 48 : 50, height: isCompactViewport ? 48 : 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
@@ -1641,7 +1844,7 @@ export function CategoryPageScene() {
         aria-label="Next page"
         style={{
           position: 'fixed', top: isCompactViewport ? undefined : '50%', right: isCompactViewport ? '0.85rem' : '1.25rem',
-          bottom: isCompactViewport ? '5.35rem' : undefined,
+          bottom: sceneLayout.arrowBottom,
           transform: isCompactViewport ? 'none' : 'translateY(-50%)', zIndex: 15,
           width: isCompactViewport ? 48 : 50, height: isCompactViewport ? 48 : 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
@@ -1663,7 +1866,7 @@ export function CategoryPageScene() {
       {/* ── Page dots ── */}
       {maxPages > 1 && !isProductOpening && (
         <div style={{
-          position: 'fixed', bottom: isCompactViewport ? '2.25rem' : '3.25rem', left: '50%', transform: 'translateX(-50%)',
+          position: 'fixed', bottom: sceneLayout.dotsBottom, left: '50%', transform: 'translateX(-50%)',
           display: 'flex', gap: '0.3rem', zIndex: 15,
         }}>
           {Array.from({ length: maxPages }, (_, i) => (
