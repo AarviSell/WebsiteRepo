@@ -200,6 +200,7 @@ export function Header() {
                       color: 'var(--color-text-muted)',
                       fontSize: 'var(--text-sm)', fontWeight: 500,
                       padding: '0.35rem 0.8rem',
+                      minHeight: 44,
                       borderRadius: 'var(--radius-full)',
                       transition: 'color 180ms, background 180ms',
                     }}

@@ -1,6 +1,4 @@
 // src/components/filters/PriceRangeSlider.tsx
-import { useState, useEffect } from 'react';
-
 interface PriceRangeSliderProps {
   min: number;
   max: number;
@@ -9,24 +7,16 @@ interface PriceRangeSliderProps {
 }
 
 export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSliderProps) {
-  const [local, setLocal] = useState<[number, number]>(value);
-
-  useEffect(() => {
-    setLocal(value);
-  }, [value]);
+  const local = value;
 
   function handleMinChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newMin = Math.min(Number(e.target.value), local[1] - 1);
-    setLocal([newMin, local[1]]);
+    onChange([newMin, local[1]]);
   }
 
   function handleMaxChange(e: React.ChangeEvent<HTMLInputElement>) {
     const newMax = Math.max(Number(e.target.value), local[0] + 1);
-    setLocal([local[0], newMax]);
-  }
-
-  function commitChange() {
-    onChange(local);
+    onChange([local[0], newMax]);
   }
 
   if (min >= max) return null;
@@ -45,7 +35,6 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
             max={local[1] - 1}
             value={local[0]}
             onChange={handleMinChange}
-            onBlur={commitChange}
             style={{
               width: '100%',
               padding: 'var(--space-2)',
@@ -54,6 +43,7 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
               background: 'var(--color-surface)',
               color: 'var(--color-text)',
               fontSize: 'var(--text-sm)',
+              minHeight: 40,
             }}
           />
         </div>
@@ -69,7 +59,6 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
             max={max}
             value={local[1]}
             onChange={handleMaxChange}
-            onBlur={commitChange}
             style={{
               width: '100%',
               padding: 'var(--space-2)',
@@ -78,6 +67,7 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
               background: 'var(--color-surface)',
               color: 'var(--color-text)',
               fontSize: 'var(--text-sm)',
+              minHeight: 40,
             }}
           />
         </div>
@@ -88,10 +78,8 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
         max={max}
         value={local[0]}
         onChange={handleMinChange}
-        onMouseUp={commitChange}
-        onTouchEnd={commitChange}
         aria-label="Minimum price"
-        style={{ width: '100%', accentColor: 'var(--color-primary)' }}
+        style={{ width: '100%', minHeight: 40, accentColor: 'var(--color-primary)' }}
       />
       <input
         type="range"
@@ -99,10 +87,8 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
         max={max}
         value={local[1]}
         onChange={handleMaxChange}
-        onMouseUp={commitChange}
-        onTouchEnd={commitChange}
         aria-label="Maximum price"
-        style={{ width: '100%', accentColor: 'var(--color-primary)' }}
+        style={{ width: '100%', minHeight: 40, accentColor: 'var(--color-primary)' }}
       />
     </div>
   );

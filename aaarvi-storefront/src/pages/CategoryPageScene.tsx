@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import { Search, X } from 'lucide-react';
 import { loadCategoryProducts, loadCategories } from '@/data/loader';
 import { useProductData } from '@/hooks/useProductData';
+import { useIsCompactViewport } from '@/hooks/useViewport';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
@@ -352,7 +353,7 @@ function CubeContactReveal({ product }: { product: Product }) {
       {verified ? (
         <div role="status" aria-live="polite" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '0.35rem', color: '#8ddf6b', fontSize: '0.9rem', fontWeight: 700, textAlign: 'center' }}>
           {formattedNumber ? (
-            <a href={whatsappHref} target="_blank" rel="noreferrer" style={{ color: '#8ddf6b', textDecoration: 'none', minHeight: 38, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+            <a href={whatsappHref} target="_blank" rel="noreferrer" style={{ color: '#8ddf6b', textDecoration: 'none', minHeight: 44, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               {formattedNumber}
             </a>
           ) : (
@@ -368,9 +369,9 @@ function CubeContactReveal({ product }: { product: Product }) {
             value={answer}
             onChange={event => setAnswer(event.target.value)}
             autoComplete="off"
-            style={{ width: '100%', minHeight: 38, borderRadius: '0.45rem', border: '1px solid rgba(250,245,255,0.18)', background: 'rgba(250,245,255,0.08)', color: '#faf5ff', textAlign: 'center', font: 'inherit' }}
+            style={{ width: '100%', minHeight: 44, borderRadius: '0.45rem', border: '1px solid rgba(250,245,255,0.18)', background: 'rgba(250,245,255,0.08)', color: '#faf5ff', textAlign: 'center', font: 'inherit' }}
           />
-          <button type="submit" style={{ minHeight: 38, border: 'none', borderRadius: '0.45rem', background: '#a855f7', color: '#fff', cursor: 'pointer', fontWeight: 700, padding: '0 0.8rem' }}>Verify</button>
+          <button type="submit" style={{ minHeight: 44, border: 'none', borderRadius: '0.45rem', background: '#a855f7', color: '#fff', cursor: 'pointer', fontWeight: 700, padding: '0 0.8rem' }}>Verify</button>
           {error && <span role="alert" style={{ gridColumn: '1 / -1', color: '#ff8c7c', fontSize: '0.75rem', textAlign: 'center' }}>{error}</span>}
         </form>
       )}
@@ -383,6 +384,7 @@ export function CategoryPageScene() {
   const { slug } = useParams<{ slug: string }>();
   const navigate  = useNavigate();
   const location = useLocation();
+  const isCompactViewport = useIsCompactViewport(720);
   const { allProducts, isLoaded } = useProductData();
   const routeState = location.state as CategoryRouteState | null;
   const incomingSearchQuery = routeState?.searchQuery?.trim() ?? '';
@@ -432,12 +434,12 @@ export function CategoryPageScene() {
   /* ── Load products ────────────────────────────────────────── */
   useEffect(() => {
     if (!slug) return;
-    setIsCategoryLoading(true);
-    setSearchQuery(incomingSearchQuery);
-    setSelectedSearchProductId(incomingSearchProductId);
-    setSearchOpen(shouldReopenSearch);
     pageRef.current = 0;
     const resetTimer = window.setTimeout(() => {
+      setIsCategoryLoading(true);
+      setSearchQuery(incomingSearchQuery);
+      setSelectedSearchProductId(incomingSearchProductId);
+      setSearchOpen(shouldReopenSearch);
       setPage(0);
       setOpeningProductName('');
       setFocusedProduct(null);
@@ -455,7 +457,7 @@ export function CategoryPageScene() {
       state.isRotating.value = false;
       state.searchDrop.active = false;
       state.searchDrop.startMs = Number.NEGATIVE_INFINITY;
-      state.camera.position.set(0, 5.5, 12);
+      state.camera.position.set(0, window.innerWidth < 768 ? 5.1 : 5.5, window.innerWidth < 768 ? 21 : 12);
       state.cubes.forEach((cube, cubeIndex) => {
         const columnIndex = Math.floor(cubeIndex / TABLE_H);
         const posX = (columnIndex - 2) * SPACING;
@@ -504,7 +506,9 @@ export function CategoryPageScene() {
     const isMobile = window.innerWidth < 768;
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.0 : 1.5));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    const width = container.clientWidth || window.innerWidth;
+    const height = container.clientHeight || window.innerHeight;
+    renderer.setSize(width, height);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping      = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0.85;
@@ -517,8 +521,8 @@ export function CategoryPageScene() {
     scene.fog = new THREE.FogExp2(BG, 0.028);
 
     /* Camera — matches provided HTML */
-    const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 5.5, 12);
+    const camera = new THREE.PerspectiveCamera(isMobile ? 54 : 50, width / height, 0.1, 1000);
+    camera.position.set(0, isMobile ? 5.1 : 5.5, isMobile ? 21 : 12);
 
     /* Lighting */
     scene.add(new THREE.AmbientLight(0xffffff, 0.35));
@@ -861,9 +865,14 @@ export function CategoryPageScene() {
 
     /* Resize */
     function onResize() {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      const mount = containerRef.current;
+      const nextWidth = mount?.clientWidth || window.innerWidth;
+      const nextHeight = mount?.clientHeight || window.innerHeight;
+      const compact = nextWidth < 768;
+      camera.aspect = nextWidth / nextHeight;
+      camera.fov = compact ? 54 : 50;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(nextWidth, nextHeight);
     }
 
     window.addEventListener('resize', onResize);
@@ -998,16 +1007,19 @@ export function CategoryPageScene() {
   }, [isSearchMode]);
 
   useEffect(() => {
-    if (!isSearchMode) {
-      setVisibleProducts(categoryProducts);
-      return;
-    }
+    const timer = window.setTimeout(() => {
+      if (!isSearchMode) {
+        setVisibleProducts(categoryProducts);
+        return;
+      }
 
-    const searchPool = allProducts.length > 0 ? allProducts : categoryProducts;
-    const nextProducts = selectedSearchProductId
-      ? searchPool.filter(product => product.id === selectedSearchProductId)
-      : searchProductsByName(searchPool, trimmedSearchQuery).filter(product => Boolean(getPrimaryImage(product)));
-    setVisibleProducts(nextProducts);
+      const searchPool = allProducts.length > 0 ? allProducts : categoryProducts;
+      const nextProducts = selectedSearchProductId
+        ? searchPool.filter(product => product.id === selectedSearchProductId)
+        : searchProductsByName(searchPool, trimmedSearchQuery).filter(product => Boolean(getPrimaryImage(product)));
+      setVisibleProducts(nextProducts);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [allProducts, categoryProducts, isSearchMode, selectedSearchProductId, setVisibleProducts, trimmedSearchQuery]);
 
   /* ── Fade the scene in on mount ── */
@@ -1175,7 +1187,7 @@ export function CategoryPageScene() {
     focus.selectedIdx = cubeIdx;
     focus.startMs = performance.now();
     focus.startCamera.copy(state.camera.position);
-    focus.targetCamera.set(0, focusY + 0.12, window.innerWidth < 768 ? 6.6 : 5.35);
+    focus.targetCamera.set(0, focusY + 0.12, window.innerWidth < 768 ? 8.2 : 5.35);
     focus.startPosition.copy(cube.position);
     focus.targetPosition.set(0, focusY, 0);
     focus.startScale.copy(cube.scale);
@@ -1242,7 +1254,7 @@ export function CategoryPageScene() {
     }
   }
 
-  const resetProductFocus = useCallback(() => {
+  function resetProductFocus() {
     setFocusedProduct(null);
 
     const state = sceneRef.current;
@@ -1253,7 +1265,7 @@ export function CategoryPageScene() {
     state.productFocus.returning = true;
     state.productFocus.returnStartMs = performance.now();
     state.productFocus.returnStartCamera.copy(state.camera.position);
-    state.productFocus.returnTargetCamera.set(0, 5.5, 12);
+    state.productFocus.returnTargetCamera.set(0, window.innerWidth < 768 ? 5.1 : 5.5, window.innerWidth < 768 ? 21 : 12);
     state.isRotating.value = false;
     const targetRotY = getPageRotationY(pageRef.current);
 
@@ -1264,9 +1276,9 @@ export function CategoryPageScene() {
       cube.userData.targetRotX = 0;
       cube.userData.targetRotY = targetRotY;
     });
-  }, []);
+  }
 
-  const returnFromFocusedProduct = useCallback(() => {
+  function returnFromFocusedProduct() {
     const fallbackQuery = trimmedSearchQuery || focusedProduct?.name || '';
     const routeReturnTarget: SearchReturnTarget | null = routeState?.searchOrigin
       ? {
@@ -1312,7 +1324,7 @@ export function CategoryPageScene() {
         searchOrigin: 'category',
       },
     });
-  }, [focusedProduct?.category, focusedProduct?.name, navigate, resetProductFocus, routeState?.returnCategorySlug, routeState?.searchOrigin, routeState?.searchQuery, selectedSearchProductId, slug, trimmedSearchQuery]);
+  }
 
   useEffect(() => {
     if (!focusProductId || !focusRequestKey || !sceneReady || products.length === 0) return;
@@ -1418,17 +1430,17 @@ export function CategoryPageScene() {
       {/* ── Header ── */}
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40,
-        display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
-        padding: '1rem 1.5rem',
+        display: 'grid', gridTemplateColumns: isCompactViewport ? (searchOpen ? 'minmax(0, 1fr)' : 'minmax(0, 1fr) auto') : 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
+        padding: isCompactViewport ? '0.7rem 0.8rem' : '1rem 1.5rem',
         background: 'linear-gradient(to bottom, rgba(13,4,20,0.96) 0%, transparent 100%)',
-        gap: '1rem',
+        gap: isCompactViewport ? '0.55rem' : '1rem',
       }}>
         {/* Left — hamburger + back */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', justifySelf: 'stretch', minWidth: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem', justifySelf: 'stretch', minWidth: 0, gridColumn: isCompactViewport && searchOpen ? '1 / -1' : undefined }}>
           <button
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', padding: '0.4rem', display: 'flex', flexDirection: 'column', gap: '4px', flexShrink: 0 }}
+            style={{ width: 44, height: 44, background: 'rgba(17,7,24,0.62)', border: '1px solid rgba(250,245,255,0.12)', borderRadius: '50%', color: '#faf5ff', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px', flexShrink: 0 }}
           >
             <span style={{ display: 'block', width: 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
             <span style={{ display: 'block', width: 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
@@ -1451,6 +1463,7 @@ export function CategoryPageScene() {
               background: 'rgba(255,255,255,0.06)',
               border: '1px solid rgba(168,85,247,0.35)',
               borderRadius: '999px', padding: '0.45rem 1rem',
+              minHeight: 44,
               color: '#faf5ff', cursor: 'pointer',
               fontSize: '0.82rem', fontWeight: 500, letterSpacing: '0.02em',
               transition: 'background 180ms, border-color 180ms',
@@ -1464,7 +1477,7 @@ export function CategoryPageScene() {
             Home
           </button>
           {searchOpen ? (
-            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: '25rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.45rem', alignItems: 'center' }}>
+            <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: isCompactViewport ? 'none' : '25rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.45rem', alignItems: 'center' }}>
               <SceneSearchBar
                 value={searchQuery}
                 onChange={value => {
@@ -1533,7 +1546,7 @@ export function CategoryPageScene() {
         </div>
 
         {/* Centre — logo + name */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
+        <div style={{ display: isCompactViewport ? 'none' : 'flex', alignItems: 'center', gap: '2px' }}>
           <img src={logoSrc} alt="Arvi logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
           <span style={{
             fontFamily: 'var(--font-display)',
@@ -1545,7 +1558,7 @@ export function CategoryPageScene() {
         </div>
 
         {/* Right — collection name */}
-        <div style={{ justifySelf: 'end', textAlign: 'right' }}>
+        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'block', justifySelf: 'end', textAlign: 'right', maxWidth: isCompactViewport ? '11rem' : 'none', minWidth: 0 }}>
           <div style={{
             fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.2em',
             textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.15rem',
@@ -1554,6 +1567,7 @@ export function CategoryPageScene() {
             fontFamily: "'Playfair Display', Georgia, serif",
             fontSize: 'clamp(0.7rem, 2vw, 0.95rem)', fontWeight: 600,
             color: '#faf5ff', lineHeight: 1.1,
+            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
           }}>{displayLabel}</div>
         </div>
       </header>
@@ -1563,9 +1577,10 @@ export function CategoryPageScene() {
         onClick={!isProductOpening && page > 0 ? goPrev : undefined}
         aria-label="Previous page"
         style={{
-          position: 'fixed', top: '50%', left: '1.25rem',
-          transform: 'translateY(-50%)', zIndex: 15,
-          width: 50, height: 50, borderRadius: '50%',
+          position: 'fixed', top: isCompactViewport ? undefined : '50%', left: isCompactViewport ? '0.85rem' : '1.25rem',
+          bottom: isCompactViewport ? '5.35rem' : undefined,
+          transform: isCompactViewport ? 'none' : 'translateY(-50%)', zIndex: 15,
+          width: isCompactViewport ? 48 : 50, height: isCompactViewport ? 48 : 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
           background: 'rgba(42,16,64,0.6)', backdropFilter: 'blur(10px)',
           color: '#faf5ff', cursor: !isProductOpening && page > 0 ? 'pointer' : 'default',
@@ -1586,9 +1601,10 @@ export function CategoryPageScene() {
         onClick={!isProductOpening && page < maxPages - 1 ? goNext : undefined}
         aria-label="Next page"
         style={{
-          position: 'fixed', top: '50%', right: '1.25rem',
-          transform: 'translateY(-50%)', zIndex: 15,
-          width: 50, height: 50, borderRadius: '50%',
+          position: 'fixed', top: isCompactViewport ? undefined : '50%', right: isCompactViewport ? '0.85rem' : '1.25rem',
+          bottom: isCompactViewport ? '5.35rem' : undefined,
+          transform: isCompactViewport ? 'none' : 'translateY(-50%)', zIndex: 15,
+          width: isCompactViewport ? 48 : 50, height: isCompactViewport ? 48 : 50, borderRadius: '50%',
           border: '1px solid rgba(168,85,247,0.4)',
           background: 'rgba(42,16,64,0.6)', backdropFilter: 'blur(10px)',
           color: '#faf5ff', cursor: !isProductOpening && page < maxPages - 1 ? 'pointer' : 'default',
@@ -1608,8 +1624,8 @@ export function CategoryPageScene() {
       {/* ── Page dots ── */}
       {maxPages > 1 && !isProductOpening && (
         <div style={{
-          position: 'fixed', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)',
-          display: 'flex', gap: '0.5rem', zIndex: 15,
+          position: 'fixed', bottom: isCompactViewport ? '1.15rem' : '2.5rem', left: '50%', transform: 'translateX(-50%)',
+          display: 'flex', gap: '0.3rem', zIndex: 15,
         }}>
           {Array.from({ length: maxPages }, (_, i) => (
             <button
@@ -1619,13 +1635,24 @@ export function CategoryPageScene() {
               }}
               aria-label={`Page ${i + 1}`}
               style={{
-                width: 8, height: 8, borderRadius: '50%', border: 'none',
+                width: 28, height: 28, borderRadius: '50%', border: 'none',
                 padding: 0, cursor: 'pointer',
-                background: i === page ? '#a855f7' : 'rgba(168,85,247,0.3)',
-                transform: i === page ? 'scale(1.45)' : 'scale(1)',
-                transition: 'background 300ms, transform 300ms',
+                background: 'transparent',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               }}
-            />
+            >
+              <span
+                aria-hidden="true"
+                style={{
+                  width: i === page ? 12 : 8,
+                  height: i === page ? 12 : 8,
+                  borderRadius: '50%',
+                  background: i === page ? '#a855f7' : 'rgba(168,85,247,0.42)',
+                  boxShadow: i === page ? '0 0 0 3px rgba(168,85,247,0.18)' : 'none',
+                  transition: 'width 300ms, height 300ms, background 300ms, box-shadow 300ms',
+                }}
+              />
+            </button>
           ))}
         </div>
       )}
@@ -1633,7 +1660,7 @@ export function CategoryPageScene() {
       {/* ── Status hint ── */}
       <div style={{
         position: 'fixed',
-        top: isProductOpening ? undefined : '4.15rem',
+        top: isProductOpening ? undefined : isCompactViewport ? '4.75rem' : '4.15rem',
         bottom: isProductOpening ? (maxPages > 1 ? '4.5rem' : '1.5rem') : undefined,
         left: '50%', transform: 'translateX(-50%)',
         color: 'rgba(250,245,255,0.85)', fontSize: '0.72rem',
@@ -1668,15 +1695,17 @@ export function CategoryPageScene() {
             aria-label="Product purchase actions"
             style={{
               position: 'fixed',
-              top: '50%',
-              right: 'clamp(1rem, 4vw, 3rem)',
-              transform: 'translateY(-50%)',
+              top: isCompactViewport ? undefined : '50%',
+              right: isCompactViewport ? '1rem' : 'clamp(1rem, 4vw, 3rem)',
+              bottom: isCompactViewport ? '1rem' : undefined,
+              left: isCompactViewport ? '1rem' : undefined,
+              transform: isCompactViewport ? 'none' : 'translateY(-50%)',
               zIndex: 34,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'stretch',
               gap: '0.75rem',
-              width: 'min(15.5rem, calc(100vw - 2rem))',
+              width: isCompactViewport ? 'auto' : 'min(15.5rem, calc(100vw - 2rem))',
               padding: '0.9rem 1.05rem',
               borderRadius: '0.85rem',
               border: '1px solid rgba(240,180,41,0.45)',
@@ -1718,7 +1747,7 @@ export function CategoryPageScene() {
               type="button"
               onClick={returnFromFocusedProduct}
               style={{
-                minHeight: 40,
+                minHeight: 44,
                 border: '1px solid rgba(250,245,255,0.18)',
                 borderRadius: 999,
                 background: 'rgba(250,245,255,0.06)',
@@ -1741,8 +1770,8 @@ export function CategoryPageScene() {
       )}
 
       {/* ── Filter / Browse panel ── */}
-      <aside style={{
-        position: 'fixed', top: 0, left: 0, height: '100dvh', width: 290,
+      {menuOpen && <aside style={{
+        position: 'fixed', top: 0, left: 0, height: '100dvh', width: 'min(290px, 88vw)',
         background: 'rgba(10,3,18,0.97)', backdropFilter: 'blur(24px)',
         borderRight: '1px solid rgba(168,85,247,0.2)',
         zIndex: 100,
@@ -1754,7 +1783,7 @@ export function CategoryPageScene() {
       }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
           <span style={{ fontWeight: 700, fontSize: '1.05rem' }}>Browse</span>
-          <button onClick={() => setMenuOpen(false)} style={{ background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', opacity: 0.6, padding: '0.25rem' }}>
+          <button onClick={() => setMenuOpen(false)} aria-label="Close menu" style={{ width: 44, height: 44, background: 'none', border: 'none', color: '#faf5ff', cursor: 'pointer', opacity: 0.8, padding: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
           </button>
         </div>
@@ -1797,17 +1826,17 @@ export function CategoryPageScene() {
               <div style={{ fontSize: '0.7rem', color: 'rgba(250,245,255,0.45)', marginBottom: '0.3rem' }}>Min</div>
               <input type="range" min={0} max={10000} step={100} value={priceRange[0]}
                 onChange={e => setPriceRange([Math.min(+e.target.value, priceRange[1] - 100), priceRange[1]])}
-                style={{ accentColor: '#a855f7', width: '100%' }} />
+                style={{ accentColor: '#a855f7', width: '100%', minHeight: 40 }} />
             </div>
             <div>
               <div style={{ fontSize: '0.7rem', color: 'rgba(250,245,255,0.45)', marginBottom: '0.3rem' }}>Max</div>
               <input type="range" min={0} max={10000} step={100} value={priceRange[1]}
                 onChange={e => setPriceRange([priceRange[0], Math.max(+e.target.value, priceRange[0] + 100)])}
-                style={{ accentColor: '#a855f7', width: '100%' }} />
+                style={{ accentColor: '#a855f7', width: '100%', minHeight: 40 }} />
             </div>
           </div>
         </div>
-      </aside>
+      </aside>}
 
     </div>
   );

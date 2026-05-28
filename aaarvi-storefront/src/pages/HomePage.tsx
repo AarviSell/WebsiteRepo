@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  ArrowLeft, ArrowRight, Eye, Home, Package, Search, Sparkles, Star, Waves,
+  ArrowLeft, ArrowRight, Search, Sparkles, Waves,
 } from 'lucide-react';
 import { SearchBar } from '@/components/search/SearchBar';
 import { ProductGrid } from '@/components/product/ProductGrid';
@@ -158,7 +158,10 @@ export function HomePage() {
   const activeVisual = CATEGORY_VISUALS[activeCategory?.slug] ?? CATEGORY_VISUALS['home-and-kitchen'];
 
   useEffect(() => {
-    setActiveIndex(prev => Math.min(prev, Math.max(sceneCategories.length - 1, 0)));
+    const timer = window.setTimeout(() => {
+      setActiveIndex(prev => Math.min(prev, Math.max(sceneCategories.length - 1, 0)));
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [sceneCategories.length]);
 
   useEffect(() => {

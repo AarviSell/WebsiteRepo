@@ -30,11 +30,6 @@ export function ProductGrid({
         className="product-grid"
         role="list"
         aria-label="Loading products"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(220px, 100%), 1fr))',
-          gap: 'var(--space-4)',
-        }}
       >
         {Array.from({ length: skeletonCount }, (_, i) => (
           <div role="listitem" key={i}>
@@ -61,11 +56,6 @@ export function ProductGrid({
       className="product-grid"
       role="list"
       aria-label={`${products.length} products`}
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(min(220px, 100%), 1fr))',
-        gap: 'var(--space-4)',
-      }}
     >
       {products.map(p => (
         <div role="listitem" key={p.id}>

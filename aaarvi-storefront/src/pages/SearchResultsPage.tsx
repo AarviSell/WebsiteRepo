@@ -100,7 +100,7 @@ export function SearchResultsPage() {
         {/* Back link */}
         <Link
           to="/"
-          style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-1)', fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none', marginBottom: 'var(--space-4)' }}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-1)', minHeight: 40, fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none', marginBottom: 'var(--space-4)' }}
         >
           <ArrowLeft size={14} aria-hidden="true" />
           Back to Browse

@@ -169,8 +169,8 @@ export function SceneSearchBar({
               inputRef.current?.focus();
             }}
             style={{
-              width: 34,
-              height: 34,
+                width: 40,
+                height: 40,
               borderRadius: '50%',
               border: 'none',
               background: 'rgba(250,245,255,0.08)',
@@ -188,7 +188,7 @@ export function SceneSearchBar({
           type="submit"
           disabled={trimmedValue.length < 2 || disabled}
           style={{
-            minHeight: 34,
+            minHeight: 40,
             borderRadius: 999,
             border: 'none',
             background: trimmedValue.length >= 2 && !disabled ? '#a855f7' : 'rgba(168,85,247,0.28)',

@@ -13,7 +13,7 @@ export function Footer() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'minmax(0, 1.4fr) minmax(160px, 1fr)',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))',
               gap: 'var(--space-8)',
               marginBottom: 'var(--space-8)',
             }}
@@ -50,7 +50,7 @@ export function Footer() {
               </p>
               <a
                 href="mailto:aarvisell@gmail.com"
-                style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', minHeight: 40, fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none' }}
               >
                 aarvisell@gmail.com
               </a>
