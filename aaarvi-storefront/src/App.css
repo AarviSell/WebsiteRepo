@@ -1353,11 +1353,7 @@
 
 @media (max-width: 980px) {
 	.basic-header__top {
-		grid-template-columns: auto auto minmax(0, 1fr);
-	}
-
-	.basic-header__interactive {
-		display: none;
+		grid-template-columns: auto auto minmax(0, 1fr) auto;
 	}
 
 	.basic-catalog-layout,
@@ -1388,9 +1384,27 @@
 	}
 
 	.basic-header__top {
-		grid-template-columns: auto auto;
+		grid-template-columns: auto auto minmax(0, 1fr) auto;
 		gap: 0.7rem;
 		padding-block: 0.75rem;
+	}
+
+	.basic-header__menu {
+		min-width: 38px;
+		min-height: 38px;
+	}
+
+	.basic-header__menu svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.basic-header__interactive {
+		justify-self: end;
+		min-width: 40px;
+		min-height: 40px;
+		padding-inline: 0.65rem;
+		font-size: 0.78rem;
 	}
 
 	.basic-search {
@@ -1399,7 +1413,7 @@
 	}
 
 	.basic-header__nav {
-		padding: 0 0.75rem 0.7rem;
+		display: none;
 	}
 
 	.basic-main,

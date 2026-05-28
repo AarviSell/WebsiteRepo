@@ -697,7 +697,7 @@ export function HomePageScene() {
       {/* Header */}
       <header style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 40,
-        display: 'grid', gridTemplateColumns: isCompactViewport ? 'minmax(0, 1fr) auto' : 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
+        display: 'grid', gridTemplateColumns: isCompactViewport ? (searchOpen ? 'minmax(0, 1fr)' : 'minmax(0, 1fr) auto minmax(0, 1fr)') : 'minmax(0, 1fr) auto minmax(0, 1fr)', alignItems: 'center',
         padding: isCompactViewport ? '0.75rem 0.85rem' : '1.25rem 2.5rem',
         background: 'linear-gradient(to bottom, rgba(13,4,20,0.92) 0%, transparent 100%)',
         gap: isCompactViewport ? '0.55rem' : '1rem',
@@ -707,11 +707,11 @@ export function HomePageScene() {
           <button
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            style={{ width: 44, height: 44, background: 'rgba(17,7,24,0.62)', border: '1px solid rgba(250,245,255,0.12)', borderRadius: '50%', color: '#faf5ff', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px', flexShrink: 0 }}
+            style={{ width: isCompactViewport ? 38 : 44, height: isCompactViewport ? 38 : 44, background: 'rgba(17,7,24,0.62)', border: '1px solid rgba(250,245,255,0.12)', borderRadius: '50%', color: '#faf5ff', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: isCompactViewport ? '3px' : '4px', flexShrink: 0 }}
           >
-            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
-            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ display: 'block', width: 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? `translateY(${isCompactViewport ? 5 : 6}px) rotate(45deg)` : 'none' }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 22, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? `translateY(-${isCompactViewport ? 5 : 6}px) rotate(-45deg)` : 'none' }} />
           </button>
           {!isZoomingOut && (searchOpen ? (
             <div style={{ flex: '1 1 auto', minWidth: 0, maxWidth: isCompactViewport ? 'none' : '26rem', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto', gap: '0.45rem', alignItems: 'center' }}>
@@ -778,7 +778,7 @@ export function HomePageScene() {
           ))}
         </div>
         {/* Center — logo */}
-        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', alignItems: 'center', gap: '2px' }}>
+        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', alignItems: 'center', justifySelf: 'center', gap: '2px' }}>
           <img src={logoSrc} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
           <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
@@ -791,6 +791,20 @@ export function HomePageScene() {
         </div>
         {!isCompactViewport && <div />}
       </header>
+
+      {isCompactViewport && !searchOpen && !isZoomingOut && (
+        <div style={{
+          position: 'fixed', top: '5.15rem', left: '50%', transform: 'translateX(-50%)', zIndex: 8,
+          maxWidth: 'calc(100vw - 2rem)',
+          padding: '0.38rem 0.75rem', borderRadius: '999px',
+          border: '1px solid rgba(240,180,41,0.28)', background: 'rgba(13,4,20,0.68)',
+          color: 'rgba(250,245,255,0.82)', fontSize: '0.72rem', fontWeight: 700,
+          letterSpacing: '0.04em', textAlign: 'center', whiteSpace: 'nowrap',
+          pointerEvents: 'none', backdropFilter: 'blur(10px)',
+        }}>
+          Swipe or use arrows to browse cards
+        </div>
+      )}
 
       {/* Category display */}
       <div style={{

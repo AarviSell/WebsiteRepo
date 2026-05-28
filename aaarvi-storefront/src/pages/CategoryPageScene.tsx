@@ -16,13 +16,16 @@ import logoSrc from '@/assets/logo.png';
 
 /* ── Constants ─────────────────────────────────────────────── */
 const BG        = 0x0d0414;
-const TABLE_W   = 5;
-const TABLE_H   = 3;
+const DESKTOP_TABLE_COLUMNS = 5;
+const MOBILE_TABLE_COLUMNS  = 3;
+const TABLE_ROWS = 3;
 const CUBE_SIZE = 2.15;
-const SPACING   = 2.9;
+const DESKTOP_SPACING = 2.9;
+const MOBILE_SPACING  = 2.5;
+const TABLE_CENTER_Y  = 5.2;
+const MOBILE_BREAKPOINT = 768;
 const FLOOR_GRID  = 40;  // 40×40 = 1 600 tiles – fog hides anything beyond ~30 units
 const FLOOR_COUNT = FLOOR_GRID * FLOOR_GRID;
-const PAGE_SIZE   = TABLE_W * TABLE_H; // 15
 
 /**
  * BoxGeometry face order: [+X(0), -X(1), +Y(2), -Y(3), +Z(4), -Z(5)]
@@ -33,12 +36,42 @@ const PAGE_SIZE   = TABLE_W * TABLE_H; // 15
  *   page 3  rotation.y = +3π/2  → +X face (0) faces camera
  */
 const PAGE_FACE_IDX = [4, 1, 5, 0] as const;
-const MAX_PAGES = PAGE_FACE_IDX.length; // 4 → up to 60 products
 const PRODUCT_FOCUS_RETURN_DUR = 860;
 const SEARCH_DROP_DUR = 560;
 
 function getPageRotationY(pageIdx: number) {
   return pageIdx * (Math.PI / 2);
+}
+
+function getPageFaceIdx(pageIdx: number) {
+  return PAGE_FACE_IDX[pageIdx % PAGE_FACE_IDX.length];
+}
+
+function getSceneLayout(isMobile: boolean) {
+  const columns = isMobile ? MOBILE_TABLE_COLUMNS : DESKTOP_TABLE_COLUMNS;
+  const spacing = isMobile ? MOBILE_SPACING : DESKTOP_SPACING;
+
+  return {
+    columns,
+    rows: TABLE_ROWS,
+    spacing,
+    pageSize: columns * TABLE_ROWS,
+    cameraFov: isMobile ? 70 : 50,
+    cameraY: isMobile ? 5.15 : 5.5,
+    cameraZ: isMobile ? 11.6 : 12,
+  };
+}
+
+type SceneLayout = ReturnType<typeof getSceneLayout>;
+
+function getGridPosition(cubeIndex: number, layout: SceneLayout) {
+  const columnIndex = Math.floor(cubeIndex / layout.rows);
+  const rowIndex = cubeIndex % layout.rows;
+
+  return {
+    x: (columnIndex - (layout.columns - 1) / 2) * layout.spacing,
+    y: ((layout.rows - 1) / 2 - rowIndex) * layout.spacing + TABLE_CENTER_Y,
+  };
 }
 
 /* ── Easing ─────────────────────────────────────────────────── */
@@ -84,6 +117,7 @@ interface SceneState {
   renderer: THREE.WebGLRenderer;
   scene: THREE.Scene;
   camera: THREE.PerspectiveCamera;
+  layout: SceneLayout;
   floorMesh: THREE.InstancedMesh;
   floorData: Array<{ x: number; z: number; speed: number; offset: number; amplitude: number }>;
   cubes: THREE.Mesh[];
@@ -384,7 +418,9 @@ export function CategoryPageScene() {
   const { slug } = useParams<{ slug: string }>();
   const navigate  = useNavigate();
   const location = useLocation();
-  const isCompactViewport = useIsCompactViewport(720);
+  const isCompactViewport = useIsCompactViewport(MOBILE_BREAKPOINT);
+  const sceneLayout = useMemo(() => getSceneLayout(isCompactViewport), [isCompactViewport]);
+  const pageSize = sceneLayout.pageSize;
   const { allProducts, isLoaded } = useProductData();
   const routeState = location.state as CategoryRouteState | null;
   const incomingSearchQuery = routeState?.searchQuery?.trim() ?? '';
@@ -457,11 +493,12 @@ export function CategoryPageScene() {
       state.isRotating.value = false;
       state.searchDrop.active = false;
       state.searchDrop.startMs = Number.NEGATIVE_INFINITY;
-      state.camera.position.set(0, window.innerWidth < 768 ? 5.1 : 5.5, window.innerWidth < 768 ? 21 : 12);
+      state.camera.fov = state.layout.cameraFov;
+      state.camera.position.set(0, state.layout.cameraY, state.layout.cameraZ);
+      state.camera.updateProjectionMatrix();
       state.cubes.forEach((cube, cubeIndex) => {
-        const columnIndex = Math.floor(cubeIndex / TABLE_H);
-        const posX = (columnIndex - 2) * SPACING;
-        cube.position.set(posX, cube.userData.baseY, 0);
+        const position = getGridPosition(cubeIndex, state.layout);
+        cube.position.set(position.x, cube.userData.baseY, 0);
         cube.rotation.set(0, 0, 0);
         cube.scale.set(1, 1, 1);
         cube.userData.targetRotX = 0;
@@ -503,7 +540,8 @@ export function CategoryPageScene() {
     if (!container) return;
 
     /* Renderer — alpha:true so the CSS gradient wrapper shows through the sky */
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < MOBILE_BREAKPOINT;
+    const layout = getSceneLayout(isMobile);
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.0 : 1.5));
     const width = container.clientWidth || window.innerWidth;
@@ -521,8 +559,8 @@ export function CategoryPageScene() {
     scene.fog = new THREE.FogExp2(BG, 0.028);
 
     /* Camera — matches provided HTML */
-    const camera = new THREE.PerspectiveCamera(isMobile ? 54 : 50, width / height, 0.1, 1000);
-    camera.position.set(0, isMobile ? 5.1 : 5.5, isMobile ? 21 : 12);
+    const camera = new THREE.PerspectiveCamera(layout.cameraFov, width / height, 0.1, 1000);
+    camera.position.set(0, layout.cameraY, layout.cameraZ);
 
     /* Lighting */
     scene.add(new THREE.AmbientLight(0xffffff, 0.35));
@@ -572,7 +610,7 @@ export function CategoryPageScene() {
       }
     }
 
-    /* ── Product table (5×3 cubes) ── */
+    /* ── Product table (5×3 desktop, 3×3 mobile) ── */
     const cubeGeo   = new THREE.BoxGeometry(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE);
     const cubeGroup = new THREE.Group();
     scene.add(cubeGroup);
@@ -580,18 +618,17 @@ export function CategoryPageScene() {
     const labels: THREE.Sprite[] = [];
 
     let cubeIdx = 0;
-    for (let x = 0; x < TABLE_W; x++) {
-      for (let y = 0; y < TABLE_H; y++) {
+    for (let x = 0; x < layout.columns; x++) {
+      for (let y = 0; y < layout.rows; y++) {
         const mats = Array.from({ length: 6 }, goldMat);
         const mesh  = new THREE.Mesh(cubeGeo, mats);
 
-        const posX = (x - 2) * SPACING;
-        const posY = (1 - y) * SPACING + 5.2;
+        const position = getGridPosition(cubeIdx, layout);
 
         // Start below floor; entry animation will raise them
-        mesh.position.set(posX, -10, 0);
+        mesh.position.set(position.x, -10, 0);
         mesh.userData = {
-          baseY:       posY,
+          baseY:       position.y,
           targetRotX:  0,
           targetRotY:  0,
           floatOffset: Math.random() * Math.PI * 2,
@@ -604,7 +641,7 @@ export function CategoryPageScene() {
         // Label sprite above the cube — tracks cube Y in animation loop.
         // Starts blank; populated by loadPageTextures once products load.
         const label = makeLabelSprite('');
-        label.position.set(posX, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
+        label.position.set(position.x, -10 + LABEL_OFFSET_Y, LABEL_OFFSET_Z);
         scene.add(label);
         labels.push(label);
 
@@ -704,7 +741,7 @@ export function CategoryPageScene() {
           const startRotZ = (cube.userData.searchDropStartRotZ as number | undefined) ?? cube.rotation.z;
           const startScale = (cube.userData.searchDropStartScale as number | undefined) ?? cube.scale.x;
           const floatY = cube.userData.baseY + Math.sin(time * 0.5 + cube.userData.floatOffset) * 0.12;
-          const targetY = searchDrop.active ? -16 - (cubeIndex % TABLE_H) * 0.45 : floatY;
+          const targetY = searchDrop.active ? -16 - (cubeIndex % layout.rows) * 0.45 : floatY;
           const targetRotX = searchDrop.active ? (cubeIndex % 2 === 0 ? 1.2 : -1.1) : 0;
           const targetRotZ = searchDrop.active ? (cubeIndex % 3 === 0 ? -0.85 : 0.85) : 0;
           const targetScale = searchDrop.active ? 0.82 : 1;
@@ -774,8 +811,8 @@ export function CategoryPageScene() {
         camera.lookAt(0, 5.2, 0);
 
         cubes.forEach((cube, cubeIndex) => {
-          const columnIndex = Math.floor(cubeIndex / TABLE_H);
-          const targetX = (columnIndex - 2) * SPACING;
+          const targetPosition = getGridPosition(cubeIndex, layout);
+          const targetX = targetPosition.x;
           const targetY = cube.userData.baseY as number;
           const startPosition = cube.userData.returnStartPosition as THREE.Vector3 | undefined;
           const startRotation = cube.userData.returnStartRotation as THREE.Euler | undefined;
@@ -860,7 +897,7 @@ export function CategoryPageScene() {
       renderer.render(scene, camera);
     });
 
-    sceneRef.current = { renderer, scene, camera, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart, searchDrop, productFocus };
+    sceneRef.current = { renderer, scene, camera, layout, floorMesh, floorData, cubes, labels, entryDone, isRotating, isExiting, exitStart, searchDrop, productFocus };
     setSceneReady(true);
 
     /* Resize */
@@ -868,9 +905,10 @@ export function CategoryPageScene() {
       const mount = containerRef.current;
       const nextWidth = mount?.clientWidth || window.innerWidth;
       const nextHeight = mount?.clientHeight || window.innerHeight;
-      const compact = nextWidth < 768;
+      const compact = nextWidth < MOBILE_BREAKPOINT;
+      const nextLayout = getSceneLayout(compact);
       camera.aspect = nextWidth / nextHeight;
-      camera.fov = compact ? 54 : 50;
+      camera.fov = nextLayout.cameraFov;
       camera.updateProjectionMatrix();
       renderer.setSize(nextWidth, nextHeight);
     }
@@ -907,10 +945,10 @@ export function CategoryPageScene() {
   const loadPageTextures = useCallback((pageIdx: number) => {
     const state = sceneRef.current;
     const prods = productsRef.current;
-    if (!state || pageIdx < 0 || pageIdx >= MAX_PAGES) return;
+    if (!state || pageIdx < 0) return;
 
     const requestId = ++texturePageRequestRef.current;
-    const faceIdx = PAGE_FACE_IDX[pageIdx];
+    const faceIdx = getPageFaceIdx(pageIdx);
     const loader  = new THREE.TextureLoader();
     const hideUnpaintedSearchCubes = isSearchMode;
 
@@ -939,7 +977,7 @@ export function CategoryPageScene() {
 
     // Second pass: apply product image ONLY to the face that now faces the camera
     state.cubes.forEach((_, i) => {
-      const prodIdx = pageIdx * PAGE_SIZE + i;
+      const prodIdx = pageIdx * pageSize + i;
       if (prodIdx >= prods.length) return;
 
       const product = prods[prodIdx];
@@ -1004,7 +1042,7 @@ export function CategoryPageScene() {
         () => { /* swallow — face stays gold */ },
       );
     });
-  }, [isSearchMode]);
+  }, [isSearchMode, pageSize]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -1046,7 +1084,7 @@ export function CategoryPageScene() {
   }, [loadPageTextures]);
 
   /* ── Computed values ─────────────────────────────────────────── */
-  const maxPages = Math.min(MAX_PAGES, Math.ceil(products.length / PAGE_SIZE));
+  const maxPages = Math.max(1, Math.ceil(products.length / pageSize));
   const isProductOpening = openingProductName.length > 0;
 
   /* ── Cube rotation helpers ────────────────────────────────── */
@@ -1166,8 +1204,9 @@ export function CategoryPageScene() {
     const state = sceneRef.current;
     if (!state) return;
     const cube = state.cubes[cubeIdx];
-    const faceIdx = PAGE_FACE_IDX[pageRef.current];
-    const focusY = window.innerWidth < 768 ? 3.9 : 4.35;
+    const faceIdx = getPageFaceIdx(pageRef.current);
+    const isMobileLayout = state.layout.columns === MOBILE_TABLE_COLUMNS;
+    const focusY = isMobileLayout ? 3.9 : 4.35;
     const focus = state.productFocus;
 
     setMenuOpen(false);
@@ -1187,7 +1226,7 @@ export function CategoryPageScene() {
     focus.selectedIdx = cubeIdx;
     focus.startMs = performance.now();
     focus.startCamera.copy(state.camera.position);
-    focus.targetCamera.set(0, focusY + 0.12, window.innerWidth < 768 ? 8.2 : 5.35);
+    focus.targetCamera.set(0, focusY + 0.12, isMobileLayout ? 8.2 : 5.35);
     focus.startPosition.copy(cube.position);
     focus.targetPosition.set(0, focusY, 0);
     focus.startScale.copy(cube.scale);
@@ -1247,7 +1286,7 @@ export function CategoryPageScene() {
     if (hits.length === 0) return;
 
     const cubeI    = (hits[0].object as THREE.Mesh).userData.cubeIdx as number;
-    const prodIdx  = pageRef.current * PAGE_SIZE + cubeI;
+    const prodIdx  = pageRef.current * pageSize + cubeI;
     if (prodIdx < productsRef.current.length) {
       const product = productsRef.current[prodIdx];
       beginProductFocus(cubeI, product);
@@ -1265,7 +1304,7 @@ export function CategoryPageScene() {
     state.productFocus.returning = true;
     state.productFocus.returnStartMs = performance.now();
     state.productFocus.returnStartCamera.copy(state.camera.position);
-    state.productFocus.returnTargetCamera.set(0, window.innerWidth < 768 ? 5.1 : 5.5, window.innerWidth < 768 ? 21 : 12);
+    state.productFocus.returnTargetCamera.set(0, state.layout.cameraY, state.layout.cameraZ);
     state.isRotating.value = false;
     const targetRotY = getPageRotationY(pageRef.current);
 
@@ -1333,10 +1372,10 @@ export function CategoryPageScene() {
     const productIndex = products.findIndex(product => product.id === focusProductId);
     if (productIndex < 0) return;
 
-    const targetPage = Math.floor(productIndex / PAGE_SIZE);
-    const cubeIndex = productIndex % PAGE_SIZE;
+    const targetPage = Math.floor(productIndex / pageSize);
+    const cubeIndex = productIndex % pageSize;
     const product = products[productIndex];
-    if (targetPage >= MAX_PAGES) return;
+    if (targetPage >= maxPages) return;
 
     pageRef.current = targetPage;
     const pageTimer = window.setTimeout(() => setPage(targetPage), 0);
@@ -1353,7 +1392,7 @@ export function CategoryPageScene() {
       window.clearTimeout(pageTimer);
       window.clearTimeout(timer);
     };
-  }, [beginProductFocus, focusProductId, focusRequestKey, loadPageTextures, products, sceneReady, syncSceneToPage]);
+  }, [beginProductFocus, focusProductId, focusRequestKey, loadPageTextures, maxPages, pageSize, products, sceneReady, syncSceneToPage]);
 
   const focusProductFromSearch = useCallback((product: Product, query: string) => {
     const nextQuery = query.trim() || product.name;
@@ -1440,11 +1479,11 @@ export function CategoryPageScene() {
           <button
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            style={{ width: 44, height: 44, background: 'rgba(17,7,24,0.62)', border: '1px solid rgba(250,245,255,0.12)', borderRadius: '50%', color: '#faf5ff', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '4px', flexShrink: 0 }}
+            style={{ width: isCompactViewport ? 38 : 44, height: isCompactViewport ? 38 : 44, background: 'rgba(17,7,24,0.62)', border: '1px solid rgba(250,245,255,0.12)', borderRadius: '50%', color: '#faf5ff', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: isCompactViewport ? '3px' : '4px', flexShrink: 0 }}
           >
-            <span style={{ display: 'block', width: 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? 'translateY(6px) rotate(45deg)' : 'none' }} />
-            <span style={{ display: 'block', width: 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ display: 'block', width: 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms, opacity 220ms', transform: menuOpen ? `translateY(${isCompactViewport ? 5 : 6}px) rotate(45deg)` : 'none' }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'opacity 220ms', opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ display: 'block', width: isCompactViewport ? 18 : 20, height: 2, background: 'rgba(250,245,255,0.85)', borderRadius: 1, transition: 'transform 220ms', transform: menuOpen ? `translateY(-${isCompactViewport ? 5 : 6}px) rotate(-45deg)` : 'none' }} />
           </button>
           <button
             onClick={() => {
@@ -1624,7 +1663,7 @@ export function CategoryPageScene() {
       {/* ── Page dots ── */}
       {maxPages > 1 && !isProductOpening && (
         <div style={{
-          position: 'fixed', bottom: isCompactViewport ? '1.15rem' : '2.5rem', left: '50%', transform: 'translateX(-50%)',
+          position: 'fixed', bottom: isCompactViewport ? '2.25rem' : '3.25rem', left: '50%', transform: 'translateX(-50%)',
           display: 'flex', gap: '0.3rem', zIndex: 15,
         }}>
           {Array.from({ length: maxPages }, (_, i) => (
