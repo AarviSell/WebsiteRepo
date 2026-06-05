@@ -51,9 +51,9 @@ describe('ProductCard', () => {
   });
 
   it('renders a link to the category cube scene', () => {
-    const { container } = renderCard(makeProduct({ id: 'abc-123', category: 'standard-collection' }));
+    const { container } = renderCard(makeProduct({ id: 'abc-123', category: 'signature-collection' }));
     const link = container.querySelector('a');
-    expect(link?.getAttribute('href')).toBe('/category/standard-collection');
+    expect(link?.getAttribute('href')).toBe('/category/signature-collection');
   });
 
   it('renders with no price gracefully', () => {

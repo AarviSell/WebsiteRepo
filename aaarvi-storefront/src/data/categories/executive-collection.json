@@ -29,7 +29,7 @@
     "id": "aarvi-executive-collection-2",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Clock with Temperature & Magnetic Photo Frame — Digital",
+    "name": "Clock with Temperature & Magnetic Photo Frame - Digital",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -55,7 +55,7 @@
     "id": "aarvi-executive-collection-3",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Zippy Lunch Bag — Plastic with 3 Containers",
+    "name": "Zippy Lunch Bag - Plastic with 3 Containers",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -81,7 +81,7 @@
     "id": "aarvi-executive-collection-4",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "4700Bc Hawaiian Barbeque Cheese Popcorn Tin — 150G",
+    "name": "4700Bc Hawaiian Barbeque Cheese Popcorn Tin - 150G",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -211,7 +211,7 @@
     "id": "aarvi-executive-collection-9",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Duramug Grip Large Spill-Proof Suction Mug — 460Ml",
+    "name": "Duramug Grip Large Spill-Proof Suction Mug - 460Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -260,84 +260,6 @@
     "catalogue_image_index": 10
   },
   {
-    "id": "aarvi-executive-collection-11",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Handybeam Tango Rechargeable Torch with Side Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/11.jpg",
-        "filename": "11.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 368",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 12,
-    "catalogue_image_index": 11
-  },
-  {
-    "id": "aarvi-executive-collection-12",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Handybeam Rechargeabletorch",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/12.jpg",
-        "filename": "12.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "LITHIUM-ION",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 13,
-    "catalogue_image_index": 12
-  },
-  {
-    "id": "aarvi-executive-collection-13",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Handybeam Sonic Rechargeable Torch with Side Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/13.jpg",
-        "filename": "13.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 366",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 13
-  },
-  {
     "id": "aarvi-executive-collection-14",
     "source_site": "shipmydeals",
     "url": "",
@@ -364,32 +286,6 @@
     "catalogue_image_index": 14
   },
   {
-    "id": "aarvi-executive-collection-15",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Brighto Shine Rechargeable LED Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/15.jpg",
-        "filename": "15.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 356",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 16,
-    "catalogue_image_index": 15
-  },
-  {
     "id": "aarvi-executive-collection-16",
     "source_site": "shipmydeals",
     "url": "",
@@ -414,84 +310,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 17,
     "catalogue_image_index": 16
-  },
-  {
-    "id": "aarvi-executive-collection-17",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Brighto 2.0 Rechargeable LED Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/18.jpg",
-        "filename": "18.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 353",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 18,
-    "catalogue_image_index": 17
-  },
-  {
-    "id": "aarvi-executive-collection-18",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Penzen Ii Rechargeable Lamp with Double Tumbler & Phone Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/19.jpg",
-        "filename": "19.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 352",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 19,
-    "catalogue_image_index": 18
-  },
-  {
-    "id": "aarvi-executive-collection-19",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Power Glow Rechargeable Wooden Lamp with Stationery Holder & Phone Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/20.jpg",
-        "filename": "20.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 361",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 19
   },
   {
     "id": "aarvi-executive-collection-20",
@@ -523,7 +341,7 @@
     "id": "aarvi-executive-collection-21",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Cola 500Ml Vacuum Flask — Color Finish",
+    "name": "Cola 500Ml Vacuum Flask - Color Finish",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -549,7 +367,7 @@
     "id": "aarvi-executive-collection-22",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Cola 500Ml Vacuum Flask — Steel Finish",
+    "name": "Cola 500Ml Vacuum Flask - Steel Finish",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -598,36 +416,10 @@
     "catalogue_image_index": 23
   },
   {
-    "id": "aarvi-executive-collection-24",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "See-Thru Clock with Temperature — Wall/Table Clock",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/25.jpg",
-        "filename": "25.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 133",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 24
-  },
-  {
     "id": "aarvi-executive-collection-25",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Bamboo Vacuum Flask with Tea Strainer — 400Ml",
+    "name": "Bamboo Vacuum Flask with Tea Strainer - 400Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -679,7 +471,7 @@
     "id": "aarvi-executive-collection-27",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Stainless Steel Vacuum Coffee Mug with Temperature Display — 510Ml",
+    "name": "Stainless Steel Vacuum Coffee Mug with Temperature Display - 510Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -705,7 +497,7 @@
     "id": "aarvi-executive-collection-28",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Caf Mate Stainless Steel Vacuum Coffee Mug — 380Ml",
+    "name": "Caf Mate Stainless Steel Vacuum Coffee Mug - 380Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -754,32 +546,6 @@
     "catalogue_image_index": 29
   },
   {
-    "id": "aarvi-executive-collection-30",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Podium Rechargeable Lamp — 360° Flexible Neck",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/31.jpg",
-        "filename": "31.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 345",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 31,
-    "catalogue_image_index": 30
-  },
-  {
     "id": "aarvi-executive-collection-31",
     "source_site": "shipmydeals",
     "url": "",
@@ -809,7 +575,7 @@
     "id": "aarvi-executive-collection-32",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Compact 4-Pc Cork Gift Set — Notebook, Cork Pen, Keychain, Card Holder",
+    "name": "Compact 4-Pc Cork Gift Set - Notebook, Cork Pen, Keychain, Card Holder",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -861,7 +627,7 @@
     "id": "aarvi-executive-collection-34",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Bullet Vacuum Flask — 500Ml",
+    "name": "Bullet Vacuum Flask - 500Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -882,32 +648,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 35,
     "catalogue_image_index": 34
-  },
-  {
-    "id": "aarvi-executive-collection-35",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Power Strip with USB Ports, 2-Mode Lamp, 2 Sockets",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/36.jpg",
-        "filename": "36.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 186",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 35
   },
   {
     "id": "aarvi-executive-collection-36",
@@ -965,7 +705,7 @@
     "id": "aarvi-executive-collection-38",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Compact 4-Pc Gift Set — Notebook, Pen, Keychain, Card Holder",
+    "name": "Compact 4-Pc Gift Set - Notebook, Pen, Keychain, Card Holder",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -986,32 +726,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 39,
     "catalogue_image_index": 38
-  },
-  {
-    "id": "aarvi-executive-collection-39",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Rechargeable Torch with Folding Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/40.jpg",
-        "filename": "40.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 335",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 39
   },
   {
     "id": "aarvi-executive-collection-40",
@@ -1069,7 +783,7 @@
     "id": "aarvi-executive-collection-42",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "3-Pc Travel Set — Mini Passport Holder, Sim Card Box, Pen & Tag",
+    "name": "3-Pc Travel Set - Mini Passport Holder, Sim Card Box, Pen & Tag",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1095,7 +809,7 @@
     "id": "aarvi-executive-collection-43",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "4-Pc Gift Set — A6 Notebook, Visiting Card Holder, Pen & Keychain",
+    "name": "4-Pc Gift Set - A6 Notebook, Visiting Card Holder, Pen & Keychain",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1118,36 +832,10 @@
     "catalogue_image_index": 43
   },
   {
-    "id": "aarvi-executive-collection-44",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Swan Rechargeable Flexi Table Lamp with Mobile Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/45.jpg",
-        "filename": "45.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 320",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 45,
-    "catalogue_image_index": 44
-  },
-  {
     "id": "aarvi-executive-collection-45",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Sunset Mug Magic Suction — Stainless Steel Inside",
+    "name": "Sunset Mug Magic Suction - Stainless Steel Inside",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1168,32 +856,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 46,
     "catalogue_image_index": 45
-  },
-  {
-    "id": "aarvi-executive-collection-46",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Wooden Table Top with Analog Clock, Mobile Stand, Pen Stand & Lifetime Calendar",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/47.jpg",
-        "filename": "47.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 132",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 47,
-    "catalogue_image_index": 46
   },
   {
     "id": "aarvi-executive-collection-47",
@@ -1225,7 +887,7 @@
     "id": "aarvi-executive-collection-48",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Hexa Insulated Tall Sipper Mug — 375Ml",
+    "name": "Hexa Insulated Tall Sipper Mug - 375Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1482,32 +1144,6 @@
     "catalogue_image_index": 57
   },
   {
-    "id": "aarvi-executive-collection-58",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Folding Cob Desk Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/59.jpg",
-        "filename": "59.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 177",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 59,
-    "catalogue_image_index": 58
-  },
-  {
     "id": "aarvi-executive-collection-59",
     "source_site": "shipmydeals",
     "url": "",
@@ -1563,7 +1199,7 @@
     "id": "aarvi-executive-collection-61",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Mega Lunch — 3 Stainless Steel Container Lunch Box",
+    "name": "Mega Lunch - 3 Stainless Steel Container Lunch Box",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1589,7 +1225,7 @@
     "id": "aarvi-executive-collection-62",
     "source_site": "shipmydeals",
     "url": "",
-    "name": "Tall Sipper Mug — 304 Grade Stainless Steel, 375Ml",
+    "name": "Tall Sipper Mug - 304 Grade Stainless Steel, 375Ml",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹400–600",
@@ -1768,58 +1404,6 @@
     "catalogue_image_index": 68
   },
   {
-    "id": "aarvi-executive-collection-69",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dinnerset Powerplus Pcs.f 00 D Grade",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/70.jpg",
-        "filename": "70.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 213",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 70,
-    "catalogue_image_index": 69
-  },
-  {
-    "id": "aarvi-executive-collection-70",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Stainless Steel Compartment Plate Powerplus with Premium Glass and Spoon",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/71.jpg",
-        "filename": "71.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 212",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 71,
-    "catalogue_image_index": 70
-  },
-  {
     "id": "aarvi-executive-collection-71",
     "source_site": "shipmydeals",
     "url": "",
@@ -1976,32 +1560,6 @@
     "catalogue_image_index": 76
   },
   {
-    "id": "aarvi-executive-collection-77",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "3.4 a Dual USB Home Charger Powerplus with LED Night Lamp",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/78.jpg",
-        "filename": "78.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 123",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 78,
-    "catalogue_image_index": 77
-  },
-  {
     "id": "aarvi-executive-collection-78",
     "source_site": "shipmydeals",
     "url": "",
@@ -2026,32 +1584,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 79,
     "catalogue_image_index": 78
-  },
-  {
-    "id": "aarvi-executive-collection-79",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "3 D Wall Clock(5 R Size",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/80.jpg",
-        "filename": "80.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "W 04",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 80,
-    "catalogue_image_index": 79
   },
   {
     "id": "aarvi-executive-collection-80",
@@ -2208,84 +1740,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 86,
     "catalogue_image_index": 85
-  },
-  {
-    "id": "aarvi-executive-collection-86",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Power Glow Caplet Power Bank",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/87.jpg",
-        "filename": "87.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 46",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 87,
-    "catalogue_image_index": 86
-  },
-  {
-    "id": "aarvi-executive-collection-87",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerglowmini Power Bank",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/88.jpg",
-        "filename": "88.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 45",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 88,
-    "catalogue_image_index": 87
-  },
-  {
-    "id": "aarvi-executive-collection-88",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Night Lamp Clock Powerplus with Alarm & Super Sweep Movement",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/89.jpg",
-        "filename": "89.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 125",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 89,
-    "catalogue_image_index": 88
   },
   {
     "id": "aarvi-executive-collection-89",

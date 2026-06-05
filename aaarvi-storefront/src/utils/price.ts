@@ -16,7 +16,7 @@ export function parseNumericPrice(priceStr: string): number | null {
  * Adds ₹ prefix if missing.
  */
 export function formatDisplayPrice(priceStr: string): string {
-  if (!priceStr) return '—';
+  if (!priceStr) return '-';
   if (priceStr.includes('₹')) return priceStr;
   return `₹${priceStr}`;
 }

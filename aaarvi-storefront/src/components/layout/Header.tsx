@@ -3,14 +3,15 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
+import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
 import logoSrc from '@/assets/logo.png';
 
-function AArviLogo() {
+function AarviLogo() {
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '2px', color: 'var(--color-text)' }}>
       <img
         src={logoSrc}
-        alt="Arvi logo"
+        alt={`${BRAND_NAME} logo`}
         style={{ width: 34, height: 34, flexShrink: 0, objectFit: 'contain' }}
       />
       <span
@@ -25,7 +26,7 @@ function AArviLogo() {
           lineHeight: 1,
         }}
       >
-        Arvi
+        {BRAND_HEADER_TEXT}
       </span>
     </span>
   );
@@ -68,7 +69,7 @@ function DrawerNav({ onClose }: { onClose: () => void }) {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <AArviLogo />
+          <AarviLogo />
           <button
             onClick={onClose}
             aria-label="Close navigation menu"
@@ -183,8 +184,8 @@ export function Header() {
               {/* Left slot — empty */}
               <div />
               {/* Center — logo */}
-              <Link to="/" aria-label="AArvi home" style={{ textDecoration: 'none', justifySelf: 'center' }}>
-                <AArviLogo />
+              <Link to="/" aria-label={`${BRAND_NAME} home`} style={{ textDecoration: 'none', justifySelf: 'center' }}>
+                <AarviLogo />
               </Link>
 
               <nav style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-1)', justifyContent: 'flex-end' }} aria-label="Primary navigation">
@@ -225,8 +226,8 @@ export function Header() {
                 {/* Left — empty */}
                 <div />
                 {/* Center — logo */}
-                <Link to="/" aria-label="AArvi home" style={{ textDecoration: 'none', justifySelf: 'center' }}>
-                  <AArviLogo />
+                <Link to="/" aria-label={`${BRAND_NAME} home`} style={{ textDecoration: 'none', justifySelf: 'center' }}>
+                  <AarviLogo />
                 </Link>
                 {/* Right — hamburger */}
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>

@@ -8,7 +8,7 @@ function makeProduct(overrides: Partial<Product> = {}): Product {
     source_site: 'shipmydeals',
     url: 'https://example.com',
     name: 'Test Product',
-    category: 'standard-collection',
+    category: 'signature-collection',
     category_label: 'Standard Collection',
     specifications: {},
     images: [],

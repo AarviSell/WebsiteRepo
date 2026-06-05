@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, MonitorPlay, Sparkles } from 'lucide-react';
 import { preloadInteractiveExperience } from '@/pages/interactivePreload';
+import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
 import logoSrc from '@/assets/logo.png';
 
 type GatePhase = 'choice' | 'interactive-perfect' | 'interactive-start' | 'interactive-reveal';
@@ -68,9 +69,9 @@ export function ExperienceGate() {
     <main className={`experience-gate experience-gate--${phase}`} aria-live="polite">
       <div className="experience-gate__ambient" aria-hidden="true" />
       <section className="experience-gate__panel">
-        <div className="experience-gate__brand" aria-label="AArvi">
-          <img src={logoSrc} alt="Arvi logo" />
-          <span>Arvi</span>
+        <div className="experience-gate__brand" aria-label={BRAND_NAME}>
+          <img src={logoSrc} alt={`${BRAND_NAME} logo`} />
+          <span>{BRAND_HEADER_TEXT}</span>
         </div>
 
         {phase === 'choice' && (

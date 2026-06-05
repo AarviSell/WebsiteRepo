@@ -34,7 +34,7 @@ export function SearchBar() {
     const trimmedInput = input.trim();
     if (!trimmedInput) return;
     const firstResult = searchProductsByName(allProducts, trimmedInput, { limit: 1 })[0];
-    const targetSlug = firstResult?.category ?? 'standard-collection';
+    const targetSlug = firstResult?.category ?? 'signature-collection';
     setOpen(false);
     setActiveIndex(-1);
     navigate(`/category/${targetSlug}`, {

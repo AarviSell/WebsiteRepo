@@ -1,6 +1,13 @@
 // src/data/loader.ts
-// Use static imports for Vite bundling — JSON is code-split via dynamic import.
+// Use static imports for Vite bundling; JSON is code-split via dynamic import.
 import type { Product, CategoryNode } from '@/types/product';
+import {
+  filterActiveCategories,
+  filterActiveCollectionProducts,
+  isActiveCollectionSlug,
+} from '@/utils/collections';
+import { filterExcludedProducts } from '@/utils/excludedProducts';
+import { normalizeProducts } from '@/utils/productText';
 
 const categoryProductModules = import.meta.glob<{ default: Product[] }>('./categories/*.json');
 
@@ -11,7 +18,9 @@ function mergeProducts(productGroups: Product[][]): Product[] {
       if (!byId.has(product.id)) byId.set(product.id, product);
     }
   }
-  return Array.from(byId.values());
+  return normalizeProducts(
+    filterActiveCollectionProducts(filterExcludedProducts(Array.from(byId.values()))),
+  );
 }
 
 export async function loadAllProducts(): Promise<Product[]> {
@@ -32,12 +41,15 @@ export async function loadAllProducts(): Promise<Product[]> {
 
 export async function loadCategories(): Promise<CategoryNode[]> {
   const mod = await import('@/data/categories.json');
-  return mod.default as CategoryNode[];
+  return filterActiveCategories(mod.default as CategoryNode[]);
 }
 
 export async function loadCategoryProducts(slug: string): Promise<Product[]> {
+  if (!isActiveCollectionSlug(slug)) return [];
   const loadModule = categoryProductModules[`./categories/${slug}.json`];
   if (!loadModule) return [];
   const mod = await loadModule();
-  return mod.default as Product[];
+  return normalizeProducts(
+    filterActiveCollectionProducts(filterExcludedProducts(mod.default as Product[])),
+  );
 }

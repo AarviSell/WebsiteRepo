@@ -6,6 +6,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { filterActiveCollectionProducts, filterActiveCategories } from '../src/utils/collections';
+import { filterExcludedProducts } from '../src/utils/excludedProducts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,11 +111,26 @@ function parseNumericPrice(priceStr: string): number | null {
   return parseFloat(match[1].replace(/,/g, ''));
 }
 
+function normalizeProductText(value: string): string {
+  return value
+    .replace(/\s+\u2014\s+/g, ' - ')
+    .replace(/\s+\u2013\s+/g, ' - ')
+    .replace(/\u2014/g, ' - ')
+    .replace(/\u2013/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function normalizeProduct(product: ScrapedProduct): ScrapedProduct {
-  if (product.price && product.price_numeric == null) {
-    return { ...product, price_numeric: parseNumericPrice(product.price) ?? undefined };
+  const normalized: ScrapedProduct = {
+    ...product,
+    name: normalizeProductText(product.name),
+    description: product.description ? normalizeProductText(product.description) : product.description,
+  };
+  if (normalized.price && normalized.price_numeric == null) {
+    return { ...normalized, price_numeric: parseNumericPrice(normalized.price) ?? undefined };
   }
-  return product;
+  return normalized;
 }
 
 function addProductsFromFile(file: string, allProducts: ScrapedProduct[], seenProductIds: Set<string>) {
@@ -155,7 +172,13 @@ function main() {
     addProductsFromFile(file, allProducts, seenProductIds);
   }
 
-  console.log(`[build-data] Total products: ${allProducts.length}`);
+  const beforeFilters = allProducts.length;
+  const filteredProducts = filterActiveCollectionProducts(filterExcludedProducts(allProducts));
+  allProducts.length = 0;
+  allProducts.push(...filteredProducts);
+  console.log(
+    `[build-data] Total products: ${allProducts.length} (${beforeFilters - allProducts.length} filtered by catalogue rules)`,
+  );
 
   // Build category tree
   const categoryMap = new Map<string, CategoryNode>();
@@ -188,7 +211,7 @@ function main() {
   const existingCategories = readExistingCategories();
   const generatedBySlug = new Map(generatedCategories.map(category => [category.slug, category]));
   const existingSlugs = new Set(existingCategories.map(category => category.slug));
-  const categories = [
+  const categories = filterActiveCategories([
     ...existingCategories.map(existing => {
       const generated = generatedBySlug.get(existing.slug);
       if (!generated) return existing;
@@ -199,7 +222,7 @@ function main() {
       };
     }),
     ...generatedCategories.filter(category => !existingSlugs.has(category.slug)),
-  ];
+  ]);
 
   // Ensure output dirs exist
   fs.mkdirSync(SRC_DATA, { recursive: true });

@@ -47,7 +47,7 @@ export function PriceRangeSlider({ min, max, value, onChange }: PriceRangeSlider
             }}
           />
         </div>
-        <span style={{ color: 'var(--color-text-faint)', paddingTop: 'var(--space-4)' }}>—</span>
+        <span style={{ color: 'var(--color-text-faint)', paddingTop: 'var(--space-4)' }}>to</span>
         <div style={{ flex: 1 }}>
           <label htmlFor="price-max" style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', display: 'block', marginBottom: 'var(--space-1)' }}>
             Max (₹)

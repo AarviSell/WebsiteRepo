@@ -123,8 +123,8 @@ export function SearchResultsPage() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-4)', flexWrap: 'wrap', gap: 'var(--space-3)' }}>
               <h1 style={{ fontSize: 'var(--text-lg)', fontWeight: 600, color: 'var(--color-text)', margin: 0 }}>
                 {query
-                  ? <>Search results for &ldquo;<strong>{query}</strong>&rdquo; — <strong>{filteredProducts.length}</strong> results</>
-                  : <>All Products — <strong>{filteredProducts.length}</strong></>
+                  ? <>Search results for &ldquo;<strong>{query}</strong>&rdquo; · <strong>{filteredProducts.length}</strong> results</>
+                  : <>All Products · <strong>{filteredProducts.length}</strong></>
                 }
               </h1>
               <div style={{ display: 'flex', gap: 'var(--space-3)', alignItems: 'center' }}>
@@ -143,7 +143,7 @@ export function SearchResultsPage() {
                     <option value="relevance">Relevance</option>
                     <option value="price_asc">Price: Low to High</option>
                     <option value="price_desc">Price: High to Low</option>
-                    <option value="name_asc">Name: A–Z</option>
+                    <option value="name_asc">Name: A-Z</option>
                   </select>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export function SearchResultsPage() {
 
             {filteredProducts.length > 0 && (
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', margin: '0 0 var(--space-4)' }}>
-                Showing {startItem}–{endItem} of {filteredProducts.length} products
+                Showing {startItem}-{endItem} of {filteredProducts.length} products
               </p>
             )}
 

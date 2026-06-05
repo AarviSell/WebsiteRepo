@@ -1,20 +1,25 @@
 // src/pages/HomePageScene.tsx  — Three.js golden-card homepage
 import { useEffect, useMemo, useRef, useState, useCallback, type MouseEvent as ReactMouseEvent } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
-import { Search, X } from 'lucide-react';
+import { Box, Search, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
 import { useIsCompactViewport } from '@/hooks/useViewport';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { searchProductsByName } from '@/utils/productSearch';
-import { COLLECTIONS } from '@/utils/collections';
+import { COLLECTIONS, DEFAULT_COLLECTION_SLUG } from '@/utils/collections';
+import {
+  FEATURED_PRODUCTS_SLUG,
+  getCurrentSceneViewport,
+  getFeaturedProductDisplayCount,
+} from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
+import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
 import logoSrc from '../assets/logo.png';
 
 /* ── Category data ─────────────────────────────────────────── */
 const CATEGORY_ICONS: Record<string, string> = {
-  'standard-collection': '📦',
-  'business-collection': '💼',
+  [FEATURED_PRODUCTS_SLUG]: '✨',
   'signature-collection': '✒️',
   'preferred-collection': '⭐',
   'premium-collection': '💎',
@@ -23,11 +28,22 @@ const CATEGORY_ICONS: Record<string, string> = {
   'legacy-collection': '👑',
 };
 
-const CATS = COLLECTIONS.map(collection => ({
-  ...collection,
-  count: 0,
-  icon: CATEGORY_ICONS[collection.slug] ?? '✦',
-}));
+const CATS = [
+  {
+    slug: FEATURED_PRODUCTS_SLUG,
+    label: 'Featured Products',
+    priceRange: '',
+    minPrice: 0,
+    maxPrice: null,
+    count: 0,
+    icon: CATEGORY_ICONS[FEATURED_PRODUCTS_SLUG],
+  },
+  ...COLLECTIONS.map(collection => ({
+    ...collection,
+    count: 0,
+    icon: CATEGORY_ICONS[collection.slug] ?? '✦',
+  })),
+];
 
 /* ── Helpers ────────────────────────────────────────────────── */
 function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
@@ -166,10 +182,12 @@ function makeGoldTexture(cat: { slug: string; label: string; icon: string; price
   ctx.font = '600 14px "DM Sans", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'bottom';
-  ctx.fillText(cat.label.toUpperCase(), W / 2, H - 46);
-  ctx.fillStyle = 'rgba(255,250,225,0.78)';
-  ctx.font = '700 17px "DM Sans", sans-serif';
-  ctx.fillText(cat.priceRange.toUpperCase(), W / 2, H - 20);
+  ctx.fillText(cat.label.toUpperCase(), W / 2, H - (cat.priceRange ? 46 : 28));
+  if (cat.priceRange) {
+    ctx.fillStyle = 'rgba(255,250,225,0.78)';
+    ctx.font = '700 17px "DM Sans", sans-serif';
+    ctx.fillText(cat.priceRange.toUpperCase(), W / 2, H - 20);
+  }
 
   return new THREE.CanvasTexture(cv);
 }
@@ -242,15 +260,30 @@ export function HomePageScene() {
   const navigate = useNavigate();
   const location = useLocation();
   const isCompactViewport = useIsCompactViewport(720);
+  const [viewportSize, setViewportSize] = useState(getCurrentSceneViewport);
   const { categories, allProducts, isLoaded } = useProductData();
   const locationState = location.state as { returnTo?: string; searchQuery?: string; reopenSearch?: boolean } | null;
   const returnSlug = locationState?.returnTo;
   const initialIndex = returnSlug ? Math.max(0, CATS.findIndex(c => c.slug === returnSlug)) : 0;
 
   const cats = useMemo(() => CATS.map(cat => {
+    if (cat.slug === FEATURED_PRODUCTS_SLUG) {
+      const legacyCategory = categories.find(category => category.slug === 'legacy-collection');
+      const legacyCount = legacyCategory?.count ?? cat.count;
+      return { ...cat, count: getFeaturedProductDisplayCount(legacyCount, viewportSize) };
+    }
     const loadedCategory = categories.find(category => category.slug === cat.slug);
     return { ...cat, count: loadedCategory?.count ?? cat.count };
-  }), [categories]);
+  }), [categories, viewportSize]);
+
+  useEffect(() => {
+    function onResize() {
+      setViewportSize(getCurrentSceneViewport());
+    }
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(initialIndex);
@@ -280,7 +313,7 @@ export function HomePageScene() {
     if (trimmedQuery.length < 2) return;
 
     const firstResult = selectedProduct ?? searchProductsByName(allProducts, trimmedQuery, { limit: 1 })[0];
-    const targetSlug = firstResult?.category ?? CATS[currentRef.current]?.slug ?? 'standard-collection';
+    const targetSlug = firstResult?.category ?? CATS[currentRef.current]?.slug ?? DEFAULT_COLLECTION_SLUG;
     setSearchOpen(false);
 
     navigate(`/category/${targetSlug}`, {
@@ -779,17 +812,24 @@ export function HomePageScene() {
         </div>
         {/* Center — logo */}
         <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', alignItems: 'center', justifySelf: 'center', gap: '2px' }}>
-          <img src={logoSrc} alt="Arvi logo" style={{ width: 34, height: 34, objectFit: 'contain' }} />
+          <img src={logoSrc} alt={`${BRAND_NAME} logo`} style={{ width: 34, height: 34, objectFit: 'contain' }} />
           <span style={{
             fontFamily: "'Playfair Display', Georgia, serif",
             fontSize: '1.5rem', fontWeight: 700,
             background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
           }}>
-            Arvi
+            {BRAND_HEADER_TEXT}
           </span>
         </div>
-        {!isCompactViewport && <div />}
+        {!(isCompactViewport && searchOpen) && (
+          <div style={{ display: 'flex', justifyContent: 'flex-end', justifySelf: 'end' }}>
+            <Link to="/basic" className="basic-header__interactive">
+              <Box size={18} aria-hidden="true" />
+              <span>Normal</span>
+            </Link>
+          </div>
+        )}
       </header>
 
       {isCompactViewport && !searchOpen && !isZoomingOut && (
@@ -834,15 +874,17 @@ export function HomePageScene() {
         }}>
           {cats[current]?.label}
         </div>
-        <div style={{
-          fontSize: '0.9rem', color: '#fde68a',
-          marginTop: '0.35rem', fontWeight: 800,
-          opacity: labelVisible ? 1 : 0,
-          transform: labelVisible ? 'translateY(0)' : 'translateY(8px)',
-          transition: 'opacity 350ms ease 120ms, transform 350ms ease 120ms',
-        }}>
-          {cats[current]?.priceRange}
-        </div>
+        {cats[current]?.priceRange && (
+          <div style={{
+            fontSize: '0.9rem', color: '#fde68a',
+            marginTop: '0.35rem', fontWeight: 800,
+            opacity: labelVisible ? 1 : 0,
+            transform: labelVisible ? 'translateY(0)' : 'translateY(8px)',
+            transition: 'opacity 350ms ease 120ms, transform 350ms ease 120ms',
+          }}>
+            {cats[current]?.priceRange}
+          </div>
+        )}
         <div style={{
           fontSize: '0.875rem', color: 'rgba(250,245,255,0.7)',
           marginTop: '0.4rem',
@@ -994,7 +1036,9 @@ export function HomePageScene() {
             <span style={{ fontSize: '1rem' }}>{cat.icon}</span>
             <span style={{ display: 'grid', gap: '0.1rem' }}>
               <span>{cat.label}</span>
-              <span style={{ color: '#fde68a', fontSize: '0.7rem', fontWeight: 700 }}>{cat.priceRange}</span>
+              {cat.priceRange && (
+                <span style={{ color: '#fde68a', fontSize: '0.7rem', fontWeight: 700 }}>{cat.priceRange}</span>
+              )}
             </span>
           </button>
         ))}

@@ -72,7 +72,7 @@ export const useProductStore = create<ProductStore>((set, get) => ({
       set({ allProducts: searchableProducts, categories: hydrateCategoryCounts(categories, searchableProducts), fuse, isLoaded: true });
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Failed to load data';
-      if (import.meta.env.DEV) console.error('[AArvi] Data load error:', err);
+      if (import.meta.env.DEV) console.error('[Aarvi] Data load error:', err);
       set({ loadError: msg, isLoaded: true });
     }
   },

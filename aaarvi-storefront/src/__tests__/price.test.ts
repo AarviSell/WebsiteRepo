@@ -33,8 +33,8 @@ describe('parseNumericPrice', () => {
 });
 
 describe('formatDisplayPrice', () => {
-  it('returns — for empty string', () => {
-    expect(formatDisplayPrice('')).toBe('—');
+  it('returns - for empty string', () => {
+    expect(formatDisplayPrice('')).toBe('-');
   });
 
   it('returns price unchanged when ₹ present', () => {

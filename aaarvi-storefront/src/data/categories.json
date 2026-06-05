@@ -1,26 +1,8 @@
 [
   {
-    "slug": "standard-collection",
-    "label": "Standard Collection",
-    "count": 64,
-    "source_sites": [
-      "shipmydeals"
-    ],
-    "children": []
-  },
-  {
-    "slug": "business-collection",
-    "label": "Business Collection",
-    "count": 68,
-    "source_sites": [
-      "shipmydeals"
-    ],
-    "children": []
-  },
-  {
     "slug": "signature-collection",
     "label": "Signature Collection",
-    "count": 131,
+    "count": 125,
     "source_sites": [
       "shipmydeals"
     ],
@@ -29,7 +11,7 @@
   {
     "slug": "preferred-collection",
     "label": "Preferred Collection",
-    "count": 113,
+    "count": 109,
     "source_sites": [
       "shipmydeals"
     ],
@@ -38,7 +20,7 @@
   {
     "slug": "premium-collection",
     "label": "Premium Collection",
-    "count": 56,
+    "count": 54,
     "source_sites": [
       "shipmydeals"
     ],
@@ -47,7 +29,7 @@
   {
     "slug": "executive-collection",
     "label": "Executive Collection",
-    "count": 89,
+    "count": 68,
     "source_sites": [
       "shipmydeals"
     ],
@@ -56,7 +38,7 @@
   {
     "slug": "chairman-collection",
     "label": "Chairman Collection",
-    "count": 76,
+    "count": 66,
     "source_sites": [
       "shipmydeals"
     ],
@@ -65,7 +47,7 @@
   {
     "slug": "legacy-collection",
     "label": "Legacy Collection",
-    "count": 69,
+    "count": 62,
     "source_sites": [
       "shipmydeals"
     ],
@@ -101,7 +83,7 @@
   {
     "slug": "home-and-kitchen",
     "label": "Home And Kitchen",
-    "count": 32,
+    "count": 30,
     "source_sites": [
       "shipmydeals"
     ],

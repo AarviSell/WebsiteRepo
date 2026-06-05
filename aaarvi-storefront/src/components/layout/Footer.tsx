@@ -1,5 +1,19 @@
 // src/components/layout/Footer.tsx
+import { MessageCircle } from 'lucide-react';
+import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
+import { BRAND_NAME } from '@/constants/brand';
+import {
+  CONTACT_EMAIL,
+  buildWhatsAppHref,
+  getWhatsAppNumber,
+} from '@/utils/contact';
+
 export function Footer() {
+  const whatsappHref = buildWhatsAppHref(
+    getWhatsAppNumber(),
+    `Hi ${BRAND_NAME}, I would like to inquire about your products. Please share pricing and availability.`,
+  );
+
   return (
     <footer
       style={{
@@ -36,7 +50,7 @@ export function Footer() {
                   </defs>
                 </svg>
                 <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 700, background: 'linear-gradient(135deg, #e9d5ff, #fde68a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                  AArvi
+                  {BRAND_NAME}
                 </span>
               </span>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', lineHeight: 1.8, maxWidth: 320, margin: 0 }}>
@@ -48,12 +62,23 @@ export function Footer() {
               <p style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--color-text)', margin: '0 0 var(--space-3)' }}>
                 Contact
               </p>
-              <a
-                href="mailto:aarvisell@gmail.com"
-                style={{ display: 'inline-flex', alignItems: 'center', minHeight: 40, fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none' }}
-              >
-                aarvisell@gmail.com
-              </a>
+              <div className="contact-stack">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  style={{ display: 'inline-flex', alignItems: 'center', minHeight: 40, fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', textDecoration: 'none' }}
+                >
+                  {CONTACT_EMAIL}
+                </a>
+                <WhatsAppCaptchaButton
+                  captchaSeed="footer"
+                  whatsappHref={whatsappHref}
+                  buttonLabel="WhatsApp"
+                  verifiedLabel="Open WhatsApp"
+                  triggerClassName="basic-button basic-button--secondary basic-button--whatsapp"
+                  verifiedClassName="basic-button basic-button--secondary basic-button--whatsapp"
+                  icon={<MessageCircle size={16} aria-hidden="true" />}
+                />
+              </div>
               <p style={{ margin: 'var(--space-4) 0 0', color: 'var(--color-text-faint)', fontSize: 'var(--text-xs)', lineHeight: 1.8 }}>
                 Ask for pricing, custom sourcing, or collection-specific recommendations.
               </p>
@@ -72,7 +97,7 @@ export function Footer() {
             }}
           >
             <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-faint)', margin: 0 }}>
-              © {new Date().getFullYear()} AArvi
+              © {new Date().getFullYear()} {BRAND_NAME}
             </p>
             <p style={{ fontSize: 'var(--text-xs)', color: 'var(--color-text-faint)', margin: 0 }}>
               Prices & availability subject to change.

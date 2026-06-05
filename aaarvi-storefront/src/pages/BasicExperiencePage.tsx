@@ -1,72 +1,68 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   ArrowLeft,
   Grid3X3,
   Mail,
   MessageCircle,
-  Menu,
   MonitorPlay,
   Package,
   Search,
   SlidersHorizontal,
-  X,
 } from 'lucide-react';
+import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
 import { Footer } from '@/components/layout/Footer';
 import { useProductData } from '@/hooks/useProductData';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
 import { getPrimaryImage, resolveImageUrl, getImageFallbackSvg } from '@/utils/image';
 import { searchProducts } from '@/utils/productSearch';
-import { COLLECTIONS, getCollectionMeta, getCollectionPriceRange, sortCollections } from '@/utils/collections';
+import {
+  COLLECTIONS,
+  getCollectionMeta,
+  getCollectionPriceRange,
+  isActiveCollectionSlug,
+  sortCollections,
+} from '@/utils/collections';
+import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
+import { CONTACT_EMAIL, buildWhatsAppHref, getWhatsAppNumber } from '@/utils/contact';
 import type { CategoryNode, Product } from '@/types/product';
 import logoSrc from '@/assets/logo.png';
 
 const PAGE_SIZE = 24;
-const CONTACT_EMAIL = 'aarvisell@gmail.com';
+const FEATURED_COLLECTION_SLUG = 'legacy-collection';
 const COLLECTION_SLUGS = new Set(COLLECTIONS.map(collection => collection.slug));
+
+function shuffle<T>(items: T[]): T[] {
+  const result = [...items];
+  for (let index = result.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+  }
+  return result;
+}
 
 type BasicSort = 'featured' | 'name';
 
 function buildMailHref(product?: Product) {
-  const subject = product ? `Quote request: ${product.name}` : 'AArvi catalog quote request';
+  const subject = product ? `Quote request: ${product.name}` : `${BRAND_NAME} catalog quote request`;
   const code = product ? getProductCode(product) : '';
   const body = product
-    ? `Hi AArvi,\n\nPlease share the current price, availability, and branding options for:\n${product.name}${code ? `\nProduct code: ${code}` : ''}\nCollection: ${product.category_label}\n\nThank you.`
-    : 'Hi AArvi,\n\nPlease share current pricing and availability for your product catalog.\n\nThank you.';
+    ? `Hi ${BRAND_NAME},\n\nPlease share the current price, availability, and branding options for:\n${product.name}${code ? `\nProduct code: ${code}` : ''}\nCollection: ${product.category_label}\n\nThank you.`
+    : `Hi ${BRAND_NAME},\n\nPlease share current pricing and availability for your product catalog.\n\nThank you.`;
 
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 function getQuoteMessage(product: Product) {
   const productCode = getProductCode(product);
-  return `Hi AArvi, I am interested in ${product.name}${productCode ? ` (code ${productCode})` : ''}. Please share pricing and availability.`;
-}
-
-function getContactNumber() {
-  return (import.meta.env.VITE_AARVI_WHATSAPP_NUMBER ?? '').trim();
-}
-
-function getContactDigits(number: string) {
-  return number.replace(/[^\d]/g, '');
-}
-
-function formatContactNumber(number: string) {
-  const trimmed = number.trim();
-  if (!trimmed) return '';
-  return trimmed.replace(/(\+\d{1,3})(\d{5})(\d+)/, '$1 $2 $3');
-}
-
-function buildWhatsAppHref(product: Product) {
-  const digits = getContactDigits(getContactNumber());
-  if (!digits) return '';
-  return `https://wa.me/${digits}?text=${encodeURIComponent(getQuoteMessage(product))}`;
+  return `Hi ${BRAND_NAME}, I am interested in ${product.name}${productCode ? ` (code ${productCode})` : ''}. Please share pricing and availability.`;
 }
 
 function BasicLogo() {
   return (
-    <Link to="/basic" className="basic-logo" aria-label="AArvi basic home">
-      <img src={logoSrc} alt="Arvi logo" />
-      <span>Arvi</span>
+    <Link to="/basic" className="basic-logo" aria-label={`${BRAND_NAME} basic home`}>
+      <img src={logoSrc} alt={`${BRAND_NAME} logo`} />
+      <span>{BRAND_HEADER_TEXT}</span>
     </Link>
   );
 }
@@ -92,7 +88,6 @@ function BasicHeader() {
   const { categories, allProducts } = useProductData();
   const displayCategories = useMemo(() => toCategoryNodes(categories, allProducts), [allProducts, categories]);
   const currentQuery = searchParams.get('q') ?? '';
-  const [menuOpen, setMenuOpen] = useState(false);
 
   function submitSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -100,15 +95,15 @@ function BasicHeader() {
     const query = String(formData.get('q') ?? '');
     const trimmedQuery = query.trim();
     navigate(trimmedQuery ? `/basic/search?q=${encodeURIComponent(trimmedQuery)}` : '/basic');
-    setMenuOpen(false);
   }
 
   return (
     <header className="basic-header">
       <div className="basic-header__top">
-        <button type="button" className="basic-header__menu" aria-label="Open categories" onClick={() => setMenuOpen(true)}>
-          <Menu size={21} aria-hidden="true" />
-        </button>
+        <Link to="/interactive" className="basic-header__interactive">
+          <MonitorPlay size={18} aria-hidden="true" />
+          <span>Interactive</span>
+        </Link>
         <BasicLogo />
         <form className="basic-search" role="search" aria-label="Search products" onSubmit={submitSearch}>
           <input
@@ -122,10 +117,6 @@ function BasicHeader() {
             <Search size={19} aria-hidden="true" />
           </button>
         </form>
-        <Link to="/interactive" className="basic-header__interactive">
-          <MonitorPlay size={18} aria-hidden="true" />
-          <span>Interactive</span>
-        </Link>
       </div>
 
       <nav className="basic-header__nav" aria-label="Basic collection navigation">
@@ -135,27 +126,6 @@ function BasicHeader() {
           </Link>
         ))}
       </nav>
-
-      {menuOpen && (
-        <div className="basic-drawer" role="dialog" aria-modal="true" aria-label="Basic categories">
-          <button type="button" className="basic-drawer__backdrop" aria-label="Close categories" onClick={() => setMenuOpen(false)} />
-          <aside className="basic-drawer__panel">
-            <div className="basic-drawer__head">
-              <BasicLogo />
-              <button type="button" aria-label="Close categories" onClick={() => setMenuOpen(false)}>
-                <X size={20} aria-hidden="true" />
-              </button>
-            </div>
-            <Link to="/basic" onClick={() => setMenuOpen(false)}>All products</Link>
-            {displayCategories.map(category => (
-              <Link key={category.slug} to={`/basic/category/${category.slug}`} onClick={() => setMenuOpen(false)}>
-                <span>{category.label}</span>
-                <small>{getCollectionPriceRange(category.slug)}</small>
-              </Link>
-            ))}
-          </aside>
-        </div>
-      )}
     </header>
   );
 }
@@ -209,7 +179,7 @@ function BasicCategoryRail({ categories, activeSlug }: { categories: CategoryNod
         Collections
       </div>
       <Link className={!activeSlug ? 'is-active' : ''} to="/basic">
-        <span>All products</span>
+        <span>Featured Products</span>
       </Link>
       {categories.map(category => (
         <Link key={category.slug} className={activeSlug === category.slug ? 'is-active' : ''} to={`/basic/category/${category.slug}`}>
@@ -235,11 +205,14 @@ function Pagination({ page, totalPages, onPageChange }: { page: number; totalPag
 
 export function BasicExperiencePage() {
   const { slug } = useParams<{ slug?: string }>();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const { allProducts, categories, isLoaded } = useProductData();
   const [sort, setSort] = useState<BasicSort>('featured');
   const [page, setPage] = useState({ key: '', value: 1 });
   const query = searchParams.get('q')?.trim() ?? '';
+  const isFeaturedView = !slug && !query;
   const basicProducts = useMemo(() => allProducts.filter(product => COLLECTION_SLUGS.has(product.category)), [allProducts]);
   const displayCategories = useMemo(() => toCategoryNodes(categories, basicProducts), [basicProducts, categories]);
   const activeCategory = displayCategories.find(category => category.slug === slug);
@@ -247,28 +220,41 @@ export function BasicExperiencePage() {
   const activePage = page.key === pageKey ? page.value : 1;
 
   const filteredProducts = useMemo(() => {
-    const searchedProducts = query.length >= 2 ? searchProducts(basicProducts, query) : basicProducts;
-    const categoryProducts = slug ? searchedProducts.filter(product => product.category === slug) : searchedProducts;
-    if (sort === 'name') {
-      return [...categoryProducts].sort((a, b) => a.name.localeCompare(b.name));
+    if (query.length >= 2) {
+      return searchProducts(basicProducts, query);
     }
-    return categoryProducts;
-  }, [basicProducts, query, slug, sort]);
+    if (slug) {
+      const categoryProducts = basicProducts.filter(product => product.category === slug);
+      if (sort === 'name') {
+        return [...categoryProducts].sort((a, b) => a.name.localeCompare(b.name));
+      }
+      return categoryProducts;
+    }
+    const legacyProducts = basicProducts.filter(product => product.category === FEATURED_COLLECTION_SLUG);
+    return shuffle(legacyProducts).slice(0, PAGE_SIZE);
+  }, [basicProducts, query, slug, sort, location.key]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
-  const safePage = Math.min(activePage, totalPages);
-  const paginatedProducts = filteredProducts.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
+  const totalPages = isFeaturedView ? 1 : Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
+  const safePage = isFeaturedView ? 1 : Math.min(activePage, totalPages);
+  const paginatedProducts = isFeaturedView
+    ? filteredProducts
+    : filteredProducts.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
   const title = query
     ? `Search results for "${query}"`
-    : activeCategory?.label ?? 'All AArvi Products';
+    : activeCategory?.label ?? 'Featured Products';
+
+  useEffect(() => {
+    if (!slug || isActiveCollectionSlug(slug)) return;
+    navigate('/basic', { replace: true });
+  }, [navigate, slug]);
 
   return (
     <div className="basic-experience app-shell">
       <BasicHeader />
       <main id="main-content" className="basic-main">
-        <section className="basic-hero" aria-label="AArvi basic catalog">
+        <section className="basic-hero" aria-label={`${BRAND_NAME} basic catalog`}>
           <div>
-            <p className="basic-kicker">AArvi Basic Catalog</p>
+            <p className="basic-kicker">{BRAND_NAME} Basic Catalog</p>
             <h1>Browse products in a clean store layout.</h1>
           </div>
           <a href={buildMailHref()} className="basic-button basic-button--primary">
@@ -298,13 +284,15 @@ export function BasicExperiencePage() {
                 <h2>{title}</h2>
                 <p>{isLoaded ? `${filteredProducts.length} products` : 'Loading products'}</p>
               </div>
-              <label className="basic-sort">
-                <SlidersHorizontal size={16} aria-hidden="true" />
-                <select value={sort} onChange={event => setSort(event.target.value as BasicSort)}>
-                  <option value="featured">Featured</option>
-                  <option value="name">Name A-Z</option>
-                </select>
-              </label>
+              {!isFeaturedView && (
+                <label className="basic-sort">
+                  <SlidersHorizontal size={16} aria-hidden="true" />
+                  <select value={sort} onChange={event => setSort(event.target.value as BasicSort)}>
+                    <option value="featured">Featured</option>
+                    <option value="name">Name A-Z</option>
+                  </select>
+                </label>
+              )}
             </div>
 
             {!isLoaded ? (
@@ -379,10 +367,6 @@ export function BasicProductPage() {
   const fallbackImageSrc = primaryImage ? resolveImageUrl(primaryImage.local_path) : getImageFallbackSvg(product.name);
   const imageSrc = catalogueSource?.imageUrl ?? fallbackImageSrc;
   const productCode = getProductCode(product);
-  const contactNumber = getContactNumber();
-  const contactDigits = getContactDigits(contactNumber);
-  const formattedContactNumber = formatContactNumber(contactNumber);
-  const whatsappHref = buildWhatsAppHref(product);
 
   return (
     <div className="basic-experience app-shell">
@@ -412,7 +396,7 @@ export function BasicProductPage() {
               <p>{catalogueSource.label}</p>
             )}
           </div>
-          <aside className="basic-contact-box" aria-label="Contact AArvi">
+          <aside className="basic-contact-box" aria-label={`Contact ${BRAND_NAME}`}>
             <h2>Contact us for price</h2>
             <p>Final pricing depends on stock, quantity, branding, and delivery details.</p>
             <div className="basic-contact-box__actions">
@@ -420,18 +404,15 @@ export function BasicProductPage() {
                 <Mail size={16} aria-hidden="true" />
                 Email quote
               </a>
-              {whatsappHref ? (
-                <a href={whatsappHref} target="_blank" rel="noreferrer" className="basic-button basic-button--secondary basic-button--whatsapp">
-                  <MessageCircle size={16} aria-hidden="true" />
-                  Phone / WhatsApp
-                </a>
-              ) : (
-                <span className="basic-contact-box__unavailable">Phone / WhatsApp not configured</span>
-              )}
-            </div>
-            <div className="basic-contact-box__links">
-              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-              {contactDigits && <a href={`tel:${contactDigits}`}>{formattedContactNumber || contactNumber}</a>}
+              <WhatsAppCaptchaButton
+                captchaSeed={product.id}
+                whatsappHref={buildWhatsAppHref(getWhatsAppNumber(), getQuoteMessage(product))}
+                buttonLabel="Phone / WhatsApp"
+                verifiedLabel="Open WhatsApp"
+                triggerClassName="basic-button basic-button--secondary basic-button--whatsapp"
+                verifiedClassName="basic-button basic-button--secondary basic-button--whatsapp"
+                icon={<MessageCircle size={16} aria-hidden="true" />}
+              />
             </div>
           </aside>
         </section>

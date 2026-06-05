@@ -137,7 +137,7 @@ function CategoryCard({
 
         <span className="home-category-card__footer">
           <span className="home-category-card__slug">{cat.slug.replaceAll('-', ' ')}</span>
-          <span className="home-category-card__slug">{active ? 'Tap to enter →' : 'AArvi Edit'}</span>
+          <span className="home-category-card__slug">{active ? 'Tap to enter →' : 'Aarvi Edit'}</span>
         </span>
       </span>
     </button>
@@ -223,7 +223,7 @@ export function HomePage() {
 
         <div className="home-hero__shell">
           <div className="home-copy">
-            <p className="eyebrow">AArvi Curated Catalog</p>
+            <p className="eyebrow">Aarvi Curated Catalog</p>
             <h1>Trade the basic grid for a cinematic storefront.</h1>
             <p>
               Browse categories as collectible cards, then dive straight into product scenes that keep the same purple-and-gold atmosphere all the way through.

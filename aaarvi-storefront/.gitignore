@@ -27,3 +27,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# One-off maintenance scripts (build pipeline keeps scripts/build-data.ts)
+scripts/*
+!scripts/build-data.ts
+
+# Generated product catalogue exports
+available-products.csv
+removed-products.csv

@@ -7,6 +7,7 @@ import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { useProductStore } from '@/store/useProductStore';
 import { ExperienceGate } from '@/pages/ExperienceGate';
 import { BasicExperiencePage, BasicProductPage } from '@/pages/BasicExperiencePage';
+import { BRAND_PAGE_TITLE } from '@/constants/brand';
 import { getCategoryPageSceneComponent, getHomePageSceneComponent, preloadCategoryPageScene, preloadHomePageScene } from '@/pages/interactivePreload';
 import './App.css';
 
@@ -102,6 +103,10 @@ function AppLayout({ children }: { children: React.ReactNode }) {
 
 export function App() {
   const { theme, loadData } = useProductStore();
+
+  useEffect(() => {
+    document.title = BRAND_PAGE_TITLE;
+  }, []);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

@@ -621,7 +621,7 @@
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 	grid-template-areas:
-		"menu logo interactive"
+		"interactive logo ."
 		"search search search";
 	align-items: center;
 	column-gap: 0.9rem;
@@ -631,10 +631,8 @@
 	padding: 0.85rem 1rem 0.7rem;
 }
 
-.basic-header__menu,
 .basic-header__interactive,
-.basic-search button,
-.basic-drawer__head button {
+.basic-search button {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -648,11 +646,6 @@
 	text-decoration: none;
 }
 
-.basic-header__menu {
-	grid-area: menu;
-	justify-self: start;
-}
-
 .basic-logo {
 	grid-area: logo;
 	justify-self: center;
@@ -660,7 +653,7 @@
 
 .basic-header__interactive {
 	grid-area: interactive;
-	justify-self: end;
+	justify-self: start;
 }
 
 .basic-search {
@@ -751,41 +744,6 @@
 	color: var(--color-text);
 }
 
-.basic-drawer {
-	position: fixed;
-	inset: 0;
-	z-index: 180;
-}
-
-.basic-drawer__backdrop {
-	position: absolute;
-	inset: 0;
-	border: 0;
-	background: rgba(0, 0, 0, 0.48);
-}
-
-.basic-drawer__panel {
-	position: relative;
-	display: grid;
-	align-content: start;
-	gap: 0.5rem;
-	width: min(21rem, 88vw);
-	height: 100%;
-	padding: 1rem;
-	background: rgba(10, 3, 18, 0.98);
-	border-right: 1px solid var(--color-border);
-	box-shadow: var(--shadow-lg);
-}
-
-.basic-drawer__head {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	margin-bottom: 1rem;
-}
-
-.basic-drawer__panel a,
 .basic-category-rail a {
 	display: grid;
 	gap: 0.15rem;
@@ -797,7 +755,6 @@
 	font-weight: 700;
 }
 
-.basic-drawer__panel small,
 .basic-category-rail small,
 .basic-collection-tile small {
 	color: var(--color-accent-soft);
@@ -805,7 +762,6 @@
 	font-weight: 800;
 }
 
-.basic-drawer__panel a:hover,
 .basic-category-rail a:hover,
 .basic-category-rail a.is-active {
 	background: rgba(168, 85, 247, 0.16);
@@ -1310,6 +1266,103 @@
 	color: var(--color-text);
 }
 
+.contact-stack {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--space-2);
+}
+
+.whatsapp-captcha {
+	display: grid;
+	gap: 0.55rem;
+	width: 100%;
+}
+
+.whatsapp-captcha__form {
+	display: grid;
+	grid-template-columns: auto minmax(4rem, 1fr) auto;
+	gap: 0.5rem;
+	align-items: center;
+	width: 100%;
+}
+
+.whatsapp-captcha__label {
+	color: #fde68a;
+	font-size: 0.82rem;
+	font-weight: 700;
+}
+
+.whatsapp-captcha__input {
+	width: 100%;
+	min-height: 44px;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--color-border);
+	background: rgba(250, 245, 255, 0.08);
+	color: var(--color-text);
+	text-align: center;
+	font: inherit;
+}
+
+.whatsapp-captcha__verify {
+	min-height: 44px;
+	border: none;
+	border-radius: var(--radius-md);
+	background: #a855f7;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 700;
+	padding: 0 0.8rem;
+}
+
+.whatsapp-captcha__error {
+	grid-column: 1 / -1;
+	color: #ff8c7c;
+	font-size: 0.75rem;
+	text-align: center;
+}
+
+.whatsapp-captcha--interactive {
+	border: 1px solid rgba(250, 245, 255, 0.2);
+	background: rgba(17, 7, 24, 0.82);
+	box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+	backdrop-filter: blur(18px);
+	color: #faf5ff;
+	border-radius: 0.75rem;
+	padding: 0.72rem;
+}
+
+.whatsapp-captcha--interactive-trigger {
+	border: 1px solid rgba(250, 245, 255, 0.2);
+	background: rgba(17, 7, 24, 0.82);
+	box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+	backdrop-filter: blur(18px);
+	color: #faf5ff;
+	min-height: 44px;
+	border-radius: 999px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	padding: 0.72rem 1.1rem;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+.whatsapp-captcha--interactive-verified {
+	color: #8ddf6b;
+	text-decoration: none;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
 .basic-contact-box__links a,
 .basic-contact-box__unavailable {
 	color: var(--color-accent-soft);
@@ -1416,16 +1469,6 @@
 		grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 		gap: 0.7rem;
 		padding-block: 0.75rem;
-	}
-
-	.basic-header__menu {
-		min-width: 38px;
-		min-height: 38px;
-	}
-
-	.basic-header__menu svg {
-		width: 18px;
-		height: 18px;
 	}
 
 	.basic-header__interactive {

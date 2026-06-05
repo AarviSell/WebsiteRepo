@@ -1,8 +1,8 @@
 // src/pages/CategoryPageScene.tsx — Three.js cube-grid category scene
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
-import { Search, X } from 'lucide-react';
+import { Box, Search, X } from 'lucide-react';
 import { loadCategoryProducts, loadCategories } from '@/data/loader';
 import { useProductData } from '@/hooks/useProductData';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
@@ -10,7 +10,20 @@ import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
 import { makeCataloguePageTexture } from '@/utils/threeCatalogueTexture';
 import { searchProductsByName } from '@/utils/productSearch';
+import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
+import {
+  buildProductWhatsAppMessage,
+  buildWhatsAppHref,
+  getWhatsAppNumber,
+} from '@/utils/contact';
+import { COLLECTIONS, DEFAULT_COLLECTION_SLUG, isActiveCollectionSlug } from '@/utils/collections';
+import {
+  FEATURED_PRODUCTS_SLUG,
+  FEATURED_SOURCE_SLUG,
+  shuffleProducts,
+} from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
+import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
 import logoSrc from '@/assets/logo.png';
 
 /* ── Constants ─────────────────────────────────────────────── */
@@ -487,119 +500,42 @@ interface TextureFadeEntry {
 }
 
 /* ── Collection catalogue ───────────────────────────────────────── */
+const CATEGORY_ICONS: Record<string, string> = {
+  [FEATURED_PRODUCTS_SLUG]: '✨',
+  'signature-collection': '✒️',
+  'preferred-collection': '⭐',
+  'premium-collection': '💎',
+  'executive-collection': '🎩',
+  'chairman-collection': '🏆',
+  'legacy-collection': '👑',
+};
+
 const CATS = [
-  { slug: 'standard-collection',  label: 'Standard Collection',  icon: '📦' },
-  { slug: 'business-collection',  label: 'Business Collection',  icon: '💼' },
-  { slug: 'signature-collection', label: 'Signature Collection', icon: '✒️' },
-  { slug: 'preferred-collection', label: 'Preferred Collection', icon: '⭐' },
-  { slug: 'premium-collection',   label: 'Premium Collection',   icon: '💎' },
-  { slug: 'executive-collection', label: 'Executive Collection', icon: '🎩' },
-  { slug: 'chairman-collection',  label: 'Chairman Collection',  icon: '🏆' },
-  { slug: 'legacy-collection',    label: 'Legacy Collection',    icon: '👑' },
+  { slug: FEATURED_PRODUCTS_SLUG, label: 'Featured Products', icon: CATEGORY_ICONS[FEATURED_PRODUCTS_SLUG] },
+  ...COLLECTIONS.map(collection => ({
+    slug: collection.slug,
+    label: collection.label,
+    icon: CATEGORY_ICONS[collection.slug] ?? '✦',
+  })),
 ];
 
-function formatWhatsAppNumber(value: string): string {
-  const trimmed = value.trim();
-  if (!trimmed) return '';
-  return trimmed.replace(/(\+\d{1,3})(\d{5})(\d+)/, '$1 $2 $3');
-}
-
-function buildWhatsAppHref(number: string, productName: string, productCode?: string): string {
-  const digits = number.replace(/[^\d]/g, '');
-  const codeText = productCode ? ` (code ${productCode})` : '';
-  const message = `Hi AArvi, I am interested in ${productName}${codeText}. Please share pricing and availability.`;
-  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
-}
-
-function makeCaptchaChallenge(seed: string) {
-  const hash = Array.from(seed).reduce((total, character) => total + character.charCodeAt(0), 0);
-  const leftOperand = 2 + (hash % 7);
-  const rightOperand = 3 + (Math.floor(hash / 7) % 6);
-  return { leftOperand, rightOperand, total: leftOperand + rightOperand };
-}
-
 function CubeContactReveal({ product }: { product: Product }) {
-  const [open, setOpen] = useState(false);
-  const [answer, setAnswer] = useState('');
-  const [verified, setVerified] = useState(false);
-  const [error, setError] = useState('');
-  const challenge = useMemo(() => makeCaptchaChallenge(product.id), [product.id]);
   const productCode = getProductCode(product);
-  const whatsappNumber = (import.meta.env.VITE_AARVI_WHATSAPP_NUMBER ?? '').trim();
-  const formattedNumber = formatWhatsAppNumber(whatsappNumber);
-  const whatsappHref = whatsappNumber ? buildWhatsAppHref(whatsappNumber, product.name, productCode) : '';
-
-  function verifyAnswer(event: React.FormEvent) {
-    event.preventDefault();
-    if (Number(answer.trim()) === challenge.total) {
-      setVerified(true);
-      setError('');
-      return;
-    }
-    setError('Try again');
-  }
-
-  const shellStyle: React.CSSProperties = {
-    border: '1px solid rgba(250,245,255,0.2)',
-    background: 'rgba(17,7,24,0.82)',
-    boxShadow: '0 18px 44px rgba(0,0,0,0.32)',
-    backdropFilter: 'blur(18px)',
-    color: '#faf5ff',
-  };
-
-  if (!open) {
-    return (
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        style={{
-          ...shellStyle,
-          minHeight: 44,
-          borderRadius: 999,
-          cursor: 'pointer',
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '0.5rem',
-          width: '100%',
-          padding: '0.72rem 1.1rem',
-          fontSize: '0.9rem',
-          fontWeight: 700,
-        }}
-      >
-        Contact us for purchase
-      </button>
-    );
-  }
+  const whatsappHref = buildWhatsAppHref(
+    getWhatsAppNumber(),
+    buildProductWhatsAppMessage(product.name, productCode),
+  );
 
   return (
-    <div style={{ ...shellStyle, width: '100%', borderRadius: '0.75rem', padding: '0.72rem' }}>
-      {verified ? (
-        <div role="status" aria-live="polite" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '0.35rem', color: '#8ddf6b', fontSize: '0.9rem', fontWeight: 700, textAlign: 'center' }}>
-          {formattedNumber ? (
-            <a href={whatsappHref} target="_blank" rel="noreferrer" style={{ color: '#8ddf6b', textDecoration: 'none', minHeight: 44, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
-              {formattedNumber}
-            </a>
-          ) : (
-            <span>WhatsApp number not configured</span>
-          )}
-        </div>
-      ) : (
-        <form onSubmit={verifyAnswer} style={{ display: 'grid', gridTemplateColumns: 'auto minmax(4rem, 1fr) auto', gap: '0.5rem', alignItems: 'center' }}>
-          <label htmlFor="cube-whatsapp-captcha" style={{ color: '#fde68a', fontSize: '0.82rem', fontWeight: 700 }}>{challenge.leftOperand} + {challenge.rightOperand}</label>
-          <input
-            id="cube-whatsapp-captcha"
-            inputMode="numeric"
-            value={answer}
-            onChange={event => setAnswer(event.target.value)}
-            autoComplete="off"
-            style={{ width: '100%', minHeight: 44, borderRadius: '0.45rem', border: '1px solid rgba(250,245,255,0.18)', background: 'rgba(250,245,255,0.08)', color: '#faf5ff', textAlign: 'center', font: 'inherit' }}
-          />
-          <button type="submit" style={{ minHeight: 44, border: 'none', borderRadius: '0.45rem', background: '#a855f7', color: '#fff', cursor: 'pointer', fontWeight: 700, padding: '0 0.8rem' }}>Verify</button>
-          {error && <span role="alert" style={{ gridColumn: '1 / -1', color: '#ff8c7c', fontSize: '0.75rem', textAlign: 'center' }}>{error}</span>}
-        </form>
-      )}
-    </div>
+    <WhatsAppCaptchaButton
+      captchaSeed={product.id}
+      whatsappHref={whatsappHref}
+      buttonLabel="Contact us for purchase"
+      verifiedLabel="Open WhatsApp"
+      className="whatsapp-captcha--interactive"
+      triggerClassName="whatsapp-captcha--interactive-trigger"
+      verifiedClassName="whatsapp-captcha--interactive-verified"
+    />
   );
 }
 
@@ -661,9 +597,14 @@ export function CategoryPageScene() {
     setPage(0);
   }, []);
 
+  useEffect(() => {
+    if (!slug || slug === FEATURED_PRODUCTS_SLUG || isActiveCollectionSlug(slug)) return;
+    navigate(`/category/${DEFAULT_COLLECTION_SLUG}`, { replace: true });
+  }, [navigate, slug]);
+
   /* ── Load products ────────────────────────────────────────── */
   useEffect(() => {
-    if (!slug) return;
+    if (!slug || !isActiveCollectionSlug(slug) && slug !== FEATURED_PRODUCTS_SLUG) return;
     pageRef.current = 0;
     const resetTimer = window.setTimeout(() => {
       setIsCategoryLoading(true);
@@ -708,6 +649,16 @@ export function CategoryPageScene() {
         label.visible = labelIndex < state.layout.pageSize;
       });
     }
+    if (slug === FEATURED_PRODUCTS_SLUG) {
+      setCatLabel('Featured Products');
+      loadCategoryProducts(FEATURED_SOURCE_SLUG).then(products => {
+        const featuredProducts = shuffleProducts(products).slice(0, pageSize);
+        setCategoryProducts(featuredProducts);
+        if (!incomingSearchQuery && !incomingSearchProductId) setVisibleProducts(featuredProducts);
+      }).finally(() => setIsCategoryLoading(false));
+      return () => window.clearTimeout(resetTimer);
+    }
+
     // Title-cased slug as a guaranteed fallback (e.g. "standard-collection" -> "Standard Collection").
     const fallbackLabel = slug
       .split('-')
@@ -727,7 +678,7 @@ export function CategoryPageScene() {
     }).finally(() => setIsCategoryLoading(false));
 
     return () => window.clearTimeout(resetTimer);
-  }, [incomingSearchProductId, incomingSearchQuery, setVisibleProducts, shouldReopenSearch, slug]);
+  }, [incomingSearchProductId, incomingSearchQuery, pageSize, setVisibleProducts, shouldReopenSearch, slug]);
 
   /* ── Build Three.js scene ─────────────────────────────────── */
   useEffect(() => {
@@ -1844,28 +1795,34 @@ export function CategoryPageScene() {
 
         {/* Centre — logo + name */}
         <div style={{ display: isCompactViewport ? 'none' : 'flex', alignItems: 'center', gap: '2px' }}>
-          <img src={logoSrc} alt="Arvi logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
+          <img src={logoSrc} alt={`${BRAND_NAME} logo`} style={{ width: 28, height: 28, objectFit: 'contain' }} />
           <span style={{
             fontFamily: 'var(--font-display)',
             fontSize: '1.4rem', fontWeight: 700,
             background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
             lineHeight: 1,
-          }}>Arvi</span>
+          }}>{BRAND_HEADER_TEXT}</span>
         </div>
 
-        {/* Right — collection name */}
-        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'block', justifySelf: 'end', textAlign: 'right', maxWidth: isCompactViewport ? '11rem' : 'none', minWidth: 0 }}>
-          <div style={{
-            fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.2em',
-            textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.15rem',
-          }}>Collection</div>
-          <div style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: 'clamp(0.7rem, 2vw, 0.95rem)', fontWeight: 600,
-            color: '#faf5ff', lineHeight: 1.1,
-            overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-          }}>{displayLabel}</div>
+        {/* Right — collection name + normal mode */}
+        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', flexDirection: 'row', alignItems: 'center', gap: isCompactViewport ? '0.55rem' : '0.85rem', justifySelf: 'end', textAlign: 'right', minWidth: 0, maxWidth: isCompactViewport ? 'min(100%, 18rem)' : 'none' }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{
+              fontSize: '0.55rem', fontWeight: 700, letterSpacing: '0.2em',
+              textTransform: 'uppercase', color: '#f0b429', marginBottom: '0.15rem',
+            }}>Collection</div>
+            <div style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontSize: 'clamp(0.7rem, 2vw, 0.95rem)', fontWeight: 600,
+              color: '#faf5ff', lineHeight: 1.1,
+              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+            }}>{displayLabel}</div>
+          </div>
+          <Link to="/basic" className="basic-header__interactive" style={{ flexShrink: 0 }}>
+            <Box size={18} aria-hidden="true" />
+            <span>Normal</span>
+          </Link>
         </div>
       </header>
 

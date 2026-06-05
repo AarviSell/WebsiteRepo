@@ -8,9 +8,11 @@ export interface CollectionMeta {
   maxPrice: number | null;
 }
 
+export const REMOVED_COLLECTION_SLUGS = new Set(['standard-collection', 'business-collection']);
+
+export const DEFAULT_COLLECTION_SLUG = 'signature-collection';
+
 export const COLLECTIONS: CollectionMeta[] = [
-  { slug: 'standard-collection', label: 'Standard Collection', priceRange: 'Rs. 20-50', minPrice: 20, maxPrice: 50 },
-  { slug: 'business-collection', label: 'Business Collection', priceRange: 'Rs. 50-100', minPrice: 50, maxPrice: 100 },
   { slug: 'signature-collection', label: 'Signature Collection', priceRange: 'Rs. 100-200', minPrice: 100, maxPrice: 200 },
   { slug: 'preferred-collection', label: 'Preferred Collection', priceRange: 'Rs. 200-300', minPrice: 200, maxPrice: 300 },
   { slug: 'premium-collection', label: 'Premium Collection', priceRange: 'Rs. 300-400', minPrice: 300, maxPrice: 400 },
@@ -36,4 +38,16 @@ export function getCollectionLabelWithRange(category: Pick<CategoryNode, 'slug' 
 export function sortCollections<T extends { slug: string }>(items: T[]): T[] {
   const order = new Map(COLLECTIONS.map((collection, index) => [collection.slug, index]));
   return [...items].sort((a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999));
+}
+
+export function isActiveCollectionSlug(slug?: string | null): boolean {
+  return Boolean(slug) && !REMOVED_COLLECTION_SLUGS.has(slug!);
+}
+
+export function filterActiveCollectionProducts<T extends { category: string }>(products: T[]): T[] {
+  return products.filter(product => isActiveCollectionSlug(product.category));
+}
+
+export function filterActiveCategories(categories: CategoryNode[]): CategoryNode[] {
+  return categories.filter(category => isActiveCollectionSlug(category.slug));
 }
