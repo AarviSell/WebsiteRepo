@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from 'react';
 import { makeCaptchaChallenge } from '@/utils/contact';
 
 type WhatsAppCaptchaButtonProps = {
@@ -10,6 +10,7 @@ type WhatsAppCaptchaButtonProps = {
   className?: string;
   triggerClassName?: string;
   verifiedClassName?: string;
+  onVerified?: () => void;
 };
 
 export function WhatsAppCaptchaButton({
@@ -21,6 +22,7 @@ export function WhatsAppCaptchaButton({
   className = '',
   triggerClassName = '',
   verifiedClassName = '',
+  onVerified,
 }: WhatsAppCaptchaButtonProps) {
   const [open, setOpen] = useState(false);
   const [answer, setAnswer] = useState('');
@@ -41,6 +43,18 @@ export function WhatsAppCaptchaButton({
     }
     setError('Try again');
   }
+
+  useEffect(() => {
+    if (!verified) return;
+
+    const popup = window.open(whatsappHref, '_blank', 'noopener,noreferrer');
+    if (!popup) return;
+
+    onVerified?.();
+    setOpen(false);
+    setVerified(false);
+    setAnswer('');
+  }, [verified, whatsappHref, onVerified]);
 
   if (!open) {
     return (

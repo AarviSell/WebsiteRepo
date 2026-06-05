@@ -29,6 +29,16 @@ export function buildProductWhatsAppMessage(productName: string, productCode?: s
   return `Hi ${BRAND_NAME}, I am interested in ${productName}${codeText}. Please share pricing and availability.`;
 }
 
+export function buildProductMailHref(
+  product: { name: string; category_label: string },
+  productCode?: string,
+): string {
+  const subject = `Quote request: ${product.name}`;
+  const body = `Hi ${BRAND_NAME},\n\nPlease share the current price, availability, and branding options for:\n${product.name}${productCode ? `\nProduct code: ${productCode}` : ''}\nCollection: ${product.category_label}\n\nThank you.`;
+
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 export function makeCaptchaChallenge(seed: string) {
   const hash = Array.from(seed).reduce((total, character) => total + character.charCodeAt(0), 0);
   const leftOperand = 2 + (hash % 7);

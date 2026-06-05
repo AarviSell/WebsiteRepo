@@ -1,6 +1,7 @@
 // src/components/layout/Footer.tsx
 import { MessageCircle } from 'lucide-react';
 import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
+import { BrandMark } from '@/components/layout/BrandMark';
 import { BRAND_NAME } from '@/constants/brand';
 import {
   CONTACT_EMAIL,
@@ -33,26 +34,9 @@ export function Footer() {
             }}
           >
             <div>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: 'var(--space-3)' }}>
-                <svg width="28" height="28" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-                  <circle cx="17" cy="17" r="16" stroke="url(#ftLg)" strokeWidth="1.5" />
-                  <path d="M17 7 L26 25 H8 Z" fill="url(#ftLg2)" opacity="0.92" />
-                  <path d="M12 19 H22" stroke="rgba(255,255,255,0.45)" strokeWidth="1.5" strokeLinecap="round" />
-                  <defs>
-                    <linearGradient id="ftLg" x1="0" y1="0" x2="34" y2="34">
-                      <stop offset="0%" stopColor="#a855f7" />
-                      <stop offset="100%" stopColor="#f0b429" />
-                    </linearGradient>
-                    <linearGradient id="ftLg2" x1="17" y1="7" x2="17" y2="25">
-                      <stop offset="0%" stopColor="#c084fc" />
-                      <stop offset="100%" stopColor="#f0b429" stopOpacity="0.8" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', fontWeight: 700, background: 'linear-gradient(135deg, #e9d5ff, #fde68a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                  {BRAND_NAME}
-                </span>
-              </span>
+              <div style={{ marginBottom: 'var(--space-3)' }}>
+                <BrandMark />
+              </div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', lineHeight: 1.8, maxWidth: 320, margin: 0 }}>
                 Discover and shop curated products from top Indian sources.
               </p>

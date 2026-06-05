@@ -619,10 +619,10 @@
 
 .basic-header__top {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+	grid-template-columns: auto minmax(0, 1fr);
 	grid-template-areas:
-		"interactive logo ."
-		"search search search";
+		"logo logo"
+		"interactive search";
 	align-items: center;
 	column-gap: 0.9rem;
 	row-gap: 0.7rem;
@@ -654,12 +654,14 @@
 .basic-header__interactive {
 	grid-area: interactive;
 	justify-self: start;
+	align-self: center;
+	min-height: 48px;
 }
 
 .basic-search {
 	grid-area: search;
-	justify-self: center;
-	width: min(46rem, 100%);
+	width: 100%;
+	max-width: none;
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) 54px;
 	min-height: 48px;
@@ -709,8 +711,10 @@
 .basic-header__nav {
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: flex-start;
+	justify-content: center;
+	align-items: center;
 	gap: 0.25rem;
+	width: 100%;
 	max-width: var(--content-wide);
 	margin: 0 auto;
 	padding: 0 1rem 0.8rem;
@@ -726,7 +730,8 @@
 .basic-header__nav a {
 	display: inline-flex;
 	align-items: center;
-	flex: 0 1 auto;
+	justify-content: center;
+	flex: 0 0 auto;
 	min-width: 0;
 	min-height: 40px;
 	padding: 0.45rem 0.58rem;
@@ -1273,6 +1278,152 @@
 	gap: var(--space-2);
 }
 
+.basic-contact-dialog {
+	position: fixed;
+	inset: 0;
+	z-index: 190;
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+}
+
+.basic-contact-dialog__backdrop {
+	position: absolute;
+	inset: 0;
+	border: 0;
+	background: rgba(0, 0, 0, 0.52);
+}
+
+.basic-contact-dialog__panel {
+	position: relative;
+	width: min(24rem, 100%);
+	padding: 1.1rem;
+	border-radius: var(--radius-lg);
+	border: 1px solid var(--color-border);
+	background: rgba(10, 3, 18, 0.98);
+	box-shadow: var(--shadow-lg);
+}
+
+.basic-contact-dialog__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.basic-contact-dialog__head h3 {
+	margin: 0 0 0.35rem;
+	font-size: 1.1rem;
+}
+
+.basic-contact-dialog__head p {
+	margin: 0;
+	color: var(--color-text-muted);
+	font-size: 0.88rem;
+	line-height: 1.45;
+}
+
+.basic-contact-dialog__close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	min-height: 40px;
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	background: rgba(250, 245, 255, 0.06);
+	color: var(--color-text);
+	cursor: pointer;
+}
+
+.basic-contact-dialog__actions {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.interactive-contact-dialog {
+	position: fixed;
+	inset: 0;
+	z-index: 220;
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+}
+
+.interactive-contact-dialog__backdrop {
+	position: absolute;
+	inset: 0;
+	border: 0;
+	background: rgba(0, 0, 0, 0.58);
+}
+
+.interactive-contact-dialog__panel {
+	position: relative;
+	width: min(24rem, 100%);
+	padding: 1rem 1.05rem;
+	border-radius: 0.85rem;
+	border: 1px solid rgba(240, 180, 41, 0.45);
+	background: rgba(17, 7, 24, 0.94);
+	box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+	backdrop-filter: blur(16px);
+	color: #faf5ff;
+}
+
+.interactive-contact-dialog__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.interactive-contact-dialog__head h3 {
+	margin: 0 0 0.35rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.interactive-contact-dialog__head p {
+	margin: 0;
+	color: rgba(250, 245, 255, 0.72);
+	font-size: 0.86rem;
+	line-height: 1.45;
+}
+
+.interactive-contact-dialog__close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	min-height: 40px;
+	border: 1px solid rgba(250, 245, 255, 0.18);
+	border-radius: 999px;
+	background: rgba(250, 245, 255, 0.06);
+	color: #faf5ff;
+	cursor: pointer;
+}
+
+.interactive-contact-dialog__actions {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.interactive-contact-dialog__email {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	min-height: 44px;
+	border-radius: 999px;
+	border: 1px solid rgba(240, 180, 41, 0.68);
+	background: linear-gradient(135deg, #ffe27a 0%, #f0b429 58%, #c9962a 100%);
+	color: #1a0a00;
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
 .whatsapp-captcha {
 	display: grid;
 	gap: 0.55rem;
@@ -1466,7 +1617,7 @@
 	}
 
 	.basic-header__top {
-		grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+		grid-template-columns: auto minmax(0, 1fr);
 		gap: 0.7rem;
 		padding-block: 0.75rem;
 	}

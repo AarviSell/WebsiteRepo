@@ -10,8 +10,9 @@ import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
 import { makeCataloguePageTexture } from '@/utils/threeCatalogueTexture';
 import { searchProductsByName } from '@/utils/productSearch';
-import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
+import { ProductContactDialog } from '@/components/contact/ProductContactDialog';
 import {
+  buildProductMailHref,
   buildProductWhatsAppMessage,
   buildWhatsAppHref,
   getWhatsAppNumber,
@@ -520,6 +521,7 @@ const CATS = [
 ];
 
 function CubeContactReveal({ product }: { product: Product }) {
+  const [contactOpen, setContactOpen] = useState(false);
   const productCode = getProductCode(product);
   const whatsappHref = buildWhatsAppHref(
     getWhatsAppNumber(),
@@ -527,15 +529,24 @@ function CubeContactReveal({ product }: { product: Product }) {
   );
 
   return (
-    <WhatsAppCaptchaButton
-      captchaSeed={product.id}
-      whatsappHref={whatsappHref}
-      buttonLabel="Contact us for purchase"
-      verifiedLabel="Open WhatsApp"
-      className="whatsapp-captcha--interactive"
-      triggerClassName="whatsapp-captcha--interactive-trigger"
-      verifiedClassName="whatsapp-captcha--interactive-verified"
-    />
+    <>
+      <button
+        type="button"
+        className="whatsapp-captcha--interactive-trigger"
+        onClick={() => setContactOpen(true)}
+      >
+        Contact us for price
+      </button>
+      <ProductContactDialog
+        variant="interactive"
+        title="Contact us for price"
+        product={product}
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+        mailHref={buildProductMailHref(product, productCode)}
+        whatsappHref={whatsappHref}
+      />
+    </>
   );
 }
 

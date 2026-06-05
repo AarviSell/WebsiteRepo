@@ -10,7 +10,9 @@ import {
   Search,
   SlidersHorizontal,
 } from 'lucide-react';
+import { ProductContactDialog } from '@/components/contact/ProductContactDialog';
 import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
+import { BrandMark } from '@/components/layout/BrandMark';
 import { Footer } from '@/components/layout/Footer';
 import { useProductData } from '@/hooks/useProductData';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
@@ -23,10 +25,9 @@ import {
   isActiveCollectionSlug,
   sortCollections,
 } from '@/utils/collections';
-import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
+import { BRAND_NAME } from '@/constants/brand';
 import { CONTACT_EMAIL, buildWhatsAppHref, getWhatsAppNumber } from '@/utils/contact';
 import type { CategoryNode, Product } from '@/types/product';
-import logoSrc from '@/assets/logo.png';
 
 const PAGE_SIZE = 24;
 const FEATURED_COLLECTION_SLUG = 'legacy-collection';
@@ -59,12 +60,7 @@ function getQuoteMessage(product: Product) {
 }
 
 function BasicLogo() {
-  return (
-    <Link to="/basic" className="basic-logo" aria-label={`${BRAND_NAME} basic home`}>
-      <img src={logoSrc} alt={`${BRAND_NAME} logo`} />
-      <span>{BRAND_HEADER_TEXT}</span>
-    </Link>
-  );
+  return <BrandMark href="/basic" ariaLabel={`${BRAND_NAME} basic home`} />;
 }
 
 function toCategoryNodes(categories: CategoryNode[], allProducts: Product[]): CategoryNode[] {
@@ -100,11 +96,11 @@ function BasicHeader() {
   return (
     <header className="basic-header">
       <div className="basic-header__top">
+        <BasicLogo />
         <Link to="/interactive" className="basic-header__interactive">
           <MonitorPlay size={18} aria-hidden="true" />
           <span>Interactive</span>
         </Link>
-        <BasicLogo />
         <form className="basic-search" role="search" aria-label="Search products" onSubmit={submitSearch}>
           <input
             type="search"
@@ -131,6 +127,7 @@ function BasicHeader() {
 }
 
 function BasicProductCard({ product }: { product: Product }) {
+  const [contactOpen, setContactOpen] = useState(false);
   const primaryImage = getPrimaryImage(product);
   const imageSrc = primaryImage ? resolveImageUrl(primaryImage.local_path) : getImageFallbackSvg(product.name);
   const productCode = getProductCode(product);
@@ -161,12 +158,19 @@ function BasicProductCard({ product }: { product: Product }) {
           <Link to={`/basic/product/${product.id}`} className="basic-button basic-button--secondary">
             View details
           </Link>
-          <a href={buildMailHref(product)} className="basic-button basic-button--primary">
+          <button type="button" className="basic-button basic-button--primary" onClick={() => setContactOpen(true)}>
             <Mail size={15} aria-hidden="true" />
             Contact
-          </a>
+          </button>
         </div>
       </div>
+      <ProductContactDialog
+        product={product}
+        open={contactOpen}
+        onClose={() => setContactOpen(false)}
+        mailHref={buildMailHref(product)}
+        whatsappHref={buildWhatsAppHref(getWhatsAppNumber(), getQuoteMessage(product))}
+      />
     </article>
   );
 }
