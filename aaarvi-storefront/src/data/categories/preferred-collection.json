@@ -104,32 +104,6 @@
     "catalogue_image_index": 4
   },
   {
-    "id": "aarvi-preferred-collection-5",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "To Allphones Usba",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/5.jpg",
-        "filename": "5.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 187",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 5
-  },
-  {
     "id": "aarvi-preferred-collection-6",
     "source_site": "shipmydeals",
     "url": "",

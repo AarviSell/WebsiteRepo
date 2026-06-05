@@ -234,32 +234,6 @@
     "catalogue_image_index": 9
   },
   {
-    "id": "aarvi-executive-collection-10",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Groove Handybean",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/10.jpg",
-        "filename": "10.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "LITHIUM-ION",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 10
-  },
-  {
     "id": "aarvi-executive-collection-14",
     "source_site": "shipmydeals",
     "url": "",
@@ -284,32 +258,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 15,
     "catalogue_image_index": 14
-  },
-  {
-    "id": "aarvi-executive-collection-16",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Taplite Feather Touch Button",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/17.jpg",
-        "filename": "17.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 354",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 17,
-    "catalogue_image_index": 16
   },
   {
     "id": "aarvi-executive-collection-20",
@@ -1534,32 +1482,6 @@
     "catalogue_image_index": 75
   },
   {
-    "id": "aarvi-executive-collection-76",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Power Plus Electra Lunch Box",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/77.jpg",
-        "filename": "77.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 06",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 77,
-    "catalogue_image_index": 76
-  },
-  {
     "id": "aarvi-executive-collection-78",
     "source_site": "shipmydeals",
     "url": "",
@@ -1636,58 +1558,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 82,
     "catalogue_image_index": 81
-  },
-  {
-    "id": "aarvi-executive-collection-82",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Magnetic 720 Degree Sensor Light with Motion Sensor with Detachable Magnetic Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/83.jpg",
-        "filename": "83.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 208S",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 83,
-    "catalogue_image_index": 82
-  },
-  {
-    "id": "aarvi-executive-collection-83",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dual Usbwall & Car Charger",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/84.jpg",
-        "filename": "84.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 117",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 84,
-    "catalogue_image_index": 83
   },
   {
     "id": "aarvi-executive-collection-84",

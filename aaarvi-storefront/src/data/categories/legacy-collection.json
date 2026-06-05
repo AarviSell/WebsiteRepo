@@ -546,32 +546,6 @@
     "catalogue_image_index": 22
   },
   {
-    "id": "aarvi-legacy-collection-23",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerplus Lumitouch",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/24.jpg",
-        "filename": "24.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 332",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 23
-  },
-  {
     "id": "aarvi-legacy-collection-24",
     "source_site": "shipmydeals",
     "url": "",
@@ -1352,32 +1326,6 @@
     "catalogue_image_index": 54
   },
   {
-    "id": "aarvi-legacy-collection-55",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerplus Serving Jug with 4 Premium Glasses & Serving Tray",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/56.jpg",
-        "filename": "56.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 216",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 56,
-    "catalogue_image_index": 55
-  },
-  {
     "id": "aarvi-legacy-collection-57",
     "source_site": "shipmydeals",
     "url": "",
@@ -1584,31 +1532,5 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 67,
     "catalogue_image_index": 66
-  },
-  {
-    "id": "aarvi-legacy-collection-67",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Auto Spray Room Freshener",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/68.jpg",
-        "filename": "68.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 36",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 68,
-    "catalogue_image_index": 67
   }
 ]

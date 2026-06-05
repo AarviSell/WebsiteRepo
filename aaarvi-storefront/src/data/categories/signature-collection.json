@@ -780,32 +780,6 @@
     "catalogue_image_index": 33
   },
   {
-    "id": "aarvi-signature-collection-34",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Pure Air Loop Gel-Based Air Freshener - 100G",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/35.jpg",
-        "filename": "35.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 334",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 34
-  },
-  {
     "id": "aarvi-signature-collection-35",
     "source_site": "shipmydeals",
     "url": "",
@@ -1558,32 +1532,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 64,
     "catalogue_image_index": 63
-  },
-  {
-    "id": "aarvi-signature-collection-64",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Pure Air Glider - Gel Based Room Freshener with Open/Close Mechanism",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/65.jpg",
-        "filename": "65.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 315",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 65,
-    "catalogue_image_index": 64
   },
   {
     "id": "aarvi-signature-collection-65",

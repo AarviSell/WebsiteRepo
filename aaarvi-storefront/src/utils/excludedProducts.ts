@@ -1,7 +1,29 @@
 import type { Product } from '@/types/product';
 
+type ExcludableProduct = Pick<Product, 'id' | 'name' | 'description' | 'product_code'>;
+
+const REMOVED_PRODUCT_IDS = new Set([
+  'aarvi-executive-collection-10',
+  'aarvi-executive-collection-16',
+  'aarvi-executive-collection-76',
+  'aarvi-executive-collection-82',
+  'aarvi-executive-collection-83',
+  'aarvi-preferred-collection-5',
+  'aarvi-legacy-collection-23',
+  'aarvi-legacy-collection-55',
+  'aarvi-legacy-collection-67',
+  'aarvi-signature-collection-34',
+  'aarvi-signature-collection-64',
+]);
+
+const REMOVED_PRODUCT_CODES = new Set(['C187', 'E208S', 'H06']);
+
 function productText(product: Pick<Product, 'name' | 'description'>): string {
   return `${product.name} ${product.description ?? ''}`.toLowerCase();
+}
+
+function normalizeProductCode(code?: string): string {
+  return (code ?? '').replace(/\s+/g, '').toUpperCase();
 }
 
 function isDigitalClock(text: string): boolean {
@@ -10,9 +32,45 @@ function isDigitalClock(text: string): boolean {
   );
 }
 
-export function getProductExclusionReason(product: Pick<Product, 'name' | 'description'>): string | null {
+export function getProductExclusionReason(product: ExcludableProduct): string | null {
   const text = productText(product);
   const name = product.name.toLowerCase();
+  const productCode = normalizeProductCode(product.product_code);
+
+  if (product.id && REMOVED_PRODUCT_IDS.has(product.id)) {
+    return 'Removed product';
+  }
+
+  if (productCode && REMOVED_PRODUCT_CODES.has(productCode)) {
+    return 'Removed product code';
+  }
+
+  if (
+    /\bauto\s+spray\s+room\s+freshener\b/.test(text) ||
+    (/\bpure\s+air\b/.test(text) && /\b(?:air\s*freshener|room\s*freshener)\b/.test(text))
+  ) {
+    return 'Room freshener';
+  }
+
+  if (/\bserving\s+jug\b/.test(text)) {
+    return 'Serving jug';
+  }
+
+  if (/\bgroove\s+handybean\b/.test(text)) {
+    return 'Groove Handybean';
+  }
+
+  if (/\btaplite\s+feather\s+touch\b/.test(text)) {
+    return 'Taplite Feather Touch';
+  }
+
+  if (/\bdual\s+usbwall\b/.test(text) && /\bcar\s+charger\b/.test(text)) {
+    return 'Dual USB wall & car charger';
+  }
+
+  if (/\blumitouch\b/.test(text)) {
+    return 'Powerplus Lumitouch';
+  }
 
   if (/\bpower\s*bank\b|\bpowerbank\b/.test(text)) {
     return 'Power bank';
@@ -92,10 +150,10 @@ export function getProductExclusionReason(product: Pick<Product, 'name' | 'descr
   return null;
 }
 
-export function isExcludedProduct(product: Pick<Product, 'name' | 'description'>): boolean {
+export function isExcludedProduct(product: ExcludableProduct): boolean {
   return getProductExclusionReason(product) !== null;
 }
 
-export function filterExcludedProducts<T extends Pick<Product, 'name' | 'description'>>(products: T[]): T[] {
+export function filterExcludedProducts<T extends ExcludableProduct>(products: T[]): T[] {
   return products.filter(product => !isExcludedProduct(product));
 }

@@ -4074,32 +4074,6 @@
     "catalogue_image_index": 9
   },
   {
-    "id": "aarvi-executive-collection-10",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Groove Handybean",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/10.jpg",
-        "filename": "10.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "LITHIUM-ION",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 10
-  },
-  {
     "id": "aarvi-executive-collection-14",
     "source_site": "shipmydeals",
     "url": "",
@@ -4124,32 +4098,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 15,
     "catalogue_image_index": 14
-  },
-  {
-    "id": "aarvi-executive-collection-16",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Taplite Feather Touch Button",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/17.jpg",
-        "filename": "17.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 354",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 17,
-    "catalogue_image_index": 16
   },
   {
     "id": "aarvi-executive-collection-20",
@@ -5374,32 +5322,6 @@
     "catalogue_image_index": 75
   },
   {
-    "id": "aarvi-executive-collection-76",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Power Plus Electra Lunch Box",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/77.jpg",
-        "filename": "77.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 06",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 77,
-    "catalogue_image_index": 76
-  },
-  {
     "id": "aarvi-executive-collection-78",
     "source_site": "shipmydeals",
     "url": "",
@@ -5476,58 +5398,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 82,
     "catalogue_image_index": 81
-  },
-  {
-    "id": "aarvi-executive-collection-82",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Magnetic 720 Degree Sensor Light with Motion Sensor with Detachable Magnetic Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/83.jpg",
-        "filename": "83.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 208S",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 83,
-    "catalogue_image_index": 82
-  },
-  {
-    "id": "aarvi-executive-collection-83",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dual Usbwall & Car Charger",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/84.jpg",
-        "filename": "84.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 117",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 84,
-    "catalogue_image_index": 83
   },
   {
     "id": "aarvi-executive-collection-84",
@@ -9691,32 +9561,6 @@
     "catalogue_image_index": 22
   },
   {
-    "id": "aarvi-legacy-collection-23",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerplus Lumitouch",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/24.jpg",
-        "filename": "24.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 332",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 23
-  },
-  {
     "id": "aarvi-legacy-collection-24",
     "source_site": "shipmydeals",
     "url": "",
@@ -10497,32 +10341,6 @@
     "catalogue_image_index": 54
   },
   {
-    "id": "aarvi-legacy-collection-55",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerplus Serving Jug with 4 Premium Glasses & Serving Tray",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/56.jpg",
-        "filename": "56.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 216",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 56,
-    "catalogue_image_index": 55
-  },
-  {
     "id": "aarvi-legacy-collection-57",
     "source_site": "shipmydeals",
     "url": "",
@@ -10731,32 +10549,6 @@
     "catalogue_image_index": 66
   },
   {
-    "id": "aarvi-legacy-collection-67",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Auto Spray Room Freshener",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/68.jpg",
-        "filename": "68.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 36",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 68,
-    "catalogue_image_index": 67
-  },
-  {
     "id": "aarvi-preferred-collection-1",
     "source_site": "shipmydeals",
     "url": "",
@@ -10859,32 +10651,6 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 5,
     "catalogue_image_index": 4
-  },
-  {
-    "id": "aarvi-preferred-collection-5",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "To Allphones Usba",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/5.jpg",
-        "filename": "5.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 187",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 5
   },
   {
     "id": "aarvi-preferred-collection-6",
@@ -15774,32 +15540,6 @@
     "catalogue_image_index": 33
   },
   {
-    "id": "aarvi-signature-collection-34",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Pure Air Loop Gel-Based Air Freshener - 100G",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/35.jpg",
-        "filename": "35.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 334",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 34
-  },
-  {
     "id": "aarvi-signature-collection-35",
     "source_site": "shipmydeals",
     "url": "",
@@ -16552,32 +16292,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 64,
     "catalogue_image_index": 63
-  },
-  {
-    "id": "aarvi-signature-collection-64",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Pure Air Glider - Gel Based Room Freshener with Open/Close Mechanism",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/65.jpg",
-        "filename": "65.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 315",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 65,
-    "catalogue_image_index": 64
   },
   {
     "id": "aarvi-signature-collection-65",
