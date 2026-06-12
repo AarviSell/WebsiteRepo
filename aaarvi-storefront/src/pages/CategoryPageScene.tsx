@@ -24,8 +24,8 @@ import {
   shuffleProducts,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
-import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
-import logoSrc from '@/assets/logo.png';
+import { BrandMark } from '@/components/layout/BrandMark';
+import { BRAND_NAME } from '@/constants/brand';
 
 /* ── Constants ─────────────────────────────────────────────── */
 const BG        = 0x0d0414;
@@ -1804,16 +1804,9 @@ export function CategoryPageScene() {
           )}
         </div>
 
-        {/* Centre — logo + name */}
-        <div style={{ display: isCompactViewport ? 'none' : 'flex', alignItems: 'center', gap: '2px' }}>
-          <img src={logoSrc} alt={`${BRAND_NAME} logo`} style={{ width: 28, height: 28, objectFit: 'contain' }} />
-          <span style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '1.4rem', fontWeight: 700,
-            background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-            lineHeight: 1,
-          }}>{BRAND_HEADER_TEXT}</span>
+        {/* Centre — logo */}
+        <div style={{ display: isCompactViewport ? 'none' : 'flex', alignItems: 'center' }}>
+          <BrandMark className="brand-logo" size="md" />
         </div>
 
         {/* Right — collection name + normal mode */}

@@ -65,7 +65,7 @@ function getCatalogQuoteMessage() {
 }
 
 function BasicLogo() {
-  return <BrandMark href="/basic" ariaLabel={`${BRAND_NAME} basic home`} />;
+  return <BrandMark href="/basic" size="md" ariaLabel={`${BRAND_NAME} basic home`} />;
 }
 
 function toCategoryNodes(categories: CategoryNode[], allProducts: Product[]): CategoryNode[] {

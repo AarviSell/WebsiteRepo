@@ -35,7 +35,7 @@ export function Footer() {
           >
             <div>
               <div style={{ marginBottom: 'var(--space-3)' }}>
-                <BrandMark />
+                <BrandMark size="md" />
               </div>
               <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-muted)', lineHeight: 1.8, maxWidth: 320, margin: 0 }}>
                 Discover and shop curated products from top Indian sources.

@@ -14,8 +14,7 @@ import {
   getFeaturedProductDisplayCount,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
-import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
-import logoSrc from '../assets/logo.png';
+import { BrandMark } from '@/components/layout/BrandMark';
 
 /* ── Category data ─────────────────────────────────────────── */
 const CATEGORY_ICONS: Record<string, string> = {
@@ -811,16 +810,8 @@ export function HomePageScene() {
           ))}
         </div>
         {/* Center — logo */}
-        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', alignItems: 'center', justifySelf: 'center', gap: '2px' }}>
-          <img src={logoSrc} alt={`${BRAND_NAME} logo`} style={{ width: 34, height: 34, objectFit: 'contain' }} />
-          <span style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: '1.5rem', fontWeight: 700,
-            background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-          }}>
-            {BRAND_HEADER_TEXT}
-          </span>
+        <div style={{ display: isCompactViewport && searchOpen ? 'none' : 'flex', alignItems: 'center', justifySelf: 'center' }}>
+          <BrandMark className="brand-logo" size="md" />
         </div>
         {!(isCompactViewport && searchOpen) && (
           <div style={{ display: 'flex', justifyContent: 'flex-end', justifySelf: 'end' }}>

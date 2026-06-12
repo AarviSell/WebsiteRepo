@@ -3,34 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useProductData } from '@/hooks/useProductData';
-import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
-import logoSrc from '@/assets/logo.png';
-
-function AarviLogo() {
-  return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '2px', color: 'var(--color-text)' }}>
-      <img
-        src={logoSrc}
-        alt={`${BRAND_NAME} logo`}
-        style={{ width: 34, height: 34, flexShrink: 0, objectFit: 'contain' }}
-      />
-      <span
-        style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '1.6rem',
-          fontWeight: 700,
-          background: 'linear-gradient(135deg, #e9d5ff, #fde68a)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          lineHeight: 1,
-        }}
-      >
-        {BRAND_HEADER_TEXT}
-      </span>
-    </span>
-  );
-}
+import { BRAND_NAME } from '@/constants/brand';
+import { BrandMark } from '@/components/layout/BrandMark';
 
 function DrawerNav({ onClose }: { onClose: () => void }) {
   const { categories } = useProductData();
@@ -69,7 +43,7 @@ function DrawerNav({ onClose }: { onClose: () => void }) {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <AarviLogo />
+          <BrandMark href="/" className="brand-logo" size="md" ariaLabel={`${BRAND_NAME} home`} />
           <button
             onClick={onClose}
             aria-label="Close navigation menu"
@@ -184,9 +158,7 @@ export function Header() {
               {/* Left slot — empty */}
               <div />
               {/* Center — logo */}
-              <Link to="/" aria-label={`${BRAND_NAME} home`} style={{ textDecoration: 'none', justifySelf: 'center' }}>
-                <AarviLogo />
-              </Link>
+              <BrandMark href="/" className="brand-logo" size="md" ariaLabel={`${BRAND_NAME} home`} />
 
               <nav style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-1)', justifyContent: 'flex-end' }} aria-label="Primary navigation">
                 {([
@@ -226,9 +198,7 @@ export function Header() {
                 {/* Left — empty */}
                 <div />
                 {/* Center — logo */}
-                <Link to="/" aria-label={`${BRAND_NAME} home`} style={{ textDecoration: 'none', justifySelf: 'center' }}>
-                  <AarviLogo />
-                </Link>
+                <BrandMark href="/" className="brand-logo" size="md" ariaLabel={`${BRAND_NAME} home`} />
                 {/* Right — hamburger */}
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <button
