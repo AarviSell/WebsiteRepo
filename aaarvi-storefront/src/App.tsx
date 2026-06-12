@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ProductCardSkeleton } from '@/components/ui/Skeleton';
 import { useProductStore } from '@/store/useProductStore';
+import { MobileInteractiveRedirect } from '@/components/routing/MobileInteractiveRedirect';
 import { ExperienceGate } from '@/pages/ExperienceGate';
 import { BasicExperiencePage, BasicProductPage } from '@/pages/BasicExperiencePage';
 import { BRAND_PAGE_TITLE } from '@/constants/brand';
@@ -123,7 +124,9 @@ export function App() {
         <Route path="/" element={<ExperienceGate />} />
 
         {/* Interactive experience — fullscreen Three.js scene, loaded only on demand */}
-        <Route path="/interactive" element={<InteractiveHomeRoute />} />
+        <Route path="/interactive" element={
+          <MobileInteractiveRedirect><InteractiveHomeRoute /></MobileInteractiveRedirect>
+        } />
 
         {/* Basic experience — catalog layout using the same product data */}
         <Route path="/basic" element={<BasicExperiencePage />} />
@@ -136,8 +139,12 @@ export function App() {
           <AppLayout><SearchResultsPage /></AppLayout>
         } />
         {/* Category pages — fullscreen Three.js cube scene, loaded only on demand */}
-        <Route path="/category/:slug" element={<InteractiveCategoryRoute />} />
-        <Route path="/category/:slug/:subSlug" element={<InteractiveCategoryRoute />} />
+        <Route path="/category/:slug" element={
+          <MobileInteractiveRedirect><InteractiveCategoryRoute /></MobileInteractiveRedirect>
+        } />
+        <Route path="/category/:slug/:subSlug" element={
+          <MobileInteractiveRedirect><InteractiveCategoryRoute /></MobileInteractiveRedirect>
+        } />
         <Route path="*" element={
           <AppLayout><NotFoundPage /></AppLayout>
         } />

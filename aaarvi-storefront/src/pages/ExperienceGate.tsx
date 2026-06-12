@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, MonitorPlay, Sparkles } from 'lucide-react';
+import { useIsMobileViewport } from '@/hooks/useViewport';
 import { preloadInteractiveExperience } from '@/pages/interactivePreload';
 import { BRAND_HEADER_TEXT, BRAND_NAME } from '@/constants/brand';
 import logoSrc from '@/assets/logo.png';
@@ -21,10 +22,16 @@ function delay(ms: number): Promise<void> {
 
 export function ExperienceGate() {
   const navigate = useNavigate();
+  const isMobile = useIsMobileViewport();
   const [phase, setPhase] = useState<GatePhase>('choice');
   const [progress, setProgress] = useState(0);
   const [isInteractiveStarting, setIsInteractiveStarting] = useState(false);
   const progressTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!isMobile) return;
+    navigate('/basic', { replace: true });
+  }, [isMobile, navigate]);
 
   useEffect(() => {
     return () => {
@@ -33,6 +40,8 @@ export function ExperienceGate() {
       }
     };
   }, []);
+
+  if (isMobile) return null;
 
   async function chooseInteractive() {
     if (isInteractiveStarting) return;

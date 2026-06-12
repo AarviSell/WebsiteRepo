@@ -631,6 +631,12 @@
 	padding: 0.85rem 1rem 0.7rem;
 }
 
+.basic-header__top--no-interactive {
+	grid-template-areas:
+		"logo logo"
+		"search search";
+}
+
 .basic-header__interactive,
 .basic-search button {
 	display: inline-flex;

@@ -13,6 +13,7 @@ import {
 import { ProductContactDialog } from '@/components/contact/ProductContactDialog';
 import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
 import { BrandMark } from '@/components/layout/BrandMark';
+import { useIsMobileViewport } from '@/hooks/useViewport';
 import { Footer } from '@/components/layout/Footer';
 import { useProductData } from '@/hooks/useProductData';
 import { getCataloguePageSource, getProductCode } from '@/utils/catalogue';
@@ -81,6 +82,7 @@ function toCategoryNodes(categories: CategoryNode[], allProducts: Product[]): Ca
 function BasicHeader() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const isMobile = useIsMobileViewport();
   const { categories, allProducts } = useProductData();
   const displayCategories = useMemo(() => toCategoryNodes(categories, allProducts), [allProducts, categories]);
   const currentQuery = searchParams.get('q') ?? '';
@@ -95,12 +97,14 @@ function BasicHeader() {
 
   return (
     <header className="basic-header">
-      <div className="basic-header__top">
+      <div className={`basic-header__top${isMobile ? ' basic-header__top--no-interactive' : ''}`}>
         <BasicLogo />
-        <Link to="/interactive" className="basic-header__interactive">
-          <MonitorPlay size={18} aria-hidden="true" />
-          <span>Interactive</span>
-        </Link>
+        {!isMobile && (
+          <Link to="/interactive" className="basic-header__interactive">
+            <MonitorPlay size={18} aria-hidden="true" />
+            <span>Interactive</span>
+          </Link>
+        )}
         <form className="basic-search" role="search" aria-label="Search products" onSubmit={submitSearch}>
           <input
             type="search"
