@@ -4,25 +4,33 @@ import type { Product } from '@/types/product';
 import { WhatsAppCaptchaButton } from '@/components/contact/WhatsAppCaptchaButton';
 
 type ProductContactDialogProps = {
-  product: Product | null;
+  product?: Product | null;
   open: boolean;
   onClose: () => void;
   mailHref: string;
   whatsappHref: string;
   variant?: 'basic' | 'interactive';
   title?: string;
+  /** Shown under the title when no product is provided. */
+  contextLabel?: string;
+  captchaSeed?: string;
 };
 
 export function ProductContactDialog({
-  product,
+  product = null,
   open,
   onClose,
   mailHref,
   whatsappHref,
   variant = 'basic',
   title = 'Contact for price',
+  contextLabel,
+  captchaSeed,
 }: ProductContactDialogProps) {
-  if (!open || !product) return null;
+  if (!open) return null;
+
+  const detailLabel = product?.name ?? contextLabel;
+  const seed = captchaSeed ?? product?.id ?? 'catalog-contact';
 
   const isInteractive = variant === 'interactive';
   const rootClass = isInteractive ? 'interactive-contact-dialog' : 'basic-contact-dialog';
@@ -36,13 +44,13 @@ export function ProductContactDialog({
     : 'basic-button basic-button--primary';
 
   return createPortal(
-    <div className={rootClass} role="dialog" aria-modal="true" aria-label={`Contact options for ${product.name}`}>
+    <div className={rootClass} role="dialog" aria-modal="true" aria-label={product ? `Contact options for ${product.name}` : 'Contact options'}>
       <button type="button" className={backdropClass} aria-label="Close contact options" onClick={onClose} />
       <div className={panelClass}>
         <div className={headClass}>
           <div>
             <h3>{title}</h3>
-            <p>{product.name}</p>
+            {detailLabel && <p>{detailLabel}</p>}
           </div>
           <button type="button" className={closeClass} aria-label="Close" onClick={onClose}>
             <X size={18} aria-hidden="true" />
@@ -54,7 +62,7 @@ export function ProductContactDialog({
             Email
           </a>
           <WhatsAppCaptchaButton
-            captchaSeed={product.id}
+            captchaSeed={seed}
             whatsappHref={whatsappHref}
             buttonLabel="WhatsApp"
             verifiedLabel="Open WhatsApp"
