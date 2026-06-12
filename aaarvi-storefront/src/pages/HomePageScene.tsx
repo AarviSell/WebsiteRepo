@@ -823,17 +823,31 @@ export function HomePageScene() {
         )}
       </header>
 
-      {isCompactViewport && !searchOpen && !isZoomingOut && (
-        <div style={{
-          position: 'fixed', top: '5.15rem', left: '50%', transform: 'translateX(-50%)', zIndex: 8,
-          maxWidth: 'calc(100vw - 2rem)',
-          padding: '0.38rem 0.75rem', borderRadius: '999px',
-          border: '1px solid rgba(240,180,41,0.28)', background: 'rgba(13,4,20,0.68)',
-          color: 'rgba(250,245,255,0.82)', fontSize: '0.72rem', fontWeight: 700,
-          letterSpacing: '0.04em', textAlign: 'center', whiteSpace: 'nowrap',
-          pointerEvents: 'none', backdropFilter: 'blur(10px)',
-        }}>
-          Swipe or use arrows to browse cards
+      {!searchOpen && !isZoomingOut && (
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'fixed',
+            top: isCompactViewport ? '5.35rem' : '6.25rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 8,
+            maxWidth: 'calc(100vw - 2rem)',
+            padding: '0.38rem 0.85rem',
+            borderRadius: '999px',
+            border: '1px solid rgba(240,180,41,0.28)',
+            background: 'rgba(13,4,20,0.68)',
+            color: 'rgba(250,245,255,0.82)',
+            fontSize: '0.72rem',
+            fontWeight: 700,
+            letterSpacing: '0.04em',
+            textAlign: 'center',
+            whiteSpace: isCompactViewport ? 'normal' : 'nowrap',
+            pointerEvents: 'none',
+            backdropFilter: 'blur(10px)',
+          }}
+        >
+          Swipe or use arrows to browse categories
         </div>
       )}
 
