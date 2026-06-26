@@ -8,6 +8,7 @@ import * as path from 'path';
 import { fileURLToPath } from 'url';
 import { filterActiveCollectionProducts, filterActiveCategories } from '../src/utils/collections';
 import { filterExcludedProducts } from '../src/utils/excludedProducts';
+import { fixProductName } from '../src/utils/productNameFix';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -122,9 +123,10 @@ function normalizeProductText(value: string): string {
 }
 
 function normalizeProduct(product: ScrapedProduct): ScrapedProduct {
+  const normalizedName = fixProductName(product.id, normalizeProductText(product.name));
   const normalized: ScrapedProduct = {
     ...product,
-    name: normalizeProductText(product.name),
+    name: normalizedName,
     description: product.description ? normalizeProductText(product.description) : product.description,
   };
   if (normalized.price && normalized.price_numeric == null) {

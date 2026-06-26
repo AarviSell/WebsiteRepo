@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & build output
 node_modules
 dist
 dist-ssr
@@ -31,7 +32,16 @@ dist-ssr
 # One-off maintenance scripts (build pipeline keeps scripts/build-data.ts)
 scripts/*
 !scripts/build-data.ts
+scripts/__pycache__/
+
+# OCR name-correction artifacts (local cache/reports from fix_product_names_ocr.py)
+ocr-name-cache.json
+ocr-name-corrections.json
+ocr-run.log
 
 # Generated product catalogue exports
 available-products.csv
 removed-products.csv
+
+# Deprecated assets (replaced by FullLogo.png)
+src/assets/Aarvi_Logo.svg

@@ -60,10 +60,6 @@ function getQuoteMessage(product: Product) {
   return `Hi ${BRAND_NAME}, I am interested in ${product.name}${productCode ? ` (code ${productCode})` : ''}. Please share pricing and availability.`;
 }
 
-function getCatalogQuoteMessage() {
-  return `Hi ${BRAND_NAME}, I would like pricing and availability for your product catalog.`;
-}
-
 function BasicLogo() {
   return <BrandMark href="/basic" size="md" ariaLabel={`${BRAND_NAME} basic home`} />;
 }
@@ -223,7 +219,6 @@ export function BasicExperiencePage() {
   const { allProducts, categories, isLoaded } = useProductData();
   const [sort, setSort] = useState<BasicSort>('featured');
   const [page, setPage] = useState({ key: '', value: 1 });
-  const [heroContactOpen, setHeroContactOpen] = useState(false);
   const query = searchParams.get('q')?.trim() ?? '';
   const isFeaturedView = !slug && !query;
   const basicProducts = useMemo(() => allProducts.filter(product => COLLECTION_SLUGS.has(product.category)), [allProducts]);
@@ -265,26 +260,6 @@ export function BasicExperiencePage() {
     <div className="basic-experience app-shell">
       <BasicHeader />
       <main id="main-content" className="basic-main">
-        <section className="basic-hero" aria-label={`${BRAND_NAME} catalog`}>
-          <div>
-            <p className="basic-kicker">{BRAND_NAME} Catalogue</p>
-            <h1>Browse products in a clean store layout.</h1>
-          </div>
-          <button type="button" className="basic-button basic-button--primary" onClick={() => setHeroContactOpen(true)}>
-            <Mail size={16} aria-hidden="true" />
-            Request pricing
-          </button>
-        </section>
-        <ProductContactDialog
-          open={heroContactOpen}
-          onClose={() => setHeroContactOpen(false)}
-          title="Request pricing"
-          contextLabel={`${BRAND_NAME} product catalog`}
-          mailHref={buildMailHref()}
-          whatsappHref={buildWhatsAppHref(getWhatsAppNumber(), getCatalogQuoteMessage())}
-          captchaSeed="basic-catalog-hero"
-        />
-
         <section className="basic-collection-strip" aria-label="Shop by collection">
           {displayCategories.map(category => {
             const meta = getCollectionMeta(category.slug);

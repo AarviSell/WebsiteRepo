@@ -797,28 +797,6 @@
 	width: min(1600px, calc(100% - 2rem));
 }
 
-.basic-hero {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1.5rem;
-	min-height: 172px;
-	padding: clamp(1.25rem, 4vw, 2.2rem);
-	border: 1px solid rgba(240, 180, 41, 0.18);
-	border-radius: var(--radius-md);
-	background:
-		linear-gradient(110deg, rgba(168, 85, 247, 0.22), transparent 36%),
-		linear-gradient(135deg, rgba(28, 11, 39, 0.94), rgba(17, 7, 24, 0.98));
-}
-
-.basic-hero h1 {
-	max-width: 34rem;
-	margin: 0.5rem 0 0;
-	font-family: var(--font-display);
-	font-size: clamp(2rem, 4.5vw, 3.5rem);
-	line-height: 1.02;
-}
-
 .basic-button {
 	display: inline-flex;
 	align-items: center;
@@ -1661,15 +1639,9 @@
 		padding-top: 0.75rem;
 	}
 
-	.basic-hero,
 	.basic-results__toolbar {
 		align-items: stretch;
 		flex-direction: column;
-	}
-
-	.basic-hero {
-		min-height: auto;
-		gap: 1rem;
 	}
 
 	.basic-collection-strip {

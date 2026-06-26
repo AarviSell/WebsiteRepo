@@ -1,8 +1,22 @@
+# Local Python environment
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local scraper checkout/output (not part of the website deploy)
 aArvi-scraper/
-aaarvi-storefront/scripts/*
-# Generated product catalogue exports
-aaarvi-storefront/available-products.csv
-aaarvi-storefront/removed-products.csv
-aaarvi-storefront/scripts/build-data.ts
-aaarvi-storefront/scripts/build-data.ts
-aaarvi-storefront/src/assets/Aarvi_Logo.svg
+
+# Vite dependency pre-bundle cache (can appear at repo root during dev)
+.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
