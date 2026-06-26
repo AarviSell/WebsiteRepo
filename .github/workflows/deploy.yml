@@ -33,8 +33,9 @@ jobs:
       - name: Build
         working-directory: aaarvi-storefront
         env:
-          VITE_BASE: /WebsiteRepo/
-        run: npx vite build
+          # Relative base works on custom domain (root) and github.io/WebsiteRepo during DNS cutover.
+          VITE_BASE: ./
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

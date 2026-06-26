@@ -6,7 +6,7 @@ import type { Product, ProductImage } from '@/types/product';
  * local_path: "shipmydeals/home-and-kitchen/..."
  * Runtime URL: "<BASE_URL>data/shipmydeals/home-and-kitchen/..."
  *
- * import.meta.env.BASE_URL is '/' in dev and '/WebsiteRepo/' on GitHub Pages,
+ * import.meta.env.BASE_URL is '/' in dev and './' on GitHub Pages / custom domain,
  * so this works correctly in both environments.
  */
 export function resolveImageUrl(localPath: string): string {
