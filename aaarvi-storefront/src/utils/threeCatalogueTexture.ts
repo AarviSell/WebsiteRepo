@@ -6,7 +6,6 @@ interface CatalogueTextureOptions {
   missingLabel?: string;
 }
 
-const MAX_TEXTURE_W = 1800;
 const FALLBACK_TEXTURE_W = 1600;
 const FALLBACK_TEXTURE_H = 1100;
 
@@ -22,12 +21,6 @@ function drawRoundRect(ctx: CanvasRenderingContext2D, x: number, y: number, widt
   ctx.lineTo(x, y + radius);
   ctx.quadraticCurveTo(x, y, x + radius, y);
   ctx.closePath();
-}
-
-function drawPageImage(ctx: CanvasRenderingContext2D, image: HTMLImageElement, canvas: HTMLCanvasElement) {
-  ctx.fillStyle = '#f7f1e6';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 }
 
 function drawFallback(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, title: string, missingLabel?: string) {
@@ -57,20 +50,14 @@ function drawFallback(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, 
   ctx.fillText(missingLabel, canvas.width / 2, canvas.height / 2 + 95, canvas.width - 340);
 }
 
-function createTexture(canvas: HTMLCanvasElement): THREE.CanvasTexture {
-  const texture = new THREE.CanvasTexture(canvas);
+/** Keep catalogue textures sharp — no mip chain, no canvas resampling when possible. */
+export function applySharpCatalogueSampling(texture: THREE.Texture, maxAnisotropy = 8): void {
   texture.colorSpace = THREE.SRGBColorSpace;
-  texture.anisotropy = 8;
+  texture.minFilter = THREE.LinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.generateMipmaps = false;
+  texture.anisotropy = maxAnisotropy;
   texture.needsUpdate = true;
-  return texture;
-}
-
-function makeCanvasForImage(image: HTMLImageElement): HTMLCanvasElement {
-  const canvas = document.createElement('canvas');
-  const scale = Math.max(1, Math.min(2, MAX_TEXTURE_W / image.naturalWidth));
-  canvas.width = Math.round(image.naturalWidth * scale);
-  canvas.height = Math.round(image.naturalHeight * scale);
-  return canvas;
 }
 
 function makeFallbackCanvas(): HTMLCanvasElement {
@@ -96,17 +83,21 @@ function loadImage(url: string | undefined): Promise<HTMLImageElement | null> {
   });
 }
 
-export async function makeCataloguePageTexture(options: CatalogueTextureOptions): Promise<THREE.CanvasTexture> {
+export async function makeCataloguePageTexture(
+  options: CatalogueTextureOptions,
+  maxAnisotropy = 8,
+): Promise<THREE.Texture> {
   const pageImage = await loadImage(options.imageUrl);
   if (pageImage) {
-    const canvas = makeCanvasForImage(pageImage);
-    const ctx = canvas.getContext('2d')!;
-    drawPageImage(ctx, pageImage, canvas);
-    return createTexture(canvas);
+    const texture = new THREE.Texture(pageImage);
+    applySharpCatalogueSampling(texture, maxAnisotropy);
+    return texture;
   }
 
   const canvas = makeFallbackCanvas();
   const ctx = canvas.getContext('2d')!;
   drawFallback(ctx, canvas, options.title, options.missingLabel);
-  return createTexture(canvas);
+  const texture = new THREE.CanvasTexture(canvas);
+  applySharpCatalogueSampling(texture, maxAnisotropy);
+  return texture;
 }

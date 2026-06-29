@@ -205,6 +205,34 @@ function easeInOutCubic(t: number) {
 
 function clamp01(value: number) { return Math.max(0, Math.min(1, value)); }
 
+const RENDERER_DPR_CAP = 2;
+const RENDERER_DPR_COMPACT = 1;
+const RENDERER_DPR_COMPACT_CATALOGUE = 2;
+
+function getRendererPixelRatio(layout: SceneLayout, catalogueViewActive = false) {
+  if (layout.isCompact) {
+    return Math.min(
+      window.devicePixelRatio,
+      catalogueViewActive ? RENDERER_DPR_COMPACT_CATALOGUE : RENDERER_DPR_COMPACT,
+    );
+  }
+  return Math.min(window.devicePixelRatio, RENDERER_DPR_CAP);
+}
+
+function isCatalogueViewActive(state: SceneState | null | undefined) {
+  if (!state) return false;
+  return state.productFocus.active || state.productFocus.returning;
+}
+
+function syncRendererDisplayQuality(
+  renderer: THREE.WebGLRenderer,
+  layout: SceneLayout,
+  catalogueViewActive: boolean,
+) {
+  renderer.setPixelRatio(getRendererPixelRatio(layout, catalogueViewActive));
+  renderer.toneMappingExposure = catalogueViewActive ? 1 : 0.85;
+}
+
 function getFocusTargetScale(faceIdx: number) {
   return faceIdx === 0 || faceIdx === 1
     ? new THREE.Vector3(0.28, 1.55, 2.55)
@@ -708,7 +736,7 @@ export function CategoryPageScene() {
     const height = container.clientHeight || window.innerHeight;
     const layout = getSceneLayout({ width, height });
     const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, layout.isCompact ? 1.0 : 1.5));
+    renderer.setPixelRatio(getRendererPixelRatio(layout));
     renderer.setSize(width, height);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping      = THREE.ACESFilmicToneMapping;
@@ -1031,6 +1059,7 @@ export function CategoryPageScene() {
         if (rawReturnT >= 1) {
           productFocus.returning = false;
           productFocus.selectedIdx = -1;
+          syncRendererDisplayQuality(renderer, layout, false);
           finishProductReturnRef.current();
         }
       }
@@ -1100,7 +1129,8 @@ export function CategoryPageScene() {
           window.requestAnimationFrame(() => refreshScenePageRef.current());
         }
       }
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, nextLayout.isCompact ? 1.0 : 1.5));
+      renderer.setPixelRatio(getRendererPixelRatio(nextLayout, isCatalogueViewActive(state)));
+      renderer.toneMappingExposure = isCatalogueViewActive(state) ? 1 : 0.85;
       renderer.setSize(nextWidth, nextHeight);
     }
 
@@ -1477,6 +1507,7 @@ export function CategoryPageScene() {
     focus.targetScale.copy(getFocusTargetScale(faceIdx));
     focus.startRotation.copy(cube.rotation);
     focus.targetRotationY = cube.userData.targetRotY;
+    syncRendererDisplayQuality(state.renderer, state.layout, true);
 
     const source = getCataloguePageSource(product);
     if (!source) return;
@@ -1497,11 +1528,12 @@ export function CategoryPageScene() {
       return;
     }
 
+    const maxAnisotropy = state.renderer.capabilities.getMaxAnisotropy();
     makeCataloguePageTexture({
       imageUrl: source.imageUrl,
       title: product.name,
       missingLabel: source.isPdfPage ? `${source.pdfName ?? 'Catalogue'} page ${source.pageNumber ?? ''}`.trim() : undefined,
-    }).then(tex => {
+    }, maxAnisotropy).then(tex => {
       texCache.current.set(cacheKey, tex);
       applyCatalogueTexture(tex);
     });
