@@ -59,6 +59,13 @@ function getPageRotationY(pageIdx: number) {
   return pageIdx * (Math.PI / 2);
 }
 
+/** Swipe uses the long arc so the cube spins opposite to arrow-button turns. */
+function resolveTargetRotY(fromPage: number, targetPage: number, invertSpin: boolean) {
+  const canonical = getPageRotationY(targetPage);
+  if (!invertSpin || targetPage === fromPage) return canonical;
+  return targetPage > fromPage ? canonical - 2 * Math.PI : canonical + 2 * Math.PI;
+}
+
 function getPageFaceIdx(pageIdx: number) {
   return PAGE_FACE_IDX[pageIdx % PAGE_FACE_IDX.length];
 }
@@ -1315,26 +1322,37 @@ export function CategoryPageScene() {
   const isProductOpening = openingProductName.length > 0;
 
   /* ── Cube rotation helpers ────────────────────────────────── */
-  const startPageRotation = useCallback((targetPage: number) => {
+  const startPageRotation = useCallback((targetPage: number, fromPage: number, invertSpin = false) => {
     const state = sceneRef.current;
     if (!state || state.isRotating.value || isAnimatingRef.current) return false;
     state.isRotating.value = true;
-    const targetRotY = getPageRotationY(targetPage);
+    const targetRotY = resolveTargetRotY(fromPage, targetPage, invertSpin);
     state.cubes.forEach(cube => { cube.userData.targetRotY = targetRotY; });
-    // Unlock after animation settles (~700ms)
-    setTimeout(() => { if (sceneRef.current) sceneRef.current.isRotating.value = false; }, 720);
+    setTimeout(() => {
+      const activeState = sceneRef.current;
+      if (!activeState) return;
+      activeState.isRotating.value = false;
+      const canonical = getPageRotationY(pageRef.current);
+      activeState.cubes.forEach(cube => {
+        cube.rotation.y = canonical;
+        cube.userData.targetRotY = canonical;
+      });
+    }, 720);
     return true;
   }, []);
 
   /* Stable refs so touch handler inside useEffect can call these */
   const goNextRef = useRef<() => void>(() => {});
   const goPrevRef = useRef<() => void>(() => {});
+  const goNextSwipeRef = useRef<() => void>(() => {});
+  const goPrevSwipeRef = useRef<() => void>(() => {});
 
-  const goToPage = useCallback((targetPage: number) => {
+  const goToPage = useCallback((targetPage: number, options?: { invertSpin?: boolean }) => {
     if (isAnimatingRef.current) return;
     const next = Math.max(0, Math.min(targetPage, maxPages - 1));
-    if (next === pageRef.current) return;
-    if (!startPageRotation(next)) return;
+    const fromPage = pageRef.current;
+    if (next === fromPage) return;
+    if (!startPageRotation(next, fromPage, options?.invertSpin ?? false)) return;
     pageRef.current = next;
     setPage(next);
     loadPageTextures(next);
@@ -1348,6 +1366,14 @@ export function CategoryPageScene() {
     goToPage(pageRef.current - 1);
   }, [goToPage]);
 
+  const goNextSwipe = useCallback(() => {
+    goToPage(pageRef.current + 1, { invertSpin: true });
+  }, [goToPage]);
+
+  const goPrevSwipe = useCallback(() => {
+    goToPage(pageRef.current - 1, { invertSpin: true });
+  }, [goToPage]);
+
   const syncSceneToPage = useCallback((targetPage: number) => {
     const state = sceneRef.current;
     if (!state) return;
@@ -1356,6 +1382,8 @@ export function CategoryPageScene() {
 
   useEffect(() => { goNextRef.current = goNext; }, [goNext]);
   useEffect(() => { goPrevRef.current = goPrev; }, [goPrev]);
+  useEffect(() => { goNextSwipeRef.current = goNextSwipe; }, [goNextSwipe]);
+  useEffect(() => { goPrevSwipeRef.current = goPrevSwipe; }, [goPrevSwipe]);
 
   /* Touch swipe — 4-directional */
   useEffect(() => {
@@ -1366,13 +1394,11 @@ export function CategoryPageScene() {
       const dy = e.changedTouches[0].clientY - ty;
       if (Math.abs(dx) < 30 && Math.abs(dy) < 30) return;
       if (Math.abs(dy) > Math.abs(dx)) {
-        // Vertical dominant: up = next, down = prev
-        if (dy < 0) goNextRef.current();
-        else        goPrevRef.current();
+        if (dy < 0) goPrevSwipeRef.current();
+        else        goNextSwipeRef.current();
       } else {
-        // Horizontal dominant: drag direction matches cube turn direction.
-        if (dx > 0) goNextRef.current();
-        else        goPrevRef.current();
+        if (dx > 0) goPrevSwipeRef.current();
+        else        goNextSwipeRef.current();
       }
     }
     document.addEventListener('touchstart', onTouchStart, { passive: true });
@@ -1393,13 +1419,11 @@ export function CategoryPageScene() {
       const dy = e.clientY - my;
       if (Math.abs(dx) < 30 && Math.abs(dy) < 30) return;
       if (Math.abs(dy) > Math.abs(dx)) {
-        // Vertical dominant: up = next, down = prev
-        if (dy < 0) goNextRef.current();
-        else        goPrevRef.current();
+        if (dy < 0) goPrevSwipeRef.current();
+        else        goNextSwipeRef.current();
       } else {
-        // Horizontal dominant: drag direction matches cube turn direction.
-        if (dx > 0) goNextRef.current();
-        else        goPrevRef.current();
+        if (dx > 0) goPrevSwipeRef.current();
+        else        goNextSwipeRef.current();
       }
     }
     document.addEventListener('mousedown', onMouseDown);

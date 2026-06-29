@@ -1,17 +1,11 @@
 /** Correct known scraper/OCR name artifacts without altering already-valid names. */
 
+import nameOverrides from '../data/product-name-overrides.json';
+
 const SCRAPER_ARTIFACT =
   /Setof|Cupsin|Actionlid|Brandingpanels|\bTand\b|notebookin|withBamboo|Blackcover|Texturedb|Ocolored|Steelcontainers|With2|Ingiftbox|Desktopmug|Tweedtansetof|ORtIS/i;
 
-const MANUAL_NAME_OVERRIDES: Record<string, string> = {
-  'aarvi-legacy-collection-44':
-    'Set of Vacuum Flask Powerplus with 2 Stainless Steel Cups in Gift Box',
-  'aarvi-legacy-collection-45':
-    'Tweed Tan Set of 4 - Passport Holder, Wallet, Visiting Card Holder & Pen',
-  'aarvi-legacy-collection-49': '3 in 1 Speaker, Earbuds & Mobile Stand',
-  'aarvi-premium-collection-32':
-    'Cork Eco Friendly Notebook with Bamboo Stylus Pen Gift Set in Black Box',
-};
+const PDF_NAME_OVERRIDES: Record<string, string> = nameOverrides as Record<string, string>;
 
 function insertWordBoundaries(text: string): string {
   return text.replace(/([a-z])([A-Z])/g, '$1 $2');
@@ -79,8 +73,8 @@ function fixScraperArtifacts(name: string): string {
 }
 
 export function fixProductName(id: string, name: string): string {
-  const manual = MANUAL_NAME_OVERRIDES[id];
-  if (manual) return manual;
+  const pdfOverride = PDF_NAME_OVERRIDES[id];
+  if (pdfOverride) return pdfOverride;
   if (!needsScraperFix(name)) return name;
   const fixed = fixScraperArtifacts(name);
   return fixed === name ? name : fixed;

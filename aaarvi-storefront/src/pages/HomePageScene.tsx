@@ -965,36 +965,68 @@ export function HomePageScene() {
         </svg>
       </button>
 
-      {/* Dots */}
-      <div style={{
-        position: 'fixed', bottom: isCompactViewport ? '1.15rem' : '2rem', left: '50%', transform: 'translateX(-50%)',
-        display: 'flex', gap: '0.3rem', zIndex: 10,
-      }}>
-        {cats.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            aria-label={`Go to ${cats[i].label}`}
+      {/* Dots + tap hint */}
+      {!searchOpen && !isZoomingOut && (
+        <div style={{
+          position: 'fixed',
+          bottom: isCompactViewport ? '1.15rem' : '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '0.55rem',
+          zIndex: 10,
+        }}>
+          <p
+            aria-hidden="true"
             style={{
-              width: 28, height: 28, borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer',
-              background: 'transparent',
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              margin: 0,
+              maxWidth: 'calc(100vw - 2rem)',
+              padding: '0.38rem 0.85rem',
+              borderRadius: '999px',
+              border: '1px solid rgba(240,180,41,0.28)',
+              background: 'rgba(13,4,20,0.68)',
+              color: 'rgba(250,245,255,0.82)',
+              fontSize: '0.72rem',
+              fontWeight: 700,
+              letterSpacing: '0.04em',
+              textAlign: 'center',
+              whiteSpace: isCompactViewport ? 'normal' : 'nowrap',
+              pointerEvents: 'none',
+              backdropFilter: 'blur(10px)',
             }}
           >
-            <span
-              aria-hidden="true"
-              style={{
-                width: i === current ? 12 : 8,
-                height: i === current ? 12 : 8,
-                borderRadius: '50%',
-                background: i === current ? '#a855f7' : 'rgba(168,85,247,0.42)',
-                boxShadow: i === current ? '0 0 0 3px rgba(168,85,247,0.18)' : 'none',
-                transition: 'width 300ms, height 300ms, background 300ms, box-shadow 300ms',
-              }}
-            />
-          </button>
-        ))}
-      </div>
+            Tap or click to view category
+          </p>
+          <div style={{ display: 'flex', gap: '0.3rem' }}>
+            {cats.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                aria-label={`Go to ${cats[i].label}`}
+                style={{
+                  width: 28, height: 28, borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer',
+                  background: 'transparent',
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                }}
+              >
+                <span
+                  aria-hidden="true"
+                  style={{
+                    width: i === current ? 12 : 8,
+                    height: i === current ? 12 : 8,
+                    borderRadius: '50%',
+                    background: i === current ? '#a855f7' : 'rgba(168,85,247,0.42)',
+                    boxShadow: i === current ? '0 0 0 3px rgba(168,85,247,0.18)' : 'none',
+                    transition: 'width 300ms, height 300ms, background 300ms, box-shadow 300ms',
+                  }}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
 
 
