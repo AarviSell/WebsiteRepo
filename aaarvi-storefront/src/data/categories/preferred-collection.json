@@ -1528,7 +1528,7 @@
       }
     ],
     "scraped_at": "",
-    "product_code": "MEMORANDUM,",
+    "product_code": "MEMORANDUM",
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 62,
     "catalogue_image_index": 61
@@ -2809,7 +2809,7 @@
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-101",
+    "name": "Two-Tone Jute Grocery Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2819,23 +2819,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/1.jpg",
+        "local_path": "product-images/bags-2026/1.jpg",
         "filename": "1.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-101",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 4,
-    "catalogue_image_index": 1,
-    "id": "aarvi-preferred-collection-114"
+    "product_code": "B1:PR-101",
+    "id": "aarvi-preferred-collection-114",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-102",
+    "name": "Cream Canvas Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2845,23 +2844,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/2.jpg",
+        "local_path": "product-images/bags-2026/2.jpg",
         "filename": "2.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-102",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 4,
-    "catalogue_image_index": 2,
-    "id": "aarvi-preferred-collection-115"
+    "product_code": "B1:PR-102",
+    "id": "aarvi-preferred-collection-115",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-103",
+    "name": "Natural Jute Square Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2871,23 +2869,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/3.jpg",
+        "local_path": "product-images/bags-2026/3.jpg",
         "filename": "3.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-103",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 4,
-    "catalogue_image_index": 3,
-    "id": "aarvi-preferred-collection-116"
+    "product_code": "B1:PR-103",
+    "id": "aarvi-preferred-collection-116",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-104",
+    "name": "Pink and Yellow Color-Block Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2897,23 +2894,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/4.jpg",
+        "local_path": "product-images/bags-2026/4.jpg",
         "filename": "4.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-104",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 4,
-    "catalogue_image_index": 4,
-    "id": "aarvi-preferred-collection-117"
+    "product_code": "B1:PR-104",
+    "id": "aarvi-preferred-collection-117",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-105",
+    "name": "Lavender Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2923,23 +2919,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/5.jpg",
+        "local_path": "product-images/bags-2026/5.jpg",
         "filename": "5.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-105",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 5,
-    "catalogue_image_index": 5,
-    "id": "aarvi-preferred-collection-118"
+    "product_code": "B1:PR-105",
+    "id": "aarvi-preferred-collection-118",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-106",
+    "name": "Bright Orange Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2949,23 +2944,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/6.jpg",
+        "local_path": "product-images/bags-2026/6.jpg",
         "filename": "6.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-106",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 5,
-    "catalogue_image_index": 6,
-    "id": "aarvi-preferred-collection-119"
+    "product_code": "B1:PR-106",
+    "id": "aarvi-preferred-collection-119",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-107",
+    "name": "Natural Jute Tote with Red Side Panels",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -2975,23 +2969,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/7.jpg",
+        "local_path": "product-images/bags-2026/7.jpg",
         "filename": "7.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-107",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 5,
-    "catalogue_image_index": 7,
-    "id": "aarvi-preferred-collection-120"
+    "product_code": "B1:PR-107",
+    "id": "aarvi-preferred-collection-120",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-108",
+    "name": "Natural Jute Tote with Illustrated Front Panel",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3001,23 +2994,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/8.jpg",
+        "local_path": "product-images/bags-2026/8.jpg",
         "filename": "8.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-108",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 5,
-    "catalogue_image_index": 8,
-    "id": "aarvi-preferred-collection-121"
+    "product_code": "B1:PR-108",
+    "id": "aarvi-preferred-collection-121",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-109",
+    "name": "Small Square Jute Gift Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3027,23 +3019,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/9.jpg",
+        "local_path": "product-images/bags-2026/9.jpg",
         "filename": "9.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-109",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 9,
-    "id": "aarvi-preferred-collection-122"
+    "product_code": "B1:PR-109",
+    "id": "aarvi-preferred-collection-122",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-110",
+    "name": "Tall Slim Bottle Bags with Printed Front Panels",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3053,23 +3044,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/10.jpg",
+        "local_path": "product-images/bags-2026/10.jpg",
         "filename": "10.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-110",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 10,
-    "id": "aarvi-preferred-collection-123"
+    "product_code": "B1:PR-110",
+    "id": "aarvi-preferred-collection-123",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-111",
+    "name": "Natural Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3079,23 +3069,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/11.jpg",
+        "local_path": "product-images/bags-2026/11.jpg",
         "filename": "11.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-111",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 11,
-    "id": "aarvi-preferred-collection-124"
+    "product_code": "B1:PR-111",
+    "id": "aarvi-preferred-collection-124",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-112",
+    "name": "Natural Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3105,23 +3094,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/12.jpg",
+        "local_path": "product-images/bags-2026/12.jpg",
         "filename": "12.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-112",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 6,
-    "catalogue_image_index": 12,
-    "id": "aarvi-preferred-collection-125"
+    "product_code": "B1:PR-112",
+    "id": "aarvi-preferred-collection-125",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-113",
+    "name": "Yellow Jute Tote with Side Pocket",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3131,23 +3119,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/13.jpg",
+        "local_path": "product-images/bags-2026/13.jpg",
         "filename": "13.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-113",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 7,
-    "catalogue_image_index": 13,
-    "id": "aarvi-preferred-collection-126"
+    "product_code": "B1:PR-113",
+    "id": "aarvi-preferred-collection-126",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-114",
+    "name": "Off-White Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3157,23 +3144,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/14.jpg",
+        "local_path": "product-images/bags-2026/14.jpg",
         "filename": "14.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-114",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 7,
-    "catalogue_image_index": 14,
-    "id": "aarvi-preferred-collection-127"
+    "product_code": "B1:PR-114",
+    "id": "aarvi-preferred-collection-127",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-115",
+    "name": "Bright Red Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3183,23 +3169,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/15.jpg",
+        "local_path": "product-images/bags-2026/15.jpg",
         "filename": "15.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-115",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 7,
-    "catalogue_image_index": 15,
-    "id": "aarvi-preferred-collection-128"
+    "product_code": "B1:PR-115",
+    "id": "aarvi-preferred-collection-128",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Promotional Bag PR-116",
+    "name": "Large Natural Canvas Market Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3209,23 +3194,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/16.jpg",
+        "local_path": "product-images/bags-2026/16.jpg",
         "filename": "16.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: PR-116",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 7,
-    "catalogue_image_index": 16,
-    "id": "aarvi-preferred-collection-129"
+    "product_code": "B1:PR-116",
+    "id": "aarvi-preferred-collection-129",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-201",
+    "name": "Small Jute Gift Bags with Clear Window and Lace Trim",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3235,23 +3219,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/17.jpg",
+        "local_path": "product-images/bags-2026/17.jpg",
         "filename": "17.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-201",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 9,
-    "catalogue_image_index": 17,
-    "id": "aarvi-preferred-collection-130"
+    "product_code": "B1:F-201",
+    "id": "aarvi-preferred-collection-130",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-202",
+    "name": "Ring-Shaped Jute Gift Bags with Floral Accents",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3261,23 +3244,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/18.jpg",
+        "local_path": "product-images/bags-2026/18.jpg",
         "filename": "18.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-202",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 9,
-    "catalogue_image_index": 18,
-    "id": "aarvi-preferred-collection-131"
+    "product_code": "B1:F-202",
+    "id": "aarvi-preferred-collection-131",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-203",
+    "name": "White Jute Zip Bag with Clear Front Window",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3287,23 +3269,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/19.jpg",
+        "local_path": "product-images/bags-2026/19.jpg",
         "filename": "19.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-203",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 9,
-    "catalogue_image_index": 19,
-    "id": "aarvi-preferred-collection-132"
+    "product_code": "B1:F-203",
+    "id": "aarvi-preferred-collection-132",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-204",
+    "name": "Striped Jute Gift Bag with Clear Panel and Flower Accent",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3313,23 +3294,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/20.jpg",
+        "local_path": "product-images/bags-2026/20.jpg",
         "filename": "20.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-204",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 9,
-    "catalogue_image_index": 20,
-    "id": "aarvi-preferred-collection-133"
+    "product_code": "B1:F-204",
+    "id": "aarvi-preferred-collection-133",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-205",
+    "name": "Structured White Jute Bag with Tassel",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3339,23 +3319,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/21.jpg",
+        "local_path": "product-images/bags-2026/21.jpg",
         "filename": "21.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-205",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 10,
-    "catalogue_image_index": 21,
-    "id": "aarvi-preferred-collection-134"
+    "product_code": "B1:F-205",
+    "id": "aarvi-preferred-collection-134",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-206",
+    "name": "Teal Jute Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3365,23 +3344,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/22.jpg",
+        "local_path": "product-images/bags-2026/22.jpg",
         "filename": "22.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-206",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 10,
-    "catalogue_image_index": 22,
-    "id": "aarvi-preferred-collection-135"
+    "product_code": "B1:F-206",
+    "id": "aarvi-preferred-collection-135",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-207",
+    "name": "White Jute Window Bag with Decorative Border Trim",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3391,23 +3369,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/23.jpg",
+        "local_path": "product-images/bags-2026/23.jpg",
         "filename": "23.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-207",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 10,
-    "catalogue_image_index": 23,
-    "id": "aarvi-preferred-collection-136"
+    "product_code": "B1:F-207",
+    "id": "aarvi-preferred-collection-136",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-208",
+    "name": "Natural Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3417,23 +3394,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/24.jpg",
+        "local_path": "product-images/bags-2026/24.jpg",
         "filename": "24.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-208",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 10,
-    "catalogue_image_index": 24,
-    "id": "aarvi-preferred-collection-137"
+    "product_code": "B1:F-208",
+    "id": "aarvi-preferred-collection-137",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-209",
+    "name": "Natural Jute Bag with Gold Piping",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3443,23 +3419,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/25.jpg",
+        "local_path": "product-images/bags-2026/25.jpg",
         "filename": "25.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-209",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 25,
-    "id": "aarvi-preferred-collection-138"
+    "product_code": "B1:F-209",
+    "id": "aarvi-preferred-collection-138",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-210",
+    "name": "Yellow Jute Bag with Charms",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3469,23 +3444,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/26.jpg",
+        "local_path": "product-images/bags-2026/26.jpg",
         "filename": "26.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-210",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 26,
-    "id": "aarvi-preferred-collection-139"
+    "product_code": "B1:F-210",
+    "id": "aarvi-preferred-collection-139",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-211",
+    "name": "Grey Fabric Tray Basket",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3495,23 +3469,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/27.jpg",
+        "local_path": "product-images/bags-2026/27.jpg",
         "filename": "27.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-211",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 27,
-    "id": "aarvi-preferred-collection-140"
+    "product_code": "B1:F-211",
+    "id": "aarvi-preferred-collection-140",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-212",
+    "name": "Cream Jute Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3521,23 +3494,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/28.jpg",
+        "local_path": "product-images/bags-2026/28.jpg",
         "filename": "28.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-212",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 11,
-    "catalogue_image_index": 28,
-    "id": "aarvi-preferred-collection-141"
+    "product_code": "B1:F-212",
+    "id": "aarvi-preferred-collection-141",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-213",
+    "name": "Small Orange Jute Gift Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3547,23 +3519,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/29.jpg",
+        "local_path": "product-images/bags-2026/29.jpg",
         "filename": "29.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-213",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 12,
-    "catalogue_image_index": 29,
-    "id": "aarvi-preferred-collection-142"
+    "product_code": "B1:F-213",
+    "id": "aarvi-preferred-collection-142",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-214",
+    "name": "Off-White Jute Shopping Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3573,23 +3544,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/30.jpg",
+        "local_path": "product-images/bags-2026/30.jpg",
         "filename": "30.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-214",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 12,
-    "catalogue_image_index": 30,
-    "id": "aarvi-preferred-collection-143"
+    "product_code": "B1:F-214",
+    "id": "aarvi-preferred-collection-143",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-215",
+    "name": "Cream Canvas Drawstring Pouch",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3599,23 +3569,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/31.jpg",
+        "local_path": "product-images/bags-2026/31.jpg",
         "filename": "31.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-215",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 12,
-    "catalogue_image_index": 31,
-    "id": "aarvi-preferred-collection-144"
+    "product_code": "B1:F-215",
+    "id": "aarvi-preferred-collection-144",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-216",
+    "name": "Beige Striped Jute Tote with Clear Front Window",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3625,23 +3594,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/32.jpg",
+        "local_path": "product-images/bags-2026/32.jpg",
         "filename": "32.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-216",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 12,
-    "catalogue_image_index": 32,
-    "id": "aarvi-preferred-collection-145"
+    "product_code": "B1:F-216",
+    "id": "aarvi-preferred-collection-145",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-217",
+    "name": "Natural Jute Bag with Lattice Cutout Panel",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3651,23 +3619,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/33.jpg",
+        "local_path": "product-images/bags-2026/33.jpg",
         "filename": "33.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-217",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 13,
-    "catalogue_image_index": 33,
-    "id": "aarvi-preferred-collection-146"
+    "product_code": "B1:F-217",
+    "id": "aarvi-preferred-collection-146",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-218",
+    "name": "Tall Teal Jute Bottle Bag",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3677,23 +3644,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/34.jpg",
+        "local_path": "product-images/bags-2026/34.jpg",
         "filename": "34.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-218",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 13,
-    "catalogue_image_index": 34,
-    "id": "aarvi-preferred-collection-147"
+    "product_code": "B1:F-218",
+    "id": "aarvi-preferred-collection-147",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-219",
+    "name": "Hexagonal Fabric Gift Trays with Cord Ties",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3703,23 +3669,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/35.jpg",
+        "local_path": "product-images/bags-2026/35.jpg",
         "filename": "35.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-219",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 13,
-    "catalogue_image_index": 35,
-    "id": "aarvi-preferred-collection-148"
+    "product_code": "B1:F-219",
+    "id": "aarvi-preferred-collection-148",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-220",
+    "name": "Sage Green Jute Tote with Pom-Pom Accent",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3729,23 +3694,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/36.jpg",
+        "local_path": "product-images/bags-2026/36.jpg",
         "filename": "36.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-220",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 13,
-    "catalogue_image_index": 36,
-    "id": "aarvi-preferred-collection-149"
+    "product_code": "B1:F-220",
+    "id": "aarvi-preferred-collection-149",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-221",
+    "name": "Lavender Fabric Tray",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3755,23 +3719,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/37.jpg",
+        "local_path": "product-images/bags-2026/37.jpg",
         "filename": "37.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-221",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 37,
-    "id": "aarvi-preferred-collection-150"
+    "product_code": "B1:F-221",
+    "id": "aarvi-preferred-collection-150",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-222",
+    "name": "Off-White Jute Tote with Large Satin Bow",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3781,23 +3744,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/38.jpg",
+        "local_path": "product-images/bags-2026/38.jpg",
         "filename": "38.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-222",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 38,
-    "id": "aarvi-preferred-collection-151"
+    "product_code": "B1:F-222",
+    "id": "aarvi-preferred-collection-151",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-223",
+    "name": "Small White Jute Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3807,23 +3769,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/39.jpg",
+        "local_path": "product-images/bags-2026/39.jpg",
         "filename": "39.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-223",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 39,
-    "id": "aarvi-preferred-collection-152"
+    "product_code": "B1:F-223",
+    "id": "aarvi-preferred-collection-152",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-224",
+    "name": "Light Blue Jute Window Bag with Satin Bow",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3833,23 +3794,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/40.jpg",
+        "local_path": "product-images/bags-2026/40.jpg",
         "filename": "40.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-224",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 40,
-    "id": "aarvi-preferred-collection-153"
+    "product_code": "B1:F-224",
+    "id": "aarvi-preferred-collection-153",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-225",
+    "name": "Natural Jute Tote with Blue Cross-Stitch Detail",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3859,23 +3819,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/41.jpg",
+        "local_path": "product-images/bags-2026/41.jpg",
         "filename": "41.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-225",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 15,
-    "catalogue_image_index": 41,
-    "id": "aarvi-preferred-collection-154"
+    "product_code": "B1:F-225",
+    "id": "aarvi-preferred-collection-154",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-226",
+    "name": "Beige Jute Handbag with Floral Print Bands",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3885,23 +3844,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/42.jpg",
+        "local_path": "product-images/bags-2026/42.jpg",
         "filename": "42.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-226",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 15,
-    "catalogue_image_index": 42,
-    "id": "aarvi-preferred-collection-155"
+    "product_code": "B1:F-226",
+    "id": "aarvi-preferred-collection-155",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-227",
+    "name": "Natural Jute Tote with Pom-Pom Accent",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3911,23 +3869,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/43.jpg",
+        "local_path": "product-images/bags-2026/43.jpg",
         "filename": "43.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-227",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 15,
-    "catalogue_image_index": 43,
-    "id": "aarvi-preferred-collection-156"
+    "product_code": "B1:F-227",
+    "id": "aarvi-preferred-collection-156",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-228",
+    "name": "Off-White Jute Bags with Leaf Print Pattern",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3937,23 +3894,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/44.jpg",
+        "local_path": "product-images/bags-2026/44.jpg",
         "filename": "44.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-228",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 15,
-    "catalogue_image_index": 44,
-    "id": "aarvi-preferred-collection-157"
+    "product_code": "B1:F-228",
+    "id": "aarvi-preferred-collection-157",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-229",
+    "name": "Natural Jute Bag with Ribbon Bow",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3963,23 +3919,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/45.jpg",
+        "local_path": "product-images/bags-2026/45.jpg",
         "filename": "45.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-229",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 16,
-    "catalogue_image_index": 45,
-    "id": "aarvi-preferred-collection-158"
+    "product_code": "B1:F-229",
+    "id": "aarvi-preferred-collection-158",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-230",
+    "name": "Beige Jute Totes with Lattice Front",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -3989,23 +3944,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/46.jpg",
+        "local_path": "product-images/bags-2026/46.jpg",
         "filename": "46.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-230",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 16,
-    "catalogue_image_index": 46,
-    "id": "aarvi-preferred-collection-159"
+    "product_code": "B1:F-230",
+    "id": "aarvi-preferred-collection-159",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-231",
+    "name": "Polka Dot Bucket Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4015,23 +3969,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/47.jpg",
+        "local_path": "product-images/bags-2026/47.jpg",
         "filename": "47.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-231",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 16,
-    "catalogue_image_index": 47,
-    "id": "aarvi-preferred-collection-160"
+    "product_code": "B1:F-231",
+    "id": "aarvi-preferred-collection-160",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-232",
+    "name": "Lavender Jute Gift Bag with Large Lace Bow",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4041,23 +3994,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/48.jpg",
+        "local_path": "product-images/bags-2026/48.jpg",
         "filename": "48.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-232",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 16,
-    "catalogue_image_index": 48,
-    "id": "aarvi-preferred-collection-161"
+    "product_code": "B1:F-232",
+    "id": "aarvi-preferred-collection-161",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-233",
+    "name": "Small Lavender Jute Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4067,23 +4019,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/49.jpg",
+        "local_path": "product-images/bags-2026/49.jpg",
         "filename": "49.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-233",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 17,
-    "catalogue_image_index": 49,
-    "id": "aarvi-preferred-collection-162"
+    "product_code": "B1:F-233",
+    "id": "aarvi-preferred-collection-162",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-234",
+    "name": "Light Blue Jute Tote with Wide Satin Bow",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4093,23 +4044,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/50.jpg",
+        "local_path": "product-images/bags-2026/50.jpg",
         "filename": "50.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-234",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 17,
-    "catalogue_image_index": 50,
-    "id": "aarvi-preferred-collection-163"
+    "product_code": "B1:F-234",
+    "id": "aarvi-preferred-collection-163",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-235",
+    "name": "Assorted Mini Jute Gift Bags with Lace and Flowers",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4119,23 +4069,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/51.jpg",
+        "local_path": "product-images/bags-2026/51.jpg",
         "filename": "51.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-235",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 17,
-    "catalogue_image_index": 51,
-    "id": "aarvi-preferred-collection-164"
+    "product_code": "B1:F-235",
+    "id": "aarvi-preferred-collection-164",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-236",
+    "name": "Natural Jute Totes with Embroidered Patch Accents",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4145,23 +4094,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/52.jpg",
+        "local_path": "product-images/bags-2026/52.jpg",
         "filename": "52.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-236",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 18,
-    "catalogue_image_index": 52,
-    "id": "aarvi-preferred-collection-165"
+    "product_code": "B1:F-236",
+    "id": "aarvi-preferred-collection-165",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Festival Bag F-237",
+    "name": "Natural Jute Totes with Colorful Embroidered Borders",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4171,23 +4119,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/53.jpg",
+        "local_path": "product-images/bags-2026/53.jpg",
         "filename": "53.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: F-237",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 18,
-    "catalogue_image_index": 53,
-    "id": "aarvi-preferred-collection-166"
+    "product_code": "B1:F-237",
+    "id": "aarvi-preferred-collection-166",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-301",
+    "name": "White Canvas Tote with Bold Block Typography",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4197,23 +4144,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/54.jpg",
+        "local_path": "product-images/bags-2026/54.jpg",
         "filename": "54.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-301",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 54,
-    "id": "aarvi-preferred-collection-167"
+    "product_code": "B1:T-301",
+    "id": "aarvi-preferred-collection-167",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-302",
+    "name": "White Canvas Tote with Lipstick Illustration Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4223,23 +4169,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/55.jpg",
+        "local_path": "product-images/bags-2026/55.jpg",
         "filename": "55.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-302",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 55,
-    "id": "aarvi-preferred-collection-168"
+    "product_code": "B1:T-302",
+    "id": "aarvi-preferred-collection-168",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-303",
+    "name": "White Canvas Tote with Heart and Lip Graphic",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4249,23 +4194,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/56.jpg",
+        "local_path": "product-images/bags-2026/56.jpg",
         "filename": "56.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-303",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 56,
-    "id": "aarvi-preferred-collection-169"
+    "product_code": "B1:T-303",
+    "id": "aarvi-preferred-collection-169",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-304",
+    "name": "Structured Cream Canvas Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4275,23 +4219,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/57.jpg",
+        "local_path": "product-images/bags-2026/57.jpg",
         "filename": "57.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-304",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 57,
-    "id": "aarvi-preferred-collection-170"
+    "product_code": "B1:T-304",
+    "id": "aarvi-preferred-collection-170",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-305",
+    "name": "White Canvas Tote with Colorful Icon Grid Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4301,23 +4244,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/58.jpg",
+        "local_path": "product-images/bags-2026/58.jpg",
         "filename": "58.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-305",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 21,
-    "catalogue_image_index": 58,
-    "id": "aarvi-preferred-collection-171"
+    "product_code": "B1:T-305",
+    "id": "aarvi-preferred-collection-171",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-306",
+    "name": "White Canvas Tote with Dense Multicolor Graphic Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4327,23 +4269,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/59.jpg",
+        "local_path": "product-images/bags-2026/59.jpg",
         "filename": "59.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-306",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 21,
-    "catalogue_image_index": 59,
-    "id": "aarvi-preferred-collection-172"
+    "product_code": "B1:T-306",
+    "id": "aarvi-preferred-collection-172",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-307",
+    "name": "White Canvas Totes with Vertical Color-Block Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4353,23 +4294,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/60.jpg",
+        "local_path": "product-images/bags-2026/60.jpg",
         "filename": "60.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-307",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 21,
-    "catalogue_image_index": 60,
-    "id": "aarvi-preferred-collection-173"
+    "product_code": "B1:T-307",
+    "id": "aarvi-preferred-collection-173",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-308",
+    "name": "White Canvas Tote with Centered Blue Wordmark Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4379,23 +4319,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/61.jpg",
+        "local_path": "product-images/bags-2026/61.jpg",
         "filename": "61.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-308",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 21,
-    "catalogue_image_index": 61,
-    "id": "aarvi-preferred-collection-174"
+    "product_code": "B1:T-308",
+    "id": "aarvi-preferred-collection-174",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-309",
+    "name": "White Canvas Tote with Earth Community Graphic",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4405,23 +4344,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/62.jpg",
+        "local_path": "product-images/bags-2026/62.jpg",
         "filename": "62.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-309",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 22,
-    "catalogue_image_index": 62,
-    "id": "aarvi-preferred-collection-175"
+    "product_code": "B1:T-309",
+    "id": "aarvi-preferred-collection-175",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-310",
+    "name": "Small Canvas Pouches with Line-Art Illustrations",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4431,23 +4369,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/63.jpg",
+        "local_path": "product-images/bags-2026/63.jpg",
         "filename": "63.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-310",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 22,
-    "catalogue_image_index": 63,
-    "id": "aarvi-preferred-collection-176"
+    "product_code": "B1:T-310",
+    "id": "aarvi-preferred-collection-176",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-311",
+    "name": "Off-White Canvas Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4457,23 +4394,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/64.jpg",
+        "local_path": "product-images/bags-2026/64.jpg",
         "filename": "64.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-311",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 22,
-    "catalogue_image_index": 64,
-    "id": "aarvi-preferred-collection-177"
+    "product_code": "B1:T-311",
+    "id": "aarvi-preferred-collection-177",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-312",
+    "name": "Natural Canvas Tote with Circular Motif Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4483,23 +4419,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/65.jpg",
+        "local_path": "product-images/bags-2026/65.jpg",
         "filename": "65.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-312",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 22,
-    "catalogue_image_index": 65,
-    "id": "aarvi-preferred-collection-178"
+    "product_code": "B1:T-312",
+    "id": "aarvi-preferred-collection-178",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-313",
+    "name": "Two-Tone Jute and Canvas Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4509,23 +4444,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/66.jpg",
+        "local_path": "product-images/bags-2026/66.jpg",
         "filename": "66.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-313",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 23,
-    "catalogue_image_index": 66,
-    "id": "aarvi-preferred-collection-179"
+    "product_code": "B1:T-313",
+    "id": "aarvi-preferred-collection-179",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-314",
+    "name": "White Canvas Tote with Multilingual Greeting Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4535,23 +4469,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/67.jpg",
+        "local_path": "product-images/bags-2026/67.jpg",
         "filename": "67.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-314",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 23,
-    "catalogue_image_index": 67,
-    "id": "aarvi-preferred-collection-180"
+    "product_code": "B1:T-314",
+    "id": "aarvi-preferred-collection-180",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-315",
+    "name": "Black Canvas Tote with Bright Floral Illustration",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4561,23 +4494,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/68.jpg",
+        "local_path": "product-images/bags-2026/68.jpg",
         "filename": "68.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-315",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 23,
-    "catalogue_image_index": 68,
-    "id": "aarvi-preferred-collection-181"
+    "product_code": "B1:T-315",
+    "id": "aarvi-preferred-collection-181",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-316",
+    "name": "Off-White Canvas Tote with Bold Statement Typography",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4587,23 +4519,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/69.jpg",
+        "local_path": "product-images/bags-2026/69.jpg",
         "filename": "69.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-316",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 23,
-    "catalogue_image_index": 69,
-    "id": "aarvi-preferred-collection-182"
+    "product_code": "B1:T-316",
+    "id": "aarvi-preferred-collection-182",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-317",
+    "name": "White Canvas Tote with Compass Graphic",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4613,23 +4544,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/70.jpg",
+        "local_path": "product-images/bags-2026/70.jpg",
         "filename": "70.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-317",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 70,
-    "id": "aarvi-preferred-collection-183"
+    "product_code": "B1:T-317",
+    "id": "aarvi-preferred-collection-183",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-318",
+    "name": "Small Canvas Pouch Set with Red Typography Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4639,23 +4569,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/71.jpg",
+        "local_path": "product-images/bags-2026/71.jpg",
         "filename": "71.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-318",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 71,
-    "id": "aarvi-preferred-collection-184"
+    "product_code": "B1:T-318",
+    "id": "aarvi-preferred-collection-184",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-319",
+    "name": "Blue and White Striped Canvas Beach Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4665,23 +4594,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/72.jpg",
+        "local_path": "product-images/bags-2026/72.jpg",
         "filename": "72.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-319",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 72,
-    "id": "aarvi-preferred-collection-185"
+    "product_code": "B1:T-319",
+    "id": "aarvi-preferred-collection-185",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-320",
+    "name": "White Canvas Tote with Blue Eye Motif Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4691,23 +4619,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/73.jpg",
+        "local_path": "product-images/bags-2026/73.jpg",
         "filename": "73.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-320",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 73,
-    "id": "aarvi-preferred-collection-186"
+    "product_code": "B1:T-320",
+    "id": "aarvi-preferred-collection-186",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-321",
+    "name": "Off-White Canvas Tote with Black Cat Silhouette",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4717,23 +4644,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/74.jpg",
+        "local_path": "product-images/bags-2026/74.jpg",
         "filename": "74.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-321",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 74,
-    "id": "aarvi-preferred-collection-187"
+    "product_code": "B1:T-321",
+    "id": "aarvi-preferred-collection-187",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-322",
+    "name": "Bright Blue Canvas Tote with Cartoon Dinosaur Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4743,23 +4669,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/75.jpg",
+        "local_path": "product-images/bags-2026/75.jpg",
         "filename": "75.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-322",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 75,
-    "id": "aarvi-preferred-collection-188"
+    "product_code": "B1:T-322",
+    "id": "aarvi-preferred-collection-188",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-323",
+    "name": "Black Canvas Tote with Space Illustration Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4769,23 +4694,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/76.jpg",
+        "local_path": "product-images/bags-2026/76.jpg",
         "filename": "76.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-323",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 76,
-    "id": "aarvi-preferred-collection-189"
+    "product_code": "B1:T-323",
+    "id": "aarvi-preferred-collection-189",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Tote Bag T-324",
+    "name": "White Canvas Tote with Everyday-Items Illustration Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4795,23 +4719,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/77.jpg",
+        "local_path": "product-images/bags-2026/77.jpg",
         "filename": "77.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: T-324",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 77,
-    "id": "aarvi-preferred-collection-190"
+    "product_code": "B1:T-324",
+    "id": "aarvi-preferred-collection-190",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-401",
+    "name": "Small Fabric Pouches with Jungle Animal Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4821,23 +4744,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/78.jpg",
+        "local_path": "product-images/bags-2026/78.jpg",
         "filename": "78.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-401",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 27,
-    "catalogue_image_index": 78,
-    "id": "aarvi-preferred-collection-191"
+    "product_code": "B1:TL-401",
+    "id": "aarvi-preferred-collection-191",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-402",
+    "name": "Off-White Canvas Zipper Pouch",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4847,23 +4769,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/79.jpg",
+        "local_path": "product-images/bags-2026/79.jpg",
         "filename": "79.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-402",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 27,
-    "catalogue_image_index": 79,
-    "id": "aarvi-preferred-collection-192"
+    "product_code": "B1:TL-402",
+    "id": "aarvi-preferred-collection-192",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-403",
+    "name": "White Fabric Zipper Pouches with Embroidered Accent",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4873,23 +4794,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/80.jpg",
+        "local_path": "product-images/bags-2026/80.jpg",
         "filename": "80.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-403",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 27,
-    "catalogue_image_index": 80,
-    "id": "aarvi-preferred-collection-193"
+    "product_code": "B1:TL-403",
+    "id": "aarvi-preferred-collection-193",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-404",
+    "name": "Flat White Fabric Document Pouches",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4899,23 +4819,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/81.jpg",
+        "local_path": "product-images/bags-2026/81.jpg",
         "filename": "81.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-404",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 27,
-    "catalogue_image_index": 81,
-    "id": "aarvi-preferred-collection-194"
+    "product_code": "B1:TL-404",
+    "id": "aarvi-preferred-collection-194",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-405",
+    "name": "Tall Pink Jute Gift Bag with Ribbon Drawstring",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4925,23 +4844,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/82.jpg",
+        "local_path": "product-images/bags-2026/82.jpg",
         "filename": "82.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-405",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 28,
-    "catalogue_image_index": 82,
-    "id": "aarvi-preferred-collection-195"
+    "product_code": "B1:TL-405",
+    "id": "aarvi-preferred-collection-195",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-406",
+    "name": "White Canvas Storage Bucket",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4951,23 +4869,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/83.jpg",
+        "local_path": "product-images/bags-2026/83.jpg",
         "filename": "83.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-406",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 28,
-    "catalogue_image_index": 83,
-    "id": "aarvi-preferred-collection-196"
+    "product_code": "B1:TL-406",
+    "id": "aarvi-preferred-collection-196",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-407",
+    "name": "Tan Jute Zipper Pouch",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -4977,23 +4894,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/84.jpg",
+        "local_path": "product-images/bags-2026/84.jpg",
         "filename": "84.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-407",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 28,
-    "catalogue_image_index": 84,
-    "id": "aarvi-preferred-collection-197"
+    "product_code": "B1:TL-407",
+    "id": "aarvi-preferred-collection-197",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Laminated Tote TL-408",
+    "name": "Colorful Jute Envelope Pouches with Button Closure",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5003,23 +4919,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/85.jpg",
+        "local_path": "product-images/bags-2026/85.jpg",
         "filename": "85.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: TL-408",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 28,
-    "catalogue_image_index": 85,
-    "id": "aarvi-preferred-collection-198"
+    "product_code": "B1:TL-408",
+    "id": "aarvi-preferred-collection-198",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-501",
+    "name": "Small Off-White Drawstring Recovery Pouches",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5029,23 +4944,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/86.jpg",
+        "local_path": "product-images/bags-2026/86.jpg",
         "filename": "86.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-501",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 30,
-    "catalogue_image_index": 86,
-    "id": "aarvi-preferred-collection-199"
+    "product_code": "B1:D-501",
+    "id": "aarvi-preferred-collection-199",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-502",
+    "name": "Off-White Drawstring Pouches with Kit Contents Display",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5055,23 +4969,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/87.jpg",
+        "local_path": "product-images/bags-2026/87.jpg",
         "filename": "87.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-502",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 30,
-    "catalogue_image_index": 87,
-    "id": "aarvi-preferred-collection-200"
+    "product_code": "B1:D-502",
+    "id": "aarvi-preferred-collection-200",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-503",
+    "name": "Natural Jute Drawstring Bag with Soft Ties",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5081,23 +4994,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/88.jpg",
+        "local_path": "product-images/bags-2026/88.jpg",
         "filename": "88.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-503",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 30,
-    "catalogue_image_index": 88,
-    "id": "aarvi-preferred-collection-201"
+    "product_code": "B1:D-503",
+    "id": "aarvi-preferred-collection-201",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-504",
+    "name": "White Fabric Drawstring Bag with Silhouette Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5107,23 +5019,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/89.jpg",
+        "local_path": "product-images/bags-2026/89.jpg",
         "filename": "89.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-504",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 30,
-    "catalogue_image_index": 89,
-    "id": "aarvi-preferred-collection-202"
+    "product_code": "B1:D-504",
+    "id": "aarvi-preferred-collection-202",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-505",
+    "name": "Assorted Small White Drawstring Pouches",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5133,23 +5044,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/90.jpg",
+        "local_path": "product-images/bags-2026/90.jpg",
         "filename": "90.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-505",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 31,
-    "catalogue_image_index": 90,
-    "id": "aarvi-preferred-collection-203"
+    "product_code": "B1:D-505",
+    "id": "aarvi-preferred-collection-203",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-506",
+    "name": "Off-White Drawstring Pouch with Party Illustration Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5159,23 +5069,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/91.jpg",
+        "local_path": "product-images/bags-2026/91.jpg",
         "filename": "91.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-506",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 31,
-    "catalogue_image_index": 91,
-    "id": "aarvi-preferred-collection-204"
+    "product_code": "B1:D-506",
+    "id": "aarvi-preferred-collection-204",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-507",
+    "name": "Mini White Drawstring Bags with Icon Prints",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5185,23 +5094,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/92.jpg",
+        "local_path": "product-images/bags-2026/92.jpg",
         "filename": "92.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-507",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 31,
-    "catalogue_image_index": 92,
-    "id": "aarvi-preferred-collection-205"
+    "product_code": "B1:D-507",
+    "id": "aarvi-preferred-collection-205",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Drawstring Pouch D-508",
+    "name": "Natural Jute Drawstring Bags with Gold Ribbon Ties",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5211,23 +5119,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/93.jpg",
+        "local_path": "product-images/bags-2026/93.jpg",
         "filename": "93.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: D-508",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 31,
-    "catalogue_image_index": 93,
-    "id": "aarvi-preferred-collection-206"
+    "product_code": "B1:D-508",
+    "id": "aarvi-preferred-collection-206",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-601",
+    "name": "Large Natural Jute Conference Tote",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5237,23 +5144,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/94.jpg",
+        "local_path": "product-images/bags-2026/94.jpg",
         "filename": "94.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-601",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 94,
-    "id": "aarvi-preferred-collection-207"
+    "product_code": "B1:FO-601",
+    "id": "aarvi-preferred-collection-207",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-602",
+    "name": "Flat Jute Document Folders with Printed Border",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5263,23 +5169,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/95.jpg",
+        "local_path": "product-images/bags-2026/95.jpg",
         "filename": "95.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-602",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 95,
-    "id": "aarvi-preferred-collection-208"
+    "product_code": "B1:FO-602",
+    "id": "aarvi-preferred-collection-208",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-603",
+    "name": "Hardcover Notebooks with Fabric Spine Accent",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5289,23 +5194,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/96.jpg",
+        "local_path": "product-images/bags-2026/96.jpg",
         "filename": "96.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-603",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 96,
-    "id": "aarvi-preferred-collection-209"
+    "product_code": "B1:FO-603",
+    "id": "aarvi-preferred-collection-209",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-604",
+    "name": "Textured Cover Notebook with Fabric Binding",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5315,23 +5219,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/97.jpg",
+        "local_path": "product-images/bags-2026/97.jpg",
         "filename": "97.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-604",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 97,
-    "id": "aarvi-preferred-collection-210"
+    "product_code": "B1:FO-604",
+    "id": "aarvi-preferred-collection-210",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-605",
+    "name": "Beige Fabric Folders with Contrast Edge Binding",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5341,23 +5244,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/98.jpg",
+        "local_path": "product-images/bags-2026/98.jpg",
         "filename": "98.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-605",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 34,
-    "catalogue_image_index": 98,
-    "id": "aarvi-preferred-collection-211"
+    "product_code": "B1:FO-605",
+    "id": "aarvi-preferred-collection-211",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-606",
+    "name": "White Fabric Messenger Bag with Shoulder Strap",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5367,23 +5269,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/99.jpg",
+        "local_path": "product-images/bags-2026/99.jpg",
         "filename": "99.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-606",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 34,
-    "catalogue_image_index": 99,
-    "id": "aarvi-preferred-collection-212"
+    "product_code": "B1:FO-606",
+    "id": "aarvi-preferred-collection-212",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-607",
+    "name": "White Fabric Envelope Pouch with Contrast Piping",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5393,23 +5294,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/100.jpg",
+        "local_path": "product-images/bags-2026/100.jpg",
         "filename": "100.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-607",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 34,
-    "catalogue_image_index": 100,
-    "id": "aarvi-preferred-collection-213"
+    "product_code": "B1:FO-607",
+    "id": "aarvi-preferred-collection-213",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-608",
+    "name": "Natural Jute Document Folder with Button Closure",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5419,23 +5319,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/101.jpg",
+        "local_path": "product-images/bags-2026/101.jpg",
         "filename": "101.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-608",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 34,
-    "catalogue_image_index": 101,
-    "id": "aarvi-preferred-collection-214"
+    "product_code": "B1:FO-608",
+    "id": "aarvi-preferred-collection-214",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-609",
+    "name": "Natural Jute Document Folders with Dark Border Trim",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5445,23 +5344,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/102.jpg",
+        "local_path": "product-images/bags-2026/102.jpg",
         "filename": "102.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-609",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 102,
-    "id": "aarvi-preferred-collection-215"
+    "product_code": "B1:FO-609",
+    "id": "aarvi-preferred-collection-215",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-610",
+    "name": "Plain Natural Jute Folder with Metal Clasp",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5471,23 +5369,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/103.jpg",
+        "local_path": "product-images/bags-2026/103.jpg",
         "filename": "103.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-610",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 103,
-    "id": "aarvi-preferred-collection-216"
+    "product_code": "B1:FO-610",
+    "id": "aarvi-preferred-collection-216",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-611",
+    "name": "Tan Jute Tote with Front Flap Pocket and Blue Trim",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5497,23 +5394,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/104.jpg",
+        "local_path": "product-images/bags-2026/104.jpg",
         "filename": "104.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-611",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 104,
-    "id": "aarvi-preferred-collection-217"
+    "product_code": "B1:FO-611",
+    "id": "aarvi-preferred-collection-217",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-612",
+    "name": "Two-Tone Jute Shoulder Bag with Flap Closure",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5523,23 +5419,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/105.jpg",
+        "local_path": "product-images/bags-2026/105.jpg",
         "filename": "105.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-612",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 105,
-    "id": "aarvi-preferred-collection-218"
+    "product_code": "B1:FO-612",
+    "id": "aarvi-preferred-collection-218",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-613",
+    "name": "Assorted Jute Executive Folders and Organizers",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5549,23 +5444,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/106.jpg",
+        "local_path": "product-images/bags-2026/106.jpg",
         "filename": "106.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-613",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 106,
-    "id": "aarvi-preferred-collection-219"
+    "product_code": "B1:FO-613",
+    "id": "aarvi-preferred-collection-219",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-614",
+    "name": "Slim Jute Envelope Folders with String Closure",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5575,23 +5469,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/107.jpg",
+        "local_path": "product-images/bags-2026/107.jpg",
         "filename": "107.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-614",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 107,
-    "id": "aarvi-preferred-collection-220"
+    "product_code": "B1:FO-614",
+    "id": "aarvi-preferred-collection-220",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-615",
+    "name": "Natural Jute Folder with Woven Reed Front Panel",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5601,23 +5494,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/108.jpg",
+        "local_path": "product-images/bags-2026/108.jpg",
         "filename": "108.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-615",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 108,
-    "id": "aarvi-preferred-collection-221"
+    "product_code": "B1:FO-615",
+    "id": "aarvi-preferred-collection-221",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Foldable Bag FO-616",
+    "name": "Jute Executive Folder with Zipper and Card Pockets",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5627,23 +5519,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/109.jpg",
+        "local_path": "product-images/bags-2026/109.jpg",
         "filename": "109.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: FO-616",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 109,
-    "id": "aarvi-preferred-collection-222"
+    "product_code": "B1:FO-616",
+    "id": "aarvi-preferred-collection-222",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Bag B-701",
+    "name": "Festive Fabric Wine Bottle Gift Bags with Drawstrings",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5653,23 +5544,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/110.jpg",
+        "local_path": "product-images/bags-2026/110.jpg",
         "filename": "110.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: B-701",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 38,
-    "catalogue_image_index": 110,
-    "id": "aarvi-preferred-collection-223"
+    "product_code": "B1:B-701",
+    "id": "aarvi-preferred-collection-223",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Bag B-702",
+    "name": "Red Jute Wine Bottle Bags with Bottle Silhouette Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5679,23 +5569,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/111.jpg",
+        "local_path": "product-images/bags-2026/111.jpg",
         "filename": "111.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: B-702",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 38,
-    "catalogue_image_index": 111,
-    "id": "aarvi-preferred-collection-224"
+    "product_code": "B1:B-702",
+    "id": "aarvi-preferred-collection-224",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Bag B-703",
+    "name": "Tall Natural Jute Single Wine Bottle Bag",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5705,23 +5594,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/112.jpg",
+        "local_path": "product-images/bags-2026/112.jpg",
         "filename": "112.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: B-703",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 38,
-    "catalogue_image_index": 112,
-    "id": "aarvi-preferred-collection-225"
+    "product_code": "B1:B-703",
+    "id": "aarvi-preferred-collection-225",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Bag B-704",
+    "name": "Double Wine Carrier with Clear Bottle Windows",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5731,23 +5619,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/113.jpg",
+        "local_path": "product-images/bags-2026/113.jpg",
         "filename": "113.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: B-704",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 38,
-    "catalogue_image_index": 113,
-    "id": "aarvi-preferred-collection-226"
+    "product_code": "B1:B-704",
+    "id": "aarvi-preferred-collection-226",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-801",
+    "name": "Small Square Jute Planter Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5757,23 +5644,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/114.jpg",
+        "local_path": "product-images/bags-2026/114.jpg",
         "filename": "114.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-801",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 114,
-    "id": "aarvi-preferred-collection-227"
+    "product_code": "B1:G-801",
+    "id": "aarvi-preferred-collection-227",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-802",
+    "name": "Cylindrical Fabric Planter Bucket",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5783,23 +5669,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/115.jpg",
+        "local_path": "product-images/bags-2026/115.jpg",
         "filename": "115.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-802",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 115,
-    "id": "aarvi-preferred-collection-228"
+    "product_code": "B1:G-802",
+    "id": "aarvi-preferred-collection-228",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-803",
+    "name": "Small Rectangular Felt Planter Covers",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5809,23 +5694,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/116.jpg",
+        "local_path": "product-images/bags-2026/116.jpg",
         "filename": "116.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-803",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 116,
-    "id": "aarvi-preferred-collection-229"
+    "product_code": "B1:G-803",
+    "id": "aarvi-preferred-collection-229",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-804",
+    "name": "Square-Bottom Natural Jute Planter Bags",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5835,23 +5719,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/117.jpg",
+        "local_path": "product-images/bags-2026/117.jpg",
         "filename": "117.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-804",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 117,
-    "id": "aarvi-preferred-collection-230"
+    "product_code": "B1:G-804",
+    "id": "aarvi-preferred-collection-230",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-805",
+    "name": "Small Jute Planter Bag with Plant Motif Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5861,23 +5744,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/118.jpg",
+        "local_path": "product-images/bags-2026/118.jpg",
         "filename": "118.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-805",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 41,
-    "catalogue_image_index": 118,
-    "id": "aarvi-preferred-collection-231"
+    "product_code": "B1:G-805",
+    "id": "aarvi-preferred-collection-231",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-806",
+    "name": "Natural Jute Planter Bag with Garden Typography Print",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5887,23 +5769,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/119.jpg",
+        "local_path": "product-images/bags-2026/119.jpg",
         "filename": "119.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-806",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 41,
-    "catalogue_image_index": 119,
-    "id": "aarvi-preferred-collection-232"
+    "product_code": "B1:G-806",
+    "id": "aarvi-preferred-collection-232",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-807",
+    "name": "Dark Green Cylindrical Jute Planter",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5913,23 +5794,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/120.jpg",
+        "local_path": "product-images/bags-2026/120.jpg",
         "filename": "120.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-807",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 41,
-    "catalogue_image_index": 120,
-    "id": "aarvi-preferred-collection-233"
+    "product_code": "B1:G-807",
+    "id": "aarvi-preferred-collection-233",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-808",
+    "name": "Small Cylindrical Jute Pot Cover",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5939,23 +5819,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/121.jpg",
+        "local_path": "product-images/bags-2026/121.jpg",
         "filename": "121.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-808",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 41,
-    "catalogue_image_index": 121,
-    "id": "aarvi-preferred-collection-234"
+    "product_code": "B1:G-808",
+    "id": "aarvi-preferred-collection-234",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-809",
+    "name": "Square Jute Trays with Pinched Corners",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5965,23 +5844,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/122.jpg",
+        "local_path": "product-images/bags-2026/122.jpg",
         "filename": "122.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-809",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 42,
-    "catalogue_image_index": 122,
-    "id": "aarvi-preferred-collection-235"
+    "product_code": "B1:G-809",
+    "id": "aarvi-preferred-collection-235",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-810",
+    "name": "Square Jute Planter Bag for Potted Plants",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -5991,23 +5869,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/123.jpg",
+        "local_path": "product-images/bags-2026/123.jpg",
         "filename": "123.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-810",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 42,
-    "catalogue_image_index": 123,
-    "id": "aarvi-preferred-collection-236"
+    "product_code": "B1:G-810",
+    "id": "aarvi-preferred-collection-236",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-811",
+    "name": "Tall Slim Fabric Lantern-Style Planter Sleeve",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -6017,23 +5894,22 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/124.jpg",
+        "local_path": "product-images/bags-2026/124.jpg",
         "filename": "124.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-811",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 42,
-    "catalogue_image_index": 124,
-    "id": "aarvi-preferred-collection-237"
+    "product_code": "B1:G-811",
+    "id": "aarvi-preferred-collection-237",
+    "brand": "",
+    "seller_name": ""
   },
   {
     "source_site": "shipmydeals",
     "url": "",
-    "name": "GCP Gift Bag G-812",
+    "name": "Small Jute Seedling Trays and Microgreen Planters",
     "category": "preferred-collection",
     "category_label": "Preferred Collection",
     "price": "₹200–300",
@@ -6043,17 +5919,16 @@
     "images": [
       {
         "url": "",
-        "local_path": "cropped/gcp-catalogue-2026/125.jpg",
+        "local_path": "product-images/bags-2026/125.jpg",
         "filename": "125.jpg",
         "is_primary": true,
         "download_status": "success"
       }
     ],
     "scraped_at": "",
-    "product_code": "GCP: G-812",
-    "catalogue_pdf": "gcp-catalogue-2026.pdf",
-    "catalogue_page": 42,
-    "catalogue_image_index": 125,
-    "id": "aarvi-preferred-collection-238"
+    "product_code": "B1:G-812",
+    "id": "aarvi-preferred-collection-238",
+    "brand": "",
+    "seller_name": ""
   }
 ]

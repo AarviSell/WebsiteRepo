@@ -133,6 +133,33 @@ describe('getCataloguePageSource', () => {
     });
   });
 
+  it('never upgrades product-images paths to full catalogue pages', () => {
+    const source = getCataloguePageSource(makeProduct({
+      product_code: 'PR-101',
+      catalogue_pdf: 'gcp-catalogue-2026.pdf',
+      catalogue_page: 4,
+      catalogue_image_index: 1,
+      images: [
+        {
+          url: '',
+          local_path: 'product-images/bags-2026/1.jpg',
+          filename: '1.jpg',
+          is_primary: true,
+          download_status: 'success',
+        },
+      ],
+    }));
+
+    expect(source).toMatchObject({
+      imagePath: 'product-images/bags-2026/1.jpg',
+      imageUrl: '/data/product-images/bags-2026/1.jpg',
+      isPdfPage: false,
+      label: 'Product image',
+      productCode: 'PR-101',
+    });
+    expect(source?.imagePath).not.toContain('catalogue-pages');
+  });
+
   it('returns null when no catalogue path or usable image exists', () => {
     expect(getCataloguePageSource(makeProduct())).toBeNull();
   });

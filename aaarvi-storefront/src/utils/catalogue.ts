@@ -20,7 +20,6 @@ const CATALOGUE_PAGE_COUNTS: Record<string, number> = {
   'affordable-200-300': 114,
   'economical-50-100': 69,
   'elite-above-1000': 70,
-  'gcp-catalogue-2026': 43,
   'high-end-600-1000': 77,
   'low-range-20-50': 65,
   'mid-range-300-400': 57,
@@ -50,6 +49,18 @@ export function getCataloguePageSource(product: Product): CataloguePageSource | 
 
   const productCode = getProductCode(product);
   const normalizedSourcePath = sourceImagePath.replace(/\\/g, '/');
+
+  // Standalone product photos (e.g. bag catalogue splits) must never upgrade to a full PDF page.
+  if (normalizedSourcePath.startsWith('product-images/')) {
+    return {
+      imagePath: normalizedSourcePath,
+      imageUrl: resolveImageUrl(normalizedSourcePath),
+      isPdfPage: false,
+      label: 'Product image',
+      productCode,
+    };
+  }
+
   const croppedMatch = normalizedSourcePath.match(CROPPED_CATALOGUE_RE);
   const pageMatch = normalizedSourcePath.match(CATALOGUE_PAGE_RE);
   const imageIndex = product.catalogue_image_index

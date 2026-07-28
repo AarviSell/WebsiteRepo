@@ -1638,11 +1638,11 @@
     "catalogue_image_index": 89
   },
   {
-    "id": "ecocarry-black-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-black-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/black-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Black and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -1650,56 +1650,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Black and Beige Color Handle Black Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Black and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple black and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Black and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 032",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Black_White-LargeCanvasToteBag.png?v=1765625359",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-1.png",
         "filename": "black-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BlackandWhite6.jpg?v=1765626545",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "black-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Black_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835123",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-3.png",
         "filename": "black-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BlackandWhite3.jpg?v=1768835123",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "black-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BlackandWhite4.jpg?v=1768835123",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "black-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BlackandWhite7.jpg?v=1768835123",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "black-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BlackandWhite2.jpg?v=1768835123",
-        "local_path": "ecocarry/executive-collection/images/black-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "black-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -1707,14 +1706,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 032",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-black-large-canvas-tote-bag",
+    "id": "aarvi-black-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/black-large-canvas-tote-bag",
+    "url": "",
     "name": "Black Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹549",
@@ -1722,56 +1721,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Black Color Handle Black Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Black Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple black design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Black Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 033",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Black-LargeCanvasToteBag.png?v=1765615605",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-1.png",
         "filename": "black-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Back6.jpg?v=1765616762",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-2.jpg",
         "filename": "black-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Black_Large_Canvas_Tote_Bag.png?v=1768835086",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-3.png",
         "filename": "black-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Back3.jpg?v=1768835086",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-4.jpg",
         "filename": "black-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Back4.jpg?v=1768835086",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-5.jpg",
         "filename": "black-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Back7.jpg?v=1768835086",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-6.jpg",
         "filename": "black-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Back2.jpg?v=1768835086",
-        "local_path": "ecocarry/executive-collection/images/black-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/black-large-canvas-tote-bag-7.jpg",
         "filename": "black-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -1779,14 +1777,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 033",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-brown-and-beige-large-canvas-tote-bag-19-x-15-x-6",
+    "id": "aarvi-brown-and-beige-large-canvas-tote-bag-19-x-15-x-6",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6",
+    "url": "",
     "name": "Brown and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -1794,77 +1792,76 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Brown and Beige Color Handle Brown Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Brown and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Brown and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Brown and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 035",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_6_b8476bc9-bc04-447d-a635-15f2cdd05c8d.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_7_ff34def8-ab2d-4cda-82e8-4be823d3dce5.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_8_fda00688-4bd6-4ac1-a31d-86956d052170.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_9.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_10_7a6f50af-4996-4a9a-8551-1c76cf6f974a.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_1_e79a2fd3-fc75-4415-9965-3d43aedf9636.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_4_25331fcb-4f5d-4755-8717-92ded06fe230.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_5_e96542a2-8b99-4086-a3ca-b328de2a9a08.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_3_339ba043-6823-4cb0-923e-38fdad11d7ae.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/BrownandWhiteLargeCanvasToteBag_2_bc0f003f-a06b-4faf-9577-ad2fb560c2cb.png?v=1784982862",
-        "local_path": "ecocarry/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
         "filename": "brown-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
         "is_primary": false,
         "download_status": "success"
@@ -1872,14 +1869,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 035",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-brown-large-canvas-tote-bag",
+    "id": "aarvi-brown-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/brown-large-canvas-tote-bag",
+    "url": "",
     "name": "Brown Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹549",
@@ -1887,56 +1884,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Brown Color Handle Brown Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Brown Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Brown design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Brown Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 036",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Brown-LargeCanvasToteBag.png?v=1766412913",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-1.png",
         "filename": "brown-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/61Esp7xOP-L._SX679.jpg?v=1766412913",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-2.jpg",
         "filename": "brown-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Brown_Large_Canvas_Tote_Bag.png?v=1768835142",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-3.png",
         "filename": "brown-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/71MPPljGHiL._SX679.jpg?v=1768835142",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-4.jpg",
         "filename": "brown-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/71P734JS46L._SX679.jpg?v=1768835142",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-5.jpg",
         "filename": "brown-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/617w5K5bYBL._SX679.jpg?v=1768835142",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-6.jpg",
         "filename": "brown-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/71MlDBrjT1L._SX679.jpg?v=1768835142",
-        "local_path": "ecocarry/executive-collection/images/brown-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/brown-large-canvas-tote-bag-7.jpg",
         "filename": "brown-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -1944,64 +1940,63 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 036",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-cotton-tote-bag-sample-kit-10-sizes-150-gsm",
+    "id": "aarvi-cotton-tote-bag-sample-kit-10-sizes-150-gsm",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/cotton-tote-bag-sample-kit-10-sizes-150-gsm",
+    "url": "",
     "name": "Cotton Tote Bag Sample Kit - 10 Sizes | 150 GSM",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹499",
     "price_numeric": 499,
-    "description": "Explore EcoCarry's cotton tote bag sample kit to compare sizes, fabric quality, and stitching before placing your bulk order with confidence. Material 100% Pure Cotton Fabric Details 150 GSM Quality Quantity 10 Bags (1 Bag of Each Size) What's Included 1 Piece of Each Size 8 × 10 Inch Cotton Tote Bag 10 × 8 Inch Cotton Tote Bag 10 × 12 Inch Cotton Tote Bag 12 × 14 Inch Cotton Tote Bag 14 × 12 Inch Cotton Tote Bag 14 × 16 Inch Cotton Tote Bag 14 × 18 Inch Cotton Tote Bag 16 × 14 Inch Cotton Tote Bag 18 × 14 Inch Cotton Tote Bag 18 × 20 Inch Cotton Tote Bag Key Features 👜 Includes 10 popular cotton tote bag sizes. 🌿 Made from 100% pure 150 GSM cotton. 📏 Compare sizes before placing bulk orders. 🎨 Check fabric quality and stitching. ♻️ Reusable and eco-friendly sample kit. Ideal For 🛍️ Bulk Order Planning - Compare all sizes before ordering. 🏷️ Brand Selection - Find the right tote bag for your products. 👕 Retail & Fashion Brands - Test sizes for apparel and accessories. 🎁 Corporate Gifting - Choose the perfect bag for events and giveaways. 🌿 Quality Evaluation - Check fabric, stitching, and overall finish.",
+    "description": "Explore cotton tote bag sample kit to compare sizes, fabric quality, and stitching before placing your bulk order with confidence. Material 100% Pure Cotton Fabric Details 150 GSM Quality Quantity 10 Bags (1 Bag of Each Size) What's Included 1 Piece of Each Size 8 × 10 Inch Cotton Tote Bag 10 × 8 Inch Cotton Tote Bag 10 × 12 Inch Cotton Tote Bag 12 × 14 Inch Cotton Tote Bag 14 × 12 Inch Cotton Tote Bag 14 × 16 Inch Cotton Tote Bag 14 × 18 Inch Cotton Tote Bag 16 × 14 Inch Cotton Tote Bag 18 × 14 Inch Cotton Tote Bag 18 × 20 Inch Cotton Tote Bag Key Features 👜 Includes 10 popular cotton tote bag sizes. 🌿 Made from 100% pure 150 GSM cotton. 📏 Compare sizes before placing bulk orders. 🎨 Check fabric quality and stitching. ♻️ Reusable and eco-friendly sample kit. Ideal For 🛍️ Bulk Order Planning - Compare all sizes before ordering. 🏷️ Brand Selection - Find the right tote bag for your products. 👕 Retail & Fashion Brands - Test sizes for apparel and accessories. 🎁 Corporate Gifting - Choose the perfect bag for events and giveaways. 🌿 Quality Evaluation - Check fabric, stitching, and overall finish.",
     "specifications": {
       "Product Code": "A1 038",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/cottontote150gsm_2.png?v=1783943835",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-1.png",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-1.png",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote220gsm_1.webp?v=1783938461",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-2.webp",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-2.webp",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-2.webp",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/cottontote150gsm_1.webp?v=1783938405",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-3.webp",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-3.webp",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-3.webp",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/cottontote150gsm_2.webp?v=1783938405",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-4.webp",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-4.webp",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-4.webp",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/cottontote150gsm_4.webp?v=1783938405",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-5.webp",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-5.webp",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-5.webp",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/cottontote150gsm_1.png?v=1783938405",
-        "local_path": "ecocarry/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-6.png",
+        "local_path": "canvas-totes/executive-collection/images/cotton-tote-bag-sample-kit-10-sizes-150-gsm-6.png",
         "filename": "cotton-tote-bag-sample-kit-10-sizes-150-gsm-6.png",
         "is_primary": false,
         "download_status": "success"
@@ -2009,14 +2004,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 038",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6",
+    "id": "aarvi-navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6",
+    "url": "",
     "name": "Navy Blue and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2024,77 +2019,76 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Navy Blue and Beige Color Handle Navy Blue Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Navy Blue and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Navy Blue and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Navy Blue and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 076",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_2.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_3.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-2.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_4.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_5.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-4.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_6.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-5.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_7.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-6.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_10.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-7.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_1.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-8.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_9.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-9.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlueandWhiteLargeCanvasToteBag_8.png?v=1784983010",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
         "filename": "navy-blue-and-beige-large-canvas-tote-bag-19-x-15-x-6-10.png",
         "is_primary": false,
         "download_status": "success"
@@ -2102,14 +2096,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 076",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-navy-blue-large-canvas-tote-bag",
+    "id": "aarvi-navy-blue-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/navy-blue-large-canvas-tote-bag",
+    "url": "",
     "name": "Navy Blue Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹549",
@@ -2117,56 +2111,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Navy Blue Color Handle Navy Blue Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Navy Blue Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Navy Blue design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Navy Blue Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 077",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/NavyBlue-LargeCanvasToteBag.png?v=1766412991",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-1.png",
         "filename": "navy-blue-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/02.jpg?v=1766412991",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-2.jpg",
         "filename": "navy-blue-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Navy_Blue_Large_Canvas_Tote_Bag.png?v=1768835158",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-3.png",
         "filename": "navy-blue-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/04.jpg?v=1768835158",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-4.jpg",
         "filename": "navy-blue-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/05.jpg?v=1768835158",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-5.jpg",
         "filename": "navy-blue-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/07.jpg?v=1768835158",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-6.jpg",
         "filename": "navy-blue-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/03.jpg?v=1768835158",
-        "local_path": "ecocarry/executive-collection/images/navy-blue-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/navy-blue-large-canvas-tote-bag-7.jpg",
         "filename": "navy-blue-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2174,14 +2167,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 077",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-pink-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-pink-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/pink-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Pink and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2189,56 +2182,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Pink and Beige Color Handle Pink Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Pink and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Pink and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Pink and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 078",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Pink_White-LargeCanvasToteBag.png?v=1766412938",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-1.png",
         "filename": "pink-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/06_1ff6a073-4a7c-4e6c-b66a-e3792aaff6b3.jpg?v=1766412938",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "pink-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Pink_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835219",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-3.png",
         "filename": "pink-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/03_e9e44e01-ccde-46c6-8164-861e735da907.jpg?v=1768835219",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "pink-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/04_5d3fde02-9bb9-4f8b-ad93-c7c0950b1b55.jpg?v=1768835219",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "pink-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/07_1559cda3-0ef5-49e7-b1f8-c22c3071100f.jpg?v=1768835219",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "pink-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/02_cdc9f09d-f3cd-4b8f-ba6a-6cd51df2f69b.jpg?v=1768835219",
-        "local_path": "ecocarry/executive-collection/images/pink-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/pink-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "pink-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2246,14 +2238,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 078",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-purple-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-purple-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/purple-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Purple and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2261,56 +2253,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Purple and Beige Color Handle Purple Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Purple and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Purple and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Purple and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 079",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Purple_White-LargeCanvasToteBag.png?v=1766412945",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-1.png",
         "filename": "purple-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/04_f8fd052e-c8ed-43f7-b277-c73433b00c46.jpg?v=1766412945",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "purple-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Purple_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835238",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-3.png",
         "filename": "purple-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/06_92da122c-412f-46d5-855f-eb81853a95ac.jpg?v=1768835238",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "purple-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/07_a3d27e33-a76a-423b-8301-0120a772621d.jpg?v=1768835238",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "purple-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/05_bcc3f149-aee7-43fc-986e-b0d8b36c7d6f.jpg?v=1768835238",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "purple-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/02_1be241e5-8107-4a84-9aae-63511b53acbe.jpg?v=1768835238",
-        "local_path": "ecocarry/executive-collection/images/purple-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/purple-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "purple-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2318,14 +2309,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 079",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-red-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-red-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/red-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Red and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2333,56 +2324,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Red and Beige Color Handle Red Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Red and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Red and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Red and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 080",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Red_White-LargeCanvasToteBag_ed54d50d-baac-4e14-ad17-f98bd641c542.png?v=1766658578",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-1.png",
         "filename": "red-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/RedandWhite6.jpg?v=1766658578",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "red-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Red_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835207",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-3.png",
         "filename": "red-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/RedandWhite3.jpg?v=1768835207",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "red-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/RedandWhite4.jpg?v=1768835207",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "red-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/RedandWhite7.jpg?v=1768835207",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "red-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/RedandWhite2.jpg?v=1768835207",
-        "local_path": "ecocarry/executive-collection/images/red-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/red-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "red-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2390,14 +2380,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 080",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-sky-blue-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-sky-blue-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/sky-blue-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Sky Blue and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2405,56 +2395,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Sky Blue and Beige Color Handle Sky Blue Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Sky Blue and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Sky Blue and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Sky Blue and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 082",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/SkyBlue_White-LargeCanvasToteBag.png?v=1766412953",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-1.png",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/06_41cb0952-6f37-4df8-a91e-9f1f744221e3.jpg?v=1766412953",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Sky_Blue_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835252",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-3.png",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/03_09188545-7353-426b-80e5-b68cbc4954f1.jpg?v=1768835252",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/04_5911170d-4ded-4a3e-a22f-d5b3767faaab.jpg?v=1768835252",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/07_7aa689e0-e6b9-45c3-a990-fe322d315bb4.jpg?v=1768835252",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/02_263a7d32-915b-42d9-8b20-979a236a72a1.jpg?v=1768835252",
-        "local_path": "ecocarry/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/sky-blue-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "sky-blue-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2462,14 +2451,14 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 082",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   },
   {
-    "id": "ecocarry-yellow-and-beige-large-canvas-tote-bag",
+    "id": "aarvi-yellow-and-beige-large-canvas-tote-bag",
     "source_site": "shipmydeals",
-    "url": "https://ecocarry.co/products/yellow-and-beige-large-canvas-tote-bag",
+    "url": "",
     "name": "Yellow and Beige Large Canvas Tote Bag | 19\" x 15\" x 6\"",
-    "brand": "EcoCarry",
+    "brand": "",
     "category": "executive-collection",
     "category_label": "Executive Collection",
     "price": "₹495",
@@ -2477,56 +2466,55 @@
     "description": "Material 100% Pure Cotton Canvas Size 19\" Length x 15\" Height x 6\" Width Fabric Details 330 GSM Quality | Yellow and Beige Color Handle Yellow Handle Handle Length 24 Inch Long Straps ( 10 Inch Height ) This Yellow and Beige Large Canvas Tote Bag is made for everyday use. It is strong, spacious, and easy to carry . The simple Yellow and Beige design looks good with any outfit and is perfect for work, college, shopping, travel, or daily use. Key Features Strong Canvas Material: Made from thick, durable canvas that lasts long. Large Space: Fits books, laptop, clothes, groceries, or daily items easily. Front Pocket: Extra pocket in the front for phone, keys, or small items. Secure Zipper Closure: Keeps all your items safe and prevents things from falling out. Comfortable Straps: Wide straps that sit well on your shoulder. Simple Yellow and Beige Look: Clean and stylish design for all occasions. Eco-Friendly: Reusable and washable, better for the environment.",
     "specifications": {
       "Product Code": "A1 083",
-      "Source": "EcoCarry",
       "Vendor": "Tote Bags",
       "Product Type": "Cotton Canvas Tote Bag"
     },
     "images": [
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_White-LargeCanvasToteBag.png?v=1766412924",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-1.png",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-1.png",
         "filename": "yellow-and-beige-large-canvas-tote-bag-1.png",
         "is_primary": true,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_White_6.jpg?v=1766412924",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-2.jpg",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-2.jpg",
         "filename": "yellow-and-beige-large-canvas-tote-bag-2.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_Beige_Large_Canvas_Tote_Bag.png?v=1768835173",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-3.png",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-3.png",
         "filename": "yellow-and-beige-large-canvas-tote-bag-3.png",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_White_3.jpg?v=1768835173",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-4.jpg",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-4.jpg",
         "filename": "yellow-and-beige-large-canvas-tote-bag-4.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_White_4.jpg?v=1768835173",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-5.jpg",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-5.jpg",
         "filename": "yellow-and-beige-large-canvas-tote-bag-5.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_White_7.jpg?v=1768835173",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-6.jpg",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-6.jpg",
         "filename": "yellow-and-beige-large-canvas-tote-bag-6.jpg",
         "is_primary": false,
         "download_status": "success"
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/Yellow_and_White_2.jpg?v=1768835173",
-        "local_path": "ecocarry/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-7.jpg",
+        "local_path": "canvas-totes/executive-collection/images/yellow-and-beige-large-canvas-tote-bag-7.jpg",
         "filename": "yellow-and-beige-large-canvas-tote-bag-7.jpg",
         "is_primary": false,
         "download_status": "success"
@@ -2534,6 +2522,6 @@
     ],
     "scraped_at": "2026-07-28T09:25:29Z",
     "product_code": "A1 083",
-    "seller_name": "EcoCarry"
+    "seller_name": ""
   }
 ]
