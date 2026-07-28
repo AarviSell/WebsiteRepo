@@ -20,6 +20,7 @@ const CATALOGUE_PAGE_COUNTS: Record<string, number> = {
   'affordable-200-300': 114,
   'economical-50-100': 69,
   'elite-above-1000': 70,
+  'gcp-catalogue-2026': 43,
   'high-end-600-1000': 77,
   'low-range-20-50': 65,
   'mid-range-300-400': 57,

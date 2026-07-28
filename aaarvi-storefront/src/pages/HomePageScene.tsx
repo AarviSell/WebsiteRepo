@@ -871,8 +871,12 @@ export function HomePageScene() {
         <div style={{
           fontFamily: "'Playfair Display', Georgia, serif",
           fontSize: 'clamp(1.8rem, 4.5vw, 3.2rem)', fontWeight: 700, lineHeight: 1.1,
-          background: 'linear-gradient(135deg, #fff 40%, #e9d5ff)',
-          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+          /* Solid fill rather than a gradient clipped into the glyphs: the
+             background-clip:text technique needs -webkit-text-fill-color to be
+             transparent, so any browser that skips the clipped paint renders the
+             title as invisible black on the dark scene. */
+          color: '#ffffff',
+          textShadow: '0 2px 12px rgba(13,4,20,0.65)',
           opacity: labelVisible ? 1 : 0,
           transform: labelVisible ? 'translateY(0)' : 'translateY(14px)',
           transition: 'opacity 350ms ease 80ms, transform 350ms ease 80ms',

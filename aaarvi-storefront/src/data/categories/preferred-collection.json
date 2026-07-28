@@ -2805,5 +2805,3255 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 114,
     "catalogue_image_index": 113
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-101",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/1.jpg",
+        "filename": "1.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-101",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 4,
+    "catalogue_image_index": 1,
+    "id": "aarvi-preferred-collection-114"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-102",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/2.jpg",
+        "filename": "2.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-102",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 4,
+    "catalogue_image_index": 2,
+    "id": "aarvi-preferred-collection-115"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-103",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/3.jpg",
+        "filename": "3.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-103",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 4,
+    "catalogue_image_index": 3,
+    "id": "aarvi-preferred-collection-116"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-104",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/4.jpg",
+        "filename": "4.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-104",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 4,
+    "catalogue_image_index": 4,
+    "id": "aarvi-preferred-collection-117"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-105",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/5.jpg",
+        "filename": "5.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-105",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 5,
+    "catalogue_image_index": 5,
+    "id": "aarvi-preferred-collection-118"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-106",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/6.jpg",
+        "filename": "6.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-106",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 5,
+    "catalogue_image_index": 6,
+    "id": "aarvi-preferred-collection-119"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-107",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/7.jpg",
+        "filename": "7.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-107",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 5,
+    "catalogue_image_index": 7,
+    "id": "aarvi-preferred-collection-120"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-108",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/8.jpg",
+        "filename": "8.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-108",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 5,
+    "catalogue_image_index": 8,
+    "id": "aarvi-preferred-collection-121"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-109",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/9.jpg",
+        "filename": "9.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-109",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 6,
+    "catalogue_image_index": 9,
+    "id": "aarvi-preferred-collection-122"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-110",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/10.jpg",
+        "filename": "10.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-110",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 6,
+    "catalogue_image_index": 10,
+    "id": "aarvi-preferred-collection-123"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-111",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/11.jpg",
+        "filename": "11.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-111",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 6,
+    "catalogue_image_index": 11,
+    "id": "aarvi-preferred-collection-124"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-112",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/12.jpg",
+        "filename": "12.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-112",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 6,
+    "catalogue_image_index": 12,
+    "id": "aarvi-preferred-collection-125"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-113",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/13.jpg",
+        "filename": "13.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-113",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 7,
+    "catalogue_image_index": 13,
+    "id": "aarvi-preferred-collection-126"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-114",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/14.jpg",
+        "filename": "14.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-114",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 7,
+    "catalogue_image_index": 14,
+    "id": "aarvi-preferred-collection-127"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-115",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/15.jpg",
+        "filename": "15.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-115",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 7,
+    "catalogue_image_index": 15,
+    "id": "aarvi-preferred-collection-128"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Promotional Bag PR-116",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/16.jpg",
+        "filename": "16.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: PR-116",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 7,
+    "catalogue_image_index": 16,
+    "id": "aarvi-preferred-collection-129"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-201",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/17.jpg",
+        "filename": "17.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-201",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 9,
+    "catalogue_image_index": 17,
+    "id": "aarvi-preferred-collection-130"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-202",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/18.jpg",
+        "filename": "18.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-202",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 9,
+    "catalogue_image_index": 18,
+    "id": "aarvi-preferred-collection-131"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-203",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/19.jpg",
+        "filename": "19.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-203",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 9,
+    "catalogue_image_index": 19,
+    "id": "aarvi-preferred-collection-132"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-204",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/20.jpg",
+        "filename": "20.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-204",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 9,
+    "catalogue_image_index": 20,
+    "id": "aarvi-preferred-collection-133"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-205",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/21.jpg",
+        "filename": "21.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-205",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 10,
+    "catalogue_image_index": 21,
+    "id": "aarvi-preferred-collection-134"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-206",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/22.jpg",
+        "filename": "22.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-206",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 10,
+    "catalogue_image_index": 22,
+    "id": "aarvi-preferred-collection-135"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-207",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/23.jpg",
+        "filename": "23.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-207",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 10,
+    "catalogue_image_index": 23,
+    "id": "aarvi-preferred-collection-136"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-208",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/24.jpg",
+        "filename": "24.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-208",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 10,
+    "catalogue_image_index": 24,
+    "id": "aarvi-preferred-collection-137"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-209",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/25.jpg",
+        "filename": "25.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-209",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 11,
+    "catalogue_image_index": 25,
+    "id": "aarvi-preferred-collection-138"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-210",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/26.jpg",
+        "filename": "26.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-210",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 11,
+    "catalogue_image_index": 26,
+    "id": "aarvi-preferred-collection-139"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-211",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/27.jpg",
+        "filename": "27.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-211",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 11,
+    "catalogue_image_index": 27,
+    "id": "aarvi-preferred-collection-140"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-212",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/28.jpg",
+        "filename": "28.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-212",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 11,
+    "catalogue_image_index": 28,
+    "id": "aarvi-preferred-collection-141"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-213",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/29.jpg",
+        "filename": "29.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-213",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 12,
+    "catalogue_image_index": 29,
+    "id": "aarvi-preferred-collection-142"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-214",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/30.jpg",
+        "filename": "30.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-214",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 12,
+    "catalogue_image_index": 30,
+    "id": "aarvi-preferred-collection-143"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-215",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/31.jpg",
+        "filename": "31.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-215",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 12,
+    "catalogue_image_index": 31,
+    "id": "aarvi-preferred-collection-144"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-216",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/32.jpg",
+        "filename": "32.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-216",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 12,
+    "catalogue_image_index": 32,
+    "id": "aarvi-preferred-collection-145"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-217",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/33.jpg",
+        "filename": "33.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-217",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 13,
+    "catalogue_image_index": 33,
+    "id": "aarvi-preferred-collection-146"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-218",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/34.jpg",
+        "filename": "34.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-218",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 13,
+    "catalogue_image_index": 34,
+    "id": "aarvi-preferred-collection-147"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-219",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/35.jpg",
+        "filename": "35.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-219",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 13,
+    "catalogue_image_index": 35,
+    "id": "aarvi-preferred-collection-148"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-220",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/36.jpg",
+        "filename": "36.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-220",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 13,
+    "catalogue_image_index": 36,
+    "id": "aarvi-preferred-collection-149"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-221",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/37.jpg",
+        "filename": "37.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-221",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 14,
+    "catalogue_image_index": 37,
+    "id": "aarvi-preferred-collection-150"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-222",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/38.jpg",
+        "filename": "38.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-222",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 14,
+    "catalogue_image_index": 38,
+    "id": "aarvi-preferred-collection-151"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-223",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/39.jpg",
+        "filename": "39.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-223",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 14,
+    "catalogue_image_index": 39,
+    "id": "aarvi-preferred-collection-152"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-224",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/40.jpg",
+        "filename": "40.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-224",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 14,
+    "catalogue_image_index": 40,
+    "id": "aarvi-preferred-collection-153"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-225",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/41.jpg",
+        "filename": "41.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-225",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 15,
+    "catalogue_image_index": 41,
+    "id": "aarvi-preferred-collection-154"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-226",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/42.jpg",
+        "filename": "42.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-226",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 15,
+    "catalogue_image_index": 42,
+    "id": "aarvi-preferred-collection-155"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-227",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/43.jpg",
+        "filename": "43.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-227",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 15,
+    "catalogue_image_index": 43,
+    "id": "aarvi-preferred-collection-156"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-228",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/44.jpg",
+        "filename": "44.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-228",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 15,
+    "catalogue_image_index": 44,
+    "id": "aarvi-preferred-collection-157"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-229",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/45.jpg",
+        "filename": "45.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-229",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 16,
+    "catalogue_image_index": 45,
+    "id": "aarvi-preferred-collection-158"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-230",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/46.jpg",
+        "filename": "46.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-230",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 16,
+    "catalogue_image_index": 46,
+    "id": "aarvi-preferred-collection-159"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-231",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/47.jpg",
+        "filename": "47.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-231",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 16,
+    "catalogue_image_index": 47,
+    "id": "aarvi-preferred-collection-160"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-232",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/48.jpg",
+        "filename": "48.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-232",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 16,
+    "catalogue_image_index": 48,
+    "id": "aarvi-preferred-collection-161"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-233",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/49.jpg",
+        "filename": "49.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-233",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 17,
+    "catalogue_image_index": 49,
+    "id": "aarvi-preferred-collection-162"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-234",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/50.jpg",
+        "filename": "50.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-234",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 17,
+    "catalogue_image_index": 50,
+    "id": "aarvi-preferred-collection-163"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-235",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/51.jpg",
+        "filename": "51.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-235",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 17,
+    "catalogue_image_index": 51,
+    "id": "aarvi-preferred-collection-164"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-236",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/52.jpg",
+        "filename": "52.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-236",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 18,
+    "catalogue_image_index": 52,
+    "id": "aarvi-preferred-collection-165"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Festival Bag F-237",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/53.jpg",
+        "filename": "53.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: F-237",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 18,
+    "catalogue_image_index": 53,
+    "id": "aarvi-preferred-collection-166"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-301",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/54.jpg",
+        "filename": "54.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-301",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 20,
+    "catalogue_image_index": 54,
+    "id": "aarvi-preferred-collection-167"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-302",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/55.jpg",
+        "filename": "55.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-302",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 20,
+    "catalogue_image_index": 55,
+    "id": "aarvi-preferred-collection-168"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-303",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/56.jpg",
+        "filename": "56.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-303",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 20,
+    "catalogue_image_index": 56,
+    "id": "aarvi-preferred-collection-169"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-304",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/57.jpg",
+        "filename": "57.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-304",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 20,
+    "catalogue_image_index": 57,
+    "id": "aarvi-preferred-collection-170"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-305",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/58.jpg",
+        "filename": "58.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-305",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 21,
+    "catalogue_image_index": 58,
+    "id": "aarvi-preferred-collection-171"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-306",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/59.jpg",
+        "filename": "59.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-306",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 21,
+    "catalogue_image_index": 59,
+    "id": "aarvi-preferred-collection-172"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-307",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/60.jpg",
+        "filename": "60.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-307",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 21,
+    "catalogue_image_index": 60,
+    "id": "aarvi-preferred-collection-173"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-308",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/61.jpg",
+        "filename": "61.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-308",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 21,
+    "catalogue_image_index": 61,
+    "id": "aarvi-preferred-collection-174"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-309",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/62.jpg",
+        "filename": "62.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-309",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 22,
+    "catalogue_image_index": 62,
+    "id": "aarvi-preferred-collection-175"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-310",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/63.jpg",
+        "filename": "63.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-310",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 22,
+    "catalogue_image_index": 63,
+    "id": "aarvi-preferred-collection-176"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-311",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/64.jpg",
+        "filename": "64.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-311",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 22,
+    "catalogue_image_index": 64,
+    "id": "aarvi-preferred-collection-177"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-312",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/65.jpg",
+        "filename": "65.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-312",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 22,
+    "catalogue_image_index": 65,
+    "id": "aarvi-preferred-collection-178"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-313",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/66.jpg",
+        "filename": "66.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-313",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 23,
+    "catalogue_image_index": 66,
+    "id": "aarvi-preferred-collection-179"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-314",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/67.jpg",
+        "filename": "67.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-314",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 23,
+    "catalogue_image_index": 67,
+    "id": "aarvi-preferred-collection-180"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-315",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/68.jpg",
+        "filename": "68.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-315",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 23,
+    "catalogue_image_index": 68,
+    "id": "aarvi-preferred-collection-181"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-316",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/69.jpg",
+        "filename": "69.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-316",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 23,
+    "catalogue_image_index": 69,
+    "id": "aarvi-preferred-collection-182"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-317",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/70.jpg",
+        "filename": "70.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-317",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 24,
+    "catalogue_image_index": 70,
+    "id": "aarvi-preferred-collection-183"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-318",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/71.jpg",
+        "filename": "71.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-318",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 24,
+    "catalogue_image_index": 71,
+    "id": "aarvi-preferred-collection-184"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-319",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/72.jpg",
+        "filename": "72.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-319",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 24,
+    "catalogue_image_index": 72,
+    "id": "aarvi-preferred-collection-185"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-320",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/73.jpg",
+        "filename": "73.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-320",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 24,
+    "catalogue_image_index": 73,
+    "id": "aarvi-preferred-collection-186"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-321",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/74.jpg",
+        "filename": "74.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-321",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 25,
+    "catalogue_image_index": 74,
+    "id": "aarvi-preferred-collection-187"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-322",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/75.jpg",
+        "filename": "75.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-322",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 25,
+    "catalogue_image_index": 75,
+    "id": "aarvi-preferred-collection-188"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-323",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/76.jpg",
+        "filename": "76.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-323",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 25,
+    "catalogue_image_index": 76,
+    "id": "aarvi-preferred-collection-189"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Tote Bag T-324",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/77.jpg",
+        "filename": "77.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: T-324",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 25,
+    "catalogue_image_index": 77,
+    "id": "aarvi-preferred-collection-190"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-401",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/78.jpg",
+        "filename": "78.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-401",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 27,
+    "catalogue_image_index": 78,
+    "id": "aarvi-preferred-collection-191"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-402",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/79.jpg",
+        "filename": "79.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-402",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 27,
+    "catalogue_image_index": 79,
+    "id": "aarvi-preferred-collection-192"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-403",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/80.jpg",
+        "filename": "80.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-403",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 27,
+    "catalogue_image_index": 80,
+    "id": "aarvi-preferred-collection-193"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-404",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/81.jpg",
+        "filename": "81.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-404",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 27,
+    "catalogue_image_index": 81,
+    "id": "aarvi-preferred-collection-194"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-405",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/82.jpg",
+        "filename": "82.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-405",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 28,
+    "catalogue_image_index": 82,
+    "id": "aarvi-preferred-collection-195"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-406",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/83.jpg",
+        "filename": "83.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-406",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 28,
+    "catalogue_image_index": 83,
+    "id": "aarvi-preferred-collection-196"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-407",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/84.jpg",
+        "filename": "84.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-407",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 28,
+    "catalogue_image_index": 84,
+    "id": "aarvi-preferred-collection-197"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Laminated Tote TL-408",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/85.jpg",
+        "filename": "85.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: TL-408",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 28,
+    "catalogue_image_index": 85,
+    "id": "aarvi-preferred-collection-198"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-501",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/86.jpg",
+        "filename": "86.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-501",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 30,
+    "catalogue_image_index": 86,
+    "id": "aarvi-preferred-collection-199"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-502",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/87.jpg",
+        "filename": "87.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-502",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 30,
+    "catalogue_image_index": 87,
+    "id": "aarvi-preferred-collection-200"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-503",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/88.jpg",
+        "filename": "88.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-503",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 30,
+    "catalogue_image_index": 88,
+    "id": "aarvi-preferred-collection-201"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-504",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/89.jpg",
+        "filename": "89.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-504",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 30,
+    "catalogue_image_index": 89,
+    "id": "aarvi-preferred-collection-202"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-505",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/90.jpg",
+        "filename": "90.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-505",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 31,
+    "catalogue_image_index": 90,
+    "id": "aarvi-preferred-collection-203"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-506",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/91.jpg",
+        "filename": "91.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-506",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 31,
+    "catalogue_image_index": 91,
+    "id": "aarvi-preferred-collection-204"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-507",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/92.jpg",
+        "filename": "92.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-507",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 31,
+    "catalogue_image_index": 92,
+    "id": "aarvi-preferred-collection-205"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Drawstring Pouch D-508",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/93.jpg",
+        "filename": "93.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: D-508",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 31,
+    "catalogue_image_index": 93,
+    "id": "aarvi-preferred-collection-206"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-601",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/94.jpg",
+        "filename": "94.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-601",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 33,
+    "catalogue_image_index": 94,
+    "id": "aarvi-preferred-collection-207"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-602",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/95.jpg",
+        "filename": "95.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-602",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 33,
+    "catalogue_image_index": 95,
+    "id": "aarvi-preferred-collection-208"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-603",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/96.jpg",
+        "filename": "96.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-603",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 33,
+    "catalogue_image_index": 96,
+    "id": "aarvi-preferred-collection-209"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-604",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/97.jpg",
+        "filename": "97.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-604",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 33,
+    "catalogue_image_index": 97,
+    "id": "aarvi-preferred-collection-210"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-605",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/98.jpg",
+        "filename": "98.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-605",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 34,
+    "catalogue_image_index": 98,
+    "id": "aarvi-preferred-collection-211"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-606",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/99.jpg",
+        "filename": "99.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-606",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 34,
+    "catalogue_image_index": 99,
+    "id": "aarvi-preferred-collection-212"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-607",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/100.jpg",
+        "filename": "100.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-607",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 34,
+    "catalogue_image_index": 100,
+    "id": "aarvi-preferred-collection-213"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-608",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/101.jpg",
+        "filename": "101.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-608",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 34,
+    "catalogue_image_index": 101,
+    "id": "aarvi-preferred-collection-214"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-609",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/102.jpg",
+        "filename": "102.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-609",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 35,
+    "catalogue_image_index": 102,
+    "id": "aarvi-preferred-collection-215"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-610",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/103.jpg",
+        "filename": "103.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-610",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 35,
+    "catalogue_image_index": 103,
+    "id": "aarvi-preferred-collection-216"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-611",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/104.jpg",
+        "filename": "104.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-611",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 35,
+    "catalogue_image_index": 104,
+    "id": "aarvi-preferred-collection-217"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-612",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/105.jpg",
+        "filename": "105.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-612",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 35,
+    "catalogue_image_index": 105,
+    "id": "aarvi-preferred-collection-218"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-613",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/106.jpg",
+        "filename": "106.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-613",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 36,
+    "catalogue_image_index": 106,
+    "id": "aarvi-preferred-collection-219"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-614",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/107.jpg",
+        "filename": "107.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-614",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 36,
+    "catalogue_image_index": 107,
+    "id": "aarvi-preferred-collection-220"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-615",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/108.jpg",
+        "filename": "108.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-615",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 36,
+    "catalogue_image_index": 108,
+    "id": "aarvi-preferred-collection-221"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Foldable Bag FO-616",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/109.jpg",
+        "filename": "109.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: FO-616",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 36,
+    "catalogue_image_index": 109,
+    "id": "aarvi-preferred-collection-222"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Bag B-701",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/110.jpg",
+        "filename": "110.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: B-701",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 38,
+    "catalogue_image_index": 110,
+    "id": "aarvi-preferred-collection-223"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Bag B-702",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/111.jpg",
+        "filename": "111.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: B-702",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 38,
+    "catalogue_image_index": 111,
+    "id": "aarvi-preferred-collection-224"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Bag B-703",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/112.jpg",
+        "filename": "112.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: B-703",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 38,
+    "catalogue_image_index": 112,
+    "id": "aarvi-preferred-collection-225"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Bag B-704",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/113.jpg",
+        "filename": "113.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: B-704",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 38,
+    "catalogue_image_index": 113,
+    "id": "aarvi-preferred-collection-226"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-801",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/114.jpg",
+        "filename": "114.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-801",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 40,
+    "catalogue_image_index": 114,
+    "id": "aarvi-preferred-collection-227"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-802",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/115.jpg",
+        "filename": "115.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-802",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 40,
+    "catalogue_image_index": 115,
+    "id": "aarvi-preferred-collection-228"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-803",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/116.jpg",
+        "filename": "116.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-803",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 40,
+    "catalogue_image_index": 116,
+    "id": "aarvi-preferred-collection-229"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-804",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/117.jpg",
+        "filename": "117.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-804",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 40,
+    "catalogue_image_index": 117,
+    "id": "aarvi-preferred-collection-230"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-805",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/118.jpg",
+        "filename": "118.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-805",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 41,
+    "catalogue_image_index": 118,
+    "id": "aarvi-preferred-collection-231"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-806",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/119.jpg",
+        "filename": "119.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-806",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 41,
+    "catalogue_image_index": 119,
+    "id": "aarvi-preferred-collection-232"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-807",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/120.jpg",
+        "filename": "120.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-807",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 41,
+    "catalogue_image_index": 120,
+    "id": "aarvi-preferred-collection-233"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-808",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/121.jpg",
+        "filename": "121.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-808",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 41,
+    "catalogue_image_index": 121,
+    "id": "aarvi-preferred-collection-234"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-809",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/122.jpg",
+        "filename": "122.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-809",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 42,
+    "catalogue_image_index": 122,
+    "id": "aarvi-preferred-collection-235"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-810",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/123.jpg",
+        "filename": "123.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-810",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 42,
+    "catalogue_image_index": 123,
+    "id": "aarvi-preferred-collection-236"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-811",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/124.jpg",
+        "filename": "124.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-811",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 42,
+    "catalogue_image_index": 124,
+    "id": "aarvi-preferred-collection-237"
+  },
+  {
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "GCP Gift Bag G-812",
+    "category": "preferred-collection",
+    "category_label": "Preferred Collection",
+    "price": "₹200–300",
+    "price_numeric": 0,
+    "description": "",
+    "specifications": {},
+    "images": [
+      {
+        "url": "",
+        "local_path": "cropped/gcp-catalogue-2026/125.jpg",
+        "filename": "125.jpg",
+        "is_primary": true,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "",
+    "product_code": "GCP: G-812",
+    "catalogue_pdf": "gcp-catalogue-2026.pdf",
+    "catalogue_page": 42,
+    "catalogue_image_index": 125,
+    "id": "aarvi-preferred-collection-238"
   }
 ]

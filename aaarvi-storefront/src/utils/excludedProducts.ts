@@ -13,7 +13,10 @@ const REMOVED_PRODUCT_IDS = new Set([
   'aarvi-legacy-collection-55',
   'aarvi-legacy-collection-67',
   'aarvi-signature-collection-34',
+  'aarvi-signature-collection-43',
+  'aarvi-signature-collection-51',
   'aarvi-signature-collection-64',
+  'aarvi-signature-collection-82',
 ]);
 
 const REMOVED_PRODUCT_CODES = new Set(['C187', 'E208S', 'H06']);
@@ -145,6 +148,15 @@ export function getProductExclusionReason(product: ExcludableProduct): string | 
   }
   if (/\btable\s+clock\s+with\b/.test(text) && !isDigitalClock(text)) {
     return 'Analogue clock';
+  }
+
+  if (
+    /\btoys?\b/.test(text) ||
+    /\brubik'?s?\b/.test(text) ||
+    /\bsudoku\b/.test(text) ||
+    /\bpuzzle\b/.test(text)
+  ) {
+    return 'Toy';
   }
 
   return null;

@@ -45,3 +45,7 @@ removed-products.csv
 
 # Deprecated assets (replaced by FullLogo.png)
 src/assets/Aarvi_Logo.svg
+
+# Source catalogue PDFs (pages/crops are committed; originals stay local)
+src/*.pdf
+src/**/*.pdf

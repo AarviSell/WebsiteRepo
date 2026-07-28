@@ -1532,5 +1532,84 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 67,
     "catalogue_image_index": 66
+  },
+  {
+    "id": "ecocarry-2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm",
+    "source_site": "shipmydeals",
+    "url": "https://ecocarry.co/products/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm",
+    "name": "2-Color Cotton Canvas Tote Bag Sample Kit - 7 Colors | 330 GSM",
+    "brand": "EcoCarry",
+    "category": "legacy-collection",
+    "category_label": "Legacy Collection",
+    "price": "₹1299",
+    "price_numeric": 1299,
+    "description": "Explore EcoCarry's premium two-tone canvas tote bags before bulk ordering. Compare colors, fabric quality, and craftsmanship to find the perfect match for your brand. Material 100% Pure Cotton Fabric Details 33 0 GSM Quality Size 13 × 15 Inch (Standard Size) Quantity 7 Tote Bags (1 Piece of Each Color) What's Included Yellow & Beige Tote Bag | 330 GSM Red & Beige Tote Bag | 330 GSM Navy Blue & Beige Tote Bag | 330 GSM Light Pink & Beige Tote Bag | 330 GSM Black & Beige Tote Bag | 330 GSM Brown & Beige Tote Bag | 330 GSM Sky Blue & Beige Tote Bag | 330 GSM Key Features 🎨 Includes 7 stylish two-tone color combinations. 💪 Made from premium 330 GSM cotton canvas. 👜 Standard 13×15 inch size with sturdy handles. 🌈 Compare colors before placing bulk orders. ♻️ Reusable and eco-friendly sample kit. Ideal For 🛍️ Bulk Order Planning - Compare colors before placing bulk orders. 🏷️ Brand Selection - Find the best color for your business. 🎁 Corporate Gifting - Choose bags for events and promotions. 👕 Retail & Fashion Brands - Match colors with your brand identity. 🌿 Quality Evaluation - Check fabric, stitching, and overall finish.",
+    "specifications": {
+      "Product Code": "A1 028",
+      "Source": "EcoCarry",
+      "Vendor": "Tote Bags",
+      "Product Type": "Cotton Canvas Tote Bag"
+    },
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_1.png?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-1.png",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-1.png",
+        "is_primary": true,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_1.webp?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-2.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-2.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_4.webp?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-3.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-3.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_6.webp?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-4.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-4.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_3.webp?v=1783939900",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-5.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-5.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_5.webp?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-6.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-6.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_2.webp?v=1783939900",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-7.webp",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-7.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/totebag2color_2.png?v=1783939901",
+        "local_path": "ecocarry/legacy-collection/images/2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-8.png",
+        "filename": "2-color-cotton-canvas-tote-bag-sample-kit-7-colors-330-gsm-8.png",
+        "is_primary": false,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "2026-07-28T09:25:29Z",
+    "product_code": "A1 028",
+    "seller_name": "EcoCarry"
   }
 ]

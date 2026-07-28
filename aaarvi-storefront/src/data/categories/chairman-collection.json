@@ -1714,5 +1714,70 @@
     "catalogue_pdf": "high-end-600-1000.pdf",
     "catalogue_page": 76,
     "catalogue_image_index": 75
+  },
+  {
+    "id": "ecocarry-cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm",
+    "source_site": "shipmydeals",
+    "url": "https://ecocarry.co/products/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm",
+    "name": "Cotton Canvas Gusset Tote Bag Sample Kit - 7 Sizes | 330 GSM",
+    "brand": "EcoCarry",
+    "category": "chairman-collection",
+    "category_label": "Chairman Collection",
+    "price": "₹699",
+    "price_numeric": 699,
+    "description": "Discover EcoCarry's premium canvas gusset tote bags before bulk ordering. Compare sizes, capacity, and craftsmanship to choose the perfect bag for your brand. Material 100% Pure Cotton Fabric Details 33 0 GSM Quality Quantity 7 Tote Bags (1 Piece of Each Size) What's Included 10 × 8 × 5 Inch Cotton Canvas Bag 10 × 12 × 5 Inch Cotton Canvas Bag 12 × 10 × 3 Inch Cotton Canvas Bag 12 × 12 × 7 Inch Cotton Canvas Bag 14 × 15 × 4 Inch Cotton Canvas Bag 15 × 12 × 4 Inch Cotton Canvas Bag 15 × 15 × 6 Inch Cotton Canvas Bag Key Features 👜 Includes 7 popular gusset tote bag sizes. 💪 Made from premium 330 GSM cotton canvas. 📦 Gusset design offers extra storage capacity. 📏 Compare sizes before placing bulk orders. ♻️ Reusable and eco-friendly sample kit. Ideal For 🛍️ Bulk Order Planning - Compare sizes before placing bulk orders. 🏷️ Brand Selection - Choose the right tote bag for your products. 🎁 Corporate Gifting - Find the ideal bag for events and hampers. 🛒 Retail Packaging - Test bags for shopping and merchandise. 🌿 Quality Evaluation - Check fabric, stitching, and overall finish.",
+    "specifications": {
+      "Product Code": "A1 037",
+      "Source": "EcoCarry",
+      "Vendor": "Tote Bags",
+      "Product Type": ""
+    },
+    "images": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_2.png?v=1783939521",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-1.png",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-1.png",
+        "is_primary": true,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_3.webp?v=1783939520",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-2.webp",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-2.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_1.webp?v=1783939520",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-3.webp",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-3.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_2.webp?v=1783939520",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-4.webp",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-4.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_5.webp?v=1783939520",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-5.webp",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-5.webp",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0677/2532/8454/files/tote330gsm_1.png?v=1783939521",
+        "local_path": "ecocarry/chairman-collection/images/cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-6.png",
+        "filename": "cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm-6.png",
+        "is_primary": false,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "2026-07-28T09:25:29Z",
+    "product_code": "A1 037",
+    "seller_name": "EcoCarry"
   }
 ]

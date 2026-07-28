@@ -2,7 +2,7 @@
   {
     "slug": "signature-collection",
     "label": "Signature Collection",
-    "count": 123,
+    "count": 190,
     "source_sites": [
       "shipmydeals"
     ],
@@ -11,7 +11,7 @@
   {
     "slug": "preferred-collection",
     "label": "Preferred Collection",
-    "count": 108,
+    "count": 233,
     "source_sites": [
       "shipmydeals"
     ],
@@ -29,7 +29,7 @@
   {
     "slug": "executive-collection",
     "label": "Executive Collection",
-    "count": 63,
+    "count": 75,
     "source_sites": [
       "shipmydeals"
     ],
@@ -38,7 +38,7 @@
   {
     "slug": "chairman-collection",
     "label": "Chairman Collection",
-    "count": 66,
+    "count": 67,
     "source_sites": [
       "shipmydeals"
     ],
@@ -47,7 +47,7 @@
   {
     "slug": "legacy-collection",
     "label": "Legacy Collection",
-    "count": 59,
+    "count": 60,
     "source_sites": [
       "shipmydeals"
     ],
