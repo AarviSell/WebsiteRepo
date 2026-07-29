@@ -806,32 +806,6 @@
     "catalogue_image_index": 33
   },
   {
-    "id": "aarvi-preferred-collection-34",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Handy Tech Gadget Organizer with Carry Strap",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/35.jpg",
-        "filename": "35.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "S 46",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 35,
-    "catalogue_image_index": 34
-  },
-  {
     "id": "aarvi-preferred-collection-35",
     "source_site": "shipmydeals",
     "url": "",
@@ -934,32 +908,6 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 39,
     "catalogue_image_index": 38
-  },
-  {
-    "id": "aarvi-preferred-collection-39",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "USB Hub with 4 USB Outputs",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/40.jpg",
-        "filename": "40.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 183",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 39
   },
   {
     "id": "aarvi-preferred-collection-40",
@@ -1090,32 +1038,6 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 45,
     "catalogue_image_index": 44
-  },
-  {
-    "id": "aarvi-preferred-collection-45",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Clip-On Charging Cable",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/46.jpg",
-        "filename": "46.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 78",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 46,
-    "catalogue_image_index": 45
   },
   {
     "id": "aarvi-preferred-collection-46",
@@ -2262,58 +2184,6 @@
     "catalogue_image_index": 89
   },
   {
-    "id": "aarvi-preferred-collection-90",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Multi Connector Data Cable - Swiss Knife Style",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/91.jpg",
-        "filename": "91.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 24",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 91,
-    "catalogue_image_index": 90
-  },
-  {
-    "id": "aarvi-preferred-collection-91",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Folding Wired Headphone (with Mic",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/92.jpg",
-        "filename": "92.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 125",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 92,
-    "catalogue_image_index": 91
-  },
-  {
     "id": "aarvi-preferred-collection-92",
     "source_site": "shipmydeals",
     "url": "",
@@ -2417,32 +2287,6 @@
     "catalogue_image_index": 95
   },
   {
-    "id": "aarvi-preferred-collection-96",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Wooden Music Amplifier for Smartphones Universal Design",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/97.jpg",
-        "filename": "97.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 241",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 97,
-    "catalogue_image_index": 96
-  },
-  {
     "id": "aarvi-preferred-collection-97",
     "source_site": "shipmydeals",
     "url": "",
@@ -2521,136 +2365,6 @@
     "catalogue_image_index": 99
   },
   {
-    "id": "aarvi-preferred-collection-102",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Expandssingle USB Portinto 3 Usbports Top Usbports",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/103.jpg",
-        "filename": "103.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 85",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 103,
-    "catalogue_image_index": 102
-  },
-  {
-    "id": "aarvi-preferred-collection-103",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "USB Hub with Mobile Stand and Logo Highlight (Back USB Ports)",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/104.jpg",
-        "filename": "104.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 75",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 104,
-    "catalogue_image_index": 103
-  },
-  {
-    "id": "aarvi-preferred-collection-104",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Brand Glow: Light Up Car Charger",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/105.jpg",
-        "filename": "105.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 68",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 105,
-    "catalogue_image_index": 104
-  },
-  {
-    "id": "aarvi-preferred-collection-105",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Round Keychain with Multi Connector Data Cable",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/106.jpg",
-        "filename": "106.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 29",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 106,
-    "catalogue_image_index": 105
-  },
-  {
-    "id": "aarvi-preferred-collection-106",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Triple USB Car Charger",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/107.jpg",
-        "filename": "107.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 25",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 107,
-    "catalogue_image_index": 106
-  },
-  {
     "id": "aarvi-preferred-collection-107",
     "source_site": "shipmydeals",
     "url": "",
@@ -2701,110 +2415,6 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 109,
     "catalogue_image_index": 108
-  },
-  {
-    "id": "aarvi-preferred-collection-110",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "USB Hub with Detachable Cable",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/111.jpg",
-        "filename": "111.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 101",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 111,
-    "catalogue_image_index": 110
-  },
-  {
-    "id": "aarvi-preferred-collection-111",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "All in 1 Charging Cable",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/112.jpg",
-        "filename": "112.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 82",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 112,
-    "catalogue_image_index": 111
-  },
-  {
-    "id": "aarvi-preferred-collection-112",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Car Charger with Keychain and Charging Cable",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/113.jpg",
-        "filename": "113.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 81",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 113,
-    "catalogue_image_index": 112
-  },
-  {
-    "id": "aarvi-preferred-collection-113",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Backlit Table Clock",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/114.jpg",
-        "filename": "114.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 81",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 114,
-    "catalogue_image_index": 113
   },
   {
     "source_site": "shipmydeals",

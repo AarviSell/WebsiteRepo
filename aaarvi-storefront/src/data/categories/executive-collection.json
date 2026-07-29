@@ -26,32 +26,6 @@
     "catalogue_image_index": 1
   },
   {
-    "id": "aarvi-executive-collection-2",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Clock with Temperature & Magnetic Photo Frame - Digital",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/2.jpg",
-        "filename": "2.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 142",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 3,
-    "catalogue_image_index": 2
-  },
-  {
     "id": "aarvi-executive-collection-3",
     "source_site": "shipmydeals",
     "url": "",
@@ -182,32 +156,6 @@
     "catalogue_image_index": 7
   },
   {
-    "id": "aarvi-executive-collection-8",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Temp Tracker Mini Table Clock with Calendar, Temperature & Humidity",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/8.jpg",
-        "filename": "8.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 141",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 9,
-    "catalogue_image_index": 8
-  },
-  {
     "id": "aarvi-executive-collection-9",
     "source_site": "shipmydeals",
     "url": "",
@@ -260,32 +208,6 @@
     "catalogue_image_index": 14
   },
   {
-    "id": "aarvi-executive-collection-20",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Multifunction Magic Clock with Pen and Mobile Stand",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/21.jpg",
-        "filename": "21.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 137",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 21,
-    "catalogue_image_index": 20
-  },
-  {
     "id": "aarvi-executive-collection-21",
     "source_site": "shipmydeals",
     "url": "",
@@ -336,32 +258,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 23,
     "catalogue_image_index": 22
-  },
-  {
-    "id": "aarvi-executive-collection-23",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Sharp Weather Station Clock Withback-Litdisplay",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/24.jpg",
-        "filename": "24.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 104",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 24,
-    "catalogue_image_index": 23
   },
   {
     "id": "aarvi-executive-collection-25",
@@ -596,32 +492,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 35,
     "catalogue_image_index": 34
-  },
-  {
-    "id": "aarvi-executive-collection-36",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Large Display Clock with Day, Date & Temperature",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/37.jpg",
-        "filename": "37.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 134",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 37,
-    "catalogue_image_index": 36
   },
   {
     "id": "aarvi-executive-collection-37",
@@ -1092,32 +962,6 @@
     "catalogue_image_index": 57
   },
   {
-    "id": "aarvi-executive-collection-59",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "POWER BOARD SQUARE MULTIPOINTEXTENSIONBOARD WITH USBPORTSAND PHONESTAND MULTIPURPOSEUSAGE C166",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "₹400–600",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/60.jpg",
-        "filename": "60.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "TELEVISIONS",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 60,
-    "catalogue_image_index": 59
-  },
-  {
     "id": "aarvi-executive-collection-60",
     "source_site": "shipmydeals",
     "url": "",
@@ -1298,58 +1142,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 67,
     "catalogue_image_index": 66
-  },
-  {
-    "id": "aarvi-executive-collection-67",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Qc 3.o Fast Wall Charger Device'spowerrequirement with I Phone Charging Cable",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/68.jpg",
-        "filename": "68.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 156",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 68,
-    "catalogue_image_index": 67
-  },
-  {
-    "id": "aarvi-executive-collection-68",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Qc 3.o Fast Wall Charger Device'spowerrequirement with I Phone Charging Cable",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/69.jpg",
-        "filename": "69.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 156",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 69,
-    "catalogue_image_index": 68
   },
   {
     "id": "aarvi-executive-collection-71",
@@ -1558,84 +1350,6 @@
     "catalogue_pdf": "premium-400-600.pdf",
     "catalogue_page": 82,
     "catalogue_image_index": 81
-  },
-  {
-    "id": "aarvi-executive-collection-84",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Heart Style 3d Illusion Clock",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/85.jpg",
-        "filename": "85.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "D 28",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 85,
-    "catalogue_image_index": 84
-  },
-  {
-    "id": "aarvi-executive-collection-85",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Powerglow Usbhub with Tumbler & Logo Highlight",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/86.jpg",
-        "filename": "86.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 106",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 86,
-    "catalogue_image_index": 85
-  },
-  {
-    "id": "aarvi-executive-collection-89",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Flip Display Clock",
-    "category": "executive-collection",
-    "category_label": "Executive Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/premium-400-600/90.jpg",
-        "filename": "90.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 96",
-    "catalogue_pdf": "premium-400-600.pdf",
-    "catalogue_page": 90,
-    "catalogue_image_index": 89
   },
   {
     "id": "aarvi-black-and-beige-large-canvas-tote-bag",

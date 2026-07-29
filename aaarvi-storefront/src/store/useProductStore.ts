@@ -4,6 +4,7 @@ import Fuse from 'fuse.js';
 import type { Product, CategoryNode } from '@/types/product';
 import { loadAllProducts, loadCategories } from '@/data/loader';
 import { withProductSearchText } from '@/utils/productSearch';
+import { selectFeaturedProducts } from '@/utils/featuredProducts';
 
 const fuseOptions: Fuse.IFuseOptions<Product> = {
   keys: [
@@ -93,25 +94,7 @@ export const useProductStore = create<ProductStore>((set, get) => ({
   getFeaturedProducts: (count: number) => {
     const { allProducts } = get();
     if (allProducts.length === 0) return [];
-
-    const indiamart = allProducts.filter(p => p.source_site === 'indiamart');
-    const shipmydeals = allProducts.filter(p => p.source_site === 'shipmydeals');
-
-    const perSource = Math.floor(count / 3);
-    const take = <T>(arr: T[], n: number): T[] => arr.slice(0, n);
-
-    const featured: Product[] = [
-      ...take(indiamart, perSource),
-      ...take(shipmydeals, perSource),
-    ];
-
-    // Fill remainder with random products not already included
-    const featuredIds = new Set(featured.map(p => p.id));
-    const remaining = allProducts.filter(p => !featuredIds.has(p.id));
-    const shuffled = remaining.sort(() => Math.random() - 0.5);
-    featured.push(...shuffled.slice(0, count - featured.length));
-
-    return featured.slice(0, count);
+    return selectFeaturedProducts(allProducts, count);
   },
 
   setTheme: (theme: 'light' | 'dark') => {

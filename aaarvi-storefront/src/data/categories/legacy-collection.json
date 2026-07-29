@@ -416,84 +416,6 @@
     "catalogue_image_index": 16
   },
   {
-    "id": "aarvi-legacy-collection-17",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Festive Set - SS Bottle, Blow Lamp, Glass Mug, LED Diya, Cookies",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/17.jpg",
-        "filename": "17.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 178",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 18,
-    "catalogue_image_index": 17
-  },
-  {
-    "id": "aarvi-legacy-collection-18",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Festive Set - Bamboo Vacuum Bottle, Rice Husk Mug, Hut Clock, Cookies, Ferrero Rocher",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/18.jpg",
-        "filename": "18.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 172",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 19,
-    "catalogue_image_index": 18
-  },
-  {
-    "id": "aarvi-legacy-collection-19",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Festive Set - Om Tealight Holder, Cola SS Bottle, Flip Display Clock, Cookies, Ferrero Rocher",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/19.jpg",
-        "filename": "19.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 171",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 20,
-    "catalogue_image_index": 19
-  },
-  {
     "id": "aarvi-legacy-collection-20",
     "source_site": "shipmydeals",
     "url": "",
@@ -570,32 +492,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 25,
     "catalogue_image_index": 24
-  },
-  {
-    "id": "aarvi-legacy-collection-25",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "5-Pc Gift Set - Notebook, Pen, Keychain, Card Holder, Folding Cob Desk Lamp",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/26.jpg",
-        "filename": "26.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 152",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 26,
-    "catalogue_image_index": 25
   },
   {
     "id": "aarvi-legacy-collection-26",
@@ -780,32 +676,6 @@
     "catalogue_image_index": 32
   },
   {
-    "id": "aarvi-legacy-collection-33",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Festive Gift Set - 3 Gourmet Popcorn Tins, Bluetooth TV Speaker, Premia Ii Glass Mug",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/34.jpg",
-        "filename": "34.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 136",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 34,
-    "catalogue_image_index": 33
-  },
-  {
     "id": "aarvi-legacy-collection-34",
     "source_site": "shipmydeals",
     "url": "",
@@ -830,32 +700,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 35,
     "catalogue_image_index": 34
-  },
-  {
-    "id": "aarvi-legacy-collection-35",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Artis Extension Board with Surge Protector, 4 Sockets, 3 USB Ports",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/36.jpg",
-        "filename": "36.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 181",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 36,
-    "catalogue_image_index": 35
   },
   {
     "id": "aarvi-legacy-collection-36",
@@ -910,84 +754,6 @@
     "catalogue_image_index": 37
   },
   {
-    "id": "aarvi-legacy-collection-38",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "5-In-1 Gray Set - Car Charger, Keychain Charging Cable, Mobile Fan, Air Freshener, Glow Clock, A5 Notebook",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/39.jpg",
-        "filename": "39.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 98",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 39,
-    "catalogue_image_index": 38
-  },
-  {
-    "id": "aarvi-legacy-collection-39",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Gray Set - Jack Stylus/Mobile Stand, Charging Cable, Rotating Ring, Glow Clock, Fast Car Charger, A5 Notebook",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/40.jpg",
-        "filename": "40.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 97",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 40,
-    "catalogue_image_index": 39
-  },
-  {
-    "id": "aarvi-legacy-collection-40",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Gray Set - Jack Stylus/Mobile Stand, Charging Cable, Mobile Fan, Glow Clock, Fast Car Charger, A5 Notebook",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/41.jpg",
-        "filename": "41.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 93",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 41,
-    "catalogue_image_index": 40
-  },
-  {
     "id": "aarvi-legacy-collection-41",
     "source_site": "shipmydeals",
     "url": "",
@@ -1038,32 +804,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 43,
     "catalogue_image_index": 42
-  },
-  {
-    "id": "aarvi-legacy-collection-43",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "6-In-1 Set - Jack Stylus/Mobile Stand, Glowing Car Charger, Foldy Flat Mobile Stand, Glow Clock, Air Freshener, Steel Water Bottle",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/44.jpg",
-        "filename": "44.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 63B",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 44,
-    "catalogue_image_index": 43
   },
   {
     "id": "aarvi-legacy-collection-44",
@@ -1168,58 +908,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 48,
     "catalogue_image_index": 47
-  },
-  {
-    "id": "aarvi-legacy-collection-49",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "3 in 1 Speaker, Earbuds & Mobile Stand",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/50.jpg",
-        "filename": "50.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 174",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 50,
-    "catalogue_image_index": 49
-  },
-  {
-    "id": "aarvi-legacy-collection-50",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Barrel Blue Tooth Speaker Withmic Speakerwith Wiredwic",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "₹1000+",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/51.jpg",
-        "filename": "51.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 168",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 51,
-    "catalogue_image_index": 50
   },
   {
     "id": "aarvi-legacy-collection-51",
@@ -1350,58 +1038,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 58,
     "catalogue_image_index": 57
-  },
-  {
-    "id": "aarvi-legacy-collection-58",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Retro Bluetooth Speaker",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/59.jpg",
-        "filename": "59.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 151",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 59,
-    "catalogue_image_index": 58
-  },
-  {
-    "id": "aarvi-legacy-collection-59",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Oval Bluetooth Speaker",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/60.jpg",
-        "filename": "60.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 150",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 60,
-    "catalogue_image_index": 59
   },
   {
     "id": "aarvi-legacy-collection-60",

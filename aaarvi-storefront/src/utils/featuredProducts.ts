@@ -1,13 +1,29 @@
+import type { Product } from '@/types/product';
+
 export const FEATURED_PRODUCTS_SLUG = 'featured-products';
-export const FEATURED_SOURCE_SLUG = 'legacy-collection';
+
+type FeaturedProductLike = Pick<Product, 'product_code' | 'images'>;
 
 type ViewportSize = {
   width: number;
   height: number;
 };
 
-function clamp(value: number, min: number, max: number) {
-  return Math.max(min, Math.min(max, value));
+function productImagePaths(product: FeaturedProductLike): string {
+  return (product.images ?? []).map(image => image.local_path ?? '').join(' ');
+}
+
+/** Bag catalogue (GCP → bags-2026 / B1:) and canvas tote (EcoCarry → canvas-totes / A1) imports. */
+export function isFeaturedCatalogProduct(product: FeaturedProductLike): boolean {
+  const code = (product.product_code ?? '').trim();
+  if (/^B1:/i.test(code) || /^A1\s+\d+/i.test(code)) return true;
+
+  const paths = productImagePaths(product);
+  return paths.includes('bags-2026') || paths.includes('canvas-totes');
+}
+
+export function getFeaturedCatalogProducts<T extends FeaturedProductLike>(products: T[]): T[] {
+  return products.filter(isFeaturedCatalogProduct);
 }
 
 export function getCurrentSceneViewport(): ViewportSize {
@@ -36,8 +52,9 @@ export function getFeaturedProductSlotCount(viewport: ViewportSize): number {
   return columns * rows;
 }
 
-export function getFeaturedProductDisplayCount(legacyCount: number, viewport: ViewportSize): number {
-  return Math.min(Math.max(legacyCount, 0), getFeaturedProductSlotCount(viewport));
+/** Home orbit badge: show first-page capacity, not the full featured pool size. */
+export function getFeaturedProductDisplayCount(featuredCount: number, viewport: ViewportSize): number {
+  return Math.min(Math.max(featuredCount, 0), getFeaturedProductSlotCount(viewport));
 }
 
 export function shuffleProducts<T>(items: T[]): T[] {
@@ -47,4 +64,10 @@ export function shuffleProducts<T>(items: T[]): T[] {
     [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
   }
   return result;
+}
+
+export function selectFeaturedProducts<T extends FeaturedProductLike>(products: T[], count?: number): T[] {
+  const featured = shuffleProducts(getFeaturedCatalogProducts(products));
+  if (count == null) return featured;
+  return featured.slice(0, Math.max(0, count));
 }

@@ -106,48 +106,35 @@ export function getProductExclusionReason(product: ExcludableProduct): string | 
     return 'Torch';
   }
 
-  const isIncenseBurner = /\b(incense|camphor|kapoor|dhoop|bakhoor|burner)\b/.test(text);
-  const isMultiItemGiftSet =
-    /\b\d+[- ]?(?:in[- ]?1|pc|pcs?)\b/.test(name) &&
-    /\b(?:set|gift)\b/.test(name) &&
-    !/\bdoctor\s+lamp\b/.test(text);
-  if (!isIncenseBurner && !isMultiItemGiftSet) {
-    if (
-      /\bdoctor\s+lamp\b/.test(text) ||
-      /\brechargeable\s+(?:led\s+)?lamp\b/.test(text) ||
-      /\blamp\s+rechargeable\b/.test(text) ||
-      /\bglow\s+lamp\b/.test(text) ||
-      /\b(?:desk|table|night|blow|cob)\s+lamp\b/.test(text) ||
-      /\bfolding\s+cob\s+desk\s+lamp\b/.test(text) ||
-      /\bled\s+blow\s+lamp\b/.test(text) ||
-      /\b(?:flexi\s+)?table\s+lamp\b/.test(text) ||
-      /\bemergency\s+lamp\b/.test(text) ||
-      /\blamp\s+with\s+(?:usbhub|tumbler|detachable|folding|360)/.test(text) ||
-      /\bpenzen\b.*\blamp\b/.test(text) ||
-      /\bbrighto\b.*\blamp\b/.test(text) ||
-      /\bwerglow\b.*\blamp\b/.test(text) ||
-      /\bmagi\s+flex\b.*\blamp\b/.test(text) ||
-      /\bpodium\b.*\blamp\b/.test(text) ||
-      /\bswan\b.*\blamp\b/.test(text) ||
-      /\bpower\s+glow\b.*\blamp\b/.test(text) ||
-      /\b2[- ]mode\s+lamp\b/.test(text) ||
-      /\bled\s+night\s+lamp\b/.test(text)
-    ) {
-      return 'Lamp';
-    }
+  if (
+    /\bdoctor\s+lamp\b/.test(text) ||
+    /\brechargeable\s+(?:led\s+)?lamp\b/.test(text) ||
+    /\blamp\s+rechargeable\b/.test(text) ||
+    /\bglow\s+lamp\b/.test(text) ||
+    /\b(?:desk|table|night|blow|cob)\s+lamp\b/.test(text) ||
+    /\bfolding\s+cob\s+desk\s+lamp\b/.test(text) ||
+    /\bled\s+blow\s+lamp\b/.test(text) ||
+    /\b(?:flexi\s+)?table\s+lamp\b/.test(text) ||
+    /\bemergency\s+lamp\b/.test(text) ||
+    /\blamp\s+with\s+(?:usbhub|tumbler|detachable|folding|360)/.test(text) ||
+    /\bpenzen\b.*\blamp\b/.test(text) ||
+    /\bbrighto\b.*\blamp\b/.test(text) ||
+    /\bwerglow\b.*\blamp\b/.test(text) ||
+    /\bmagi\s+flex\b.*\blamp\b/.test(text) ||
+    /\bpodium\b.*\blamp\b/.test(text) ||
+    /\bswan\b.*\blamp\b/.test(text) ||
+    /\bpower\s+glow\b.*\blamp\b/.test(text) ||
+    /\b2[- ]mode\s+lamp\b/.test(text) ||
+    /\bled\s+night\s+lamp\b/.test(text)
+  ) {
+    return 'Lamp';
   }
 
-  if (/\b(?:analog|analogue)\s*clock\b/.test(text)) {
-    return 'Analogue clock';
-  }
-  if (/\bsuper\s+sweep\b/.test(text)) {
-    return 'Analogue clock';
-  }
-  if (/\b(?:wall\s*\/\s*table|wall|table)\s*clock\b/.test(text) && !isDigitalClock(text)) {
-    return 'Analogue clock';
-  }
-  if (/\btable\s+clock\s+with\b/.test(text) && !isDigitalClock(text)) {
-    return 'Analogue clock';
+  if (
+    /\b(?:clock|weather\s*station|temp\s*tracker|flip\s*display|backlit)\b/.test(text) ||
+    /\bsuper\s+sweep\b/.test(text)
+  ) {
+    return 'Clock';
   }
 
   if (
@@ -157,6 +144,45 @@ export function getProductExclusionReason(product: ExcludableProduct): string | 
     /\bpuzzle\b/.test(text)
   ) {
     return 'Toy';
+  }
+
+  // Electronics / tech gadgets (chargers, cables, hubs, audio, power boards).
+  // Keep bags, flasks, cleaners, notebooks, and plain phone stands.
+  const isBagOrTote =
+    /\b(?:laptop\s+(?:bag|sleeve|backpack|storage)|canvas\s+tote|overnighter\s+bag)\b/.test(text);
+  const isCleanerOrHousehold =
+    /\b(?:cleaner|cleaning|washing\s+machine|feather\s+duster|laundry)\b/.test(text);
+  const isFlaskOrDrinkware =
+    /\b(?:vacuum\s+(?:flask|bottle|mug|tumbler)|vacuumflask)\b/.test(text) &&
+    !/\b(?:charger|usb\s*hub|speaker|headphone|earbud|cooling\s*pad)\b/.test(text);
+
+  if (!isBagOrTote && !isCleanerOrHousehold && !isFlaskOrDrinkware) {
+    if (
+      /\b(?:bluetooth|blue\s*tooth)\b/.test(text) ||
+      /\bspeakers?\b/.test(text) ||
+      /pc\s*speakers?|pcspeaker/.test(text) ||
+      /\b(?:headphones?|earphones?|earbuds?|ear\s*buds?)\b/.test(text) ||
+      /\b(?:usb\s*hub|usbhub|usb\s*ports?|usbports)\b/.test(text) ||
+      /\busb\s*fan\b/.test(text) ||
+      /\bmousepad.*usb|usb.*mousepad|mousepadwithusb\b/.test(text) ||
+      /\b(?:car|wall|fast|ultra\s*fast|dual|triple|glow(?:ing)?|light\s*up)\s*chargers?\b/.test(
+        text,
+      ) ||
+      (/\bchargers?\b/.test(text) &&
+        /\b(?:usb|cable|type\s*c|qc|mobile|phone|android|iphone)\b/.test(text)) ||
+      /\b(?:charging|data)\s+cables?\b/.test(text) ||
+      /\bmulti\s*connector(?:\s+data)?\s*(?:cable)?\b/.test(text) ||
+      /\b(?:2\s*side|all\s+in\s+1|clip[- ]?on|lanyard)\s+(?:charging\s+)?cables?\b/.test(text) ||
+      /\b(?:power|extension)\s*boards?\b/.test(text) ||
+      /\b(?:powerboard|extensionboard|multipointextensionboard)\b/.test(text) ||
+      /\bcooling\s*pads?\b/.test(text) ||
+      /\blaptop\s+stands?\b/.test(text) ||
+      /\b(?:tech\s+gadget|gadget\s+organizer)\b/.test(text) ||
+      /music\s+amplifiers?/.test(text) ||
+      /\ballowscharging\b/.test(text)
+    ) {
+      return 'Tech/gadget';
+    }
   }
 
   return null;

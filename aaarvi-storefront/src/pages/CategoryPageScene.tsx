@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
 import * as THREE from 'three';
 import { Box, Search, X } from 'lucide-react';
-import { loadCategoryProducts, loadCategories } from '@/data/loader';
+import { loadAllProducts, loadCategoryProducts, loadCategories } from '@/data/loader';
 import { useProductData } from '@/hooks/useProductData';
 import { SceneSearchBar } from '@/components/search/SceneSearchBar';
 import { getPrimaryImage, resolveImageUrl } from '@/utils/image';
@@ -20,7 +20,7 @@ import {
 import { COLLECTIONS, DEFAULT_COLLECTION_SLUG, isActiveCollectionSlug } from '@/utils/collections';
 import {
   FEATURED_PRODUCTS_SLUG,
-  FEATURED_SOURCE_SLUG,
+  getFeaturedCatalogProducts,
   shuffleProducts,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
@@ -697,10 +697,13 @@ export function CategoryPageScene() {
     }
     if (slug === FEATURED_PRODUCTS_SLUG) {
       setCatLabel('Featured Products');
-      loadCategoryProducts(FEATURED_SOURCE_SLUG).then(products => {
-        const featuredProducts = shuffleProducts(products).slice(0, pageSize);
+      // Keep featured to one rotating page each load while drawing from new imports.
+      loadAllProducts().then(products => {
+        const featuredProducts = shuffleProducts(getFeaturedCatalogProducts(products)).slice(0, pageSize);
         setCategoryProducts(featuredProducts);
-        if (!incomingSearchQuery && !incomingSearchProductId) setVisibleProducts(featuredProducts);
+        if (!incomingSearchQuery && !incomingSearchProductId) {
+          setVisibleProducts(featuredProducts);
+        }
       }).finally(() => setIsCategoryLoading(false));
       return () => window.clearTimeout(resetTimer);
     }

@@ -26,22 +26,16 @@ import {
   isActiveCollectionSlug,
   sortCollections,
 } from '@/utils/collections';
+import {
+  getFeaturedCatalogProducts,
+  shuffleProducts,
+} from '@/utils/featuredProducts';
 import { BRAND_NAME } from '@/constants/brand';
 import { CONTACT_EMAIL, buildWhatsAppHref, getWhatsAppNumber } from '@/utils/contact';
 import type { CategoryNode, Product } from '@/types/product';
 
 const PAGE_SIZE = 24;
-const FEATURED_COLLECTION_SLUG = 'legacy-collection';
 const COLLECTION_SLUGS = new Set(COLLECTIONS.map(collection => collection.slug));
-
-function shuffle<T>(items: T[]): T[] {
-  const result = [...items];
-  for (let index = result.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
-  }
-  return result;
-}
 
 type BasicSort = 'featured' | 'name';
 
@@ -238,8 +232,7 @@ export function BasicExperiencePage() {
       }
       return categoryProducts;
     }
-    const legacyProducts = basicProducts.filter(product => product.category === FEATURED_COLLECTION_SLUG);
-    return shuffle(legacyProducts).slice(0, PAGE_SIZE);
+    return shuffleProducts(getFeaturedCatalogProducts(basicProducts)).slice(0, PAGE_SIZE);
   }, [basicProducts, query, slug, sort, location.key]);
 
   const totalPages = isFeaturedView ? 1 : Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));

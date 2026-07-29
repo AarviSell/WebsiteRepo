@@ -520,32 +520,6 @@
     "catalogue_image_index": 24
   },
   {
-    "id": "aarvi-chairman-collection-25",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Retro Bluetooth TV Speaker with Phone Holder - 5W",
-    "category": "chairman-collection",
-    "category_label": "Chairman Collection",
-    "price": "₹600–1000",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/high-end-600-1000/26.jpg",
-        "filename": "26.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 185",
-    "catalogue_pdf": "high-end-600-1000.pdf",
-    "catalogue_page": 26,
-    "catalogue_image_index": 25
-  },
-  {
     "id": "aarvi-chairman-collection-26",
     "source_site": "shipmydeals",
     "url": "",
@@ -1118,32 +1092,6 @@
     "catalogue_image_index": 48
   },
   {
-    "id": "aarvi-chairman-collection-49",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Set - SS Bottle, Metal Pen, Dual USB Car Charger, Ribbon A5 Notebook",
-    "category": "chairman-collection",
-    "category_label": "Chairman Collection",
-    "price": "₹600–1000",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/high-end-600-1000/50.jpg",
-        "filename": "50.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 57A",
-    "catalogue_pdf": "high-end-600-1000.pdf",
-    "catalogue_page": 50,
-    "catalogue_image_index": 49
-  },
-  {
     "id": "aarvi-chairman-collection-50",
     "source_site": "shipmydeals",
     "url": "",
@@ -1376,32 +1324,6 @@
     "catalogue_pdf": "high-end-600-1000.pdf",
     "catalogue_page": 61,
     "catalogue_image_index": 60
-  },
-  {
-    "id": "aarvi-chairman-collection-61",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dual Power Board with USB Ports and Phone Stand",
-    "category": "chairman-collection",
-    "category_label": "Chairman Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/high-end-600-1000/62.jpg",
-        "filename": "62.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "C 167",
-    "catalogue_pdf": "high-end-600-1000.pdf",
-    "catalogue_page": 62,
-    "catalogue_image_index": 61
   },
   {
     "id": "aarvi-chairman-collection-63",
@@ -1688,32 +1610,6 @@
     "catalogue_pdf": "high-end-600-1000.pdf",
     "catalogue_page": 75,
     "catalogue_image_index": 74
-  },
-  {
-    "id": "aarvi-chairman-collection-75",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Hut Shape Wooden LED Clock with Temperatureand Sound Sensor",
-    "category": "chairman-collection",
-    "category_label": "Chairman Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/high-end-600-1000/76.jpg",
-        "filename": "76.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "A 121",
-    "catalogue_pdf": "high-end-600-1000.pdf",
-    "catalogue_page": 76,
-    "catalogue_image_index": 75
   },
   {
     "id": "aarvi-cotton-canvas-gusset-tote-bag-sample-kit-7-sizes-330-gsm",

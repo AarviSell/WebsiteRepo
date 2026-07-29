@@ -11,6 +11,7 @@ import { COLLECTIONS, DEFAULT_COLLECTION_SLUG } from '@/utils/collections';
 import {
   FEATURED_PRODUCTS_SLUG,
   getCurrentSceneViewport,
+  getFeaturedCatalogProducts,
   getFeaturedProductDisplayCount,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
@@ -267,13 +268,12 @@ export function HomePageScene() {
 
   const cats = useMemo(() => CATS.map(cat => {
     if (cat.slug === FEATURED_PRODUCTS_SLUG) {
-      const legacyCategory = categories.find(category => category.slug === 'legacy-collection');
-      const legacyCount = legacyCategory?.count ?? cat.count;
-      return { ...cat, count: getFeaturedProductDisplayCount(legacyCount, viewportSize) };
+      const featuredCount = getFeaturedCatalogProducts(allProducts).length;
+      return { ...cat, count: getFeaturedProductDisplayCount(featuredCount, viewportSize) };
     }
     const loadedCategory = categories.find(category => category.slug === cat.slug);
     return { ...cat, count: loadedCategory?.count ?? cat.count };
-  }), [categories, viewportSize]);
+  }), [allProducts, categories, viewportSize]);
 
   useEffect(() => {
     function onResize() {
