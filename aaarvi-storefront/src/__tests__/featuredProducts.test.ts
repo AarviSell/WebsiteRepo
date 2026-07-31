@@ -3,6 +3,7 @@ import {
   getFeaturedCatalogProducts,
   getLegacyFeaturedProducts,
   isFeaturedCatalogProduct,
+  isFeaturedGiftSetProduct,
   selectFeaturedProducts,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
@@ -111,5 +112,56 @@ describe('featuredProducts', () => {
     expect([...ids].some(id => id === 'bag' || id === 'tote')).toBe(true);
     expect([...ids].some(id => id === 'legacy-a' || id === 'legacy-b')).toBe(true);
     expect(ids.has('other')).toBe(false);
+  });
+
+  it('detects Forest and Terra eco gift sets for featured priority', () => {
+    expect(
+      isFeaturedGiftSetProduct(
+        product({
+          id: 'aarvi-forest-eco-gift-set',
+          name: 'Forest Eco Gift Set',
+          product_code: 'A1 126',
+          category: 'legacy-collection',
+        }),
+      ),
+    ).toBe(true);
+
+    expect(
+      isFeaturedGiftSetProduct(
+        product({
+          id: 'other-gift',
+          name: 'Compact 3-Pc Gift Set',
+          product_code: 'G1',
+          category: 'premium-collection',
+        }),
+      ),
+    ).toBe(false);
+  });
+
+  it('includes eco gift sets on a limited featured page', () => {
+    const catalog = [
+      product({
+        id: 'aarvi-forest-eco-gift-set',
+        name: 'Forest Eco Gift Set',
+        product_code: 'A1 126',
+        category: 'legacy-collection',
+        images: [
+          {
+            url: '',
+            local_path: 'canvas-totes/legacy-collection/images/forest-eco-gift-set-1.png',
+            filename: 'forest-eco-gift-set-1.png',
+            is_primary: true,
+            download_status: 'success',
+          },
+        ],
+      }),
+      product({ id: 'bag', name: 'Bag', product_code: 'B1:F-201' }),
+      product({ id: 'tote', name: 'Tote', product_code: 'A1 001', category: 'signature-collection' }),
+      product({ id: 'legacy-a', name: 'Bottle A', product_code: 'H71', category: 'legacy-collection' }),
+      product({ id: 'legacy-b', name: 'Bottle B', product_code: 'H72', category: 'legacy-collection' }),
+    ];
+
+    const limited = selectFeaturedProducts(catalog, 4);
+    expect(limited.map(item => item.id)).toContain('aarvi-forest-eco-gift-set');
   });
 });

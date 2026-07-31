@@ -1194,5 +1194,72 @@
     "catalogue_pdf": "mid-range-300-400.pdf",
     "catalogue_page": 56,
     "catalogue_image_index": 55
+  },
+  {
+    "id": "aarvi-sunflower-bliss-embroidered-tote",
+    "source_site": "shipmydeals",
+    "url": "",
+    "name": "Sunflower Bliss Embroidered Tote",
+    "category": "premium-collection",
+    "category_label": "Premium Collection",
+    "price": "₹399",
+    "price_numeric": 399.0,
+    "description": "Add a touch of elegance to your everyday style with this beautifully embroidered tote bag. Designed with delicate Blue Sunflower Bliss embroidery on a soft pastel blue canvas, this bag is perfect for carrying your essentials in style. Features: ✔️ Premium Embroidery – Intricate floral embroidery for a charming and handcrafted touch. ✔️ Lightweight – Large enough to fit your books, laptop, or daily essentials. ✔️ Durable Cotton Canvas – Made from high-quality fabric for long-lasting use. ✔️ Secure Closure – Features a zipper/drawstring to keep your belongings safe. ✔️ Eco-Friendly & Reusable – A sustainable alternative to plastic bags. Whether you're heading to work, college, shopping, or a casual day out, this floral tote bag adds a fresh, stylish, and practical touch to your outfit. 🌿✨ 📏 Size: [14 x 16 Inch] 👜 Material: 100% Cotton Canvas 🎨 Color: Pastel Blue with Yellow Sunflower Bliss Embroidery",
+    "specifications": {
+      "Product Code": "A1 141"
+    },
+    "images": [
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-1.png",
+        "filename": "sunflower-bliss-embroidered-tote-1.png",
+        "is_primary": true,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-2.png",
+        "filename": "sunflower-bliss-embroidered-tote-2.png",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-3.png",
+        "filename": "sunflower-bliss-embroidered-tote-3.png",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-4.png",
+        "filename": "sunflower-bliss-embroidered-tote-4.png",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-5.png",
+        "filename": "sunflower-bliss-embroidered-tote-5.png",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-6.jpg",
+        "filename": "sunflower-bliss-embroidered-tote-6.jpg",
+        "is_primary": false,
+        "download_status": "success"
+      },
+      {
+        "url": "",
+        "local_path": "canvas-totes/premium-collection/images/sunflower-bliss-embroidered-tote-7.jpg",
+        "filename": "sunflower-bliss-embroidered-tote-7.jpg",
+        "is_primary": false,
+        "download_status": "success"
+      }
+    ],
+    "scraped_at": "2026-07-31T07:25:41Z",
+    "product_code": "A1 141"
   }
 ]

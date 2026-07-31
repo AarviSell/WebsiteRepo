@@ -5,7 +5,7 @@ export const FEATURED_PRODUCTS_SLUG = 'featured-products';
 export const FEATURED_LEGACY_SOURCE_SLUG = 'legacy-collection';
 
 type FeaturedProductLike = Pick<Product, 'product_code' | 'images' | 'category'> &
-  Partial<Pick<Product, 'id'>>;
+  Partial<Pick<Product, 'id' | 'name'>>;
 
 type ViewportSize = {
   width: number;
@@ -16,6 +16,10 @@ function productImagePaths(product: FeaturedProductLike): string {
   return (product.images ?? []).map(image => image.local_path ?? '').join(' ');
 }
 
+function productKey(product: FeaturedProductLike): string {
+  return product.id ?? `${product.category}:${product.product_code}:${product.images?.[0]?.local_path ?? ''}`;
+}
+
 /** Bag catalogue (GCP → bags-2026 / B1:) and canvas tote (EcoCarry → canvas-totes / A1) imports. */
 export function isFeaturedCatalogProduct(product: FeaturedProductLike): boolean {
   const code = (product.product_code ?? '').trim();
@@ -23,6 +27,20 @@ export function isFeaturedCatalogProduct(product: FeaturedProductLike): boolean 
 
   const paths = productImagePaths(product);
   return paths.includes('bags-2026') || paths.includes('canvas-totes');
+}
+
+/**
+ * EcoCarry eco gift sets (Forest / Terra from /collections/new) should appear
+ * regularly on the featured page. Match by id/name, or canvas-totes gift sets.
+ */
+export function isFeaturedGiftSetProduct(product: FeaturedProductLike): boolean {
+  const name = (product.name ?? '').toLowerCase();
+  const id = (product.id ?? '').toLowerCase();
+  if (/forest-eco-gift-set|terra-eco-gift-set/.test(id)) return true;
+  if (/forest eco gift set|terra eco gift set/.test(name)) return true;
+
+  const isGift = /\bgift\s*set\b/.test(name) || /gift-set/.test(id);
+  return isGift && productImagePaths(product).includes('canvas-totes');
 }
 
 /** Pre-existing featured pool: Legacy Collection products that are not bag/tote imports. */
@@ -84,31 +102,38 @@ export function shuffleProducts<T>(items: T[]): T[] {
 }
 
 /**
- * One-page featured mix: roughly half new bag/tote imports and half older Legacy products.
- * Short pools are backfilled from the other side so the page stays full when possible.
+ * One-page featured mix: gift sets are prioritized, then roughly half bag/tote
+ * imports and half older Legacy products. Short pools are backfilled.
  */
 export function selectFeaturedProducts<T extends FeaturedProductLike>(products: T[], count?: number): T[] {
-  const newer = shuffleProducts(getFeaturedCatalogProducts(products));
-  const older = shuffleProducts(getLegacyFeaturedProducts(products));
+  const gifts = shuffleProducts(products.filter(isFeaturedGiftSetProduct));
+  const newer = shuffleProducts(
+    getFeaturedCatalogProducts(products).filter(product => !isFeaturedGiftSetProduct(product)),
+  );
+  const older = shuffleProducts(
+    getLegacyFeaturedProducts(products).filter(product => !isFeaturedGiftSetProduct(product)),
+  );
 
   if (count == null) {
-    return shuffleProducts([...newer, ...older]);
+    return shuffleProducts([...gifts, ...newer, ...older]);
   }
 
   const target = Math.max(0, count);
   if (target === 0) return [];
 
-  const preferredNew = Math.ceil(target / 2);
+  // Keep gift sets regularly visible on the single featured page.
+  const giftTake = Math.min(gifts.length, Math.min(2, Math.max(1, Math.ceil(target * 0.15))));
+  const fromGifts = gifts.slice(0, giftTake);
+  const remaining = target - fromGifts.length;
+  const preferredNew = Math.ceil(remaining / 2);
   const fromNew = newer.slice(0, Math.min(preferredNew, newer.length));
-  const fromOld = older.slice(0, Math.min(target - fromNew.length, older.length));
-  const selected = [...fromNew, ...fromOld];
+  const fromOld = older.slice(0, Math.min(remaining - fromNew.length, older.length));
+  const selected = [...fromGifts, ...fromNew, ...fromOld];
 
   if (selected.length < target) {
-    const selectedKeys = new Set(
-      selected.map(product => product.id ?? `${product.category}:${product.product_code}:${product.images?.[0]?.local_path ?? ''}`),
-    );
-    const remainder = shuffleProducts([...newer, ...older]).filter(product => {
-      const key = product.id ?? `${product.category}:${product.product_code}:${product.images?.[0]?.local_path ?? ''}`;
+    const selectedKeys = new Set(selected.map(productKey));
+    const remainder = shuffleProducts([...gifts, ...newer, ...older]).filter(product => {
+      const key = productKey(product);
       if (selectedKeys.has(key)) return false;
       selectedKeys.add(key);
       return true;
