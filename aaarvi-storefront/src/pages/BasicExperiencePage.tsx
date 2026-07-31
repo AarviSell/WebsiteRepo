@@ -146,7 +146,7 @@ function BasicProductCard({ product }: { product: Product }) {
           {product.name}
         </Link>
         <p className="basic-product-card__collection">{product.category_label}</p>
-        {description && <p className="basic-product-card__desc">{description}</p>}
+        <p className="basic-product-card__desc">{description || '\u00A0'}</p>
         <div className="basic-product-card__meta">
           {productCode && <span>Code {productCode}</span>}
           <span>Contact for price</span>
