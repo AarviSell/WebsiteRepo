@@ -19,7 +19,17 @@ const REMOVED_PRODUCT_IDS = new Set([
   'aarvi-signature-collection-82',
 ]);
 
-const REMOVED_PRODUCT_CODES = new Set(['C187', 'E208S', 'H06']);
+const REMOVED_PRODUCT_CODES = new Set([
+  'C187',
+  'E208S',
+  'H06',
+  'H125',
+  'H211',
+  'N21',
+  'E112A',
+  'Q172',
+  'Q136',
+]);
 
 function productText(product: Pick<Product, 'name' | 'description'>): string {
   return `${product.name} ${product.description ?? ''}`.toLowerCase();
@@ -46,6 +56,26 @@ export function getProductExclusionReason(product: ExcludableProduct): string | 
 
   if (productCode && REMOVED_PRODUCT_CODES.has(productCode)) {
     return 'Removed product code';
+  }
+
+  if (/\bice\s+bucket\b/.test(text)) {
+    return 'Ice bucket';
+  }
+
+  if (/\bdura\s+powerplus\b/.test(text) && /\bcasseroles?\b/.test(text)) {
+    return 'Dura Powerplus casserole';
+  }
+
+  if (/\bpen\s+stand\b/.test(text)) {
+    return 'Pen stand';
+  }
+
+  if (/\bmanicure\b/.test(text)) {
+    return 'Manicure kit';
+  }
+
+  if (/\bled\s+blow\s+lantern\b/.test(text) || (/\blantern\b/.test(text) && !/\blantern[- ]style\b/.test(text))) {
+    return 'Lantern';
   }
 
   if (

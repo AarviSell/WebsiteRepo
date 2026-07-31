@@ -1014,32 +1014,6 @@
     "catalogue_image_index": 54
   },
   {
-    "id": "aarvi-legacy-collection-57",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dura Powerplus Air Tight Casseroles",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/58.jpg",
-        "filename": "58.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 211",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 58,
-    "catalogue_image_index": 57
-  },
-  {
     "id": "aarvi-legacy-collection-60",
     "source_site": "shipmydeals",
     "url": "",
@@ -1090,32 +1064,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 62,
     "catalogue_image_index": 61
-  },
-  {
-    "id": "aarvi-legacy-collection-62",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Octa Ice Bucket with Tongs",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/63.jpg",
-        "filename": "63.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 125",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 63,
-    "catalogue_image_index": 62
   },
   {
     "id": "aarvi-legacy-collection-65",

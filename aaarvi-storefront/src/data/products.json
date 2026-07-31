@@ -10476,32 +10476,6 @@
     "catalogue_image_index": 54
   },
   {
-    "id": "aarvi-legacy-collection-57",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Dura Powerplus Air Tight Casseroles",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/58.jpg",
-        "filename": "58.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 211",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 58,
-    "catalogue_image_index": 57
-  },
-  {
     "id": "aarvi-legacy-collection-60",
     "source_site": "shipmydeals",
     "url": "",
@@ -10552,32 +10526,6 @@
     "catalogue_pdf": "elite-above-1000.pdf",
     "catalogue_page": 62,
     "catalogue_image_index": 61
-  },
-  {
-    "id": "aarvi-legacy-collection-62",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Octa Ice Bucket with Tongs",
-    "category": "legacy-collection",
-    "category_label": "Legacy Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/elite-above-1000/63.jpg",
-        "filename": "63.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "H 125",
-    "catalogue_pdf": "elite-above-1000.pdf",
-    "catalogue_page": 63,
-    "catalogue_image_index": 62
   },
   {
     "id": "aarvi-legacy-collection-65",
@@ -11462,32 +11410,6 @@
     "catalogue_pdf": "affordable-200-300.pdf",
     "catalogue_page": 32,
     "catalogue_image_index": 31
-  },
-  {
-    "id": "aarvi-preferred-collection-32",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Flag Style Photo Frame with Pen Stand & Stationery Holder",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/33.jpg",
-        "filename": "33.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "D 43",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 32
   },
   {
     "id": "aarvi-preferred-collection-33",
@@ -17422,32 +17344,6 @@
     "catalogue_image_index": 53
   },
   {
-    "id": "aarvi-premium-collection-54",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "LED Blow Lantern",
-    "category": "premium-collection",
-    "category_label": "Premium Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/mid-range-300-400/55.jpg",
-        "filename": "55.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 151",
-    "catalogue_pdf": "mid-range-300-400.pdf",
-    "catalogue_page": 55,
-    "catalogue_image_index": 54
-  },
-  {
     "id": "aarvi-premium-collection-55",
     "source_site": "shipmydeals",
     "url": "",
@@ -17472,32 +17368,6 @@
     "catalogue_pdf": "mid-range-300-400.pdf",
     "catalogue_page": 56,
     "catalogue_image_index": 55
-  },
-  {
-    "id": "aarvi-signature-collection-1",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Oval Pen Stand with 6 Coasters",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/1.jpg",
-        "filename": "1.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "B 177",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 2,
-    "catalogue_image_index": 1
   },
   {
     "id": "aarvi-signature-collection-2",
@@ -17706,32 +17576,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 11,
     "catalogue_image_index": 10
-  },
-  {
-    "id": "aarvi-signature-collection-13",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Magnetic Pen Stand with 8 Branding Panels",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/13.jpg",
-        "filename": "13.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "B 155",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 14,
-    "catalogue_image_index": 13
   },
   {
     "id": "aarvi-signature-collection-14",
@@ -17992,32 +17836,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 24,
     "catalogue_image_index": 23
-  },
-  {
-    "id": "aarvi-signature-collection-24",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Reversibletyreshape Coaster Set",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/25.jpg",
-        "filename": "25.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 112A",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 25,
-    "catalogue_image_index": 24
   },
   {
     "id": "aarvi-signature-collection-25",
@@ -18410,32 +18228,6 @@
     "catalogue_image_index": 40
   },
   {
-    "id": "aarvi-signature-collection-41",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Triangle Pen Stand with Metal Pen",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/42.jpg",
-        "filename": "42.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "L 161",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 42,
-    "catalogue_image_index": 41
-  },
-  {
     "id": "aarvi-signature-collection-42",
     "source_site": "shipmydeals",
     "url": "",
@@ -18512,32 +18304,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 46,
     "catalogue_image_index": 45
-  },
-  {
-    "id": "aarvi-signature-collection-46",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "7-Piece Manicure Kit in Cork Case",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "₹100–200",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/47.jpg",
-        "filename": "47.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "N 21",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 47,
-    "catalogue_image_index": 46
   },
   {
     "id": "aarvi-signature-collection-47",
@@ -19136,32 +18902,6 @@
     "catalogue_pdf": "super-affordable-100-200.pdf",
     "catalogue_page": 72,
     "catalogue_image_index": 71
-  },
-  {
-    "id": "aarvi-signature-collection-73",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Holder and Double Pen Stand with Pugloss Coating",
-    "category": "signature-collection",
-    "category_label": "Signature Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/super-affordable-100-200/74.jpg",
-        "filename": "74.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "Q 42",
-    "catalogue_pdf": "super-affordable-100-200.pdf",
-    "catalogue_page": 74,
-    "catalogue_image_index": 73
   },
   {
     "id": "aarvi-signature-collection-74",

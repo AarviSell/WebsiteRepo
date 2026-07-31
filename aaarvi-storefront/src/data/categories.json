@@ -2,7 +2,7 @@
   {
     "slug": "signature-collection",
     "label": "Signature Collection",
-    "count": 180,
+    "count": 174,
     "source_sites": [
       "shipmydeals"
     ],
@@ -11,7 +11,7 @@
   {
     "slug": "preferred-collection",
     "label": "Preferred Collection",
-    "count": 218,
+    "count": 217,
     "source_sites": [
       "shipmydeals"
     ],
@@ -20,7 +20,7 @@
   {
     "slug": "premium-collection",
     "label": "Premium Collection",
-    "count": 47,
+    "count": 46,
     "source_sites": [
       "shipmydeals"
     ],
@@ -47,7 +47,7 @@
   {
     "slug": "legacy-collection",
     "label": "Legacy Collection",
-    "count": 46,
+    "count": 44,
     "source_sites": [
       "shipmydeals"
     ],

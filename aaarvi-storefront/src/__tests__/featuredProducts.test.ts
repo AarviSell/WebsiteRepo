@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   getFeaturedCatalogProducts,
+  getLegacyFeaturedProducts,
   isFeaturedCatalogProduct,
   selectFeaturedProducts,
 } from '@/utils/featuredProducts';
@@ -72,7 +73,7 @@ describe('featuredProducts', () => {
     ).toBe(true);
   });
 
-  it('excludes unrelated catalog products', () => {
+  it('treats non-import Legacy products as older featured candidates', () => {
     expect(
       isFeaturedCatalogProduct(
         product({
@@ -83,20 +84,32 @@ describe('featuredProducts', () => {
         }),
       ),
     ).toBe(false);
+
+    expect(
+      getLegacyFeaturedProducts([
+        product({ id: 'legacy', name: 'Steel Bottle', product_code: 'H71', category: 'legacy-collection' }),
+        product({ id: 'bag', name: 'Bag', product_code: 'B1:F-201', category: 'preferred-collection' }),
+      ]).map(item => item.id),
+    ).toEqual(['legacy']);
   });
 
-  it('returns the full featured pool and can slice for limited displays', () => {
+  it('mixes new imports and older Legacy products on a limited featured page', () => {
     const catalog = [
       product({ id: 'bag', name: 'Bag', product_code: 'B1:F-201' }),
-      product({ id: 'tote', name: 'Tote', product_code: 'A1 001' }),
-      product({ id: 'other', name: 'Bottle', product_code: 'X1' }),
+      product({ id: 'tote', name: 'Tote', product_code: 'A1 001', category: 'signature-collection' }),
+      product({ id: 'legacy-a', name: 'Bottle A', product_code: 'H71', category: 'legacy-collection' }),
+      product({ id: 'legacy-b', name: 'Bottle B', product_code: 'H72', category: 'legacy-collection' }),
+      product({ id: 'other', name: 'Notebook', product_code: 'X1', category: 'signature-collection' }),
     ];
 
-    const featured = getFeaturedCatalogProducts(catalog);
-    expect(featured.map(item => item.id).sort()).toEqual(['bag', 'tote']);
+    expect(getFeaturedCatalogProducts(catalog).map(item => item.id).sort()).toEqual(['bag', 'tote']);
 
-    const limited = selectFeaturedProducts(catalog, 1);
-    expect(limited).toHaveLength(1);
-    expect(['bag', 'tote']).toContain(limited[0].id);
+    const limited = selectFeaturedProducts(catalog, 4);
+    expect(limited).toHaveLength(4);
+
+    const ids = new Set(limited.map(item => item.id));
+    expect([...ids].some(id => id === 'bag' || id === 'tote')).toBe(true);
+    expect([...ids].some(id => id === 'legacy-a' || id === 'legacy-b')).toBe(true);
+    expect(ids.has('other')).toBe(false);
   });
 });

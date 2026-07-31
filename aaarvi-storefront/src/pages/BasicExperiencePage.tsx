@@ -27,8 +27,7 @@ import {
   sortCollections,
 } from '@/utils/collections';
 import {
-  getFeaturedCatalogProducts,
-  shuffleProducts,
+  selectFeaturedProducts,
 } from '@/utils/featuredProducts';
 import { BRAND_NAME } from '@/constants/brand';
 import { CONTACT_EMAIL, buildWhatsAppHref, getWhatsAppNumber } from '@/utils/contact';
@@ -232,7 +231,7 @@ export function BasicExperiencePage() {
       }
       return categoryProducts;
     }
-    return shuffleProducts(getFeaturedCatalogProducts(basicProducts)).slice(0, PAGE_SIZE);
+    return selectFeaturedProducts(basicProducts, PAGE_SIZE);
   }, [basicProducts, query, slug, sort, location.key]);
 
   const totalPages = isFeaturedView ? 1 : Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));

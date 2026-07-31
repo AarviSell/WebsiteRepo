@@ -754,32 +754,6 @@
     "catalogue_image_index": 31
   },
   {
-    "id": "aarvi-preferred-collection-32",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "Flag Style Photo Frame with Pen Stand & Stationery Holder",
-    "category": "preferred-collection",
-    "category_label": "Preferred Collection",
-    "price": "₹200–300",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/affordable-200-300/33.jpg",
-        "filename": "33.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "D 43",
-    "catalogue_pdf": "affordable-200-300.pdf",
-    "catalogue_page": 33,
-    "catalogue_image_index": 32
-  },
-  {
     "id": "aarvi-preferred-collection-33",
     "source_site": "shipmydeals",
     "url": "",

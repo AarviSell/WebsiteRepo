@@ -20,8 +20,7 @@ import {
 import { COLLECTIONS, DEFAULT_COLLECTION_SLUG, isActiveCollectionSlug } from '@/utils/collections';
 import {
   FEATURED_PRODUCTS_SLUG,
-  getFeaturedCatalogProducts,
-  shuffleProducts,
+  selectFeaturedProducts,
 } from '@/utils/featuredProducts';
 import type { Product } from '@/types/product';
 import { BrandMark } from '@/components/layout/BrandMark';
@@ -697,9 +696,9 @@ export function CategoryPageScene() {
     }
     if (slug === FEATURED_PRODUCTS_SLUG) {
       setCatLabel('Featured Products');
-      // Keep featured to one rotating page each load while drawing from new imports.
+      // One rotating page: mix new bag/tote imports with older Legacy featured products.
       loadAllProducts().then(products => {
-        const featuredProducts = shuffleProducts(getFeaturedCatalogProducts(products)).slice(0, pageSize);
+        const featuredProducts = selectFeaturedProducts(products, pageSize);
         setCategoryProducts(featuredProducts);
         if (!incomingSearchQuery && !incomingSearchProductId) {
           setVisibleProducts(featuredProducts);

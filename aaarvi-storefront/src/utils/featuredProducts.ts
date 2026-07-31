@@ -1,8 +1,11 @@
 import type { Product } from '@/types/product';
 
 export const FEATURED_PRODUCTS_SLUG = 'featured-products';
+/** Older featured source before bag/tote imports were added. */
+export const FEATURED_LEGACY_SOURCE_SLUG = 'legacy-collection';
 
-type FeaturedProductLike = Pick<Product, 'product_code' | 'images'>;
+type FeaturedProductLike = Pick<Product, 'product_code' | 'images' | 'category'> &
+  Partial<Pick<Product, 'id'>>;
 
 type ViewportSize = {
   width: number;
@@ -22,8 +25,22 @@ export function isFeaturedCatalogProduct(product: FeaturedProductLike): boolean 
   return paths.includes('bags-2026') || paths.includes('canvas-totes');
 }
 
+/** Pre-existing featured pool: Legacy Collection products that are not bag/tote imports. */
+export function isLegacyFeaturedProduct(product: FeaturedProductLike): boolean {
+  return product.category === FEATURED_LEGACY_SOURCE_SLUG && !isFeaturedCatalogProduct(product);
+}
+
 export function getFeaturedCatalogProducts<T extends FeaturedProductLike>(products: T[]): T[] {
   return products.filter(isFeaturedCatalogProduct);
+}
+
+export function getLegacyFeaturedProducts<T extends FeaturedProductLike>(products: T[]): T[] {
+  return products.filter(isLegacyFeaturedProduct);
+}
+
+/** Combined featured pool used for counts and selection. */
+export function getFeaturedPoolProducts<T extends FeaturedProductLike>(products: T[]): T[] {
+  return [...getFeaturedCatalogProducts(products), ...getLegacyFeaturedProducts(products)];
 }
 
 export function getCurrentSceneViewport(): ViewportSize {
@@ -66,8 +83,38 @@ export function shuffleProducts<T>(items: T[]): T[] {
   return result;
 }
 
+/**
+ * One-page featured mix: roughly half new bag/tote imports and half older Legacy products.
+ * Short pools are backfilled from the other side so the page stays full when possible.
+ */
 export function selectFeaturedProducts<T extends FeaturedProductLike>(products: T[], count?: number): T[] {
-  const featured = shuffleProducts(getFeaturedCatalogProducts(products));
-  if (count == null) return featured;
-  return featured.slice(0, Math.max(0, count));
+  const newer = shuffleProducts(getFeaturedCatalogProducts(products));
+  const older = shuffleProducts(getLegacyFeaturedProducts(products));
+
+  if (count == null) {
+    return shuffleProducts([...newer, ...older]);
+  }
+
+  const target = Math.max(0, count);
+  if (target === 0) return [];
+
+  const preferredNew = Math.ceil(target / 2);
+  const fromNew = newer.slice(0, Math.min(preferredNew, newer.length));
+  const fromOld = older.slice(0, Math.min(target - fromNew.length, older.length));
+  const selected = [...fromNew, ...fromOld];
+
+  if (selected.length < target) {
+    const selectedKeys = new Set(
+      selected.map(product => product.id ?? `${product.category}:${product.product_code}:${product.images?.[0]?.local_path ?? ''}`),
+    );
+    const remainder = shuffleProducts([...newer, ...older]).filter(product => {
+      const key = product.id ?? `${product.category}:${product.product_code}:${product.images?.[0]?.local_path ?? ''}`;
+      if (selectedKeys.has(key)) return false;
+      selectedKeys.add(key);
+      return true;
+    });
+    selected.push(...remainder.slice(0, target - selected.length));
+  }
+
+  return shuffleProducts(selected).slice(0, target);
 }

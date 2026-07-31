@@ -1170,32 +1170,6 @@
     "catalogue_image_index": 53
   },
   {
-    "id": "aarvi-premium-collection-54",
-    "source_site": "shipmydeals",
-    "url": "",
-    "name": "LED Blow Lantern",
-    "category": "premium-collection",
-    "category_label": "Premium Collection",
-    "price": "",
-    "price_numeric": 0,
-    "description": "",
-    "specifications": {},
-    "images": [
-      {
-        "url": "",
-        "local_path": "cropped/mid-range-300-400/55.jpg",
-        "filename": "55.jpg",
-        "is_primary": true,
-        "download_status": "success"
-      }
-    ],
-    "scraped_at": "",
-    "product_code": "E 151",
-    "catalogue_pdf": "mid-range-300-400.pdf",
-    "catalogue_page": 55,
-    "catalogue_image_index": 54
-  },
-  {
     "id": "aarvi-premium-collection-55",
     "source_site": "shipmydeals",
     "url": "",
